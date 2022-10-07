@@ -11,8 +11,7 @@ if angelsmods.trigger.disable_vanilla_chemical_plants then
   OV.global_replace_item("chemical-plant", "angels-chemical-plant")
   OV.disable_recipe("chemical-plant")
   angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant", {
-    "chemistry",
-    "liquifying"
+    "chemistry"
   })
 else
   OV.add_unlock("basic-chemistry-2","chemical-plant") --give the item a new home if still active
@@ -28,8 +27,7 @@ if mods["bobassembly"] then
     OV.disable_recipe("chemical-plant-2")
     OV.disable_technology("chemical-plant-2")
     angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant-2", {
-      "chemistry",
-      "liquifying"
+      "chemistry"
     })
   end
   
@@ -42,8 +40,7 @@ if mods["bobassembly"] then
     OV.disable_recipe("chemical-plant-3")
     OV.disable_technology("chemical-plant-3")
     angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant-3", {
-      "chemistry",
-      "liquifying"
+      "chemistry"
     })
   end
   
@@ -56,8 +53,7 @@ if mods["bobassembly"] then
     OV.disable_recipe("chemical-plant-4")
     OV.disable_technology("chemical-plant-4")
     angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant-4", {
-      "chemistry",
-      "liquifying"
+      "chemistry"
     })
   end
 end
