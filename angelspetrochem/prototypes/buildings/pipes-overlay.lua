@@ -1,32 +1,27 @@
 function angelsmods.petrochem.electrolyserpictures()
-  return
-  {
-    north =
-    {
+  return {
+    north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
       width = 1,
       height = 1,
       shift = {-0.08, 0.45}
     },
-    east =
-    {
+    east = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
       width = 1,
       height = 1,
       shift = {0, 0}
     },
-    south =
-    {
+    south = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/pipe-south.png",
       priority = "extra-high",
       width = 41,
       height = 40,
-      shift = {5/32, -8/32}
+      shift = {5 / 32, -8 / 32}
     },
-    west =
-    {
+    west = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
       width = 1,
@@ -37,35 +32,30 @@ function angelsmods.petrochem.electrolyserpictures()
 end
 
 local function coverpictures()
-  return
-  {
-    north =
-    {
+  return {
+    north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
       width = 1,
       height = 1,
       shift = {0, 0}
     },
-    east =
-    {
+    east = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
       width = 1,
       height = 1,
       shift = {0, 0}
     },
-    south =
-    {
+    south = {
       filename = "__angelspetrochem__/graphics/entity/storage-tanks/pipe-cover.png",
       priority = "extra-high",
       width = 80,
       height = 80,
-	  scale = 0.5,
+      scale = 0.5,
       shift = {0, 0}
     },
-    west =
-    {
+    west = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
       width = 1,
@@ -76,127 +66,112 @@ local function coverpictures()
 end
 
 local function polypictures1()
-  return
-  {
-	north =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {0, 0}
-	},
-	east =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/04.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {-24/32, 4/32}
-	},
-	south =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/01.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {0, -22/32}
-	},
-	west =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {0, 0}
-	}
+  return {
+    north = {
+      filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {0, 0}
+    },
+    east = {
+      filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/04.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {-24 / 32, 4 / 32}
+    },
+    south = {
+      filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/01.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {0, -22 / 32}
+    },
+    west = {
+      filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {0, 0}
+    }
   }
 end
 
 local function polypictures2()
-  return
-  {
-	north =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {0, 0}
-	},
-	east =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/13.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {-24/32, 5/32}
-	},
-	south =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/11.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {0, -22/32}
-	},
-	west =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/12.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {24/32, 6/32}
-	}
+  return {
+    north = {
+      filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {0, 0}
+    },
+    east = {
+      filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/13.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {-24 / 32, 5 / 32}
+    },
+    south = {
+      filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/11.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {0, -22 / 32}
+    },
+    west = {
+      filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/12.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {24 / 32, 6 / 32}
+    }
   }
 end
 
 local function polypictures3()
-  return
-  {
-	north =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {0, 0}
-	},
-	east =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/22.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {-16/32, 2/32}
-	},
-	south =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/23.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {0, -22/32}
-	},
-	west =
-	{
-	  filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/24.png",
-	  priority = "extra-high",
-	  width = 128,
-	  height = 128,
-	  scale = 0.5,
-	  shift = {16/32, 0}
-	}
+  return {
+    north = {
+      filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {0, 0}
+    },
+    east = {
+      filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/22.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {-16 / 32, 2 / 32}
+    },
+    south = {
+      filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/23.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {0, -22 / 32}
+    },
+    west = {
+      filename = "__angelspetrochem__/graphics/entity/polymerization-chamber/24.png",
+      priority = "extra-high",
+      width = 128,
+      height = 128,
+      scale = 0.5,
+      shift = {16 / 32, 0}
+    }
   }
 end

@@ -33,7 +33,10 @@ for x = -16, 2 do
   })
   for i = 1, 2 do
     for p = 0, 1, 0.1 do
-      belt.get_transport_line(i).insert_at(p, {name = "angels-ore1-crystal", count = 1})
+      belt.get_transport_line(i).insert_at(p, {
+        name = "angels-ore1-crystal",
+        count = 1
+      })
     end
   end
 end
@@ -48,7 +51,7 @@ game.surfaces[1].create_entity({
 game.surfaces[1].create_entity({
   name = "infinity-chest",
   position = {-19, -5},
-  force = "neutral",
+  force = "neutral"
 }).set_infinity_container_filter(1, {
   name = "angels-ore1-crystal",
   count = 100,
@@ -103,20 +106,21 @@ game.surfaces[1].create_entity({
 })
 -- infinity chest (sink)
 game.surfaces[1].create_entity({
-  name = "infinity-chest",
-  position = {9, 6},
-  force = "neutral",
-}).remove_unfiltered_items = true
+    name = "infinity-chest",
+    position = {9, 6},
+    force = "neutral"
+  }).remove_unfiltered_items
+= true
 -- power
 game.surfaces[1].create_entity({
   name = "substation",
   position = {8, 0},
-  force = "neutral",
+  force = "neutral"
 })
 game.surfaces[1].create_entity({
   name = "electric-energy-interface",
   position = {10, 0},
-  force = "neutral",
+  force = "neutral"
 })
 --recipe
 rendering.draw_sprite({
@@ -124,5 +128,5 @@ rendering.draw_sprite({
   target = {-9, 1.5},
   x_scale = 1.6,
   y_scale = 1.6,
-  surface = game.surfaces[1],
+  surface = game.surfaces[1]
 })

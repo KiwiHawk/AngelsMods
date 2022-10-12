@@ -7,7 +7,7 @@ if not angelsmods.refining.disable_ore_override then
 
   --ANGELS
   if angelsmods.functions.is_special_vanilla() then
-  --if not ((angelsmods.industries and angelsmods.industries.overhaul) or mods["bobplates"]) then
+    --if not ((angelsmods.industries and angelsmods.industries.overhaul) or mods["bobplates"]) then
     angelsmods.functions.remove_resource("angels-ore5")
     angelsmods.functions.remove_resource("angels-ore6")
   end
@@ -43,7 +43,9 @@ if not angelsmods.refining.disable_ore_override then
     angelsmods.functions.remove_resource("uraninite")
     angelsmods.functions.remove_resource("fluorite")
 
-    data.raw["item"]["fluorite"].icon = "__angelsinfiniteores__/graphics/icons/up-fluorite.png"
-    data.raw["item"]["uraninite"].icon = "__angelsinfiniteores__/graphics/icons/up-uraninite.png"
+    data.raw["item"]["fluorite"].icon =
+      "__angelsinfiniteores__/graphics/icons/up-fluorite.png"
+    data.raw["item"]["uraninite"].icon =
+      "__angelsinfiniteores__/graphics/icons/up-uraninite.png"
   end
 end

@@ -3,8 +3,10 @@ if angelsmods.addons.storage.icon_scaling then
     data.raw["container"]["silo"].scale_info_icons = true
   end
   if angelsmods.addons.storage.silos then
-    data.raw["logistic-container"]["silo-active-provider"].scale_info_icons = true
-    data.raw["logistic-container"]["silo-passive-provider"].scale_info_icons = true
+    data.raw["logistic-container"]["silo-active-provider"].scale_info_icons =
+      true
+    data.raw["logistic-container"]["silo-passive-provider"].scale_info_icons =
+      true
     data.raw["logistic-container"]["silo-requester"].scale_info_icons = true
     data.raw["logistic-container"]["silo-storage"].scale_info_icons = true
     data.raw["logistic-container"]["silo-buffer"].scale_info_icons = true
@@ -24,36 +26,38 @@ end
 --REFINING
 if angelsmods.addons.storage.oresilos and angelsmods.refining then
   angelsmods.functions.OV.add_prereq("ore-silos", "ore-crushing")
-  for refinery_product_name, ore_name in pairs{
-    ["saphirite"] = "ore1",
-    ["jivolite"] = "ore2",
-    ["stiratite"] = "ore3",
-    ["crotinnium"] = "ore4",
-    ["rubyte"] = "ore5",
-    ["bobmonium"] = "ore6"
-  } do
+  for refinery_product_name, ore_name in
+    pairs{
+      saphirite = "ore1",
+      jivolite = "ore2",
+      stiratite = "ore3",
+      crotinnium = "ore4",
+      rubyte = "ore5",
+      bobmonium = "ore6"
+    }
+  do
     if angelsmods.trigger.refinery_products[refinery_product_name] then
-      angelsmods.functions.OV.patch_recipes{
-        {
-          name = "silo-"..ore_name,
-          ingredients = {
-            {type = "item", name = "angels-"..ore_name.."-crushed", amount = 10}
-          }
-        }
-      }
+      angelsmods.functions.OV.patch_recipes{{
+        name = "silo-" .. ore_name,
+        ingredients = {{
+          type = "item",
+          name = "angels-" .. ore_name .. "-crushed",
+          amount = 10
+        }}
+      }}
     else
-      angelsmods.functions.add_flag("silo-"..ore_name, "hidden")
-      angelsmods.functions.OV.disable_recipe("silo-"..ore_name)
+      angelsmods.functions.add_flag("silo-" .. ore_name, "hidden")
+      angelsmods.functions.OV.disable_recipe("silo-" .. ore_name)
     end
   end
-  angelsmods.functions.OV.patch_recipes{
-    {
-      name = "silo-coal",
-      ingredients = {
-        {type = "item", name = angelsmods.petrochem and "coal-crushed" or "coal", amount = 10}
-      }
-    }
-  }
+  angelsmods.functions.OV.patch_recipes{{
+    name = "silo-coal",
+    ingredients = {{
+      type = "item",
+      name = angelsmods.petrochem and "coal-crushed" or "coal",
+      amount = 10
+    }}
+  }}
   if angelsmods.petrochem then
     angelsmods.functions.OV.add_prereq("ore-silos", "angels-coal-processing")
   end
@@ -73,13 +77,19 @@ if angelsmods.addons.storage.silos then
   --LOGISTICS
   if mods["boblogistics"] then
   else
-    table.insert(data.raw.technology["logistic-silos"].unit.ingredients,
-      {type = "item", name = "utility-science-pack", amount = 1})
+    table.insert(data.raw.technology["logistic-silos"].unit.ingredients, {
+      type = "item",
+      name = "utility-science-pack",
+      amount = 1
+    })
   end
 
   --TECHNOLOGY
   if mods["bobtech"] and bobmods.tech.advanced_logistic_science then
-    table.insert(data.raw.technology["logistic-silos"].unit.ingredients,
-      {type = "item", name = "advanced-logistic-science-pack", amount = 1})
+    table.insert(data.raw.technology["logistic-silos"].unit.ingredients, {
+      type = "item",
+      name = "advanced-logistic-science-pack",
+      amount = 1
+    })
   end
 end

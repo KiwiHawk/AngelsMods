@@ -12,7 +12,12 @@ require("prototypes.overrides.global-tech-data")
 if angelsmods.industries.tech then
   OV.global_replace_science_packs(
     "space-science-pack",
-    {"automation-science-pack", "logistic-science-pack", "chemical-science-pack", "utility-science-pack"},
+    {
+      "automation-science-pack",
+      "logistic-science-pack",
+      "chemical-science-pack",
+      "utility-science-pack"
+    },
     "angels-science-pack-white"
   )
   OV.execute()
@@ -22,7 +27,11 @@ if angelsmods.industries.tech then
 
   OV.global_replace_science_packs(
     "utility-science-pack",
-    {"automation-science-pack", "logistic-science-pack", "chemical-science-pack"},
+    {
+      "automation-science-pack",
+      "logistic-science-pack",
+      "chemical-science-pack"
+    },
     "angels-science-pack-yellow"
   )
   OV.execute()
@@ -71,7 +80,6 @@ end
 require("prototypes.overrides.global-tech-base-packs") -- overrides for base + angel
 require("prototypes.overrides.global-tech-bobs-packs") -- overrides for bobs
 require("prototypes.overrides.global-tech-popular-addons") -- overrides for PMU (Popular Mod Updates)
-
 -- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
 if angelsmods.industries.tech then
   angelsmods.functions.AI.tech_unlock_reset()
@@ -86,7 +94,8 @@ if angelsmods.industries.tech then
   OV.global_replace_science_packs(
     "military-science-pack",
     {"production-science-pack"},
-    "datacore-war-1", 2
+    "datacore-war-1",
+    2
   )
   OV.execute()
   OV.global_replace_item("military-science-pack", "angels-science-pack-green")
@@ -98,10 +107,14 @@ if angelsmods.industries.tech then
   OV.global_replace_science_packs(
     "production-science-pack",
     {},
-    "datacore-processing-1", 2
+    "datacore-processing-1",
+    2
   )
   OV.execute()
-  OV.global_replace_item("production-science-pack", "angels-science-pack-yellow")  -- datacore replacement script needs to run first
+  OV.global_replace_item(
+    "production-science-pack",
+    "angels-science-pack-yellow"
+  ) -- datacore replacement script needs to run first
   angelsmods.functions.add_flag("production-science-pack", "hidden")
   OV.disable_recipe({"production-science-pack"})
   OV.global_replace_technology("production-science-pack", "tech-yellow-packs")
@@ -111,7 +124,6 @@ end
 -- MANUAL OVERRIDES FOR ANGELS CORES (no science packs in these files! Santa will kill you!)
 require("prototypes.overrides.global-tech-base-cores") -- overrides for base + angel
 require("prototypes.overrides.global-tech-bobs-cores") -- overrides for bobs
-
 -- GLOBAL UPDATE CORE TIERS DEPENDING ON SCIENCE PACKS
 if angelsmods.industries.tech then
   angelsmods.functions.AI.core_tier_upgrade()

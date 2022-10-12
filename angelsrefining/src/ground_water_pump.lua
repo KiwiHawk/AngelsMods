@@ -12,7 +12,11 @@ ground_water_pump.prototype_name = "ground-water-pump"
 -------------------------------------------------------------------------------
 -- Behavioural functions
 -------------------------------------------------------------------------------
-function ground_water_pump:rotate_entity(entity, entity_old_direction, player_index_who_rotated)
+function ground_water_pump:rotate_entity(
+entity,
+  entity_old_direction,
+  player_index_who_rotated
+)
   if entity and entity.valid and entity.name == self.prototype_name then
     local entity_surface = entity.surface
     local new_entity_table = {
@@ -33,7 +37,6 @@ function ground_water_pump:rotate_entity(entity, entity_old_direction, player_in
       else
         new_entity_table.position[2] = new_entity_table.position[2] - 1
       end
-
     elseif entity_old_direction == defines.direction.east then
       new_entity_table.direction = defines.direction.west
       if new_entity_table.position.x then
@@ -41,7 +44,6 @@ function ground_water_pump:rotate_entity(entity, entity_old_direction, player_in
       else
         new_entity_table.position[1] = new_entity_table.position[1] + 1
       end
-
     elseif entity_old_direction == defines.direction.south then
       new_entity_table.direction = defines.direction.north
       if new_entity_table.position.y then
@@ -49,7 +51,6 @@ function ground_water_pump:rotate_entity(entity, entity_old_direction, player_in
       else
         new_entity_table.position[2] = new_entity_table.position[2] + 1
       end
-
     elseif entity_old_direction == defines.direction.west then
       new_entity_table.direction = defines.direction.east
       if new_entity_table.position.x then
@@ -63,16 +64,16 @@ function ground_water_pump:rotate_entity(entity, entity_old_direction, player_in
   end
 end
 
-
-
 -------------------------------------------------------------------------------
 -- Event handlers
 -------------------------------------------------------------------------------
-function ground_water_pump:on_player_rotated_entity(entity, old_direction, player_index)
+function ground_water_pump:on_player_rotated_entity(
+entity,
+  old_direction,
+  player_index
+)
   self:rotate_entity(entity, old_direction, player_index)
 end
-
-
 
 -- Return class ---------------------------------------------------------------
 return ground_water_pump

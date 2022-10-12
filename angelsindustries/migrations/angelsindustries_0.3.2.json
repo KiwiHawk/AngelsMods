@@ -1,10 +1,4 @@
 {
-  "item":
-  [
-    ["angels-main-lab", "angels-main-lab-1"]
-  ],
-  "entity":
-  [
-    ["angels-main-lab", "angels-main-lab-1"]
-  ] 
+  "item": [["angels-main-lab", "angels-main-lab-1"]],
+  "entity": [["angels-main-lab", "angels-main-lab-1"]]
 }

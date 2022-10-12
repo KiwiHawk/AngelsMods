@@ -1,6 +1,7 @@
 {
-  "font":
-  {
-    "angels_square_font": ["__angelsexploration__/graphics/fonts/SquareFont.ttf"]
+  "font": {
+    "angels_square_font": [
+      "__angelsexploration__/graphics/fonts/SquareFont.ttf"
+    ]
   }
 }

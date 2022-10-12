@@ -4,7 +4,10 @@ require("prototypes.overrides.global-components-recipe")
 
 --hide the unused advanced defences
 OV.hide_recipe("angels-rocket-defense-equipment-vequip")
-angelsmods.functions.add_flag("angels-rocket-defense-equipment-vequip", "hidden")
+angelsmods.functions.add_flag(
+  "angels-rocket-defense-equipment-vequip",
+  "hidden"
+)
 OV.execute()
 
 if angelsmods.industries.components then
@@ -26,7 +29,7 @@ if angelsmods.industries.components then
     "block-extraction-3",
     "block-mprocessing-3",
     "block-cprocessing-3",
-    "block-bprocessing-3",
+    "block-bprocessing-3"
   })
 
   OV.global_replace_item(
@@ -46,7 +49,7 @@ if angelsmods.industries.components then
     "block-extraction-4",
     "block-mprocessing-4",
     "block-cprocessing-4",
-    "block-bprocessing-4",
+    "block-bprocessing-4"
   })
 
   OV.global_replace_item(
@@ -66,7 +69,7 @@ if angelsmods.industries.components then
     "block-extraction-5",
     "block-mprocessing-5",
     "block-cprocessing-5",
-    "block-bprocessing-5",
+    "block-bprocessing-5"
   })
   OV.execute()
 end
@@ -90,7 +93,7 @@ if angelsmods.industries.tech then
     "datacore-processing-3",
     "datacore-processing-4",
     "datacore-processing-5",
-    "datacore-processing-6",
+    "datacore-processing-6"
   })
   OV.execute()
 end
@@ -98,7 +101,9 @@ end
 --tech updates part 1
 require("prototypes.overrides.global-tech")
 --double check all items are updated if they had been tweaked wrong
-require("prototypes.overrides.components-base-entity-final-fixes.components-base-buildings-refining-final-fixes")
+require(
+  "prototypes.overrides.components-base-entity-final-fixes.components-base-buildings-refining-final-fixes"
+)
 
 if angelsmods.industries.components then
   --replace pre-req

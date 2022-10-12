@@ -4,157 +4,135 @@ local resource_autoplace = require("resource-autoplace")
 
 --Create autoplace
 local function make_resautoplace(input)
-  data:extend(
-    {
-      {
-        type = "autoplace-control",
-        name = input.name,
-        localised_name = {"", "[entity="..input.name.."] ", {"entity-name."..input.name}},
-        richness = true,
-        order = "b-" .. input.order,
-        category = "resource"
-      }
-    }
-  )
+  data:extend({{
+    type = "autoplace-control",
+    name = input.name,
+    localised_name = {
+      "",
+      "[entity=" .. input.name .. "] ",
+      {"entity-name." .. input.name}
+    },
+    richness = true,
+    order = "b-" .. input.order,
+    category = "resource"
+  }})
 end
 
 --Create particles
 local function make_particle(input)
   if not data.raw.particle[input.name .. "-particle"] then
-    data:extend(
-      {
-        {
-          type = "optimized-particle",
-          name = input.name .. "-particle",
-          --flags = {"not-on-map"},
-          life_time = 180,
-          pictures = {
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-1.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 5,
-              height = 5,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-2.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 7,
-              height = 5,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-3.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 6,
-              height = 7,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-4.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 9,
-              height = 8,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-5.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 5,
-              height = 5,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-6.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 6,
-              height = 4,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-7.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 7,
-              height = 8,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-8.png",
-              priority = "extra-high",
-              tint = input.tint,
-              width = 6,
-              height = 5,
-              frame_count = 1
-            }
-          },
-          shadows = {
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-1.png",
-              priority = "extra-high",
-              width = 5,
-              height = 5,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-2.png",
-              priority = "extra-high",
-              width = 7,
-              height = 5,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-3.png",
-              priority = "extra-high",
-              width = 6,
-              height = 7,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-4.png",
-              priority = "extra-high",
-              width = 9,
-              height = 8,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-5.png",
-              priority = "extra-high",
-              width = 5,
-              height = 5,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-6.png",
-              priority = "extra-high",
-              width = 6,
-              height = 4,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-7.png",
-              priority = "extra-high",
-              width = 7,
-              height = 8,
-              frame_count = 1
-            },
-            {
-              filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-8.png",
-              priority = "extra-high",
-              width = 6,
-              height = 5,
-              frame_count = 1
-            }
-          }
-        }
-      }
-    )
+    data:extend({{
+    --flags = {"not-on-map"},
+      type = "optimized-particle",
+      name = input.name .. "-particle",
+      life_time = 180,
+      pictures = {{
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-1.png",
+        priority = "extra-high",
+        tint = input.tint,
+        width = 5,
+        height = 5,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-2.png",
+        priority = "extra-high",
+        tint = input.tint,
+        width = 7,
+        height = 5,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-3.png",
+        priority = "extra-high",
+        tint = input.tint,
+        width = 6,
+        height = 7,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-4.png",
+        priority = "extra-high",
+        tint = input.tint,
+        width = 9,
+        height = 8,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-5.png",
+        priority = "extra-high",
+        tint = input.tint,
+        width = 5,
+        height = 5,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-6.png",
+        priority = "extra-high",
+        tint = input.tint,
+        width = 6,
+        height = 4,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-7.png",
+        priority = "extra-high",
+        tint = input.tint,
+        width = 7,
+        height = 8,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-8.png",
+        priority = "extra-high",
+        tint = input.tint,
+        width = 6,
+        height = 5,
+        frame_count = 1
+      }},
+      shadows = {{
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-1.png",
+        priority = "extra-high",
+        width = 5,
+        height = 5,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-2.png",
+        priority = "extra-high",
+        width = 7,
+        height = 5,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-3.png",
+        priority = "extra-high",
+        width = 6,
+        height = 7,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-4.png",
+        priority = "extra-high",
+        width = 9,
+        height = 8,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-5.png",
+        priority = "extra-high",
+        width = 5,
+        height = 5,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-6.png",
+        priority = "extra-high",
+        width = 6,
+        height = 4,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-7.png",
+        priority = "extra-high",
+        width = 7,
+        height = 8,
+        frame_count = 1
+      }, {
+        filename = "__angelsrefining__/graphics/entity/ores-particle/ore-particle-shadow-8.png",
+        priority = "extra-high",
+        width = 6,
+        height = 5,
+        frame_count = 1
+      }}
+    }})
   end
 end
 
@@ -172,8 +150,15 @@ local function make_resgfx(input)
       local stages_copy = table.deepcopy(data.raw.resource[input.get].stages)
       --log(serpent.block(stages_copy))
       return stages_copy
-    else
       --Sheet used for Copper Ore, angels-ore3 (Stiratite)
+      --Sheet used for Coal
+      --Sheet used for Iron Ore, angels-ore4 (Crotinium)
+      --Sheet used for Uranium Ore, angels-ore2 (Jivolite)
+      --Sheet used for Stone
+      --Sheet used for Coal, angels-ore1 (Saphirite)
+      --Sheet used for angels-ore5 (Rubyte)
+      --Sheet used for angels-ore6 (Bobmonium) --allow custom input ores
+    else
       if input.sheet == 1 then
         return {
           sheet = {
@@ -199,7 +184,6 @@ local function make_resgfx(input)
           }
         }
       end
-      --Sheet used for Coal
       if input.sheet == 2 then
         return {
           sheet = {
@@ -225,7 +209,6 @@ local function make_resgfx(input)
           }
         }
       end
-      --Sheet used for Iron Ore, angels-ore4 (Crotinium)
       if input.sheet == 3 then
         return {
           sheet = {
@@ -251,7 +234,6 @@ local function make_resgfx(input)
           }
         }
       end
-      --Sheet used for Uranium Ore, angels-ore2 (Jivolite)
       if input.sheet == 4 then
         return {
           sheet = {
@@ -277,7 +259,6 @@ local function make_resgfx(input)
           }
         }
       end
-      --Sheet used for Stone
       if input.sheet == 5 then
         return {
           sheet = {
@@ -303,7 +284,6 @@ local function make_resgfx(input)
           }
         }
       end
-      --Sheet used for Coal, angels-ore1 (Saphirite)
       if input.sheet == 6 then
         return {
           sheet = {
@@ -329,7 +309,6 @@ local function make_resgfx(input)
           }
         }
       end
-      --Sheet used for angels-ore5 (Rubyte)
       if input.sheet == 7 then
         return {
           sheet = {
@@ -355,7 +334,6 @@ local function make_resgfx(input)
           }
         }
       end
-      --Sheet used for angels-ore6 (Bobmonium)
       if input.sheet == 8 then
         return {
           sheet = {
@@ -488,7 +466,7 @@ local function make_resgfx(input)
         }
       end
       if type(input.sheet) == "table" then
-        return { sheet = input.sheet} --allow custom input ores
+        return {sheet = input.sheet}
       end
     end
   end
@@ -533,7 +511,7 @@ local function make_resgfx(input)
       }
     end
     if type(input.sheet) == "table" then
-      return { sheet = input.sheet} --allow custom input ores
+      return {sheet = input.sheet} --allow custom input ores
     end
   end
 end
@@ -546,9 +524,9 @@ local function make_resglow(input)
         local stages_input = data.raw.resource[input.get].stages
         input.frame_count = stages_input.sheet.frame_count
         input.variation_count = stages_input.sheet.variation_count
+        --skip
       else
         if input.frame_count and input.variation_count then
-          --skip
         elseif input.infinite == true then
           input.frame_count = 16
           input.variation_count = 4
@@ -895,10 +873,7 @@ local function generate_presets(resource)
   -- end
   for preset, conf in pairs(presets) do
     local set = data.raw["map-gen-presets"]["default"][preset]
-    if
-      set and set.basic_settings and set.basic_settings.autoplace_controls and
-        not set.basic_settings.autoplace_controls[resource]
-     then
+    if set and set.basic_settings and set.basic_settings.autoplace_controls and not set.basic_settings.autoplace_controls[resource] then
       set.basic_settings.autoplace_controls[resource] = conf
     end
   end
@@ -943,7 +918,10 @@ function angelsmods.functions.make_resource()
     }
     if not data.raw.resource[input.name] then
       --Setup autoplace (base game)
-      resource_autoplace.initialize_patch_set(input.name, input.autoplace.starting_area)
+      resource_autoplace.initialize_patch_set(
+        input.name,
+        input.autoplace.starting_area
+      )
       --Create Autopace for the resource
       make_resautoplace(input)
       generate_presets(input.name)
@@ -1005,8 +983,8 @@ function angelsmods.functions.make_resource()
           input.collision_box = {{-1.4, -1.4}, {1.4, 1.4}}
           input.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
         end
-      else
         --Unset resource category if resource yields fluids
+      else
         input.category = nil
         input.order = "a-" .. input.order
         input.highlight = false
@@ -1014,11 +992,7 @@ function angelsmods.functions.make_resource()
         input.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
       end
       --Add fluidrequirements according to mod options
-      if
-        input.acid_to_mine and angelsmods.ores and angelsmods.ores.enablefluidreq or
-          (input.name == "uranium-ore" or input.name == "infinite-uranium-ore") and
-            settings.startup["angels-keepuranacid"].value
-       then
+      if input.acid_to_mine and angelsmods.ores and angelsmods.ores.enablefluidreq or (input.name == "uranium-ore" or input.name == "infinite-uranium-ore") and settings.startup["angels-keepuranacid"].value then
         input.acid_amount = 10
       end
       --Get map_color and icon from the regular resource
@@ -1046,7 +1020,10 @@ function angelsmods.functions.make_resource()
         if not input.icon_size then
           input.icon_size = 32
         end
-        ret_table.icons = {{icon = input.icon, icon_size = input.icon_size}}
+        ret_table.icons = {{
+          icon = input.icon,
+          icon_size = input.icon_size
+        }}
       end
       ret_table.name = input.name
       ret_table.icon_size = input.icon_size
@@ -1062,16 +1039,14 @@ function angelsmods.functions.make_resource()
         mining_particle = input.particle,
         mining_time = input.mining_time,
         fluid_amount = input.acid_amount,
-        results = {
-          {
-            type = input.type,
-            name = input.output_name,
-            amount_min = input.output_min,
-            amount_max = input.output_max,
-            probability = input.output_probability,
-            temperature = input.temperature
-          }
-        }
+        results = {{
+          type = input.type,
+          name = input.output_name,
+          amount_min = input.output_min,
+          amount_max = input.output_max,
+          probability = input.output_probability,
+          temperature = input.temperature
+        }}
       }
       ret_table.collision_box = input.collision_box
       ret_table.selection_box = input.selection_box
@@ -1085,7 +1060,8 @@ function angelsmods.functions.make_resource()
       ret_table.max_effect_alpha = input.gfx_alpha_max
       ret_table.map_color = input.map_color
       ret_table.map_grid = input.map_grid
-      ret_table.autoplace = resource_autoplace.resource_autoplace_settings(autoplace_ret_table)
+      ret_table.autoplace =
+        resource_autoplace.resource_autoplace_settings(autoplace_ret_table)
       data:extend({ret_table})
     end
   end
@@ -1107,16 +1083,10 @@ function angelsmods.functions.remove_resource(resource)
 
   -- Remove from presets
   for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
-    if
-      preset and preset.basic_settings and preset.basic_settings.autoplace_controls and
-        preset.basic_settings.autoplace_controls[resource]
-     then
+    if preset and preset.basic_settings and preset.basic_settings.autoplace_controls and preset.basic_settings.autoplace_controls[resource] then
       preset.basic_settings.autoplace_controls[resource] = nil
     end
-    if
-      infinite_resource and preset and preset.basic_settings and preset.basic_settings.autoplace_controls and
-        preset.basic_settings.autoplace_controls[infinite_resource]
-     then
+    if infinite_resource and preset and preset.basic_settings and preset.basic_settings.autoplace_controls and preset.basic_settings.autoplace_controls[infinite_resource] then
       preset.basic_settings.autoplace_controls[infinite_resource] = nil
     end
   end
@@ -1142,9 +1112,11 @@ function angelsmods.functions.set_index()
     for r, input in pairs(subdir) do
       if input.get then
         if angelsmods.functions.store.update[input.get] then
-          input.autoplace.resource_index = angelsmods.functions.store.update[input.get].autoplace.resource_index
+          input.autoplace.resource_index =
+            angelsmods.functions.store.update[input.get].autoplace.resource_index
         else
-          input.autoplace.resource_index = angelsmods.functions.store.make[input.get].autoplace.resource_index
+          input.autoplace.resource_index =
+            angelsmods.functions.store.make[input.get].autoplace.resource_index
         end
       end
     end
@@ -1163,11 +1135,7 @@ function angelsmods.functions.update_autoplace()
         end
         --Add autoplace to resource
         if data.raw.resource[input.name] then
-          if
-            input.acid_to_mine and (angelsmods.ores and angelsmods.ores.enablefluidreq) or
-              (input.name == "uranium-ore" or input.name == "infinite-uranium-ore") and
-                settings.startup["angels-keepuranacid"].value
-           then
+          if input.acid_to_mine and (angelsmods.ores and angelsmods.ores.enablefluidreq) or (input.name == "uranium-ore" or input.name == "infinite-uranium-ore") and settings.startup["angels-keepuranacid"].value then
             if angelsmods.petrochem then
               if angelsmods.trigger.enableacids then
                 input.acid_req = input.acid_to_mine
@@ -1181,9 +1149,10 @@ function angelsmods.functions.update_autoplace()
                 input.acid_req = "sulfuric-acid"
               end
             end
-            data.raw.resource[input.name].minable.required_fluid = input.acid_req
-          -- log(serpent.block(input.acid_req))
-          -- log(serpent.block(data.raw.resource[input.name].minable.required_fluid))
+            data.raw.resource[input.name].minable.required_fluid =
+              input.acid_req
+            -- log(serpent.block(input.acid_req))
+            -- log(serpent.block(data.raw.resource[input.name].minable.required_fluid))
           end
         end
       end

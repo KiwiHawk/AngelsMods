@@ -13,17 +13,21 @@ st_wall.order = "a[stone-wall]-b[stone-wall]"
 st_wall.place_result = "wall-0"
 data:extend({st_wall})
 --recipe:
-data:extend(
-  {
-    {
-      type = "recipe",
-      name = "wall-0",
-      enabled = true,
-      ingredients = {{type = "item", name = "stone", amount = 5}, {type = "item", name = "wood", amount = 1}},
-      result = "wall-0"
-    }
-  }
-)
+data:extend({{
+  type = "recipe",
+  name = "wall-0",
+  enabled = true,
+  ingredients = {{
+    type = "item",
+    name = "stone",
+    amount = 5
+  }, {
+    type = "item",
+    name = "wood",
+    amount = 1
+  }},
+  result = "wall-0"
+}})
 -- STONE WALL TIER 1 -----------------------------------------------------------
 --functions for updates (TAKEN FROM LSLib on behalf of Lovely_Santa, NO COPY WITHOUT PRIOR PERMISSION)
 
@@ -35,12 +39,12 @@ local function addTintToSprite(sprite, tintToAdd)
     for layerIndex, layerSprite in pairs(sprite.layers) do
       sprite.layers[layerIndex] = addTintToSprite(layerSprite, tintToAdd)
     end
+    -- it has no effect, adding a tint to a shadow
   else
     if not sprite.draw_as_shadow then
-      -- it has no effect, adding a tint to a shadow
       sprite.tint = util.table.deepcopy(tintToAdd)
     end
-    if sprite.hr_version and (not sprite.hr_version.draw_as_shadow) then
+    if sprite.hr_version and not sprite.hr_version.draw_as_shadow then
       sprite.hr_version.tint = util.table.deepcopy(tintToAdd)
     end
   end
@@ -66,8 +70,8 @@ local addTintToSprite4Way = function(sprite4Way, tintToAdd)
   -- https://wiki.factorio.com/Types/Sprite4Way
 
   if sprite4Way.sheet then
-    -- https://wiki.factorio.com/Types/Sprite4Way#sheet
     sprite4Way.sheet = addTintToSprite(sprite4Way.sheet, tintToAdd)
+  -- https://wiki.factorio.com/Types/Sprite4Way#sheet
   elseif sprite4Way.sheets then
     -- https://wiki.factorio.com/Types/Sprite4Way#sheets
     for sheetIndex, sheet in pairs(sprite4Way.sheets) do
@@ -91,9 +95,15 @@ local wall_sprite_tint_update = function(wall_entity, tint)
     if pictureName == "water_connection_patch" or pictureName == "gate_connection_patch" then
       wall_entity.pictures[pictureName] = addTintToSprite4Way(picture, tint)
     else
-      wall_entity.pictures[pictureName] = addTintToSpriteVariation(picture, tint)
+      wall_entity.pictures[pictureName] =
+        addTintToSpriteVariation(picture, tint)
     end
   end
 end
 --updates:
-wall_sprite_tint_update(data.raw["wall"]["wall-0"], {r = 0.75, g = 0.75, b = 0.75, a = 1})
+wall_sprite_tint_update(data.raw["wall"]["wall-0"], {
+  r = 0.75,
+  g = 0.75,
+  b = 0.75,
+  a = 1
+})

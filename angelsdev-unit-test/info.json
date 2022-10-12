@@ -7,7 +7,5 @@
   "contact": "https://discord.gg/ff5p6KE",
   "homepage": "https://forums.factorio.com/viewforum.php?f=185",
   "description": "A tool to help process unit tests ingame",
-  "dependencies": [
-    "base >= 1.1.33"
-  ]
+  "dependencies": ["base >= 1.1.33"]
 }

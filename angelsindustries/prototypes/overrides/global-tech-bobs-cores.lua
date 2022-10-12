@@ -7,7 +7,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
     AI.core_replace("electrolysis-1", "basic", "processing")
-    OV.remove_prereq("electrolysis-1","tech-specialised-labs-basic")
+    OV.remove_prereq("electrolysis-1", "tech-specialised-labs-basic")
     OV.add_prereq("electrolysis-1", "tech-specialised-labs-basic-processing-1")
     AI.core_replace("electrolysis-2", "basic", "processing")
     AI.core_replace("grinding", "basic", "processing")
@@ -95,7 +95,7 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobclasses"] then
     --OV.set_science_pack("bodies", "datacore-enhance-2", 2)
-    AI.core_replace("bodies","basic","enhance")
+    AI.core_replace("bodies", "basic", "enhance")
   end
 
   -------------------------------------------------------------------------------
@@ -139,8 +139,14 @@ if angelsmods.industries.tech then
 
     OV.remove_science_pack("speed-module-3", "angels-science-pack-yellow")
     OV.remove_science_pack("effectivity-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("productivity-module-3", "angels-science-pack-yellow")
-    OV.remove_science_pack("angels-bio-yield-module-3", "angels-science-pack-yellow")
+    OV.remove_science_pack(
+      "productivity-module-3",
+      "angels-science-pack-yellow"
+    )
+    OV.remove_science_pack(
+      "angels-bio-yield-module-3",
+      "angels-science-pack-yellow"
+    )
   end
 
   -------------------------------------------------------------------------------
@@ -198,20 +204,52 @@ if angelsmods.industries.tech then
   -- BOBS VEHICLE EQUIPMENT -----------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobvehicleequipment"] then
-    OV.set_science_pack("vehicle-roboport-modular-equipment-1", "datacore-enhance-1", 2)
-    OV.set_science_pack("vehicle-roboport-modular-equipment-2", "datacore-enhance-1", 2)
-    OV.set_science_pack("vehicle-roboport-modular-equipment-3", "datacore-enhance-1", 2)
-    OV.set_science_pack("vehicle-roboport-modular-equipment-4", "datacore-enhance-1", 2)
+    OV.set_science_pack(
+      "vehicle-roboport-modular-equipment-1",
+      "datacore-enhance-1",
+      2
+    )
+    OV.set_science_pack(
+      "vehicle-roboport-modular-equipment-2",
+      "datacore-enhance-1",
+      2
+    )
+    OV.set_science_pack(
+      "vehicle-roboport-modular-equipment-3",
+      "datacore-enhance-1",
+      2
+    )
+    OV.set_science_pack(
+      "vehicle-roboport-modular-equipment-4",
+      "datacore-enhance-1",
+      2
+    )
   end
 
   -------------------------------------------------------------------------------
   -- BOBS PERSONAL EQUIPMENT ----------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobequipment"] then
-    OV.set_science_pack("personal-roboport-modular-equipment-1", "datacore-enhance-1", 2)
-    OV.set_science_pack("personal-roboport-modular-equipment-2", "datacore-enhance-1", 2)
-    OV.set_science_pack("personal-roboport-modular-equipment-3", "datacore-enhance-1", 2)
-    OV.set_science_pack("personal-roboport-modular-equipment-4", "datacore-enhance-1", 2)
+    OV.set_science_pack(
+      "personal-roboport-modular-equipment-1",
+      "datacore-enhance-1",
+      2
+    )
+    OV.set_science_pack(
+      "personal-roboport-modular-equipment-2",
+      "datacore-enhance-1",
+      2
+    )
+    OV.set_science_pack(
+      "personal-roboport-modular-equipment-3",
+      "datacore-enhance-1",
+      2
+    )
+    OV.set_science_pack(
+      "personal-roboport-modular-equipment-4",
+      "datacore-enhance-1",
+      2
+    )
   end
 
   -------------------------------------------------------------------------------
@@ -252,15 +290,42 @@ if angelsmods.industries.tech then
       OV.remove_science_pack("bob-battery-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("bob-battery-equipment-5", "datacore-enhance-1")
       OV.remove_science_pack("bob-battery-equipment-6", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-battery-equipment-4", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-battery-equipment-5", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-battery-equipment-6", "datacore-enhance-1")
-      OV.remove_science_pack("bob-energy-shield-equipment-4", "datacore-enhance-1")
-      OV.remove_science_pack("bob-energy-shield-equipment-5", "datacore-enhance-1")
-      OV.remove_science_pack("bob-energy-shield-equipment-6", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-energy-shield-equipment-4", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-energy-shield-equipment-5", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-energy-shield-equipment-6", "datacore-enhance-1")
+      OV.remove_science_pack(
+        "vehicle-battery-equipment-4",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-battery-equipment-5",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-battery-equipment-6",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "bob-energy-shield-equipment-4",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "bob-energy-shield-equipment-5",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "bob-energy-shield-equipment-6",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-energy-shield-equipment-4",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-energy-shield-equipment-5",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-energy-shield-equipment-6",
+        "datacore-enhance-1"
+      )
       OV.remove_science_pack("bob-explosive-artillery-shells", "datacore-war-1")
       OV.remove_science_pack("bob-fire-artillery-shells", "datacore-war-1")
       OV.remove_science_pack("bob-poison-artillery-shells", "datacore-war-1")
@@ -268,27 +333,56 @@ if angelsmods.industries.tech then
       OV.remove_science_pack("bob-power-armor-3", "datacore-enhance-1")
       OV.remove_science_pack("bob-power-armor-4", "datacore-enhance-1")
       OV.remove_science_pack("bob-power-armor-5", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-fusion-cell-equipment-4", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-fusion-cell-equipment-5", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-fusion-cell-equipment-6", "datacore-enhance-1")
+      OV.remove_science_pack(
+        "vehicle-fusion-cell-equipment-4",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-fusion-cell-equipment-5",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-fusion-cell-equipment-6",
+        "datacore-enhance-1"
+      )
       OV.remove_science_pack("fusion-reactor-equipment-2", "datacore-enhance-1")
       OV.remove_science_pack("fusion-reactor-equipment-3", "datacore-enhance-1")
       OV.remove_science_pack("fusion-reactor-equipment-4", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-big-turret-equipment-4", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-big-turret-equipment-5", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-big-turret-equipment-6", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-fusion-reactor-equipment-4", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-fusion-reactor-equipment-5", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-fusion-reactor-equipment-6", "datacore-enhance-1")
+      OV.remove_science_pack(
+        "vehicle-big-turret-equipment-4",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-big-turret-equipment-5",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-big-turret-equipment-6",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-fusion-reactor-equipment-4",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-fusion-reactor-equipment-5",
+        "datacore-enhance-1"
+      )
+      OV.remove_science_pack(
+        "vehicle-fusion-reactor-equipment-6",
+        "datacore-enhance-1"
+      )
 
-      table.insert(
-        data.raw.recipe["science-pack-gold"].ingredients,
-        {type = "item", name = "datacore-processing-2", amount = 1}
-      )
-      table.insert(
-        data.raw.recipe["science-pack-gold"].ingredients,
-        {type = "item", name = "datacore-enhance-2", amount = 1}
-      )
+      table.insert(data.raw.recipe["science-pack-gold"].ingredients, {
+        type = "item",
+        name = "datacore-processing-2",
+        amount = 1
+      })
+      table.insert(data.raw.recipe["science-pack-gold"].ingredients, {
+        type = "item",
+        name = "datacore-enhance-2",
+        amount = 1
+      })
     end
 
     if settings.startup["bobmods-burnerphase"].value then

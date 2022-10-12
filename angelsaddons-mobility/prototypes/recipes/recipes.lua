@@ -171,10 +171,10 @@ if angelsmods.addons.mobility.petrotrain.enabled then
     },
     "angels-petro-train"
   )
-  end
-  
-  --== Smelting ==--
-  if angelsmods.addons.mobility.smeltingtrain.enabled then
+end
+
+--== Smelting ==--
+if angelsmods.addons.mobility.smeltingtrain.enabled then
   funcs.generate_train_recipe(
     {
       type = "recipe",

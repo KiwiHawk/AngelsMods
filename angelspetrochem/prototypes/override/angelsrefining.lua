@@ -9,37 +9,77 @@ if angelsmods.refining then
   data.raw["item"]["liquifier"].icons[3].tint = angelsmods.petrochem.number_tint
 
   move_item("liquifier-2", "petrochem-buildings-electrolyser", "c[liquifier]-b")
-  data.raw["item"]["liquifier-2"].icons[3].tint = angelsmods.petrochem.number_tint
+  data.raw["item"]["liquifier-2"].icons[3].tint =
+    angelsmods.petrochem.number_tint
 
   move_item("liquifier-3", "petrochem-buildings-electrolyser", "c[liquifier]-c")
-  data.raw["item"]["liquifier-3"].icons[3].tint = angelsmods.petrochem.number_tint
+  data.raw["item"]["liquifier-3"].icons[3].tint =
+    angelsmods.petrochem.number_tint
 
   move_item("liquifier-4", "petrochem-buildings-electrolyser", "c[liquifier]-d")
-  data.raw["item"]["liquifier-4"].icons[3].tint = angelsmods.petrochem.number_tint
+  data.raw["item"]["liquifier-4"].icons[3].tint =
+    angelsmods.petrochem.number_tint
 
-  angelsmods.functions.add_crafting_category("assembling-machine", "advanced-chemical-plant", "liquifying")
-  angelsmods.functions.add_crafting_category("assembling-machine", "advanced-chemical-plant-2", "liquifying")
-
-  OV.patch_recipes(
-    {
-      {name = "carbon-separation-1", category = "liquifying"},
-      {name = "carbon-separation-2", category = "liquifying"},
-      {name = "liquifier", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-a"},
-      {name = "liquifier-2", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-b"},
-      {name = "liquifier-3", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-c"},
-      {name = "liquifier-4", subgroup = "petrochem-buildings-electrolyser", order = "b[liquifier]-d"},
-      {name = "angelsore8-dust", ingredients = {{name = "solid-sodium-hydroxide", 2}}},
-      {name = "angelsore9-dust", ingredients = {{name = "solid-sodium-hydroxide", 2}}},
-      {
-        name = "angelsore8-anode-sludge",
-        ingredients = {{name = "liquid-ferric-chloride-solution", type = "fluid", amount = 10}}
-      },
-      {
-        name = "angelsore9-anode-sludge",
-        ingredients = {{name = "liquid-cupric-chloride-solution", type = "fluid", amount = 10}}
-      }
-    }
+  angelsmods.functions.add_crafting_category(
+    "assembling-machine",
+    "advanced-chemical-plant",
+    "liquifying"
   )
+  angelsmods.functions.add_crafting_category(
+    "assembling-machine",
+    "advanced-chemical-plant-2",
+    "liquifying"
+  )
+
+  OV.patch_recipes({{
+    name = "carbon-separation-1",
+    category = "liquifying"
+  }, {
+    name = "carbon-separation-2",
+    category = "liquifying"
+  }, {
+    name = "liquifier",
+    subgroup = "petrochem-buildings-electrolyser",
+    order = "b[liquifier]-a"
+  }, {
+    name = "liquifier-2",
+    subgroup = "petrochem-buildings-electrolyser",
+    order = "b[liquifier]-b"
+  }, {
+    name = "liquifier-3",
+    subgroup = "petrochem-buildings-electrolyser",
+    order = "b[liquifier]-c"
+  }, {
+    name = "liquifier-4",
+    subgroup = "petrochem-buildings-electrolyser",
+    order = "b[liquifier]-d"
+  }, {
+    name = "angelsore8-dust",
+    ingredients = {{
+      name = "solid-sodium-hydroxide",
+      2
+    }}
+  }, {
+    name = "angelsore9-dust",
+    ingredients = {{
+      name = "solid-sodium-hydroxide",
+      2
+    }}
+  }, {
+    name = "angelsore8-anode-sludge",
+    ingredients = {{
+      name = "liquid-ferric-chloride-solution",
+      type = "fluid",
+      amount = 10
+    }}
+  }, {
+    name = "angelsore9-anode-sludge",
+    ingredients = {{
+      name = "liquid-cupric-chloride-solution",
+      type = "fluid",
+      amount = 10
+    }}
+  }})
 
   OV.remove_unlock("slag-processing-1", "liquifier")
   OV.add_unlock("basic-chemistry", "liquifier")
@@ -82,8 +122,8 @@ if angelsmods.refining then
   -- handle electric engine since lubricant moved...
   if mods["boblogistics"] then
     -- robotics required at green science
-  else
     -- robotics required at blue science
+  else
     OV.set_science_pack("electric-engine", "chemical-science-pack")
     OV.add_prereq("electric-engine", "chemical-science-pack")
   end
@@ -92,9 +132,19 @@ if angelsmods.refining then
   OV.remove_science_pack("ore-powderizer", "chemical-science-pack")
   OV.remove_prereq("ore-powderizer", "chemical-science-pack")
 
-  move_item("liquid-ferric-chloride-solution", "ore-processing-fluid", "a[ferrous]-e", "fluid")
+  move_item(
+    "liquid-ferric-chloride-solution",
+    "ore-processing-fluid",
+    "a[ferrous]-e",
+    "fluid"
+  )
   OV.add_unlock("chlorine-processing-1", "liquid-ferric-chloride-solution")
 
-  move_item("liquid-cupric-chloride-solution", "ore-processing-fluid", "b[cupric]-e", "fluid")
+  move_item(
+    "liquid-cupric-chloride-solution",
+    "ore-processing-fluid",
+    "b[cupric]-e",
+    "fluid"
+  )
   OV.add_unlock("chlorine-processing-1", "liquid-cupric-chloride-solution")
 end

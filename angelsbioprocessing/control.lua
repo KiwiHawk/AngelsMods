@@ -19,41 +19,76 @@ function on_ghost_build(ghost_entity)
   ghost_entity.item_requests = item_request_proxy
 end
 
-script.on_event(defines.events.on_built_entity, function(event)
-  on_ghost_build(event.created_entity)
-end, {
-  {filter = "ghost_type", type = "lab"},
-  {filter = "ghost_type", type = "mining-drill"}
-})
+script.on_event(
+  defines.events.on_built_entity,
+  function(event)
+    on_ghost_build(event.created_entity)
+  end,
+  {{
+    filter = "ghost_type",
+    type = "lab"
+  }, {
+    filter = "ghost_type",
+    type = "mining-drill"
+  }}
+)
 
-script.on_event(defines.events.on_robot_built_entity, function(event)
-  on_ghost_build(event.created_entity)
-end, {
-  {filter = "ghost_type", type = "lab"},
-  {filter = "ghost_type", type = "mining-drill"}
-})
+script.on_event(
+  defines.events.on_robot_built_entity,
+  function(event)
+    on_ghost_build(event.created_entity)
+  end,
+  {{
+    filter = "ghost_type",
+    type = "lab"
+  }, {
+    filter = "ghost_type",
+    type = "mining-drill"
+  }}
+)
 
-script.on_event(defines.events.on_entity_cloned, function(event)
-  on_ghost_build(event.source) -- you never know where the source came from...
-  on_ghost_build(event.destination)
-end, {
-  {filter = "ghost_type", type = "lab"},
-  {filter = "ghost_type", type = "mining-drill"}
-})
+script.on_event(
+  defines.events.on_entity_cloned,
+  function(event)
+    on_ghost_build(event.source) -- you never know where the source came from...
+    on_ghost_build(event.destination)
+  end,
+  {{
+    filter = "ghost_type",
+    type = "lab"
+  }, {
+    filter = "ghost_type",
+    type = "mining-drill"
+  }}
+)
 
-script.on_event(defines.events.script_raised_revive, function(event)
-  on_ghost_build(event.entity)
-end, {
-  {filter = "ghost_type", type = "lab"},
-  {filter = "ghost_type", type = "mining-drill"}
-})
+script.on_event(
+  defines.events.script_raised_revive,
+  function(event)
+    on_ghost_build(event.entity)
+  end,
+  {{
+    filter = "ghost_type",
+    type = "lab"
+  }, {
+    filter = "ghost_type",
+    type = "mining-drill"
+  }}
+)
 
-script.on_event(defines.events.script_raised_built, function(event)
-  on_ghost_build(event.entity)
-end, {
-  {filter = "ghost_type", type = "lab"},
-  {filter = "ghost_type", type = "mining-drill"}
-})
+script.on_event(
+  defines.events.script_raised_built,
+  function(event)
+    on_ghost_build(event.entity)
+  end,
+  {{
+    filter = "ghost_type",
+    type = "lab"
+  }, {
+    filter = "ghost_type",
+    type = "mining-drill"
+  }}
+)
 
 script.on_event(defines.events.on_player_fast_transferred, function(event)
   if not event.from_player then return end
@@ -78,12 +113,22 @@ script.on_event(defines.events.on_player_fast_transferred, function(event)
       if player_cursor_stack.valid_for_read then
         if player_cursor_stack.name == module_name then
           local player_cursor_stack_count = player_cursor_stack.count
-          player_cursor_stack.set_stack{name=module_name, count=player_cursor_stack_count + remaining}
-          remaining = remaining - (player_cursor_stack.count - player_cursor_stack_count)
+          player_cursor_stack.set_stack{
+            name = module_name,
+            count = player_cursor_stack_count + remaining
+          }
+          remaining =
+            remaining - (player_cursor_stack.count - player_cursor_stack_count)
         end
       else
-        if player_cursor_stack.can_set_stack{name=module_name, count=1} then
-          player_cursor_stack.set_stack{name=module_name, count=remaining}
+        if player_cursor_stack.can_set_stack{
+          name = module_name,
+          count = 1
+        } then
+          player_cursor_stack.set_stack{
+            name = module_name,
+            count = remaining
+          }
           if player_cursor_stack.valid_for_read and player_cursor_stack.name == module_name then
             remaining = remaining - player_cursor_stack.count
           end
@@ -95,10 +140,16 @@ script.on_event(defines.events.on_player_fast_transferred, function(event)
           count = remaining
         }
         if remaining > 0 then
-          player.surface.spill_item_stack(player.position, {
-            name = module_name,
-            count = remaining
-          }, true, entity.force, false)
+          player.surface.spill_item_stack(
+            player.position,
+            {
+              name = module_name,
+              count = remaining
+            },
+            true,
+            entity.force,
+            false
+          )
         end
       end
     end
@@ -109,7 +160,7 @@ script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
   local player = game.get_player(event.player_index)
   local opened_entity = player.opened
   if not (opened_entity and opened_entity.valid) then return end
-  if opened_entity.object_name == 'LuaEquipmentGrid' or opened_entity.object_name == 'LuaPlayer' then return end
+  if opened_entity.object_name == "LuaEquipmentGrid" or opened_entity.object_name == "LuaPlayer" then return end
   if not (opened_entity.type == "lab" or opened_entity.type == "mining-drill") then return end
 
   local player_cursor_stack = player.cursor_stack
@@ -128,12 +179,22 @@ script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
       if player_cursor_stack.valid_for_read then
         if player_cursor_stack.name == module_name then
           local player_cursor_stack_count = player_cursor_stack.count
-          player_cursor_stack.set_stack{name=module_name, count=player_cursor_stack_count + remaining}
-          remaining = remaining - (player_cursor_stack.count - player_cursor_stack_count)
+          player_cursor_stack.set_stack{
+            name = module_name,
+            count = player_cursor_stack_count + remaining
+          }
+          remaining =
+            remaining - (player_cursor_stack.count - player_cursor_stack_count)
         end
       else
-        if player_cursor_stack.can_set_stack{name=module_name, count=1} then
-          player_cursor_stack.set_stack{name=module_name, count=remaining}
+        if player_cursor_stack.can_set_stack{
+          name = module_name,
+          count = 1
+        } then
+          player_cursor_stack.set_stack{
+            name = module_name,
+            count = remaining
+          }
           if player_cursor_stack.valid_for_read and player_cursor_stack.name == module_name then
             remaining = remaining - player_cursor_stack.count
           end
@@ -145,10 +206,16 @@ script.on_event(defines.events.on_player_cursor_stack_changed, function(event)
           count = remaining
         }
         if remaining > 0 then
-          player.surface.spill_item_stack(player.position, {
-            name = module_name,
-            count = remaining
-          }, true, opened_entity.force, false)
+          player.surface.spill_item_stack(
+            player.position,
+            {
+              name = module_name,
+              count = remaining
+            },
+            true,
+            opened_entity.force,
+            false
+          )
         end
       end
     end
@@ -159,7 +226,7 @@ script.on_event(defines.events.on_player_main_inventory_changed, function(event)
   local player = game.get_player(event.player_index)
   local opened_entity = player.opened
   if not (opened_entity and opened_entity.valid) then return end
-  if opened_entity.object_name == 'LuaEquipmentGrid' or opened_entity.object_name == 'LuaPlayer' then return end
+  if opened_entity.object_name == "LuaEquipmentGrid" or opened_entity.object_name == "LuaPlayer" then return end
   if not (opened_entity.type == "lab" or opened_entity.type == "mining-drill") then return end
 
   local module_inventory = opened_entity.get_module_inventory()
@@ -177,10 +244,16 @@ script.on_event(defines.events.on_player_main_inventory_changed, function(event)
         count = remaining
       }
       if remaining > 0 then
-        player.surface.spill_item_stack(player.position, {
-          name = module_name,
-          count = remaining
-        }, true, opened_entity.force, false)
+        player.surface.spill_item_stack(
+          player.position,
+          {
+            name = module_name,
+            count = remaining
+          },
+          true,
+          opened_entity.force,
+          false
+        )
       end
     end
   end

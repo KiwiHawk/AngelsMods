@@ -17,7 +17,10 @@ table.insert(description, available_ores)
 
 local available_wells = {""}
 
-table.insert(available_wells, tnt.get_item_from_name("angels-fissure", "entity", ""))
+table.insert(
+  available_wells,
+  tnt.get_item_from_name("angels-fissure", "entity", "")
+)
 
 table.insert(description, available_wells)
 

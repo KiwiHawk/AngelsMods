@@ -1,6 +1,6 @@
 local sourceEntityTypes = {
   ["train-stop"] = true,
-  ["locomotive"] = true,
+  locomotive = true,
   ["cargo-wagon"] = true,
   ["fluid-wagon"] = true
 }
@@ -34,11 +34,7 @@ local on_entity_settings_pasted = function(event)
   local source = event.source
   local destination = event.destination
 
-  if (wagonsToCopy[source.name] or wagonsToCopy[destination.name]) and -- correct train to do behaviour for
-     ( (sourceEntityTypes[source.type] and destinationEntityTypes[destination.type]) or -- paste to a cargo or fluid wagon
-       (sourceEntityTypes[destination.type] and destinationEntityTypes[source.type])  )
-   then -- copy from a cargo or fluid wagon
-    
+  if (wagonsToCopy[source.name] or wagonsToCopy[destination.name]) and ((sourceEntityTypes[source.type] and destinationEntityTypes[destination.type]) or (sourceEntityTypes[destination.type] and destinationEntityTypes[source.type])) then -- correct train to do behaviour for -- paste to a cargo or fluid wagon -- copy from a cargo or fluid wagon
     local source_color = source.color or source.prototype.color
     if source_color then
       local destination_color = destination.color or destination.prototype.color
@@ -53,17 +49,16 @@ local on_entity_settings_pasted = function(event)
 end
 
 local init_events = function()
-  script.on_event(defines.events.on_entity_settings_pasted, on_entity_settings_pasted)
+  script.on_event(
+    defines.events.on_entity_settings_pasted,
+    on_entity_settings_pasted
+  )
 end
 
-script.on_load(
-  function()
-    init_events()
-  end
-)
+script.on_load(function()
+  init_events()
+end)
 
-script.on_init(
-  function()
-    init_events()
-  end
-)
+script.on_init(function()
+  init_events()
+end)

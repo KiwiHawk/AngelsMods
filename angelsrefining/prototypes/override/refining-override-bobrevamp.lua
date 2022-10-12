@@ -1,7 +1,6 @@
 local OV = angelsmods.functions.OV
 
 if mods["bobrevamp"] then
-
   -----------------------------------------------------------------------------
   -- LIMESTONE ----------------------------------------------------------------
   -----------------------------------------------------------------------------
@@ -13,14 +12,16 @@ if mods["bobrevamp"] then
     else
       if limestone then
         data.raw.item["limestone"].icon = nil
-        data.raw.item["limestone"].icons = {
-          {icon = "__angelsrefining__/graphics/icons/solid-limestone.png", icon_size = 32}
-        }
+        data.raw.item["limestone"].icons = {{
+          icon = "__angelsrefining__/graphics/icons/solid-limestone.png",
+          icon_size = 32
+        }}
 
         data.raw.recipe["limestone"].icon = nil
-        data.raw.recipe["limestone"].icons = {
-          {icon = "__angelsrefining__/graphics/icons/solid-limestone.png", icon_size = 32}
-        }
+        data.raw.recipe["limestone"].icons = {{
+          icon = "__angelsrefining__/graphics/icons/solid-limestone.png",
+          icon_size = 32
+        }}
       end
     end
   end

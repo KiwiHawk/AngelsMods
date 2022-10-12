@@ -1,11 +1,16 @@
 if angelsmods.addons.storage.warehouses then
   if angelsmods.addons.storage.icon_scaling then
     data.raw["container"]["angels-warehouse"].scale_info_icons = true
-    data.raw["logistic-container"]["angels-warehouse-passive-provider"].scale_info_icons = true
-    data.raw["logistic-container"]["angels-warehouse-active-provider"].scale_info_icons = true
-    data.raw["logistic-container"]["angels-warehouse-storage"].scale_info_icons = true
-    data.raw["logistic-container"]["angels-warehouse-requester"].scale_info_icons = true
-    data.raw["logistic-container"]["angels-warehouse-buffer"].scale_info_icons = true
+    data.raw["logistic-container"]["angels-warehouse-passive-provider"].scale_info_icons
+    = true
+    data.raw["logistic-container"]["angels-warehouse-active-provider"].scale_info_icons
+    = true
+    data.raw["logistic-container"]["angels-warehouse-storage"].scale_info_icons
+    = true
+    data.raw["logistic-container"]["angels-warehouse-requester"].scale_info_icons
+    = true
+    data.raw["logistic-container"]["angels-warehouse-buffer"].scale_info_icons =
+      true
   end
 
   --OVERRIDE FOR ANGELS
@@ -19,14 +24,25 @@ if angelsmods.addons.storage.warehouses then
   --LOGISTICS
   if mods["boblogistics"] then
   else
-    table.insert(data.raw.technology["angels-logistic-warehouses"].unit.ingredients,
-      {type = "item", name = "utility-science-pack", amount = 1})
+    table.insert(
+      data.raw.technology["angels-logistic-warehouses"].unit.ingredients,
+      {
+        type = "item",
+        name = "utility-science-pack",
+        amount = 1
+      }
+    )
   end
 
   --TECHNOLOGY
   if mods["bobtech"] and bobmods.tech.advanced_logistic_science then
-    table.insert(data.raw.technology["angels-logistic-warehouses"].unit.ingredients,
-      {type = "item", name = "advanced-logistic-science-pack", amount = 1})
+    table.insert(
+      data.raw.technology["angels-logistic-warehouses"].unit.ingredients,
+      {
+        type = "item",
+        name = "advanced-logistic-science-pack",
+        amount = 1
+      }
+    )
   end
-
 end

@@ -1,16 +1,29 @@
 local OV = angelsmods.functions.OV
 
-OV.disable_technology({"angels-yellow-loader", "angels-red-loader", "angels-blue-loader"})
+OV.disable_technology({
+  "angels-yellow-loader",
+  "angels-red-loader",
+  "angels-blue-loader"
+})
 OV.add_unlock("optics", "angels-lamp")
 
-if mods ["boblogistics"] then
-  OV.remove_science_pack("angels-ghosting-construction-robots", "chemical-science-pack")
+if mods["boblogistics"] then
+  OV.remove_science_pack(
+    "angels-ghosting-construction-robots",
+    "chemical-science-pack"
+  )
 end
 
 if mods["bobvehicleequipment"] then
   -- crawler
-  table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories, "car")
-  table.insert(data.raw["equipment-grid"]["angels-crawler"].equipment_categories, "vehicle")
+  table.insert(
+    data.raw["equipment-grid"]["angels-crawler"].equipment_categories,
+    "car"
+  )
+  table.insert(
+    data.raw["equipment-grid"]["angels-crawler"].equipment_categories,
+    "vehicle"
+  )
 end
 
 OV.execute()

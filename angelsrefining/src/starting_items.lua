@@ -10,7 +10,10 @@ local starting_items = {}
 -------------------------------------------------------------------------------
 -- Behavioural functions
 -------------------------------------------------------------------------------
-function starting_items:increment_freeplay_starting_item(item_name, incremental_amount)
+function starting_items:increment_freeplay_starting_item(
+item_name,
+  incremental_amount
+)
   -- note that incremental_amount can be negative to reduce the amount.
   if remote.interfaces["freeplay"] then
     local items_to_insert = remote.call("freeplay", "get_created_items")
@@ -22,19 +25,19 @@ end
 
 function starting_items:configure_starting_items()
   -- configuration settings
-  local technology_overhaul = game.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value or false
-  local components_overhaul = technology_overhaul or (game.active_mods["angelsindustries"] and settings.startup["angels-enable-components"].value) or false
+  local technology_overhaul =
+    game.active_mods["angelsindustries"] and settings.startup["angels-enable-tech"].value or false
+  local components_overhaul =
+    technology_overhaul or (game.active_mods["angelsindustries"] and settings.startup["angels-enable-components"].value) or false
 
   self:increment_freeplay_starting_item("burner-ore-crusher", 1)
 
-  if game.active_mods["bobclasses"] then-- fix character classes starting point
+  if game.active_mods["bobclasses"] then -- fix character classes starting point
     if components_overhaul then
       self:increment_freeplay_starting_item("iron-plate", 2)
     end
   end
 end
-
-
 
 -------------------------------------------------------------------------------
 -- Event handlers
@@ -42,8 +45,6 @@ end
 function starting_items:on_init()
   self:configure_starting_items()
 end
-
-
 
 -- Return class ---------------------------------------------------------------
 return starting_items

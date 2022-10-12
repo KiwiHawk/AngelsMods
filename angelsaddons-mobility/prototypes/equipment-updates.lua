@@ -1,26 +1,72 @@
 local funcs = require("prototypes/train-functions")
 
 -- base game
-funcs.update_equipment("energy-shield-equipment", "energy-shield-equipment", "angels-basegame-defense")
-funcs.update_equipment("energy-shield-equipment", "energy-shield-mk2-equipment", "angels-basegame-defense")
+funcs.update_equipment(
+  "energy-shield-equipment",
+  "energy-shield-equipment",
+  "angels-basegame-defense"
+)
+funcs.update_equipment(
+  "energy-shield-equipment",
+  "energy-shield-mk2-equipment",
+  "angels-basegame-defense"
+)
 
-funcs.update_equipment("battery-equipment", "battery-equipment", "angels-basegame-energy")
-funcs.update_equipment("battery-equipment", "battery-mk2-equipment", "angels-basegame-energy")
-funcs.update_equipment("solar-panel-equipment", "solar-panel-equipment", "angels-basegame-energy")
-funcs.update_equipment("generator-equipment", "fusion-reactor-equipment", "angels-basegame-energy")
+funcs.update_equipment(
+  "battery-equipment",
+  "battery-equipment",
+  "angels-basegame-energy"
+)
+funcs.update_equipment(
+  "battery-equipment",
+  "battery-mk2-equipment",
+  "angels-basegame-energy"
+)
+funcs.update_equipment(
+  "solar-panel-equipment",
+  "solar-panel-equipment",
+  "angels-basegame-energy"
+)
+funcs.update_equipment(
+  "generator-equipment",
+  "fusion-reactor-equipment",
+  "angels-basegame-energy"
+)
 
-funcs.update_equipment("active-defense-equipment", "personal-laser-defense-equipment", "angels-basegame-attack")
-funcs.update_equipment("active-defense-equipment", "discharge-defense-equipment", "angels-basegame-attack")
+funcs.update_equipment(
+  "active-defense-equipment",
+  "personal-laser-defense-equipment",
+  "angels-basegame-attack"
+)
+funcs.update_equipment(
+  "active-defense-equipment",
+  "discharge-defense-equipment",
+  "angels-basegame-attack"
+)
 
-funcs.update_equipment("movement-bonus-equipment", "exoskeleton-equipment", "angels-basegame-movement")
+funcs.update_equipment(
+  "movement-bonus-equipment",
+  "exoskeleton-equipment",
+  "angels-basegame-movement"
+)
 --funcs.update_equipment("belt-immunity-equipment", "belt-immunity-equipment", "angels-basegame-movement")
 
-funcs.update_equipment("roboport-equipment", "personal-roboport-equipment", "angels-basegame-construction")
-funcs.update_equipment("roboport-equipment", "personal-roboport-mk2-equipment", "angels-basegame-construction")
+funcs.update_equipment(
+  "roboport-equipment",
+  "personal-roboport-equipment",
+  "angels-basegame-construction"
+)
+funcs.update_equipment(
+  "roboport-equipment",
+  "personal-roboport-mk2-equipment",
+  "angels-basegame-construction"
+)
 
 if mods["angelsindustries"] then
-  data.raw["item-subgroup"]["angels-vehicle-train-crawler"].group = "angels-vehicles"
-  data.raw["item-subgroup"]["angels-vehicle-train-crawler"].order = "bc[crawler-train]"
+  data.raw["item-subgroup"]["angels-vehicle-train-crawler"].group =
+    "angels-vehicles"
+  data.raw["item-subgroup"]["angels-vehicle-train-crawler"].order =
+    "bc[crawler-train]"
   data.raw["item-subgroup"]["angels-petrotrain"].group = "angels-vehicles"
   data.raw["item-subgroup"]["angels-petrotrain"].order = "bd[petro-train]"
   data.raw["item-subgroup"]["angels-smeltingtrain"].group = "angels-vehicles"
@@ -28,38 +74,118 @@ if mods["angelsindustries"] then
 end
 
 if mods["space-exploration"] then
-  funcs.update_equipment("generator-equipment", "se-rtg-equipment", "angels-basegame-energy")
-  funcs.update_equipment("generator-equipment", "se-rtg-equipment-2", "angels-basegame-energy")
+  funcs.update_equipment(
+    "generator-equipment",
+    "se-rtg-equipment",
+    "angels-basegame-energy"
+  )
+  funcs.update_equipment(
+    "generator-equipment",
+    "se-rtg-equipment-2",
+    "angels-basegame-energy"
+  )
 
-  funcs.update_equipment("energy-shield-equipment", "se-adaptive-armour-equipment-1", "angels-basegame-defense")
-  funcs.update_equipment("energy-shield-equipment", "se-adaptive-armour-equipment-2", "angels-basegame-defense")
-  funcs.update_equipment("energy-shield-equipment", "se-adaptive-armour-equipment-3", "angels-basegame-defense")
-  funcs.update_equipment("energy-shield-equipment", "se-adaptive-armour-equipment-4", "angels-basegame-defense")
-  funcs.update_equipment("energy-shield-equipment", "se-adaptive-armour-equipment-5", "angels-basegame-defense")
-  funcs.update_equipment("energy-shield-equipment", "energy-shield-mk3-equipment", "angels-basegame-defense")
-  funcs.update_equipment("energy-shield-equipment", "energy-shield-mk4-equipment", "angels-basegame-defense")
-  funcs.update_equipment("energy-shield-equipment", "energy-shield-mk5-equipment", "angels-basegame-defense")
-  funcs.update_equipment("energy-shield-equipment", "energy-shield-mk6-equipment", "angels-basegame-defense")
+  funcs.update_equipment(
+    "energy-shield-equipment",
+    "se-adaptive-armour-equipment-1",
+    "angels-basegame-defense"
+  )
+  funcs.update_equipment(
+    "energy-shield-equipment",
+    "se-adaptive-armour-equipment-2",
+    "angels-basegame-defense"
+  )
+  funcs.update_equipment(
+    "energy-shield-equipment",
+    "se-adaptive-armour-equipment-3",
+    "angels-basegame-defense"
+  )
+  funcs.update_equipment(
+    "energy-shield-equipment",
+    "se-adaptive-armour-equipment-4",
+    "angels-basegame-defense"
+  )
+  funcs.update_equipment(
+    "energy-shield-equipment",
+    "se-adaptive-armour-equipment-5",
+    "angels-basegame-defense"
+  )
+  funcs.update_equipment(
+    "energy-shield-equipment",
+    "energy-shield-mk3-equipment",
+    "angels-basegame-defense"
+  )
+  funcs.update_equipment(
+    "energy-shield-equipment",
+    "energy-shield-mk4-equipment",
+    "angels-basegame-defense"
+  )
+  funcs.update_equipment(
+    "energy-shield-equipment",
+    "energy-shield-mk5-equipment",
+    "angels-basegame-defense"
+  )
+  funcs.update_equipment(
+    "energy-shield-equipment",
+    "energy-shield-mk6-equipment",
+    "angels-basegame-defense"
+  )
 end
 
 if mods["Krastorio2"] then
-  funcs.update_equipment("movement-bonus-equipment", "additional-engine", "angels-basegame-movement")
-  funcs.update_equipment("movement-bonus-equipment", "advanced-additional-engine", "angels-basegame-movement")
+  funcs.update_equipment(
+    "movement-bonus-equipment",
+    "additional-engine",
+    "angels-basegame-movement"
+  )
+  funcs.update_equipment(
+    "movement-bonus-equipment",
+    "advanced-additional-engine",
+    "angels-basegame-movement"
+  )
 
-  funcs.update_equipment("roboport-equipment", "vehicle-roboport", "angels-basegame-construction")
+  funcs.update_equipment(
+    "roboport-equipment",
+    "vehicle-roboport",
+    "angels-basegame-construction"
+  )
 end
 
 if mods["Power Armor MK3"] then
-  funcs.update_equipment("energy-shield-equipment", "pamk3-esmk3", "angels-basegame-defense")
+  funcs.update_equipment(
+    "energy-shield-equipment",
+    "pamk3-esmk3",
+    "angels-basegame-defense"
+  )
 
-  funcs.update_equipment("battery-equipment", "pamk3-battmk3", "angels-basegame-energy")
-  funcs.update_equipment("generator-equipment", "pamk3-pnr", "angels-basegame-energy")
-  funcs.update_equipment("generator-equipment", "pamk3-se", "angels-basegame-energy")
+  funcs.update_equipment(
+    "battery-equipment",
+    "pamk3-battmk3",
+    "angels-basegame-energy"
+  )
+  funcs.update_equipment(
+    "generator-equipment",
+    "pamk3-pnr",
+    "angels-basegame-energy"
+  )
+  funcs.update_equipment(
+    "generator-equipment",
+    "pamk3-se",
+    "angels-basegame-energy"
+  )
 end
 
 if mods["Portable_power"] then
-  funcs.update_equipment("generator-equipment", "portable-generator-equipment", "angels-basegame-energy")
-  funcs.update_equipment("generator-equipment", "portable-reactor-equipment", "angels-basegame-energy")
+  funcs.update_equipment(
+    "generator-equipment",
+    "portable-generator-equipment",
+    "angels-basegame-energy"
+  )
+  funcs.update_equipment(
+    "generator-equipment",
+    "portable-reactor-equipment",
+    "angels-basegame-energy"
+  )
 end
 
 if angelsmods.petrochem then
@@ -77,25 +203,19 @@ end
 
 --equipment grid groupings
 local default = "angels-void" --remove with vanilla adds
-local vanilla = {--vanilla adds/gets removed with bobs
+local vanilla = {
+  --vanilla adds/gets removed with bobs
   loco = {
     "angels-basegame-energy",
     "angels-basegame-defense",
     "angels-basegame-attack",
     "angels-basegame-movement"
   },
-  wagon = { --vanilla adds/gets removed with bobs
-    "angels-basegame-energy",
-    "angels-basegame-defense",
-    "angels-basegame-attack"
-  }
+  wagon = {--vanilla adds/gets removed with bobs
+  "angels-basegame-energy", "angels-basegame-defense", "angels-basegame-attack"}
 }
 local industries = {
-  loco = {
-    "angels-energy",
-    "angels-heavy-defense",
-    "angels-movement"
-  },
+  loco = {"angels-energy", "angels-heavy-defense", "angels-movement"},
   wagon = {
     "angels-energy",
     "angels-heavy-defense",
@@ -104,15 +224,8 @@ local industries = {
   }
 }
 local bobs = {
-  loco = {
-    "train",
-    "vehicle",
-    "locomotive"
-  },
-  wagon = {
-    "train",
-    "vehicle"
-  }
+  loco = {"train", "vehicle", "locomotive"},
+  wagon = {"train", "vehicle"}
 }
 
 local trains = {
@@ -157,7 +270,10 @@ end
 if mods["bobvehicleequipment"] then
   funcs.update_equipment_grid("angels-crawler-bot-wagon", "cargo-wagon")
 else
-  funcs.update_equipment_grid("angels-crawler-bot-wagon", "angels-basegame-construction")
+  funcs.update_equipment_grid(
+    "angels-crawler-bot-wagon",
+    "angels-basegame-construction"
+  )
 end
 if mods["angelsindustries"] then
   funcs.update_equipment_grid("angels-crawler-bot-wagon", "angels-construction")

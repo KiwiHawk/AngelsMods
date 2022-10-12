@@ -3,17 +3,10 @@ if angelsmods.industries.components then
 
   if mods["boblogistics"] then
     if not mods["bobelectronics"] then
-      OV.patch_recipes(
-        {
-          {
-            name = "lab",
-            ingredients = {
-              {"block-electronics-0", "block-electronics-1"}
-            }
-          },
-        }
-      )
+      OV.patch_recipes({{
+        name = "lab",
+        ingredients = {{"block-electronics-0", "block-electronics-1"}}
+      }})
     end
   end
-
 end

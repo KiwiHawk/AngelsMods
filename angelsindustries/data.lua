@@ -1,13 +1,19 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.industries = angelsmods.industries or {}
-angelsmods.industries.number_tint = {r = 1, g = 0, b = 1, a = 1}
-angelsmods.industries.tech_exceptions = angelsmods.industries.tech_exceptions or {}
+angelsmods.industries.number_tint = {
+  r = 1,
+  g = 0,
+  b = 1,
+  a = 1
+}
+angelsmods.industries.tech_exceptions =
+  angelsmods.industries.tech_exceptions or {}
 
 --TRIGGER CHECKS
 angelsmods.industries.tech = settings.startup["angels-enable-tech"].value -- enable technology overhaul
-
-angelsmods.industries.components = settings.startup["angels-enable-components"].value
+angelsmods.industries.components =
+  settings.startup["angels-enable-components"].value
 angelsmods.industries.blocks = angelsmods.industries.blocks or {}
 angelsmods.industries.blocks.exploration = false
 angelsmods.industries.blocks.logistic = false
@@ -27,14 +33,16 @@ if angelsmods.industries.tech == true then
   end
 end
 
-angelsmods.industries.overhaul = settings.startup["angels-enable-industries"].value -- enable industries
+angelsmods.industries.overhaul =
+  settings.startup["angels-enable-industries"].value -- enable industries
 if mods["bobplates"] or angelsmods.industries.components then
   angelsmods.industries.overhaul = true
 end
 
 angelsmods.industries.return_ingredients =
   angelsmods.industries.components and settings.startup["angels-return-ingredients"].value or false
-angelsmods.industries.block_stack_size = settings.startup["angels-components-stack-size"].value
+angelsmods.industries.block_stack_size =
+  settings.startup["angels-components-stack-size"].value
 
 -- set triggers for other angel mods
 require("prototypes.angels-industries-triggers")

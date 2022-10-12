@@ -1,16 +1,17 @@
 local setting = require("prototypes/settings").equipment
 local energyInterface = setting["energy-interface"]
 
-local localisedPrefixes = {
-  {"si-prefix-symbol-kilo"},
-  {"si-prefix-symbol-mega"},
-  {"si-prefix-symbol-giga"},
-  {"si-prefix-symbol-tera"},
-  {"si-prefix-symbol-peta"},
-  {"si-prefix-symbol-exa"},
-  {"si-prefix-symbol-zetta"},
-  {"si-prefix-symbol-yotta"}
-}
+local localisedPrefixes =
+  {
+    {"si-prefix-symbol-kilo"},
+    {"si-prefix-symbol-mega"},
+    {"si-prefix-symbol-giga"},
+    {"si-prefix-symbol-tera"},
+    {"si-prefix-symbol-peta"},
+    {"si-prefix-symbol-exa"},
+    {"si-prefix-symbol-zetta"},
+    {"si-prefix-symbol-yotta"}
+  }
 local getLocalisedUnit = function(value, localisedUnitSymbol, roundPresicion)
   -- roundPresicion defaults to 0 (aka integer value)
 
@@ -27,9 +28,14 @@ local getLocalisedUnit = function(value, localisedUnitSymbol, roundPresicion)
     roundPresicion = roundPresicion > 0 and roundPresicion or nil
   end
 
-  return {"",
-    string.format(roundPresicion and "%."..roundPresicion.."f " or "%i ", value),
-    prefix or localisedUnitSymbol, prefix and localisedUnitSymbol or nil,
+  return {
+    "",
+    string.format(
+      roundPresicion and "%." .. roundPresicion .. "f " or "%i ",
+      value
+    ),
+    prefix or localisedUnitSymbol,
+    prefix and localisedUnitSymbol or nil
   }
 end
 
@@ -39,17 +45,29 @@ end
 data:extend{{
   type = "item",
   name = string.format(energyInterface.name, "-mk1"),
-  localised_name = {"equipment-name."..string.format(energyInterface.name, ""), "MK1"},
-  localised_description = {"",
-    {"equipment-description."..string.format(energyInterface.name, "")},
-    {"tooltip-description.custom-parameter",
+  localised_name = {
+    "equipment-name." .. string.format(energyInterface.name, ""),
+    "MK1"
+  },
+  localised_description = {
+    "",
+    {"equipment-description." .. string.format(energyInterface.name, "")},
+    {
+      "tooltip-description.custom-parameter",
       {"custom-parameter-description.maximum-power-transfer"},
-      getLocalisedUnit(energyInterface.transferRates["mk1"] * 60, {"si-unit-symbol-watt"})
+      getLocalisedUnit(energyInterface.transferRates["mk1"] * 60, {
+        "si-unit-symbol-watt"
+      })
     },
-    {"tooltip-description.custom-parameter",
+    {
+      "tooltip-description.custom-parameter",
       {"description.supply-area"},
-      string.format("%i×%i", energyInterface.supplyArea, energyInterface.supplyArea)
-    },
+      string.format(
+        "%i×%i",
+        energyInterface.supplyArea,
+        energyInterface.supplyArea
+      )
+    }
   },
   icon = "__angelsaddons-cab__/graphics/icons/cab-energy-interface-mk1.png",
   icon_size = 32,
@@ -61,42 +79,57 @@ data:extend{{
 }}
 data:extend{{
   type = "night-vision-equipment",
-  name = data.raw["item"][string.format(energyInterface.name, "-mk1")].placed_as_equipment_result,
-  localised_name        = data.raw["item"][string.format(energyInterface.name, "-mk1")].localised_name,
-  localised_description = data.raw["item"][string.format(energyInterface.name, "-mk1")].localised_description,
-  sprite =
-  {
+  name = data.raw["item"][string.format(
+    energyInterface.name,
+    "-mk1"
+  )].placed_as_equipment_result,
+  localised_name = data.raw["item"][string.format(
+    energyInterface.name,
+    "-mk1"
+  )].localised_name,
+  localised_description = data.raw["item"][string.format(
+    energyInterface.name,
+    "-mk1"
+  )].localised_description,
+  sprite = {
     filename = "__angelsaddons-cab__/graphics/equipment/cab-energy-interface-mk1.png",
     width = 96,
     height = 96,
     priority = "medium"
   },
-  shape =
-  {
+  shape = {
     width = 4,
     height = 4,
     type = "full"
   },
-  energy_source =
-  {
+  energy_source = {
     type = "electric",
     usage_priority = "secondary-input",
-    buffer_capacity   = string.format("%iJ", energyInterface.transferRates["mk1"]),
+    buffer_capacity = string.format(
+      "%iJ",
+      energyInterface.transferRates["mk1"]
+    ),
     --drain             = "0W",
-    input_flow_limit  = string.format("%iW", energyInterface.transferRates["mk1"] * 60),
+    input_flow_limit = string.format(
+      "%iW",
+      energyInterface.transferRates["mk1"] * 60
+    )
     --output_flow_limit = "0W",
   },
   energy_input = "0W",
-  tint = {r = 1, g = 1, b = 1, a = 0},
-  desaturation_params =
-  {
+  tint = {
+    r = 1,
+    g = 1,
+    b = 1,
+    a = 0
+  },
+  desaturation_params = {
     smoothstep_min = 0.1,
     smoothstep_max = 0.7,
     minimum = 0.3,
     maximum = 1.0
   },
-  light_params =
-  {
+  light_params = {
     smoothstep_min = 0.1,
     smoothstep_max = 0.7,
     minimum = 0.666,
@@ -108,12 +141,26 @@ data:extend{{
 }}
 data:extend{{
   type = "electric-energy-interface",
-  name = data.raw["item"][string.format(energyInterface.name, "-mk1")].placed_as_equipment_result,
-  localised_name        = data.raw["item"][string.format(energyInterface.name, "-mk1")].localised_name,
-  localised_description = data.raw["item"][string.format(energyInterface.name, "-mk1")].localised_description,
+  name = data.raw["item"][string.format(
+    energyInterface.name,
+    "-mk1"
+  )].placed_as_equipment_result,
+  localised_name = data.raw["item"][string.format(
+    energyInterface.name,
+    "-mk1"
+  )].localised_name,
+  localised_description = data.raw["item"][string.format(
+    energyInterface.name,
+    "-mk1"
+  )].localised_description,
   icon = "__angelsaddons-cab__/graphics/icons/cab-icon.png",
   icon_size = 32,
-  flags = {"not-blueprintable", "not-deconstructable", "not-on-map", "hide-alt-info"},
+  flags = {
+    "not-blueprintable",
+    "not-deconstructable",
+    "not-on-map",
+    "hide-alt-info"
+  },
   enable_gui = false,
   allow_copy_paste = false,
   --minable = {mining_time = 1, result = energyInterfaceItem.name},
@@ -122,28 +169,37 @@ data:extend{{
   collision_box = {{-0.35, -0.35}, {0.35, 0.35}},
   collision_mask = {},
   --selection_box = {{-0.35, -0.35}, {0.35, 0.35}},
-  energy_source =
-  {
-    type              = "electric",
-    usage_priority    = "tertiary",
-    buffer_capacity   = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk1")].energy_source.buffer_capacity,
-    drain             = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk1")].energy_source.drain,
-    input_flow_limit  = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk1")].energy_source.output_flow_limit,
-    output_flow_limit = data.raw["night-vision-equipment"][string.format(energyInterface.name, "-mk1")].energy_source.input_flow_limit,
-
+  energy_source = {
+    type = "electric",
+    usage_priority = "tertiary",
+    buffer_capacity = data.raw["night-vision-equipment"][string.format(
+      energyInterface.name,
+      "-mk1"
+    )].energy_source.buffer_capacity,
+    drain = data.raw["night-vision-equipment"][string.format(
+      energyInterface.name,
+      "-mk1"
+    )].energy_source.drain,
+    input_flow_limit = data.raw["night-vision-equipment"][string.format(
+      energyInterface.name,
+      "-mk1"
+    )].energy_source.output_flow_limit,
+    output_flow_limit = data.raw["night-vision-equipment"][string.format(
+      energyInterface.name,
+      "-mk1"
+    )].energy_source.input_flow_limit,
     render_no_network_icon = false,
-    render_no_power_icon = false,
+    render_no_power_icon = false
   },
   energy_production = "0kW",
   energy_consumption = "0kW",
-  picture =
-  {
+  picture = {
     filename = "__core__/graphics/empty.png",
     priority = "low",
     width = 1,
-    height = 1,
+    height = 1
   },
-  working_sound = nil,
+  working_sound = nil
 }}
 
 -------------------------------------------------------------------------------

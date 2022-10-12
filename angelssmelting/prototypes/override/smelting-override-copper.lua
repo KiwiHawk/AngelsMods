@@ -12,14 +12,10 @@ end
 -- ORE ------------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.ores["copper"] then
-  angelsmods.functions.override_item_conditions(
-    {
-      value = 200,
-      list = {
-        "copper-ore"
-      }
-    }
-  )
+  angelsmods.functions.override_item_conditions({
+    value = 200,
+    list = {"copper-ore"}
+  })
   angelsmods.functions.move_item("copper-ore", "angels-copper", "a")
 else
   angelsmods.functions.add_flag("copper-ore", "hidden")
@@ -29,81 +25,83 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["copper"].ingot then
-  if angelsmods.trigger.smelting_products["copper"].plate or
-     angelsmods.trigger.smelting_products["copper"].wire  then
-  else
-    OV.disable_technology({"angels-copper-casting-2", "angels-copper-casting-3"})
+  if angelsmods.trigger.smelting_products["copper"].plate or angelsmods.trigger.smelting_products["copper"].wire then
     -- swap tech tier 1 to ingots
-    for _, property in pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"}) do
-      data.raw.technology["angels-copper-smelting-1"][property] = util.table.deepcopy(data.raw.technology["angels-copper-smelting-2"][property])
+  else
+    OV.disable_technology({
+      "angels-copper-casting-2",
+      "angels-copper-casting-3"
+    })
+    for _, property in
+      pairs({"icon", "icon_size", "icon_mipmaps", "icons", "localised_name"})
+    do
+      data.raw.technology["angels-copper-smelting-1"][property] =
+        util.table.deepcopy(
+          data.raw.technology["angels-copper-smelting-2"][property]
+        )
     end
   end
-else
   --todo
+else
 end
 
 -------------------------------------------------------------------------------
 -- PLATE ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["copper"].plate then
-  OV.patch_recipes(
-    {
-      {
+  OV.patch_recipes({{ --this essentially enforces the smelting of ore/advanced methods --this essentially enforces the smelting of ore/advanced methods
+    name = "copper-plate",
+    energy_required = 10.5,
+    normal = {
+      enabled = false,
+      hidden = not angelsmods.functions.is_special_vanilla(),
+      ingredients = {{
+        name = "copper-ore",
+        type = "item",
+        amount = "+3"
+      }},
+      results = {{
         name = "copper-plate",
-        energy_required = 10.5,
-        normal = {
-          enabled = false,
-          hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
-          ingredients = {
-            {name = "copper-ore", type = "item", amount = "+3"}
-          },
-          results = {
-            {name = "copper-plate", type = "item", amount = "+2"}
-          }
-        },
-        expensive = {
-          enabled = false,
-          hidden = not angelsmods.functions.is_special_vanilla(), --this essentially enforces the smelting of ore/advanced methods
-          ingredients = {
-            {"!!"},
-            {name = "copper-ore", type = "item", amount = 5 * intermediatemulti}
-          },
-          results = {
-            {name = "copper-plate", type = "item", amount = "+2"}
-          }
-        },
-        icons = {
-          {
-            icon = "__angelssmelting__/graphics/icons/plate-copper.png"
-          },
-          {
-            icon = "__base__/graphics/icons/copper-ore.png",
-            icon_size = 64,
-            scale = 32 / 64 * 0.4375,
-            shift = {-10, -10}
-          }
-        },
-        icon_size = 32,
-        subgroup = "angels-copper-casting",
-        order = "j[angels-plate-copper]-b"
-      }
-    }
-  )
+        type = "item",
+        amount = "+2"
+      }}
+    },
+    expensive = {
+      enabled = false,
+      hidden = not angelsmods.functions.is_special_vanilla(),
+      ingredients = {{"!!"}, {
+        name = "copper-ore",
+        type = "item",
+        amount = 5 * intermediatemulti
+      }},
+      results = {{
+        name = "copper-plate",
+        type = "item",
+        amount = "+2"
+      }}
+    },
+    icons = {{icon = "__angelssmelting__/graphics/icons/plate-copper.png"}, {
+      icon = "__base__/graphics/icons/copper-ore.png",
+      icon_size = 64,
+      scale = 32 / 64 * 0.4375,
+      shift = {-10, -10}
+    }},
+    icon_size = 32,
+    subgroup = "angels-copper-casting",
+    order = "j[angels-plate-copper]-b"
+  }})
   if not angelsmods.functions.is_special_vanilla() then
     OV.remove_unlock("ore-crushing", "copper-plate")
   end
   OV.global_replace_item("angels-plate-copper", "copper-plate")
   angelsmods.functions.add_flag("angels-plate-copper", "hidden")
   angelsmods.functions.move_item("copper-plate", "angels-copper-casting", "j")
-  angelsmods.functions.override_item_conditions(
-    {
-      value = 200,
-      list = {
-        "copper-plate"
-      }
-    }
-  )
-  data.raw["item"]["copper-plate"].icon = "__angelssmelting__/graphics/icons/plate-copper.png"
+  angelsmods.functions.override_item_conditions({
+    value = 200,
+    list = {"copper-plate"}
+  })
+  data.raw["item"]["copper-plate"].icon =
+    "__angelssmelting__/graphics/icons/plate-copper.png"
   data.raw["item"]["copper-plate"].icon_size = 32
   data.raw["item"]["copper-plate"].icon_mipmaps = 1
   OV.global_replace_icon(
@@ -112,28 +110,22 @@ if angelsmods.trigger.smelting_products["copper"].plate then
   )
 
   if angelsmods.refining then
-    OV.patch_recipes(
-      {
-        {
-          name = "angelsore3-crushed-smelting",
-          subgroup = "angels-copper-casting",
-          order = "j[angels-plate-copper]-a"
-        },
-        {
-          name = "angels-copper-pebbles-smelting",
-          subgroup = "angels-copper-casting",
-          order = "j[angels-plate-copper]-ab"
-        },
-        {
-          name = "angels-copper-nugget-smelting",
-          subgroup = "angels-copper-casting",
-          order = "j[angels-plate-copper]-ac"
-        }
-      }
-    )
+    OV.patch_recipes({{
+      name = "angelsore3-crushed-smelting",
+      subgroup = "angels-copper-casting",
+      order = "j[angels-plate-copper]-a"
+    }, {
+      name = "angels-copper-pebbles-smelting",
+      subgroup = "angels-copper-casting",
+      order = "j[angels-plate-copper]-ab"
+    }, {
+      name = "angels-copper-nugget-smelting",
+      subgroup = "angels-copper-casting",
+      order = "j[angels-plate-copper]-ac"
+    }})
   end
-else
   -- todo
+else
 end
 
 -------------------------------------------------------------------------------
@@ -149,32 +141,24 @@ end
 -- CABLE ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["copper"].wire then
-  OV.patch_recipes(
-    {
-      {
-        name = "copper-cable",
-        allow_decomposition = false,
-        icons = {
-          {
-            icon = "__angelssmelting__/graphics/icons/wire-copper.png"
-          },
-          {
-            icon = "__angelssmelting__/graphics/icons/plate-copper.png",
-            scale = 0.4375,
-            shift = {-10, -10}
-          }
-        },
-        icon_size = 32,
-        subgroup = "angels-copper-casting",
-        order = "k[angels-wire-copper]-a"
-      }
-    }
-  )
+  OV.patch_recipes({{
+    name = "copper-cable",
+    allow_decomposition = false,
+    icons = {{icon = "__angelssmelting__/graphics/icons/wire-copper.png"}, {
+      icon = "__angelssmelting__/graphics/icons/plate-copper.png",
+      scale = 0.4375,
+      shift = {-10, -10}
+    }},
+    icon_size = 32,
+    subgroup = "angels-copper-casting",
+    order = "k[angels-wire-copper]-a"
+  }})
   angelsmods.functions.remove_productivity("copper-cable")
   OV.global_replace_item("angels-wire-copper", "copper-cable")
   angelsmods.functions.add_flag("angels-wire-copper", "hidden")
   angelsmods.functions.move_item("copper-cable", "angels-copper-casting", "k")
-  data.raw["item"]["copper-cable"].icon = "__angelssmelting__/graphics/icons/wire-copper.png"
+  data.raw["item"]["copper-cable"].icon =
+    "__angelssmelting__/graphics/icons/wire-copper.png"
   data.raw["item"]["copper-cable"].icon_size = 32
   data.raw["item"]["copper-cable"].icon_mipmaps = 1
   OV.global_replace_icon(
@@ -183,19 +167,14 @@ if angelsmods.trigger.smelting_products["copper"].wire then
   )
 
   if mods["bobassembly"] and mods["bobelectronics"] then
-    OV.patch_recipes(
-      {
-        {
-          name = "copper-cable",
-          category = "electronics"
-        },
-        {
-          name = "angels-wire-coil-copper-converting",
-          category = "electronics-machine"
-        }
-      }
-    )
+    OV.patch_recipes({{
+      name = "copper-cable",
+      category = "electronics"
+    }, {
+      name = "angels-wire-coil-copper-converting",
+      category = "electronics-machine"
+    }})
   end
-else
   -- todo
+else
 end

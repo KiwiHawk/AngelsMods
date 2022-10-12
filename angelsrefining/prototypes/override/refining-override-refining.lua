@@ -85,10 +85,30 @@ end
 -- FERROUS --------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["ferrous"] then
-  angelsmods.functions.move_item("angels-ore8-sludge", "ore-processing-fluid", "a[ferrous]-a", "fluid")
-  angelsmods.functions.move_item("angels-ore8-solution", "ore-processing-fluid", "a[ferrous]-b", "fluid")
-  angelsmods.functions.move_item("angels-ore8-anode-sludge", "ore-processing-fluid", "a[ferrous]-c", "fluid")
-  angelsmods.functions.move_item("angels-ore8-slime", "ore-processing-fluid", "a[ferrous]-d", "fluid")
+  angelsmods.functions.move_item(
+    "angels-ore8-sludge",
+    "ore-processing-fluid",
+    "a[ferrous]-a",
+    "fluid"
+  )
+  angelsmods.functions.move_item(
+    "angels-ore8-solution",
+    "ore-processing-fluid",
+    "a[ferrous]-b",
+    "fluid"
+  )
+  angelsmods.functions.move_item(
+    "angels-ore8-anode-sludge",
+    "ore-processing-fluid",
+    "a[ferrous]-c",
+    "fluid"
+  )
+  angelsmods.functions.move_item(
+    "angels-ore8-slime",
+    "ore-processing-fluid",
+    "a[ferrous]-d",
+    "fluid"
+  )
 else
   angelsmods.functions.add_flag("angels-ore8-crushed", "hidden")
   angelsmods.functions.add_flag("angels-ore8-powder", "hidden")
@@ -99,32 +119,26 @@ else
   angelsmods.functions.add_flag("angels-ore8-anode-sludge", "hidden")
   angelsmods.functions.add_flag("angels-ore8-slime", "hidden")
 
-  OV.disable_recipe(
-    {
-      "angelsore8-powder",
-      "angelsore8-powder-processing",
-      "angelsore8-sludge",
-      "angelsore8-dust",
-      "angelsore8-dust-processing",
-      "angelsore8-solution",
-      "angelsore8-anode-sludge",
-      "angelsore8-anode-sludge-filtering",
-      "angelsore8-crystal",
-      "angelsore8-crystal-processing"
-    }
-  )
+  OV.disable_recipe({
+    "angelsore8-powder",
+    "angelsore8-powder-processing",
+    "angelsore8-sludge",
+    "angelsore8-dust",
+    "angelsore8-dust-processing",
+    "angelsore8-solution",
+    "angelsore8-anode-sludge",
+    "angelsore8-anode-sludge-filtering",
+    "angelsore8-crystal",
+    "angelsore8-crystal-processing"
+  })
 
-  OV.patch_recipes(
-    {
-      {
-        name = "angelsore-chunk-mix6-processing",
-        ingredients =
-        {
-          {name = "angels-ore3-chunk", amount = "angels-ore8-powder"}
-        }
-      }
-    }
-  )
+  OV.patch_recipes({{
+    name = "angelsore-chunk-mix6-processing",
+    ingredients = {{
+      name = "angels-ore3-chunk",
+      amount = "angels-ore8-powder"
+    }}
+  }})
   OV.remove_prereq("advanced-ore-refining-2", "ore-powderizer")
 end
 
@@ -132,10 +146,30 @@ end
 -- CUPRIC ---------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.refinery_products["cupric"] then
-  angelsmods.functions.move_item("angels-ore9-sludge", "ore-processing-fluid", "b[cupric]-a", "fluid")
-  angelsmods.functions.move_item("angels-ore9-solution", "ore-processing-fluid", "b[cupric]-b", "fluid")
-  angelsmods.functions.move_item("angels-ore9-anode-sludge", "ore-processing-fluid", "b[cupric]-c", "fluid")
-  angelsmods.functions.move_item("angels-ore9-slime", "ore-processing-fluid", "b[cupric]-d", "fluid")
+  angelsmods.functions.move_item(
+    "angels-ore9-sludge",
+    "ore-processing-fluid",
+    "b[cupric]-a",
+    "fluid"
+  )
+  angelsmods.functions.move_item(
+    "angels-ore9-solution",
+    "ore-processing-fluid",
+    "b[cupric]-b",
+    "fluid"
+  )
+  angelsmods.functions.move_item(
+    "angels-ore9-anode-sludge",
+    "ore-processing-fluid",
+    "b[cupric]-c",
+    "fluid"
+  )
+  angelsmods.functions.move_item(
+    "angels-ore9-slime",
+    "ore-processing-fluid",
+    "b[cupric]-d",
+    "fluid"
+  )
 else
   angelsmods.functions.add_flag("angels-ore9-crushed", "hidden")
   angelsmods.functions.add_flag("angels-ore9-powder", "hidden")
@@ -146,35 +180,31 @@ else
   angelsmods.functions.add_flag("angels-ore9-anode-sludge", "hidden")
   angelsmods.functions.add_flag("angels-ore9-slime", "hidden")
 
-  OV.disable_recipe(
-    {
-      "angelsore9-powder",
-      "angelsore9-powder-processing",
-      "angelsore9-sludge",
-      "angelsore9-dust",
-      "angelsore9-dust-processing",
-      "angelsore9-solution",
-      "angelsore9-anode-sludge",
-      "angelsore9-anode-sludge-filtering",
-      "angelsore9-crystal",
-      "angelsore9-crystal-processing"
-    }
-  )
+  OV.disable_recipe({
+    "angelsore9-powder",
+    "angelsore9-powder-processing",
+    "angelsore9-sludge",
+    "angelsore9-dust",
+    "angelsore9-dust-processing",
+    "angelsore9-solution",
+    "angelsore9-anode-sludge",
+    "angelsore9-anode-sludge-filtering",
+    "angelsore9-crystal",
+    "angelsore9-crystal-processing"
+  })
 end
 
 -------------------------------------------------------------------------------
 -- CRYSTAL SEEDLING -----------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.functions.is_special_vanilla() then
-  OV.disable_recipe(
-    {
-      "crystal-slurry-filtering-1",
-      "crystal-slurry-filtering-2",
-      "catalysator-brown",
-      "catalysator-green",
-      "catalysator-orange",
-    }
-  )
+  OV.disable_recipe({
+    "crystal-slurry-filtering-1",
+    "crystal-slurry-filtering-2",
+    "catalysator-brown",
+    "catalysator-green",
+    "catalysator-orange"
+  })
   angelsmods.functions.add_flag("crystal-seedling", "hidden")
   angelsmods.functions.add_flag("catalysator-brown", "hidden")
   angelsmods.functions.add_flag("catalysator-green", "hidden")
@@ -183,17 +213,12 @@ end
 
 -- Currently crystal-matrix has no use
 OV.disable_recipe({"crystal-matrix"})
-angelsmods.functions.add_flag("crystal-matrix","hidden")
+angelsmods.functions.add_flag("crystal-matrix", "hidden")
 
 -------------------------------------------------------------------------------
 -- SLAG -----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.slag == false then
-  OV.disable_recipe(
-    {
-      "slag-processing-stone",
-      "slag-processing-dissolution"
-    }
-  )
+  OV.disable_recipe({"slag-processing-stone", "slag-processing-dissolution"})
   angelsmods.functions.add_flag("slag", "hidden")
 end

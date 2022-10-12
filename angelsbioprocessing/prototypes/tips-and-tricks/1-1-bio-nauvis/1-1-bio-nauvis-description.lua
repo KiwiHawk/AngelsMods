@@ -1,5 +1,2 @@
-return {
-  "",
-  {"tips-and-tricks-description.angelsbioprocessing-nauvis"},
-  --{"tips-and-tricks-description.angelsbioprocessing-nauvis-notes"}
-}
+return {"", {"tips-and-tricks-description.angelsbioprocessing-nauvis"}}
+--{"tips-and-tricks-description.angelsbioprocessing-nauvis-notes"}

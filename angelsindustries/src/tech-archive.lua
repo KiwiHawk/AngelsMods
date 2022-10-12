@@ -37,7 +37,7 @@ function tech_archive:remove_lab_from_inv(inventory)
     local items = game.item_prototypes
     for key, lab in pairs(tech_archive.main_lab) do
       if items[lab] and inventory.get_item_count(lab) > 0 then
-        inventory.remove {name = lab}
+        inventory.remove{name = lab}
         global.is_lab_given = false
         return true
       end
@@ -46,7 +46,7 @@ function tech_archive:remove_lab_from_inv(inventory)
 end
 
 function tech_archive:initialize_crash_site()
-  if game.entity_prototypes[tech_archive.main_lab[1]] and (not global.is_lab_given) then
+  if game.entity_prototypes[tech_archive.main_lab[1]] and not global.is_lab_given then
     -- angels science mode
     local surface = game.surfaces["nauvis"]
     if surface and surface.valid then
@@ -59,11 +59,15 @@ function tech_archive:initialize_crash_site()
         local created_entity = surface.create_entity{
           name = tech_archive.main_lab[0],
           position = surface.find_non_colliding_position(
-            --[[name]]tech_archive.main_lab[0],
-            --[[center]]{crash_site_entity.position.x - 15, crash_site_entity.position.y},
-            --[[radius]]15 + 15,
-            --[[precision]]0.5,
-            --[[force_to_tile_center]]true
+            --[[force_to_tile_center]]
+            --[[name]] tech_archive.main_lab[0],
+            --[[center]] {
+              crash_site_entity.position.x - 15,
+              crash_site_entity.position.y
+            },
+            --[[radius]] 15 + 15,
+            --[[precision]] 0.5,
+            true
           ),
           force = "player",
           raise_build = false, -- I don't see why we should raise this?
@@ -83,7 +87,11 @@ function tech_archive:initialize_crash_site()
                 y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
               }
             }
-            explosions.time_to_live = math.random(60 * 20, 60 * 30) - math.min((8 + (math.random() * 40)) * 100, 15 * 60)
+            explosions.time_to_live =
+              math.random(60 * 20, 60 * 30) - math.min(
+                (8 + (math.random() * 40)) * 100,
+                15 * 60
+              )
             explosions.time_to_next_effect = math.random(30)
           end
 
@@ -104,18 +112,19 @@ function tech_archive:initialize_crash_site()
                 y = (bbox.left_top.y + bbox.right_bottom.y) / 2 + (bbox.right_bottom.y - bbox.left_top.y) * (math.random() - 0.5)
               }
             }
-            smoke.time_to_live = math.random(60 * 20, 60 * 30) - math.min((8 + (math.random() * 40)) * 100, 15 * 60)
+            smoke.time_to_live =
+              math.random(60 * 20, 60 * 30) - math.min(
+                (8 + (math.random() * 40)) * 100,
+                15 * 60
+              )
             smoke.time_to_next_effect = math.random(30)
           end
-
         end
       end
     end
   end
   global.crash_site_created = true
 end
-
-
 
 -------------------------------------------------------------------------------
 -- Event handlers
@@ -131,16 +140,23 @@ function tech_archive:on_player_respawned(player_index)
 
   if player and player.valid then
     if not global.is_lab_given and game.entity_prototypes[tech_archive.main_lab[1]] then
-      global.is_lab_given = player.insert{name = tech_archive.main_lab[0], count = 1} > 0
+      global.is_lab_given = player.insert{
+        name = tech_archive.main_lab[0],
+        count = 1
+      } > 0
     end
   end
 
   local force = player and player.force
   if force then
-    local available = force.technologies["angels-hidden-ghosting"] and force.technologies["angels-hidden-ghosting"].researched or false
+    local available =
+      force.technologies["angels-hidden-ghosting"] and force.technologies["angels-hidden-ghosting"].researched or false
     player.set_shortcut_available("toggle-ghosting", available)
     if available then
-      player.set_shortcut_toggled("toggle-ghosting", force.ghost_time_to_live == 0)
+      player.set_shortcut_toggled(
+        "toggle-ghosting",
+        force.ghost_time_to_live == 0
+      )
     end
   end
 end
@@ -153,7 +169,9 @@ function tech_archive:on_entity_died(entity)
     elseif etype == "container" or etype == "logistic-container" then
       self:remove_lab_from_inv(entity.get_inventory(defines.inventory.chest))
     elseif etype == "construction-robot" or etype == "logistic-robot" then
-      self:remove_lab_from_inv(entity.get_inventory(defines.inventory.robot_cargo))
+      self:remove_lab_from_inv(
+        entity.get_inventory(defines.inventory.robot_cargo)
+      )
     end
   end
 end
@@ -163,8 +181,6 @@ function tech_archive:on_pre_player_died(player_index)
     self:remove_lab_from_inv(game.players[player_index].get_main_inventory())
   end
 end
-
-
 
 -- Return class ---------------------------------------------------------------
 return tech_archive

@@ -148,8 +148,13 @@ if angelsmods.industries.tech then
   -- WARFARE CORES --------------------------------------------------------------
   -------------------------------------------------------------------------------
   -- BASE GAME
-  for rec_4tech, _ in pairs(data.raw.technology) do --fix follower robot count techs
-    if string.find(rec_4tech, "follower") ~= nil and string.find(rec_4tech, "robot") ~= nil then
+  for rec_4tech, _ in
+    pairs(data.raw.technology) --fix follower robot count techs
+  do
+    if string.find(rec_4tech, "follower") ~= nil and string.find(
+      rec_4tech,
+      "robot"
+    ) ~= nil then
       AI.core_replace(rec_4tech, "logistic", "war")
     end
   end
@@ -192,11 +197,10 @@ if angelsmods.industries.tech then
   AI.core_replace("rocket-booster-1", "war", "processing")
   AI.core_replace("rocket-booster-2", "war", "processing")
   OV.execute() ------------------------------------------------------------------
-
   -- now upgrade the cores to tier 2 and let them depend on the correct technology
   AI.core_tier_upgrade()
   OV.execute()
-  
+
   -- GLOBAL UPDATE TECHNOLOGY RESEARCH AMOUNT AND TIMES
   AI.tech_unlock_reset()
   OV.execute()

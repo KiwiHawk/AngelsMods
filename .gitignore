@@ -13,3 +13,5 @@ __pycache__/
 # Unit test files
 angelsdev-unit-test/log/
 run_unit_tests_PWJ.bat
+
+node_modules/

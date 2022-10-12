@@ -21,14 +21,10 @@ end
 -- BOBS HEAT SHIELD -----------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.sintering_tech and mods["bobrevamp"] then
-  OV.patch_recipes(
-    {
-      {
-        name = "heat-shield-tile",
-        category = "sintering-4"
-      }
-    }
-  )
+  OV.patch_recipes({{
+    name = "heat-shield-tile",
+    category = "sintering-4"
+  }})
   OV.add_prereq("heat-shield", "powder-metallurgy-4")
 else
   OV.add_prereq("heat-shield", "production-science-pack")

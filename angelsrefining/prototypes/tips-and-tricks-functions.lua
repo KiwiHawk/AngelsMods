@@ -1,8 +1,8 @@
 local tnt = {} --init table
-
 tnt.get_item_from_name = function(item_name, item_type, before, ending)
   before = before or "- "
-  ending = ending or (before == "\n[font=default-bold]" and "[/font]:\n") or "\n"
+  ending =
+    ending or (before == "\n[font=default-bold]" and "[/font]:\n") or "\n"
 
   item_type = item_type or "item"
   return {
@@ -13,15 +13,22 @@ tnt.get_item_from_name = function(item_name, item_type, before, ending)
   }
 end
 
-tnt.get_items_from_name = function(item_name, item_type, mid_string, before, ending)
+tnt.get_items_from_name = function(
+item_name,
+  item_type,
+  mid_string,
+  before,
+  ending
+)
   --item_name and mid_string can be arrays, as long as name is longer than mid it will be fine
-  
+
   --set default
   before = before or "- "
   mid_string = mid_string or ""
-  ending = ending or (before == "\n[font=default-bold]" and "[/font]:\n") or "\n"
+  ending =
+    ending or (before == "\n[font=default-bold]" and "[/font]:\n") or "\n"
 
-  local arr = {""} 
+  local arr = {""}
   if type(item_name) == "table" then
     for ind, i_name in pairs(item_name) do
       --name = i_name
@@ -29,19 +36,37 @@ tnt.get_items_from_name = function(item_name, item_type, mid_string, before, end
       --arr[#arr+1] = ((ind==1) and before .. " [img=" or " [img=" ) .. item_type .. "/" .. name .. "] "
       --arr[#arr+1] = {item_type .. "-name." .. name}
       --arr[#arr+1] = (ind == #item_name) and ending or (" " .. mid_string)
-      table.insert(arr, tnt.get_item_from_name(i_name, item_type, ind == 1 and before or "", ind == #item_name and ending or mid_string))
-    end
-  else --use single case
-    angelsmods.functions.tnt.get_item_from_name(item_name, item_type, before, ending)
+      table.insert(
+        arr,
+        tnt.get_item_from_name(
+          i_name,
+          item_type,
+          ind == 1 and before or "",
+          ind == #item_name and ending or mid_string
+        )
+      )
+    end --use single case
+  else
+    angelsmods.functions.tnt.get_item_from_name(
+      item_name,
+      item_type,
+      before,
+      ending
+    )
   end
   return arr
 end
 
 tnt.number_to_string = function(number, decimal_places)
   -- returns a string representation of a number, rounded to a certain amount of decimal places (default to 0)
-  if decimal_places == nil then decimal_places = 0 end
-  local decimal_factor = 10^decimal_places
-  return string.format((decimal_places>0) and ("%."..decimal_places.."f") or "%d", math.floor(number*decimal_factor+0.5)/decimal_factor)
+  if decimal_places == nil then
+    decimal_places = 0
+  end
+  local decimal_factor = 10 ^ decimal_places
+  return string.format(
+    (decimal_places > 0) and ("%." .. decimal_places .. "f") or "%d",
+    math.floor(number * decimal_factor + 0.5) / decimal_factor
+  )
 end
 
 return tnt

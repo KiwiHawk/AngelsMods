@@ -21,22 +21,30 @@ local biter_definitions = {}
       return spawner.results
   end]]
 
-
 -------------------------------------------------------------------------------
 -- BITER DEFINITIONS ----------------------------------------------------------
 -------------------------------------------------------------------------------
-biter_definitions.small_biter =
-{
+biter_definitions.small_biter = {
   appearance = {
     type = "biter",
     name = "small",
     scale = 0.5,
-    tint1 = {r=0.56, g=0.46, b=0.42, a=0.65},
-    tint2 = {r=1.00, g=0.63, b=0.00, a=0.40},
+    tint1 = {
+      r = 0.56,
+      g = 0.46,
+      b = 0.42,
+      a = 0.65
+    },
+    tint2 = {
+      r = 1.00,
+      g = 0.63,
+      b = 0.00,
+      a = 0.40
+    },
     speed = 0.185,
     health = 100,
     order = "b-a-a",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     category = "melee",
@@ -47,32 +55,55 @@ biter_definitions.small_biter =
     damage_modifier = nil,
     warmup = nil,
     damage = 8,
-    damage2 = 5,
+    damage2 = 5
   },
-  resistance = {
-    {type = "physical", decrease = 0, percent = 0},
-    {type = "fire", decrease = 5, percent = 20},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 5, percent = 20},
-    {type = "plasma", decrease = 0, percent = 0}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 0,
+    percent = 0
+  }, {
+    type = "fire",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "plasma",
+    decrease = 0,
+    percent = 0
+  }}
   --loot = {
   --  angelsmods.triggers.artifacts["base"] and {item = "small-alien-artifact", avg_amount = 0.25, variation = 0.1} or nil,
   --}
 }
 
-biter_definitions.medium_biter =
-{
+biter_definitions.medium_biter = {
   appearance = {
     type = "biter",
     name = "medium",
     scale = 0.7,
-    tint1 = {r=0.78, g=0.15, b=0.15, a=0.60},
-    tint2 = {r=0.90, g=0.30, b=0.30, a=0.75},
+    tint1 = {
+      r = 0.78,
+      g = 0.15,
+      b = 0.15,
+      a = 0.60
+    },
+    tint2 = {
+      r = 0.90,
+      g = 0.30,
+      b = 0.30,
+      a = 0.75
+    },
     speed = 0.185,
     health = 200,
     order = "b-a-b",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     category = "melee",
@@ -83,29 +114,52 @@ biter_definitions.medium_biter =
     damage_modifier = nil,
     warmup = nil,
     damage = 16,
-    damage2 = 10,
+    damage2 = 10
   },
-  resistance = {
-    {type = "physical", decrease = 5, percent = 20},
-    {type = "fire", decrease = 0, percent = 10},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 0, percent = 10},
-    {type = "plasma", decrease = 5, percent = 20}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "fire",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "plasma",
+    decrease = 5,
+    percent = 20
+  }}
 }
 
-biter_definitions.big_biter =
-{
+biter_definitions.big_biter = {
   appearance = {
     type = "biter",
     name = "big",
     scale = 1,
-    tint1 = {r=0.34, g=0.68, b=0.90, a=0.60},
-    tint2 = {r=0.31, g=0.61, b=0.95, a=0.85},
+    tint1 = {
+      r = 0.34,
+      g = 0.68,
+      b = 0.90,
+      a = 0.60
+    },
+    tint2 = {
+      r = 0.31,
+      g = 0.61,
+      b = 0.95,
+      a = 0.85
+    },
     speed = 0.185,
     health = 300,
     order = "b-a-c",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     category = "melee",
@@ -116,29 +170,52 @@ biter_definitions.big_biter =
     damage_modifier = nil,
     warmup = nil,
     damage = 24,
-    damage2 = 20,
+    damage2 = 20
   },
-  resistance = {
-    {type = "physical", decrease = 10, percent = 30},
-    {type = "fire", decrease = 5, percent = 20},
-    {type = "explosion", decrease = 0, percent = 0},
-    {type = "laser", decrease = 5, percent = 20},
-    {type = "plasma", decrease = 10, percent = 30}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 10,
+    percent = 30
+  }, {
+    type = "fire",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "explosion",
+    decrease = 0,
+    percent = 0
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "plasma",
+    decrease = 10,
+    percent = 30
+  }}
 }
 
-biter_definitions.behemoth_biter =
-{
+biter_definitions.behemoth_biter = {
   appearance = {
     type = "biter",
     name = "behemoth",
     scale = 1.2,
-    tint1 = {r=0.30, g=0.90, b=0.30, a=0.75},
-    tint2 = {r=0.88, g=0.24, b=0.24, a=0.90},
+    tint1 = {
+      r = 0.30,
+      g = 0.90,
+      b = 0.30,
+      a = 0.75
+    },
+    tint2 = {
+      r = 0.88,
+      g = 0.24,
+      b = 0.24,
+      a = 0.90
+    },
     speed = 0.17,
     health = 400,
     order = "b-a-d",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     category = "melee",
@@ -149,31 +226,54 @@ biter_definitions.behemoth_biter =
     damage_modifier = nil,
     warmup = nil,
     damage = 32,
-    damage2 = 30,
+    damage2 = 30
   },
-  resistance = {
-    {type = "physical", decrease = 15, percent = 40},
-    {type = "fire", decrease = 0, percent = 10},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 0, percent = 10},
-    {type = "plasma", decrease = 15, percent = 40}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 15,
+    percent = 40
+  }, {
+    type = "fire",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "plasma",
+    decrease = 15,
+    percent = 40
+  }}
 }
 
-biter_definitions.colossal_biter =
-{
+biter_definitions.colossal_biter = {
   appearance = {
     type = "biter",
     name = "colossal",
     scale = 1.4,
     --tint1 = {r=0.56, g=0.46, b=0.42, a=0.65},
     --tint2 = {r=1.00, g=0.63, b=0.00, a=0.40},
-    tint1 = {r=1.00, g=0.68, b=0.00, a=0.75},
-    tint2 = {r=0.64, g=0.03, b=0.03, a=0.90},
+    tint1 = {
+      r = 1.00,
+      g = 0.68,
+      b = 0.00,
+      a = 0.75
+    },
+    tint2 = {
+      r = 0.64,
+      g = 0.03,
+      b = 0.03,
+      a = 0.90
+    },
     speed = 0.17,
     health = 500,
     order = "b-a-e",
-    box_scale = 1.8,
+    box_scale = 1.8
   },
   attack = {
     category = "melee",
@@ -184,32 +284,55 @@ biter_definitions.colossal_biter =
     damage_modifier = nil,
     warmup = nil,
     damage = 40,
-    damage2 = 40,
+    damage2 = 40
   },
-  resistance = {
-    {type = "physical", decrease = 10, percent = 30},
-    {type = "fire", decrease = 5, percent = 30},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 5, percent = 30},
-    {type = "plasma", decrease = 10, percent = 30}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 10,
+    percent = 30
+  }, {
+    type = "fire",
+    decrease = 5,
+    percent = 30
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 30
+  }, {
+    type = "plasma",
+    decrease = 10,
+    percent = 30
+  }}
 }
 
 -------------------------------------------------------------------------------
 -- SPITTER DEFINITIONS --------------------------------------------------------
 -------------------------------------------------------------------------------
-biter_definitions.small_spitter =
-{
+biter_definitions.small_spitter = {
   appearance = {
     type = "spitter",
     name = "small",
     scale = 0.5,
-    tint1 = {r=0.68, g=0.40, b=0.00, a=1.00},
-    tint2 = {r=1.00, g=0.63, b=0.00, a=0.40},
+    tint1 = {
+      r = 0.68,
+      g = 0.40,
+      b = 0.00,
+      a = 1.00
+    },
+    tint2 = {
+      r = 1.00,
+      g = 0.63,
+      b = 0.00,
+      a = 0.40
+    },
     speed = 0.185,
     health = 50,
     order = "b-b-a",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     range = 15,
@@ -218,29 +341,52 @@ biter_definitions.small_spitter =
     creation_distance = 1.9,
     damage_modifier = 1,
     warmup = 30,
-    damage = 10,
+    damage = 10
   },
-  resistance = {
-    {type = "physical", decrease = 0, percent = 0},
-    {type = "fire", decrease = 5, percent = 20},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 5, percent = 20},
-    {type = "plasma", decrease = 0, percent = 0}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 0,
+    percent = 0
+  }, {
+    type = "fire",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "plasma",
+    decrease = 0,
+    percent = 0
+  }}
 }
 
-biter_definitions.medium_spitter =
-{
+biter_definitions.medium_spitter = {
   appearance = {
     type = "spitter",
     name = "medium",
     scale = 0.7,
-    tint1 = {r=0.83, g=0.39, b=0.36, a=0.75},
-    tint2 = {r=1.00, g=0.63, b=0.00, a=0.40},
+    tint1 = {
+      r = 0.83,
+      g = 0.39,
+      b = 0.36,
+      a = 0.75
+    },
+    tint2 = {
+      r = 1.00,
+      g = 0.63,
+      b = 0.00,
+      a = 0.40
+    },
     speed = 0.185,
     health = 100,
     order = "b-b-b",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     range = 15,
@@ -249,29 +395,52 @@ biter_definitions.medium_spitter =
     creation_distance = 1.9,
     damage_modifier = 1,
     warmup = 30,
-    damage = 20,
+    damage = 20
   },
-  resistance = {
-    {type = "physical", decrease = 5, percent = 20},
-    {type = "fire", decrease = 0, percent = 10},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 0, percent = 10},
-    {type = "plasma", decrease = 5, percent = 20}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "fire",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "plasma",
+    decrease = 5,
+    percent = 20
+  }}
 }
 
-biter_definitions.big_spitter =
-{
+biter_definitions.big_spitter = {
   appearance = {
     type = "spitter",
     name = "big",
     scale = 1,
-    tint1 = {r=0.54, g=0.58, b=0.85, a=0.60},
-    tint2 = {r=1.00, g=0.63, b=0.00, a=0.40},
+    tint1 = {
+      r = 0.54,
+      g = 0.58,
+      b = 0.85,
+      a = 0.60
+    },
+    tint2 = {
+      r = 1.00,
+      g = 0.63,
+      b = 0.00,
+      a = 0.40
+    },
     speed = 0.185,
     health = 150,
     order = "b-b-c",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     range = 15,
@@ -280,29 +449,52 @@ biter_definitions.big_spitter =
     creation_distance = 1.9,
     damage_modifier = 1,
     warmup = 30,
-    damage = 30,
+    damage = 30
   },
-  resistance = {
-    {type = "physical", decrease = 10, percent = 30},
-    {type = "fire", decrease = 5, percent = 20},
-    {type = "explosion", decrease = 0, percent = 0},
-    {type = "laser", decrease = 5, percent = 20},
-    {type = "plasma", decrease = 10, percent = 30}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 10,
+    percent = 30
+  }, {
+    type = "fire",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "explosion",
+    decrease = 0,
+    percent = 0
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "plasma",
+    decrease = 10,
+    percent = 30
+  }}
 }
 
-biter_definitions.behemoth_spitter =
-{
+biter_definitions.behemoth_spitter = {
   appearance = {
     type = "spitter",
     name = "behemoth",
     scale = 1.2,
-    tint1 = {r=0.30, g=0.90, b=0.30, a=0.75},
-    tint2 = {r=1.00, g=0.63, b=0.00, a=0.40},
+    tint1 = {
+      r = 0.30,
+      g = 0.90,
+      b = 0.30,
+      a = 0.75
+    },
+    tint2 = {
+      r = 1.00,
+      g = 0.63,
+      b = 0.00,
+      a = 0.40
+    },
     speed = 0.185,
     health = 200,
     order = "b-b-d",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     range = 15,
@@ -311,31 +503,54 @@ biter_definitions.behemoth_spitter =
     creation_distance = 1.9,
     damage_modifier = 1,
     warmup = 30,
-    damage = 40,
+    damage = 40
   },
-  resistance = {
-    {type = "physical", decrease = 15, percent = 40},
-    {type = "fire", decrease = 0, percent = 10},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 0, percent = 10},
-    {type = "plasma", decrease = 15, percent = 40}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 15,
+    percent = 40
+  }, {
+    type = "fire",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "plasma",
+    decrease = 15,
+    percent = 40
+  }}
 }
 
-biter_definitions.colossal_spitter =
-{
+biter_definitions.colossal_spitter = {
   appearance = {
     type = "spitter",
     name = "colossal",
     scale = 1.4,
     --tint1 = {r=0.56, g=0.46, b=0.42, a=0.65},
     --tint2 = {r=1.00, g=0.63, b=0.00, a=0.40},
-    tint1 = {r=1.00, g=0.68, b=0.00, a=0.75},
-    tint2 = {r=0.64, g=0.03, b=0.03, a=0.40},
+    tint1 = {
+      r = 1.00,
+      g = 0.68,
+      b = 0.00,
+      a = 0.75
+    },
+    tint2 = {
+      r = 0.64,
+      g = 0.03,
+      b = 0.03,
+      a = 0.40
+    },
     speed = 0.185,
     health = 250,
     order = "b-b-e",
-    box_scale = 1.5,
+    box_scale = 1.5
   },
   attack = {
     range = 15,
@@ -344,32 +559,55 @@ biter_definitions.colossal_spitter =
     creation_distance = 1.9,
     damage_modifier = 1,
     warmup = 30,
-    damage = 50,
+    damage = 50
   },
-  resistance = {
-    {type = "physical", decrease = 10, percent = 30},
-    {type = "fire", decrease = 5, percent = 30},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 5, percent = 30},
-    {type = "plasma", decrease = 10, percent = 30}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 10,
+    percent = 30
+  }, {
+    type = "fire",
+    decrease = 5,
+    percent = 30
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 30
+  }, {
+    type = "plasma",
+    decrease = 10,
+    percent = 30
+  }}
 }
 
 -------------------------------------------------------------------------------
 -- SCARAB DEFINITIONS ---------------------------------------------------------
 -------------------------------------------------------------------------------
-biter_definitions.small_scarab =
-{
+biter_definitions.small_scarab = {
   appearance = {
     type = "scarab",
     name = "small",
     scale = 0.4,
-    tint1 = {r=0.68, g=0.40, b=0.00, a=1.00},
-    tint2 = {r=0.64, g=0.03, b=0.03, a=0.40},
+    tint1 = {
+      r = 0.68,
+      g = 0.40,
+      b = 0.00,
+      a = 1.00
+    },
+    tint2 = {
+      r = 0.64,
+      g = 0.03,
+      b = 0.03,
+      a = 0.40
+    },
     speed = 0.185,
     health = 150,
     order = "b-a-f",
-    box_scale = 0.5,
+    box_scale = 0.5
   },
   attack = {
     range = 0.5,
@@ -378,29 +616,52 @@ biter_definitions.small_scarab =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 8,
+    damage = 8
   },
-  resistance = {
-    {type = "physical", decrease = 2.5, percent = 15},
-    {type = "fire", decrease = 7.5, percent = 40},
-    {type = "explosion", decrease = 7.5, percent = 30},
-    {type = "laser", decrease = 7.5, percent = 40},
-    {type = "plasma", decrease = 2.5, percent = 20}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 2.5,
+    percent = 15
+  }, {
+    type = "fire",
+    decrease = 7.5,
+    percent = 40
+  }, {
+    type = "explosion",
+    decrease = 7.5,
+    percent = 30
+  }, {
+    type = "laser",
+    decrease = 7.5,
+    percent = 40
+  }, {
+    type = "plasma",
+    decrease = 2.5,
+    percent = 20
+  }}
 }
 
-biter_definitions.medium_scarab =
-{
+biter_definitions.medium_scarab = {
   appearance = {
     type = "scarab",
     name = "medium",
     scale = 0.6,
-    tint1 = {r=0.83, g=0.39, b=0.36, a=1.00},
-    tint2 = {r=0.64, g=0.03, b=0.03, a=0.40},
+    tint1 = {
+      r = 0.83,
+      g = 0.39,
+      b = 0.36,
+      a = 1.00
+    },
+    tint2 = {
+      r = 0.64,
+      g = 0.03,
+      b = 0.03,
+      a = 0.40
+    },
     speed = 0.185,
     health = 300,
     order = "b-a-g",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     range = 0.5,
@@ -409,29 +670,52 @@ biter_definitions.medium_scarab =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 15,
+    damage = 15
   },
-  resistance = {
-    {type = "physical", decrease = 7.5, percent = 40},
-    {type = "fire", decrease = 2.5, percent = 30},
-    {type = "explosion", decrease = 7.5, percent = 30},
-    {type = "laser", decrease = 2.5, percent = 30},
-    {type = "plasma", decrease = 7.5, percent = 40}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 7.5,
+    percent = 40
+  }, {
+    type = "fire",
+    decrease = 2.5,
+    percent = 30
+  }, {
+    type = "explosion",
+    decrease = 7.5,
+    percent = 30
+  }, {
+    type = "laser",
+    decrease = 2.5,
+    percent = 30
+  }, {
+    type = "plasma",
+    decrease = 7.5,
+    percent = 40
+  }}
 }
 
-biter_definitions.big_scarab =
-{
+biter_definitions.big_scarab = {
   appearance = {
     type = "scarab",
     name = "big",
     scale = 0.9,
-    tint1 = {r=0.54, g=0.58, b=0.85, a=1.00},
-    tint2 = {r=0.64, g=0.03, b=0.03, a=0.40},
+    tint1 = {
+      r = 0.54,
+      g = 0.58,
+      b = 0.85,
+      a = 1.00
+    },
+    tint2 = {
+      r = 0.64,
+      g = 0.03,
+      b = 0.03,
+      a = 0.40
+    },
     speed = 0.185,
     health = 450,
     order = "b-a-h",
-    box_scale = 1.25,
+    box_scale = 1.25
   },
   attack = {
     range = 0.5,
@@ -440,29 +724,52 @@ biter_definitions.big_scarab =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 25,
+    damage = 25
   },
-  resistance = {
-    {type = "physical", decrease = 12.5, percent = 50},
-    {type = "fire", decrease = 7.5, percent = 40},
-    {type = "explosion", decrease = 2.5, percent = 20},
-    {type = "laser", decrease = 7.5, percent = 40},
-    {type = "plasma", decrease = 12.5, percent = 50}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 12.5,
+    percent = 50
+  }, {
+    type = "fire",
+    decrease = 7.5,
+    percent = 40
+  }, {
+    type = "explosion",
+    decrease = 2.5,
+    percent = 20
+  }, {
+    type = "laser",
+    decrease = 7.5,
+    percent = 40
+  }, {
+    type = "plasma",
+    decrease = 12.5,
+    percent = 50
+  }}
 }
 
-biter_definitions.behemoth_scarab =
-{
+biter_definitions.behemoth_scarab = {
   appearance = {
     type = "scarab",
     name = "behemoth",
     scale = 1.1,
-    tint1 = {r=0.30, g=0.90, b=0.30, a=1.00},
-    tint2 = {r=0.64, g=0.03, b=0.03, a=0.40},
+    tint1 = {
+      r = 0.30,
+      g = 0.90,
+      b = 0.30,
+      a = 1.00
+    },
+    tint2 = {
+      r = 0.64,
+      g = 0.03,
+      b = 0.03,
+      a = 0.40
+    },
     speed = 0.185,
     health = 900,
     order = "b-a-i",
-    box_scale = 1.75,
+    box_scale = 1.75
   },
   attack = {
     range = 0.5,
@@ -471,29 +778,52 @@ biter_definitions.behemoth_scarab =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 35,
+    damage = 35
   },
-  resistance = {
-    {type = "physical", decrease = 17.5, percent = 60},
-    {type = "fire", decrease = 12.5, percent = 30},
-    {type = "explosion", decrease = 7.5, percent = 30},
-    {type = "laser", decrease = 12.5, percent = 30},
-    {type = "plasma", decrease = 17.5, percent = 60}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 17.5,
+    percent = 60
+  }, {
+    type = "fire",
+    decrease = 12.5,
+    percent = 30
+  }, {
+    type = "explosion",
+    decrease = 7.5,
+    percent = 30
+  }, {
+    type = "laser",
+    decrease = 12.5,
+    percent = 30
+  }, {
+    type = "plasma",
+    decrease = 17.5,
+    percent = 60
+  }}
 }
 
-biter_definitions.colossal_scarab =
-{
+biter_definitions.colossal_scarab = {
   appearance = {
     type = "scarab",
     name = "colossal",
     scale = 1.3,
-    tint1 = {r=1.00, g=0.68, b=0.00, a=1.00},
-    tint2 = {r=0.64, g=0.03, b=0.03, a=0.40},
+    tint1 = {
+      r = 1.00,
+      g = 0.68,
+      b = 0.00,
+      a = 1.00
+    },
+    tint2 = {
+      r = 0.64,
+      g = 0.03,
+      b = 0.03,
+      a = 0.40
+    },
     speed = 0.185,
     health = 2000,
     order = "b-a-j",
-    box_scale = 2,
+    box_scale = 2
   },
   attack = {
     range = 0.5,
@@ -502,32 +832,55 @@ biter_definitions.colossal_scarab =
     creation_distance = nil,
     damage_modifier = nil,
     warmup = nil,
-    damage = 45,
+    damage = 45
   },
-  resistance = {
-    {type = "physical", decrease = 12.5, percent = 50},
-    {type = "fire", decrease = 7.5, percent = 50},
-    {type = "explosion", decrease = 7.5, percent = 30},
-    {type = "laser", decrease = 7.5, percent = 50},
-    {type = "plasma", decrease = 12.5, percent = 50}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 12.5,
+    percent = 50
+  }, {
+    type = "fire",
+    decrease = 7.5,
+    percent = 50
+  }, {
+    type = "explosion",
+    decrease = 7.5,
+    percent = 30
+  }, {
+    type = "laser",
+    decrease = 7.5,
+    percent = 50
+  }, {
+    type = "plasma",
+    decrease = 12.5,
+    percent = 50
+  }}
 }
 
 -------------------------------------------------------------------------------
 -- PSYKER DEFINITIONS ---------------------------------------------------------
 -------------------------------------------------------------------------------
-biter_definitions.small_psyker =
-{
+biter_definitions.small_psyker = {
   appearance = {
     type = "psyker",
     name = "small",
     scale = 0.5,
-    tint1 = {r=0.56, g=0.46, b=0.42, a=0.65},
-    tint2 = {r=1.00, g=0.63, b=0.00, a=0.40},
+    tint1 = {
+      r = 0.56,
+      g = 0.46,
+      b = 0.42,
+      a = 0.65
+    },
+    tint2 = {
+      r = 1.00,
+      g = 0.63,
+      b = 0.00,
+      a = 0.40
+    },
     speed = 0.185,
     health = 100,
     order = "b-b-f",
-    box_scale = 0.5,
+    box_scale = 0.5
   },
   attack = {
     range = 7,
@@ -536,29 +889,52 @@ biter_definitions.small_psyker =
     creation_distance = nil,
     damage_modifier = 1,
     warmup = nil,
-    damage = 10,
+    damage = 10
   },
-  resistance = {
-    {type = "physical", decrease = 0, percent = 0},
-    {type = "fire", decrease = 5, percent = 20},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 5, percent = 20},
-    {type = "plasma", decrease = 0, percent = 0}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 0,
+    percent = 0
+  }, {
+    type = "fire",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "plasma",
+    decrease = 0,
+    percent = 0
+  }}
 }
 
-biter_definitions.medium_psyker =
-{
+biter_definitions.medium_psyker = {
   appearance = {
     type = "psyker",
     name = "medium",
     scale = 0.7,
-    tint1 = {r=0.78, g=0.15, b=0.15, a=0.50},
-    tint2 = {r=0.90, g=0.30, b=0.30, a=0.75},
+    tint1 = {
+      r = 0.78,
+      g = 0.15,
+      b = 0.15,
+      a = 0.50
+    },
+    tint2 = {
+      r = 0.90,
+      g = 0.30,
+      b = 0.30,
+      a = 0.75
+    },
     speed = 0.185,
     health = 200,
     order = "b-b-g",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     range = 7,
@@ -567,29 +943,52 @@ biter_definitions.medium_psyker =
     creation_distance = nil,
     damage_modifier = 1,
     warmup = nil,
-    damage = 20,
+    damage = 20
   },
-  resistance = {
-    {type = "physical", decrease = 5, percent = 20},
-    {type = "fire", decrease = 0, percent = 10},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 0, percent = 10},
-    {type = "plasma", decrease = 5, percent = 20}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "fire",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "plasma",
+    decrease = 5,
+    percent = 20
+  }}
 }
 
-biter_definitions.big_psyker =
-{
+biter_definitions.big_psyker = {
   appearance = {
     type = "psyker",
     name = "big",
     scale = 1,
-    tint1 = {r=0.34, g=0.68, b=0.90, a=0.60},
-    tint2 = {r=0.31, g=0.61, b=0.95, a=0.85},
+    tint1 = {
+      r = 0.34,
+      g = 0.68,
+      b = 0.90,
+      a = 0.60
+    },
+    tint2 = {
+      r = 0.31,
+      g = 0.61,
+      b = 0.95,
+      a = 0.85
+    },
     speed = 0.185,
     health = 300,
     order = "b-b-h",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     range = 7,
@@ -598,29 +997,52 @@ biter_definitions.big_psyker =
     creation_distance = nil,
     damage_modifier = 1,
     warmup = nil,
-    damage = 30,
+    damage = 30
   },
-  resistance = {
-    {type = "physical", decrease = 10, percent = 30},
-    {type = "fire", decrease = 5, percent = 20},
-    {type = "explosion", decrease = 0, percent = 0},
-    {type = "laser", decrease = 5, percent = 20},
-    {type = "plasma", decrease = 10, percent = 30}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 10,
+    percent = 30
+  }, {
+    type = "fire",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "explosion",
+    decrease = 0,
+    percent = 0
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 20
+  }, {
+    type = "plasma",
+    decrease = 10,
+    percent = 30
+  }}
 }
 
-biter_definitions.behemoth_psyker =
-{
+biter_definitions.behemoth_psyker = {
   appearance = {
     type = "psyker",
     name = "behemoth",
     scale = 1.2,
-    tint1 = {r=0.30, g=0.90, b=0.30, a=0.65},
-    tint2 = {r=0.88, g=0.24, b=0.24, a=0.90},
+    tint1 = {
+      r = 0.30,
+      g = 0.90,
+      b = 0.30,
+      a = 0.65
+    },
+    tint2 = {
+      r = 0.88,
+      g = 0.24,
+      b = 0.24,
+      a = 0.90
+    },
     speed = 0.185,
     health = 400,
     order = "b-b-i",
-    box_scale = 1,
+    box_scale = 1
   },
   attack = {
     range = 7,
@@ -629,29 +1051,52 @@ biter_definitions.behemoth_psyker =
     creation_distance = nil,
     damage_modifier = 1,
     warmup = nil,
-    damage = 40,
+    damage = 40
   },
-  resistance = {
-    {type = "physical", decrease = 15, percent = 40},
-    {type = "fire", decrease = 0, percent = 10},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 0, percent = 10},
-    {type = "plasma", decrease = 15, percent = 40}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 15,
+    percent = 40
+  }, {
+    type = "fire",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 0,
+    percent = 10
+  }, {
+    type = "plasma",
+    decrease = 15,
+    percent = 40
+  }}
 }
 
-biter_definitions.colossal_psyker =
-{
+biter_definitions.colossal_psyker = {
   appearance = {
     type = "psyker",
     name = "colossal",
     scale = 1.4,
-    tint1 = {r=1.00, g=0.68, b=0.00, a=0.65},
-    tint2 = {r=0.64, g=0.03, b=0.03, a=0.90},
+    tint1 = {
+      r = 1.00,
+      g = 0.68,
+      b = 0.00,
+      a = 0.65
+    },
+    tint2 = {
+      r = 0.64,
+      g = 0.03,
+      b = 0.03,
+      a = 0.90
+    },
     speed = 0.185,
     health = 500,
     order = "b-b-j",
-    box_scale = 1.5,
+    box_scale = 1.5
   },
   attack = {
     range = 7,
@@ -660,113 +1105,171 @@ biter_definitions.colossal_psyker =
     creation_distance = nil,
     damage_modifier = 1,
     warmup = nil,
-    damage = 50,
+    damage = 50
   },
-  resistance = {
-    {type = "physical", decrease = 10, percent = 30},
-    {type = "fire", decrease = 5, percent = 30},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "laser", decrease = 5, percent = 30},
-    {type = "plasma", decrease = 10, percent = 30}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 10,
+    percent = 30
+  }, {
+    type = "fire",
+    decrease = 5,
+    percent = 30
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 30
+  }, {
+    type = "plasma",
+    decrease = 10,
+    percent = 30
+  }}
 }
 
 -------------------------------------------------------------------------------
 -- SPAWNER DEFINITIONS --------------------------------------------------------
 -------------------------------------------------------------------------------
-biter_definitions.biter_spawner =
-{
+biter_definitions.biter_spawner = {
   appearance = {
     type = "biter",
-    tint = {r=255/255, g=174/255, b=1/255},
+    tint = {
+      r = 255 / 255,
+      g = 174 / 255,
+      b = 1 / 255
+    },
     health = 500,
     spawn_cooldown = {360, 150},
-    order = "b-d-a",
+    order = "b-d-a"
   },
-  results = {
-    {"colossal-biter", { {0.95, 0.0}, {1.0, 0.8} }}
-  },
+  results = {{"colossal-biter", {{0.95, 0.0}, {1.0, 0.8}}}},
   resistance = {
     --[[{type = "physical", decrease = 5, percent = 10},
     {type = "explosion", decrease = 5, percent = 10},
     {type = "fire", decrease = 30, percent = 60},
     {type = "laser", decrease = 5, percent = 10},]]
-    {type = "plasma", decrease = 5, percent = 10}
+    {
+      type = "plasma",
+      decrease = 5,
+      percent = 10
+    }
   }
 }
 
-biter_definitions.spitter_spawner =
-{
+biter_definitions.spitter_spawner = {
   appearance = {
     type = "spitter",
-    tint = {r=255/255, g=255/255, b=0/255},
+    tint = {
+      r = 255 / 255,
+      g = 255 / 255,
+      b = 0 / 255
+    },
     health = 500,
     spawn_cooldown = {360, 150},
     order = "b-d-b"
   },
-  results = {
-    {"colossal-spitter", { {0.95, 0.0}, {1.0, 0.8} }}
-  },
+  results = {{"colossal-spitter", {{0.95, 0.0}, {1.0, 0.8}}}},
   resistance = {
     --[[{type = "physical", decrease = 5, percent = 10},
     {type = "explosion", decrease = 5, percent = 10},
     {type = "fire", decrease = 30, percent = 60},
     {type = "laser", decrease = 5, percent = 10},]]
-    {type = "plasma", decrease = 5, percent = 10}
+    {
+      type = "plasma",
+      decrease = 5,
+      percent = 10
+    }
   }
 }
 
-biter_definitions.scarab_spawner =
-{
+biter_definitions.scarab_spawner = {
   appearance = {
     type = "scarab",
-    tint = {r=255/255, g=174/255, b=1/255},
+    tint = {
+      r = 255 / 255,
+      g = 174 / 255,
+      b = 1 / 255
+    },
     health = 500,
     spawn_cooldown = {360, 150},
-    order = "b-d-c",
+    order = "b-d-c"
   },
   results = {
-    {"small-biter",     { {0.0  , 0.2}, {0.1 , 0.4}, {0.2 , 0.0} }},
-    {"small-scarab",    { {0.1  , 0.0}, {0.25, 0.2}, {0.75, 0.0} }},
-    {"medium-scarab",   { {0.25 , 0.0}, {0.5 , 0.3}, {1.0 , 0.2} }},
-    {"big-scarab",      { {0.55 , 0.0}, {0.75, 0.4}, {0.8 , 0.4} }},
-    {"behemoth-scarab", { {0.93 , 0.0}, {1.0 , 0.6}              }},
-    {"colossal-scarab", { {0.965, 0.0}, {1.0 , 0.8}              }},
+    {"small-biter", {{0.0, 0.2}, {0.1, 0.4}, {0.2, 0.0}}},
+    {"small-scarab", {{0.1, 0.0}, {0.25, 0.2}, {0.75, 0.0}}},
+    {"medium-scarab", {{0.25, 0.0}, {0.5, 0.3}, {1.0, 0.2}}},
+    {"big-scarab", {{0.55, 0.0}, {0.75, 0.4}, {0.8, 0.4}}},
+    {"behemoth-scarab", {{0.93, 0.0}, {1.0, 0.6}}},
+    {"colossal-scarab", {{0.965, 0.0}, {1.0, 0.8}}}
   },
-  resistance = {
-    {type = "physical", decrease = 5, percent = 10},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "fire", decrease = 30, percent = 60},
-    {type = "laser", decrease = 5, percent = 10},
-    {type = "plasma", decrease = 5, percent = 10}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "fire",
+    decrease = 30,
+    percent = 60
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "plasma",
+    decrease = 5,
+    percent = 10
+  }}
 }
 
-biter_definitions.psyker_spawner =
-{
+biter_definitions.psyker_spawner = {
   appearance = {
     type = "psyker",
-    tint = {r=255/255, g=255/255, b=0/255},
+    tint = {
+      r = 255 / 255,
+      g = 255 / 255,
+      b = 0 / 255
+    },
     health = 500,
     spawn_cooldown = {360, 150},
-    order = "b-d-d",
+    order = "b-d-d"
   },
   results = {
-    {"small-biter",     { {0.0  , 1.6}, {0.1 , 1.6}, {0.2, 0.4}, {0.3, 0.0} }},
-    {"small-scarab",    { {0.1  , 0.0}, {0.2 , 0.4}, {0.3, 1.5}, {0.4, 0.0} }},
-    {"small-psyker",    { {0.3  , 0.0}, {0.4 , 0.4}, {0.7, 0.0}             }},
-    {"medium-psyker",   { {0.45 , 0.0}, {0.55, 0.1}, {0.7, 0.8}, {1.0, 0.1} }},
-    {"big-psyker",      { {0.55 , 0.0}, {0.7 , 0.5}                         }},
-    {"behemoth-psyker", { {0.93 , 0.0}, {1.0 , 0.6}                         }},
-    {"colossal-psyker", { {0.965, 0.0}, {1.0 , 0.8}                         }},
+    {"small-biter", {{0.0, 1.6}, {0.1, 1.6}, {0.2, 0.4}, {0.3, 0.0}}},
+    {"small-scarab", {{0.1, 0.0}, {0.2, 0.4}, {0.3, 1.5}, {0.4, 0.0}}},
+    {"small-psyker", {{0.3, 0.0}, {0.4, 0.4}, {0.7, 0.0}}},
+    {"medium-psyker", {{0.45, 0.0}, {0.55, 0.1}, {0.7, 0.8}, {1.0, 0.1}}},
+    {"big-psyker", {{0.55, 0.0}, {0.7, 0.5}}},
+    {"behemoth-psyker", {{0.93, 0.0}, {1.0, 0.6}}},
+    {"colossal-psyker", {{0.965, 0.0}, {1.0, 0.8}}}
   },
-  resistance = {
-    {type = "physical", decrease = 5, percent = 10},
-    {type = "explosion", decrease = 5, percent = 10},
-    {type = "fire", decrease = 30, percent = 60},
-    {type = "laser", decrease = 5, percent = 10},
-    {type = "plasma", decrease = 5, percent = 10}
-  }
+  resistance = {{
+    type = "physical",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "explosion",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "fire",
+    decrease = 30,
+    percent = 60
+  }, {
+    type = "laser",
+    decrease = 5,
+    percent = 10
+  }, {
+    type = "plasma",
+    decrease = 5,
+    percent = 10
+  }}
 }
 
 return biter_definitions

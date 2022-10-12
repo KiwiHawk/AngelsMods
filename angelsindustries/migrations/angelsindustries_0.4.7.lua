@@ -12,7 +12,8 @@ if settings.startup["angels-enable-industries"].value or game.active_mods["bobpl
     end
 
     if force.technologies["angels-glass-melting"] and force.technologies["angels-glass-smelting-1"] then
-      force.technologies["angels-glass-melting"].researched = force.technologies["angels-glass-smelting-1"].researched
+      force.technologies["angels-glass-melting"].researched =
+        force.technologies["angels-glass-smelting-1"].researched
     end
   end
 end

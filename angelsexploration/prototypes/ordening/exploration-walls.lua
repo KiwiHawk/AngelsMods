@@ -10,6 +10,16 @@ reorder("item", "wall-0", "angels-exploration-walls", "a[primitive]-a[wall]")
 reorder("item", "stone-wall", "angels-exploration-walls", "b[regular]-a[wall]")
 reorder("item", "gate", "angels-exploration-walls", "b[regular]-b[gate]")
 if mods["bobwarfare"] then
-  reorder("item", "reinforced-wall", "angels-exploration-walls", "c[reinforced]-a[wall]")
-  reorder("item", "reinforced-gate", "angels-exploration-walls", "c[reinforced]-b[gate]")
+  reorder(
+    "item",
+    "reinforced-wall",
+    "angels-exploration-walls",
+    "c[reinforced]-a[wall]"
+  )
+  reorder(
+    "item",
+    "reinforced-gate",
+    "angels-exploration-walls",
+    "c[reinforced]-b[gate]"
+  )
 end

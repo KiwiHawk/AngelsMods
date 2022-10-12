@@ -12,30 +12,37 @@ if mods["bobplates"] then
       -- gems group
       data.raw["item-group"]["bob-gems"].icon = nil
       data.raw["item-group"]["bob-gems"].icon_size = nil
-      data.raw["item-group"]["bob-gems"].icons = {
-        {
-          icon = "__bobplates__/graphics/icons/technology/gems.png",
-          icon_size = 64
-        },
-        {
-          icon = "__angelsrefining__/graphics/icons/bobs-logo.png",
-          icon_size = 1080,
-          scale = 64/1080 * 0.35,
-          shift = {20, -20}
-        },
-      }
+      data.raw["item-group"]["bob-gems"].icons = {{
+        icon = "__bobplates__/graphics/icons/technology/gems.png",
+        icon_size = 64
+      }, {
+        icon = "__angelsrefining__/graphics/icons/bobs-logo.png",
+        icon_size = 1080,
+        scale = 64 / 1080 * 0.35,
+        shift = {20, -20}
+      }}
       data.raw["item-group"]["bob-gems"].order = "lb[bobs]-c[gems]"
     end
 
     -- gems subgroups
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].group = "bob-gems"
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].order = "7"..data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].order
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].group = "bob-gems"
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].order = "7"..data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].order
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].group = "bob-gems"
-    data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].order = "7"..data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].order
-    
-    move_item("crystal-grindstone", "bio-biter-processing-crystal-splinter", "d")
+    data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].group =
+      "bob-gems"
+    data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].order =
+      "7" .. data.raw["item-subgroup"]["bio-biter-processing-crystal-splinter"].order
+    data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].group =
+      "bob-gems"
+    data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].order =
+      "7" .. data.raw["item-subgroup"]["bio-biter-processing-crystal-shard"].order
+    data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].group =
+      "bob-gems"
+    data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].order =
+      "7" .. data.raw["item-subgroup"]["bio-biter-processing-crystal-full"].order
+
+    move_item(
+      "crystal-grindstone",
+      "bio-biter-processing-crystal-splinter",
+      "d"
+    )
     move_item("crystal-grindstone", "bob-gems-cut", "h-4", "recipe")
   end
 
@@ -50,9 +57,14 @@ end
 
 -- everything below this should be rewritten and organized as it's becomming a mess
 if bobmods then
-  OV.patch_recipes({
-    { name = "bob-coal-from-wood", ingredients = { {type="item", name="wood", amount = 5} } },
-  })
+  OV.patch_recipes({{
+    name = "bob-coal-from-wood",
+    ingredients = {{
+      type = "item",
+      name = "wood",
+      amount = 5
+    }}
+  }})
 end
 
 if mods["bobassembly"] and settings.startup["bobmods-assembly-burner"].value == true then

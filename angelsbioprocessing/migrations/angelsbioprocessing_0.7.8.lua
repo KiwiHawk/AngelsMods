@@ -1,10 +1,7 @@
 game.reload_script()
 
-local change_tech = {
-  "ore-powderizer",
-  "ore-advanced-floatation",
-  "ore-electro-whinning-cell"
-}
+local change_tech =
+  {"ore-powderizer", "ore-advanced-floatation", "ore-electro-whinning-cell"}
 --Enable recipes
 for index, force in pairs(game.forces) do
   for _, tech_name in pairs(change_tech) do

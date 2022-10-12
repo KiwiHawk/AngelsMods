@@ -1,7 +1,8 @@
 -- REFINERY PRODUCTS TRIGGERS
 -- in the data stage, triggers where set for the ores,
 -- depending on the ore settings, we enable the refinery products
-angelsmods.trigger.refinery_products = angelsmods.trigger.refinery_products or {}
+angelsmods.trigger.refinery_products =
+  angelsmods.trigger.refinery_products or {}
 angelsmods.trigger.refinery_products["saphirite"] = true
 angelsmods.trigger.refinery_products["jivolite"] = true
 angelsmods.trigger.refinery_products["stiratite"] = true

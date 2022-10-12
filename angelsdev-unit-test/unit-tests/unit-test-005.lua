@@ -19,8 +19,8 @@ local function get_researchable_recipes()
   end
 
   local tech_filters = {}
-  table.insert(tech_filters, {filter = "hidden", invert = true, mode = "and"})
-  table.insert(tech_filters, {filter = "enabled", invert = false, mode = "and"})
+  table.insert(tech_filters, { filter = "hidden", invert = true, mode = "and" })
+  table.insert(tech_filters, { filter = "enabled", invert = false, mode = "and" })
   local tech_prototypes = game.get_filtered_technology_prototypes(tech_filters)
 
   for tech_name, tech_prototype in pairs(tech_prototypes) do

@@ -14,7 +14,7 @@ else
     "desert-tree-arboretum-1",
     "desert-tree-arboretum-2",
     "bio-rubber-tree",
-    "bio-rubber",
+    "bio-rubber"
   })
   angelsmods.functions.add_flag("tree-desert-seed", "hidden")
   angelsmods.functions.add_flag("bio-rubber", "hidden")
@@ -40,7 +40,7 @@ else
     "bio-resin-tree",
     "bio-resin-resin-liquification",
     "bio-resin",
-    "bio-resin-wood-reprocessing",
+    "bio-resin-wood-reprocessing"
   })
   angelsmods.functions.add_flag("tree-temperate-seed", "hidden")
   angelsmods.functions.add_flag("bio-resin", "hidden")
@@ -64,7 +64,7 @@ else
     "swamp-tree-arboretum-1",
     "swamp-tree-arboretum-2",
     "bio-plastic-tree",
-    "bio-plastic",
+    "bio-plastic"
   })
   angelsmods.functions.add_flag("tree-swamp-seed", "hidden")
   angelsmods.functions.add_flag("bio-plastic", "hidden")
@@ -76,6 +76,7 @@ else
 end
 
 if angelsmods.triggers.paper then
+  --rereq clean-out
 else
   OV.hide_recipe({
     "solid-wood-pulp",
@@ -91,29 +92,28 @@ else
     "kraft-causting",
     "solid-alginic-acid"
   })
-  angelsmods.functions.add_flag({
-    "pulping-liquor",
-    "liquid-brown-liquor",
-    "liquid-white-liquor",
-    "liquid-black-liquor",
-    "liquid-green-liquor",
-    "liquid-pulping-liquor",
-    "solid-paper",
-    "solid-wood-pulp",
-    "solid-alginic-acid"
-  },"hidden")
-  OV.disable_technology({
-    "bio-paper-1",
-    "bio-paper-2",
-    "bio-paper-3"
-  })
-  OV.patch_recipes({
+  angelsmods.functions.add_flag(
     {
-      name = "garden-cultivating",
-      ingredients = {{name ="paste-cellulose", amount = "solid-wood-pulp"}}
-    }
-  })
-  --rereq clean-out
-  OV.remove_prereq("gardens-2","bio-paper-1")
+      "pulping-liquor",
+      "liquid-brown-liquor",
+      "liquid-white-liquor",
+      "liquid-black-liquor",
+      "liquid-green-liquor",
+      "liquid-pulping-liquor",
+      "solid-paper",
+      "solid-wood-pulp",
+      "solid-alginic-acid"
+    },
+    "hidden"
+  )
+  OV.disable_technology({"bio-paper-1", "bio-paper-2", "bio-paper-3"})
+  OV.patch_recipes({{
+    name = "garden-cultivating",
+    ingredients = {{
+      name = "paste-cellulose",
+      amount = "solid-wood-pulp"
+    }}
+  }})
+  OV.remove_prereq("gardens-2", "bio-paper-1")
   OV.remove_unlock("bio-processing-brown", "solid-alginic-acid")
 end

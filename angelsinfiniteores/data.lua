@@ -8,9 +8,11 @@ angelsmods.functions.store.make = angelsmods.functions.store.make or {}
 
 --SET MOD OPTIONS
 angelsmods.ores.yield = settings.startup["angels-infinite-yield"].value
-angelsmods.ores.loweryield = settings.startup["angels-lower-infinite-yield"].value
+angelsmods.ores.loweryield =
+  settings.startup["angels-lower-infinite-yield"].value
 angelsmods.ores.enablefluidreq = settings.startup["angels-enablefluidreq"].value
-angelsmods.ores.disable_ore_override = angelsmods.refining and angelsmods.refining.disable_ore_override or false
+angelsmods.ores.disable_ore_override =
+  angelsmods.refining and angelsmods.refining.disable_ore_override or false
 
 --LOAD RESOURCE GENERATOR
 require("prototypes.generation.resource-builder")

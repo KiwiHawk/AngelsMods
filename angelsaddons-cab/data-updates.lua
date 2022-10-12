@@ -11,7 +11,16 @@ if angelsmods.industries then
 end
 
 if mods["bobvehicleequipment"] then
-  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories, "tank")
-  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories, "vehicle")
-  table.insert(data.raw["equipment-grid"]["angels-cab"].equipment_categories, "armoured-vehicle")
+  table.insert(
+    data.raw["equipment-grid"]["angels-cab"].equipment_categories,
+    "tank"
+  )
+  table.insert(
+    data.raw["equipment-grid"]["angels-cab"].equipment_categories,
+    "vehicle"
+  )
+  table.insert(
+    data.raw["equipment-grid"]["angels-cab"].equipment_categories,
+    "armoured-vehicle"
+  )
 end

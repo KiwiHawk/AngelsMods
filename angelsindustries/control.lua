@@ -1,4 +1,4 @@
-local tech_archive = require "src.tech-archive"
+local tech_archive = require"src.tech-archive"
 
 script.on_event(defines.events.on_player_created, function(event)
   tech_archive:on_player_created()
@@ -65,38 +65,37 @@ script.on_event(defines.events.on_research_finished, function(event)
           research.force.technologies[tech].enabled = false
         end
       end
-    end
-
-  else -- not a ghosting tech (but could be the final prerequisite in order to be researchable)
-    -- this makes sure only 1 will be available for research, the others will be disabled
+    end -- not a ghosting tech (but could be the final prerequisite in order to be researchable)
+    -- this makes sure only 1 will be available for research, the others will be disabled -- shows up as researchable
+    --research.force.technologies[tech].researched = true
+  else
     local already_available = false
-    for tech,_ in pairs(ghosting) do
-      if research.force.technologies[tech] and (not research.force.technologies[tech].researched) then
-
+    for tech, _ in pairs(ghosting) do
+      if research.force.technologies[tech] and not research.force.technologies[tech].researched then
         local available = true
-        for _,prereq in pairs(research.force.technologies[tech].prerequisites or {}) do
+        for _, prereq in
+          pairs(research.force.technologies[tech].prerequisites or {})
+        do
           if not prereq.researched then
             available = false
           end
         end
 
-        if available then -- shows up as researchable
+        if available then
           if already_available then
-            --research.force.technologies[tech].researched = true
             research.force.technologies[tech].enabled = false
           else
             already_available = true
           end
         end
-
       end
     end
   end
-
 end)
 
-script.on_event({defines.events.on_lua_shortcut,
-                 "toggle-ghosting"             }, function(event)
+script.on_event({defines.events.on_lua_shortcut, "toggle-ghosting"}, function(
+event
+)
   if event.prototype_name and event.prototype_name ~= "toggle-ghosting" then return end
   local input = event.prototype_name or event.input_name
   local player = game.players[event.player_index]

@@ -4,26 +4,39 @@ local move_item = angelsmods.functions.move_item
 -------------------------------------------------------------------------------
 -- CHEMICAL PLANTS ------------------------------------------------------------
 -------------------------------------------------------------------------------
-move_item("chemical-plant", "petrochem-buildings-chemical-plant", "a[regular]-aa[vanilla]")
+move_item(
+  "chemical-plant",
+  "petrochem-buildings-chemical-plant",
+  "a[regular]-aa[vanilla]"
+)
 
 if angelsmods.trigger.disable_vanilla_chemical_plants then
   angelsmods.functions.add_flag("chemical-plant", "hidden")
-  angelsmods.functions.set_next_upgrade("assembling-machine", "chemical-plant", nil)
+  angelsmods.functions.set_next_upgrade(
+    "assembling-machine",
+    "chemical-plant",
+    nil
+  )
   OV.global_replace_item("chemical-plant", "angels-chemical-plant")
   OV.disable_recipe("chemical-plant")
-  angelsmods.functions.remove_crafting_category("assembling-machine", "chemical-plant", {
-    "chemistry",
-    "liquifying"
-  })
+  angelsmods.functions.remove_crafting_category(
+    "assembling-machine",
+    "chemical-plant",
+    {"chemistry", "liquifying"}
+  ) --give the item a new home if still active
 else
-  OV.add_unlock("basic-chemistry-2","chemical-plant") --give the item a new home if still active
+  OV.add_unlock("basic-chemistry-2", "chemical-plant")
 end
 
 -------------------------------------------------------------------------------
 -- OIL PROCESSING -------------------------------------------------------------
 -------------------------------------------------------------------------------
 -- oil refinery
-move_item("oil-refinery", "petrochem-buildings-oil-refinery", "b[oil-refinery]-a")
+move_item(
+  "oil-refinery",
+  "petrochem-buildings-oil-refinery",
+  "b[oil-refinery]-a"
+)
 
 -- oil processing
 OV.converter_fluid("petroleum-gas", "gas-methane")
@@ -34,7 +47,10 @@ OV.disable_recipe("lubricant")
 OV.add_unlock("lubricant", "mineral-oil-lubricant")
 
 OV.global_replace_technology("oil-processing", "angels-oil-processing")
-OV.global_replace_technology("advanced-oil-processing", "angels-advanced-oil-processing")
+OV.global_replace_technology(
+  "advanced-oil-processing",
+  "angels-advanced-oil-processing"
+)
 
 OV.disable_technology({"coal-liquefaction"})
 OV.disable_recipe({"coal-liquefaction"})
