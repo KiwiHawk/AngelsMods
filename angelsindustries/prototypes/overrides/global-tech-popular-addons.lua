@@ -7,7 +7,7 @@ if angelsmods.industries.tech then
   -- WAREHOUSES -----------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["Warehousing"] then
-    AI.pack_replace("warehouse-logistics-research-1","green","orange")
+    AI.pack_replace("warehouse-logistics-research-1", "green", "orange")
   end
 
   -------------------------------------------------------------------------------
@@ -60,6 +60,6 @@ if angelsmods.industries.tech then
     OV.remove_prereq("nano-range-4", "robotics")
     OV.add_prereq("nano-range-4", "angels-components-mechanical-5")
   end
-  
+
   OV.execute()
 end

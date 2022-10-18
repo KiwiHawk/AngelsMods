@@ -1,8 +1,7 @@
 local pack_amount_base = 64 / 2 -- half the amount, and the lab has double the speed, so 4x increase
 local pack_time_base = 15
 if angelsmods.industries.tech then
-data:extend(
-  {
+  data:extend({
     -----------------------------------------------------------------------------
     -- EXPLORATION LABS ---------------------------------------------------------
     -----------------------------------------------------------------------------
@@ -13,31 +12,31 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "angels-components-weapons-basic",
-        "tech-red-packs"
+        "tech-red-packs",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-exploration-lab-1"
+          recipe = "angels-exploration-lab-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-exploration-1"
+          recipe = "datacore-exploration-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-exploration-1"
-        }
+          recipe = "block-exploration-1",
+        },
       },
       unit = {
         count = pack_amount_base,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -47,24 +46,24 @@ data:extend(
       prerequisites = {
         "tech-green-packs",
         "tech-specialised-labs-basic-exploration-1",
-        "angels-stone-smelting-1"
+        "angels-stone-smelting-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-exploration-2"
-        }
+          recipe = "block-exploration-2",
+        },
       },
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -74,25 +73,25 @@ data:extend(
       prerequisites = {
         "tech-orange-packs",
         "tech-specialised-labs-basic-exploration-2",
-        "angels-stone-smelting-2"
+        "angels-stone-smelting-2",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-exploration-3"
-        }
+          recipe = "block-exploration-3",
+        },
       },
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -102,34 +101,34 @@ data:extend(
       prerequisites = {
         "tech-blue-packs",
         "tech-specialised-labs-basic-exploration-3",
-        "angels-stone-smelting-3"
+        "angels-stone-smelting-3",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-exploration-lab-2"
+          recipe = "angels-exploration-lab-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-exploration-2"
+          recipe = "datacore-exploration-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-exploration-4"
-        }
+          recipe = "block-exploration-4",
+        },
       },
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -138,27 +137,27 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "tech-yellow-packs",
-        "tech-specialised-labs-advanced-exploration-1"
+        "tech-specialised-labs-advanced-exploration-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-exploration-5"
-        }
+          recipe = "block-exploration-5",
+        },
       },
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1},
-          {type = "item", name = "angels-science-pack-yellow", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     -----------------------------------------------------------------------------
     -- ENERGY LABS --------------------------------------------------------------
@@ -169,31 +168,31 @@ data:extend(
       icon = "__angelsindustries__/graphics/technology/energy-lab-tech.png",
       icon_size = 128,
       prerequisites = {
-        "tech-specialised-labs-basic-exploration-1"
+        "tech-specialised-labs-basic-exploration-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-energy-lab-1"
+          recipe = "angels-energy-lab-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-energy-1"
+          recipe = "datacore-energy-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-energy-1"
-        }
+          recipe = "block-energy-1",
+        },
       },
       unit = {
         count = pack_amount_base,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -203,24 +202,24 @@ data:extend(
       prerequisites = {
         "tech-green-packs",
         "tech-specialised-labs-basic-energy-1",
-        "angels-stone-smelting-1"
+        "angels-stone-smelting-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-energy-2"
-        }
+          recipe = "block-energy-2",
+        },
       },
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -230,25 +229,25 @@ data:extend(
       prerequisites = {
         "tech-orange-packs",
         "tech-specialised-labs-basic-energy-2",
-        "angels-stone-smelting-2"
+        "angels-stone-smelting-2",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-energy-3"
-        }
+          recipe = "block-energy-3",
+        },
       },
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -258,34 +257,34 @@ data:extend(
       prerequisites = {
         "tech-specialised-labs-advanced-exploration-1",
         "tech-specialised-labs-basic-energy-3",
-        "angels-stone-smelting-3"
+        "angels-stone-smelting-3",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-energy-lab-2"
+          recipe = "angels-energy-lab-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-energy-2"
+          recipe = "datacore-energy-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-energy-4"
-        }
+          recipe = "block-energy-4",
+        },
       },
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -294,27 +293,27 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "tech-yellow-packs",
-        "tech-specialised-labs-advanced-energy-1"
+        "tech-specialised-labs-advanced-energy-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-energy-5"
-        }
+          recipe = "block-energy-5",
+        },
       },
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1},
-          {type = "item", name = "angels-science-pack-yellow", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     -----------------------------------------------------------------------------
     -- LOGISTICS LABS -----------------------------------------------------------
@@ -325,31 +324,31 @@ data:extend(
       icon = "__angelsindustries__/graphics/technology/logistic-lab-tech.png",
       icon_size = 128,
       prerequisites = {
-        "tech-specialised-labs-basic-exploration-1"
+        "tech-specialised-labs-basic-exploration-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-logistic-lab-1"
+          recipe = "angels-logistic-lab-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-logistic-1"
+          recipe = "datacore-logistic-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-logistic-1"
-        }
+          recipe = "block-logistic-1",
+        },
       },
       unit = {
         count = pack_amount_base,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -359,24 +358,24 @@ data:extend(
       prerequisites = {
         "tech-green-packs",
         "tech-specialised-labs-basic-logistic-1",
-        "angels-stone-smelting-1"
+        "angels-stone-smelting-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-logistic-2"
-        }
+          recipe = "block-logistic-2",
+        },
       },
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -386,25 +385,25 @@ data:extend(
       prerequisites = {
         "tech-orange-packs",
         "tech-specialised-labs-basic-logistic-2",
-        "angels-stone-smelting-2"
+        "angels-stone-smelting-2",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-logistic-3"
-        }
+          recipe = "block-logistic-3",
+        },
       },
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -414,34 +413,34 @@ data:extend(
       prerequisites = {
         "tech-specialised-labs-advanced-exploration-1",
         "tech-specialised-labs-basic-logistic-3",
-        "angels-stone-smelting-3"
+        "angels-stone-smelting-3",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-logistic-lab-2"
+          recipe = "angels-logistic-lab-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-logistic-2"
+          recipe = "datacore-logistic-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-logistic-4"
-        }
+          recipe = "block-logistic-4",
+        },
       },
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -450,27 +449,27 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "tech-yellow-packs",
-        "tech-specialised-labs-advanced-logistic-1"
+        "tech-specialised-labs-advanced-logistic-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-logistic-5"
-        }
+          recipe = "block-logistic-5",
+        },
       },
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1},
-          {type = "item", name = "angels-science-pack-yellow", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     -----------------------------------------------------------------------------
     -- ENHANCEMENT LABS ---------------------------------------------------------
@@ -481,31 +480,31 @@ data:extend(
       icon = "__angelsindustries__/graphics/technology/enhance-lab-tech.png",
       icon_size = 128,
       prerequisites = {
-        "tech-specialised-labs-basic-exploration-1"
+        "tech-specialised-labs-basic-exploration-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-enhance-lab-1"
+          recipe = "angels-enhance-lab-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-enhance-1"
+          recipe = "datacore-enhance-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-enhancement-1"
-        }
+          recipe = "block-enhancement-1",
+        },
       },
       unit = {
         count = pack_amount_base,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -515,24 +514,24 @@ data:extend(
       prerequisites = {
         "tech-green-packs",
         "tech-specialised-labs-basic-enhance-1",
-        "angels-stone-smelting-1"
+        "angels-stone-smelting-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-enhancement-2"
-        }
+          recipe = "block-enhancement-2",
+        },
       },
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -542,25 +541,25 @@ data:extend(
       prerequisites = {
         "tech-orange-packs",
         "tech-specialised-labs-basic-enhance-2",
-        "angels-stone-smelting-2"
+        "angels-stone-smelting-2",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-enhancement-3"
-        }
+          recipe = "block-enhancement-3",
+        },
       },
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -570,34 +569,34 @@ data:extend(
       prerequisites = {
         "tech-specialised-labs-advanced-exploration-1",
         "tech-specialised-labs-basic-enhance-3",
-        "angels-stone-smelting-3"
+        "angels-stone-smelting-3",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-enhance-lab-2"
+          recipe = "angels-enhance-lab-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-enhance-2"
+          recipe = "datacore-enhance-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-enhancement-4"
-        }
+          recipe = "block-enhancement-4",
+        },
       },
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -606,27 +605,27 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "tech-yellow-packs",
-        "tech-specialised-labs-advanced-enhance-1"
+        "tech-specialised-labs-advanced-enhance-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-enhancement-5"
-        }
+          recipe = "block-enhancement-5",
+        },
       },
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1},
-          {type = "item", name = "angels-science-pack-yellow", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     -----------------------------------------------------------------------------
     -- PRODUCTION LABS ----------------------------------------------------------
@@ -638,31 +637,31 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-basic-exploration-1",
-        "angels-components-mechanical-1"
+        "angels-components-mechanical-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-processing-lab-1"
+          recipe = "angels-processing-lab-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-processing-1"
+          recipe = "datacore-processing-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-production-1"
-        }
+          recipe = "block-production-1",
+        },
       },
       unit = {
         count = pack_amount_base,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -672,24 +671,24 @@ data:extend(
       prerequisites = {
         "tech-green-packs",
         "tech-specialised-labs-basic-processing-1",
-        "angels-components-mechanical-2"
+        "angels-components-mechanical-2",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-production-2"
-        }
+          recipe = "block-production-2",
+        },
       },
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -700,25 +699,25 @@ data:extend(
         "tech-orange-packs",
         "tech-specialised-labs-basic-processing-2",
         "angels-components-mechanical-3",
-        "angels-stone-smelting-2"
+        "angels-stone-smelting-2",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-production-3"
-        }
+          recipe = "block-production-3",
+        },
       },
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -729,34 +728,34 @@ data:extend(
         "tech-specialised-labs-advanced-exploration-1",
         "tech-specialised-labs-basic-processing-3",
         "angels-components-mechanical-4",
-        "angels-stone-smelting-3"
+        "angels-stone-smelting-3",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-processing-lab-2"
+          recipe = "angels-processing-lab-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-processing-2"
+          recipe = "datacore-processing-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-production-4"
-        }
+          recipe = "block-production-4",
+        },
       },
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -766,27 +765,27 @@ data:extend(
       prerequisites = {
         "tech-yellow-packs",
         "tech-specialised-labs-advanced-processing-1",
-        "angels-components-mechanical-5"
+        "angels-components-mechanical-5",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-production-5"
-        }
+          recipe = "block-production-5",
+        },
       },
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1},
-          {type = "item", name = "angels-science-pack-yellow", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     -----------------------------------------------------------------------------
     -- WARFARE LABS -------------------------------------------------------------
@@ -798,31 +797,31 @@ data:extend(
       icon_size = 128,
       prerequisites = {
         "tech-specialised-labs-basic-exploration-1",
-        "angels-components-weapons-basic"
+        "angels-components-weapons-basic",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-war-lab-1"
+          recipe = "angels-war-lab-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-war-1"
+          recipe = "datacore-war-1",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-warfare-1"
-        }
+          recipe = "block-warfare-1",
+        },
       },
       unit = {
         count = pack_amount_base,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -833,24 +832,24 @@ data:extend(
         "tech-green-packs",
         "tech-specialised-labs-basic-war-1",
         "military",
-        "angels-stone-smelting-1"
+        "angels-stone-smelting-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-warfare-2"
-        }
+          recipe = "block-warfare-2",
+        },
       },
       unit = {
         count = pack_amount_base * 2,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -861,25 +860,25 @@ data:extend(
         "tech-orange-packs",
         "tech-specialised-labs-basic-war-2",
         "military-2",
-        "angels-stone-smelting-2"
+        "angels-stone-smelting-2",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-warfare-3"
-        }
+          recipe = "block-warfare-3",
+        },
       },
       unit = {
         count = pack_amount_base * 4,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -890,34 +889,34 @@ data:extend(
         "tech-specialised-labs-advanced-exploration-1",
         "tech-specialised-labs-basic-war-3",
         "angels-components-weapons-advanced",
-        "angels-stone-smelting-3"
+        "angels-stone-smelting-3",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-war-lab-2"
+          recipe = "angels-war-lab-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-war-2"
+          recipe = "datacore-war-2",
         },
         {
           type = "unlock-recipe",
-          recipe = "block-warfare-4"
-        }
+          recipe = "block-warfare-4",
+        },
       },
       unit = {
         count = pack_amount_base * 8,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -927,27 +926,27 @@ data:extend(
       prerequisites = {
         "tech-yellow-packs",
         "tech-specialised-labs-advanced-war-1",
-        "military-3"
+        "military-3",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "block-warfare-5"
-        }
+          recipe = "block-warfare-5",
+        },
       },
       unit = {
         count = pack_amount_base * 16,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1},
-          {type = "item", name = "angels-science-pack-yellow", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     -----------------------------------------------------------------------------
     -- BASIC LABS ---------------------------------------------------------------
@@ -961,21 +960,21 @@ data:extend(
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-basic-lab"
+          recipe = "angels-basic-lab",
         },
         {
           type = "unlock-recipe",
-          recipe = "datacore-basic"
-        }
+          recipe = "datacore-basic",
+        },
       },
       unit = {
         count = pack_amount_base,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     {
       type = "technology",
@@ -988,23 +987,23 @@ data:extend(
         "tech-specialised-labs-basic-logistic-1",
         "tech-specialised-labs-basic-enhance-1",
         "tech-specialised-labs-basic-processing-1",
-        "tech-specialised-labs-basic-war-1"
+        "tech-specialised-labs-basic-war-1",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-basic-lab-2"
-        }
+          recipe = "angels-basic-lab-2",
+        },
       },
       unit = {
         count = pack_amount_base,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
       },
-      order = "b-5"
+      order = "b-5",
     },
     -----------------------------------------------------------------------------
     -- POST ROCKET LABS ---------------------------------------------------------
@@ -1015,54 +1014,53 @@ data:extend(
       icon = "__angelsindustries__/graphics/technology/basic-lab-tech.png",
       icon_size = 128,
       prerequisites = {
-        "space-science-pack"
+        "space-science-pack",
       },
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "angels-basic-lab-3"
+          recipe = "angels-basic-lab-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-enhance-lab-3"
+          recipe = "angels-enhance-lab-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-energy-lab-3"
+          recipe = "angels-energy-lab-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-processing-lab-3"
+          recipe = "angels-processing-lab-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-war-lab-3"
+          recipe = "angels-war-lab-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-logistic-lab-3"
+          recipe = "angels-logistic-lab-3",
         },
         {
           type = "unlock-recipe",
-          recipe = "angels-exploration-lab-3"
-        }
+          recipe = "angels-exploration-lab-3",
+        },
       },
       unit = {
         count = pack_amount_base * 32,
         ingredients = {
-          {type = "item", name = "angels-science-pack-grey", amount = 1},
-          {type = "item", name = "angels-science-pack-red", amount = 1},
-          {type = "item", name = "angels-science-pack-green", amount = 1},
-          {type = "item", name = "angels-science-pack-orange", amount = 1},
-          {type = "item", name = "angels-science-pack-blue", amount = 1},
-          {type = "item", name = "angels-science-pack-yellow", amount = 1},
-          {type = "item", name = "angels-science-pack-white", amount = 1}
+          { type = "item", name = "angels-science-pack-grey", amount = 1 },
+          { type = "item", name = "angels-science-pack-red", amount = 1 },
+          { type = "item", name = "angels-science-pack-green", amount = 1 },
+          { type = "item", name = "angels-science-pack-orange", amount = 1 },
+          { type = "item", name = "angels-science-pack-blue", amount = 1 },
+          { type = "item", name = "angels-science-pack-yellow", amount = 1 },
+          { type = "item", name = "angels-science-pack-white", amount = 1 },
         },
-        time = pack_time_base
+        time = pack_time_base,
         --pack_time_base,
       },
-      order = "b-5"
-    }
-  }
-)
+      order = "b-5",
+    },
+  })
 end

@@ -1,7 +1,7 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.bioprocessing = angelsmods.bioprocessing or {}
-angelsmods.bioprocessing.number_tint = {r = 0.2, g = 1, b = 0.2, a = 1}
+angelsmods.bioprocessing.number_tint = { r = 0.2, g = 1, b = 0.2, a = 1 }
 
 --TRIGGER CHECKS
 angelsmods.triggers = angelsmods.triggers or {}
@@ -52,7 +52,9 @@ end
 --BIO ALTERNATIVES FOR PETRO
 angelsmods.triggers.bio_rubber = angelsmods.triggers.bio_rubber or angelsmods.trigger.rubber or false
 angelsmods.triggers.bio_resin = angelsmods.triggers.bio_resin or angelsmods.trigger.resin or false
-angelsmods.triggers.bio_plastic = angelsmods.triggers.bio_plastic or (angelsmods.trigger.plastic and (angelsmods.triggers.bio_resin or angelsmods.triggers.bio_rubber)) or false
+angelsmods.triggers.bio_plastic = angelsmods.triggers.bio_plastic
+  or (angelsmods.trigger.plastic and (angelsmods.triggers.bio_resin or angelsmods.triggers.bio_rubber))
+  or false
 
 -- set triggers for other angel mods
 require("prototypes.bio-processing-triggers")

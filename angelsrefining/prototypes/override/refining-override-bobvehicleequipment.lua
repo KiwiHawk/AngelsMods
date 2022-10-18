@@ -27,7 +27,7 @@ if mods["bobvehicleequipment"] then
     OV.add_prereq("vehicle-roboport-equipment-2", "chemical-science-pack")
     OV.add_prereq("vehicle-roboport-equipment-3", "advanced-logistic-science-pack")
   end
-  
+
   -----------------------------------------------------------------------------
   -- LASER DEFENSE EQUIPMENT --------------------------------------------------
   -----------------------------------------------------------------------------
@@ -64,5 +64,4 @@ if mods["bobvehicleequipment"] then
     OV.remove_science_pack("vehicle-fusion-reactor-equipment-3", "utility-science-pack")
     OV.remove_prereq("vehicle-fusion-reactor-equipment-3", "utility-science-pack")
   end
-
 end

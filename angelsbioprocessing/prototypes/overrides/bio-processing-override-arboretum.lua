@@ -17,7 +17,7 @@ else
   OV.disable_technology({
     "bio-arboretum-desert-1",
     "bio-arboretum-desert-2",
-    "bio-arboretum-desert-3"
+    "bio-arboretum-desert-3",
   })
 end
 
@@ -40,7 +40,7 @@ else
   OV.disable_technology({
     "bio-arboretum-temperate-1",
     "bio-arboretum-temperate-2",
-    "bio-arboretum-temperate-3"
+    "bio-arboretum-temperate-3",
   })
 end
 
@@ -61,6 +61,6 @@ else
   OV.disable_technology({
     "bio-arboretum-swamp-1",
     "bio-arboretum-swamp-2",
-    "bio-arboretum-swamp-3"
+    "bio-arboretum-swamp-3",
   })
 end

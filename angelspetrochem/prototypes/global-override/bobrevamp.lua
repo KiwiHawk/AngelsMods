@@ -14,7 +14,7 @@ if mods["bobrevamp"] then
   move_item("solid-fuel-from-heavy-oil", "petrochem-fuel", "e[bob]-c")
   move_item("solid-fuel-from-hydrogen", "petrochem-fuel", "e[bob]-d")
 
-  OV.disable_technology({"solid-fuel"})
+  OV.disable_technology({ "solid-fuel" })
 
   OV.remove_unlock("angels-oil-processing", "solid-fuel-fuel-oil")
   OV.remove_unlock("angels-oil-processing", "solid-fuel-naphtha")
@@ -37,7 +37,6 @@ if mods["bobrevamp"] then
     OV.add_unlock("flammables", "enriched-fuel-from-liquid-fuel")
 
     OV.add_prereq("chemical-processing-3", "flammables")
-
   end
 
   -----------------------------------------------------------------------------
@@ -53,14 +52,12 @@ if mods["bobrevamp"] then
   angelsmods.functions.disable_barreling_recipes("ammonia")
 
   if settings.startup["bobmods-revamp-old-oil"] then
-    OV.hide_recipe(
-      {
-        "oil-processing-with-sulfur",
-        "oil-processing-with-sulfur-dioxide",
-        "oil-processing-with-sulfur-dioxide-2",
-        "oil-processing-with-sulfur-dioxide-3",
-      }
-    )
+    OV.hide_recipe({
+      "oil-processing-with-sulfur",
+      "oil-processing-with-sulfur-dioxide",
+      "oil-processing-with-sulfur-dioxide-2",
+      "oil-processing-with-sulfur-dioxide-3",
+    })
   end
   if settings.startup["bobmods-revamp-oil"] then
     OV.hide_recipe("solid-fuel-from-sour-gas")
@@ -83,7 +80,7 @@ if mods["bobrevamp"] then
     --OV.remove_unlock("lithium-processing", "sodium-perchlorate")
     --NaCl+H2O-->NaClO3+H2O
     --OV.remove_unlock("lithium-processing", "sodium-chlorate")
-    OV.disable_recipe({"sodium-chlorate","sodium-perchlorate"})
+    OV.disable_recipe({ "sodium-chlorate", "sodium-perchlorate" })
     --make pre-reqs match new unlock point
     OV.add_prereq("lithium-processing", "chlorine-processing-4")
     OV.set_science_pack("lithium-processing", "chemical-science-pack", 1)
@@ -119,22 +116,20 @@ if mods["bobrevamp"] then
 
     --OV.global_replace_technology("rocket-fuel", "angels-rocket-fuel")
     --OV.remove_unlock("rocket-fuel", "dinitrogen-tetroxide")
-    OV.disable_recipe(
-      {
-        "dinitrogen-tetroxide",
-        "nitric-oxide",
-        "hydrazine",
-        "hydrogen-peroxide",
-        "carbon-dioxide",
-        "enriched-fuel-from-hydrazine",
-      }
-    )
+    OV.disable_recipe({
+      "dinitrogen-tetroxide",
+      "nitric-oxide",
+      "hydrazine",
+      "hydrogen-peroxide",
+      "carbon-dioxide",
+      "enriched-fuel-from-hydrazine",
+    })
   end
   -----------------------------------------------------------------------------
   -- PEROXIDE DEAD END --------------------------------------------------------
   -----------------------------------------------------------------------------
   --this may be used at a later date, but for now, it is a dead-end
-  angelsmods.functions.add_flag("gas-hydrogen-peroxide","hidden")
+  angelsmods.functions.add_flag("gas-hydrogen-peroxide", "hidden")
 
   -----------------------------------------------------------------------------
   -- RTG ----------------------------------------------------------------------
@@ -144,12 +139,12 @@ if mods["bobrevamp"] then
     angelsmods.functions.add_flag("sodium-carbonate", "hidden")
 
     if settings.startup["bobmods-revamp-hardmode"].value then
-      OV.disable_recipe(
-        {
-          "brine-electrolysis", -- equivalent of angels recipe "water-saline-seperation"
-          "ammoniated-brine", "sodium-bicarbonate", "sodium-carbonate", -- angels has own process of creating "solid-sodium-carbonate" from saline water
-        }
-      )
+      OV.disable_recipe({
+        "brine-electrolysis", -- equivalent of angels recipe "water-saline-seperation"
+        "ammoniated-brine",
+        "sodium-bicarbonate",
+        "sodium-carbonate", -- angels has own process of creating "solid-sodium-carbonate" from saline water
+      })
 
       angelsmods.functions.add_flag("brine", "hidden")
       angelsmods.functions.disable_barreling_recipes("brine")
@@ -165,29 +160,24 @@ if mods["bobrevamp"] then
       OV.global_replace_item("sodium-perchlorate", "solid-sodium-perchlorate")
       angelsmods.functions.add_flag("sodium-perchlorate", "hidden")
 
-      OV.patch_recipes(
+      OV.patch_recipes({
         {
-          {
-            name = "ammonium-chloride-recycling",
-            ingredients =
-            {
-              --{name = "solid-limestone", type = "item", amount = 1},
-              {name = "gas-ammonium-chloride", type = "fluid", amount = 20},
-              {name = "ammonium-chloride", type = "item", amount = 0}
-            },
-            results =
-            {
-              {type = "fluid", name = "gas-ammonia", amount = 40}, -- 40 instead of 50 to be ammonia neutral (no production of it)
-            },
-            subgroup = "petrochem-basics",
-            crafting_machine_tint = angelsmods.functions.get_recipe_tints({"gas-ammonia","gas-ammonium-chloride"}),
-            order = "e[solid-calcium-chloride]-b"
-          }
-        }
-      )
+          name = "ammonium-chloride-recycling",
+          ingredients = {
+            --{name = "solid-limestone", type = "item", amount = 1},
+            { name = "gas-ammonium-chloride", type = "fluid", amount = 20 },
+            { name = "ammonium-chloride", type = "item", amount = 0 },
+          },
+          results = {
+            { type = "fluid", name = "gas-ammonia", amount = 40 }, -- 40 instead of 50 to be ammonia neutral (no production of it)
+          },
+          subgroup = "petrochem-basics",
+          crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "gas-ammonia", "gas-ammonium-chloride" }),
+          order = "e[solid-calcium-chloride]-b",
+        },
+      })
       OV.converter_fluid("ammonium-chloride", "gas-ammonium-chloride")
       angelsmods.functions.add_flag("ammonium-chloride", "hidden")
     end
   end
-
 end

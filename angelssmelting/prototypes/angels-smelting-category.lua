@@ -1,6 +1,5 @@
-data:extend(
-{
---RESOURCE CATEGORIES
+data:extend({
+  --RESOURCE CATEGORIES
   { type = "recipe-category", name = "ore-processing" },
   { type = "recipe-category", name = "ore-processing-2" },
   { type = "recipe-category", name = "ore-processing-3" },
@@ -47,7 +46,7 @@ data:extend(
   { type = "recipe-category", name = "sintering-4" },
 
   { type = "recipe-category", name = "cooling" },
---SUBGROUPS
+  --SUBGROUPS
   {
     type = "item-subgroup",
     name = "fluids-smelting",
@@ -62,15 +61,15 @@ data:extend(
       {
         icon = "__angelssmelting__/graphics/technology/blast-furnace-tech.png",
         icon_size = 256,
-        scale = 0.25
+        scale = 0.25,
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
-        shift = {20, -20}
-      }
-    }
+        shift = { 20, -20 },
+      },
+    },
   },
   {
     type = "item-subgroup",
@@ -193,10 +192,10 @@ data:extend(
     order = "r",
   },
   -- {
-    -- type = "item-subgroup",
-    -- name = "angels-alloys-2",
-    -- group = "angels-smelting",
-    -- order = "s",
+  -- type = "item-subgroup",
+  -- name = "angels-alloys-2",
+  -- group = "angels-smelting",
+  -- order = "s",
   -- },
   {
     type = "item-subgroup",
@@ -242,15 +241,15 @@ data:extend(
       {
         icon = "__angelssmelting__/graphics/technology/induction-furnace-tech.png",
         icon_size = 256,
-        scale = 0.25
+        scale = 0.25,
       },
       {
         icon = "__angelsrefining__/graphics/icons/void.png",
         icon_size = 32,
         scale = 64 / 32 * 0.35,
-        shift = {20, -20}
-      }
-    }
+        shift = { 20, -20 },
+      },
+    },
   },
   {
     type = "item-subgroup",
@@ -414,5 +413,4 @@ data:extend(
     group = "angels-casting",
     order = "zh",
   },
-}
-)
+})

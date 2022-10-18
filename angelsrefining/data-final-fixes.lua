@@ -9,4 +9,4 @@ end
 
 angelsmods.functions.create_barreling_fluid_subgroup()
 
-require "prototypes.tips-and-tricks.tips-and-tricks"
+require("prototypes.tips-and-tricks.tips-and-tricks")

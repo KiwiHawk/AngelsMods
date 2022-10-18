@@ -1,7 +1,7 @@
 --INITIALIZE
 angelsmods = angelsmods or {}
 angelsmods.petrochem = angelsmods.petrochem or {}
-angelsmods.petrochem.number_tint = {r = 1, g = 1, b = 1, a = 1}
+angelsmods.petrochem.number_tint = { r = 1, g = 1, b = 1, a = 1 }
 
 --TRIGGER CHECKS
 angelsmods.trigger = angelsmods.trigger or {}
@@ -11,15 +11,17 @@ angelsmods.trigger.enableconverter = settings.startup["angels-enable-converter"]
 angelsmods.trigger.hideconverter = settings.startup["angels-hide-converter"].value
 --PETRO PRODUCS
 angelsmods.trigger.plastic = true
-angelsmods.trigger.resin = not (angelsmods.functions.is_special_vanilla() or (not mods["bobelectronics"]))
-angelsmods.trigger.rubber = not (angelsmods.functions.is_special_vanilla() or (not mods["bobelectronics"]))
+angelsmods.trigger.resin = not (angelsmods.functions.is_special_vanilla() or not mods["bobelectronics"])
+angelsmods.trigger.rubber = not (angelsmods.functions.is_special_vanilla() or not mods["bobelectronics"])
 angelsmods.trigger.liquid_ferric_chloride_solution = not angelsmods.functions.is_special_vanilla()
 angelsmods.trigger.liquid_cupric_chloride_solution = not angelsmods.functions.is_special_vanilla()
 --HIDE UNUSED BUILDINGS
 angelsmods.trigger.disable_bobs_electrolysers = settings.startup["angels-disable-bobs-electrolysers"].value
 angelsmods.trigger.disable_bobs_chemical_plants = settings.startup["angels-disable-bobs-chemical-plants"].value
 angelsmods.trigger.disable_bobs_distilleries = settings.startup["angels-disable-bobs-distilleries"].value
-angelsmods.trigger.disable_vanilla_chemical_plants = mods["bobplates"] and settings.startup["angels-disable-bobs-chemical-plants"].value or angelsmods.trigger.disable_bobs_chemical_plants
+angelsmods.trigger.disable_vanilla_chemical_plants = mods["bobplates"]
+    and settings.startup["angels-disable-bobs-chemical-plants"].value
+  or angelsmods.trigger.disable_bobs_chemical_plants
 
 --OVERRIDE FOR REFINING
 angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
@@ -27,9 +29,9 @@ if mods["bobplates"] then
   angelsmods.trigger.ores["fluorite"] = true
 elseif mods["angelsindustries"] then
   if -- overhaul enabled
-    settings.startup["angels-enable-industries"].value or
-    settings.startup["angels-enable-components"].value or
-    settings.startup["angels-enable-tech"].value
+    settings.startup["angels-enable-industries"].value
+    or settings.startup["angels-enable-components"].value
+    or settings.startup["angels-enable-tech"].value
   then
     angelsmods.trigger.ores["fluorite"] = true
   end

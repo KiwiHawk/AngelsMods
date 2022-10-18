@@ -9,25 +9,23 @@ if angelsmods.industries.tech then
   -- GREY SCIENCE PACKS ---------------------------------------------------------
   -------------------------------------------------------------------------------
   --replace starting tech requirements to needing grey (not red)
-  for _, tech_name in pairs(
-    {
-      -- BASE GAME
-      "automation",
-      "logistics",
-      "turrets",
-      -- REFINING
-      "water-treatment",
-      -- SMELTING
-      "angels-solder-smelting-basic",
-      -- BIO PROCESSING
-      "bio-processing-brown",
-      "bio-paper-1",
-      -- INDUSTRIES
-      "tech-red-circuit",
-      "angels-components-mechanical-1",
-      "angels-components-weapons-basic",
-    }
-  ) do
+  for _, tech_name in pairs({
+    -- BASE GAME
+    "automation",
+    "logistics",
+    "turrets",
+    -- REFINING
+    "water-treatment",
+    -- SMELTING
+    "angels-solder-smelting-basic",
+    -- BIO PROCESSING
+    "bio-processing-brown",
+    "bio-paper-1",
+    -- INDUSTRIES
+    "tech-red-circuit",
+    "angels-components-mechanical-1",
+    "angels-components-weapons-basic",
+  }) do
     AI.pack_replace(tech_name, "red", "grey")
   end
   -- BASE GAME
@@ -152,7 +150,7 @@ if angelsmods.industries.tech then
   AI.pack_replace("bio-processing-crystal-splinter-1", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-2", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-3", "green", "orange")
-  AI.pack_replace("bio-arboretum-2","green","orange")
+  AI.pack_replace("bio-arboretum-2", "green", "orange")
   --PETROCHEM
   AI.pack_replace("angels-advanced-chemistry-2", "green", "orange")
   AI.pack_replace("plastic-1", "green", "orange")

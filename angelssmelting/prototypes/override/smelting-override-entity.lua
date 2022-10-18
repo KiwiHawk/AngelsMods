@@ -7,19 +7,19 @@ else
     "sintering-oven",
     "sintering-oven-2",
     "sintering-oven-3",
-    "sintering-oven-4"
+    "sintering-oven-4",
   })
   angelsmods.functions.add_flag({
     "sintering-oven",
     "sintering-oven-2",
     "sintering-oven-3",
-    "sintering-oven-4"
+    "sintering-oven-4",
   }, "hidden")
-  for _,tech_name in pairs({
+  for _, tech_name in pairs({
     "powder-metallurgy-1",
     "powder-metallurgy-2",
     "powder-metallurgy-3",
-    "powder-metallurgy-4"
+    "powder-metallurgy-4",
   }) do
     local tech = data.raw.technology[tech_name]
     if tech then
