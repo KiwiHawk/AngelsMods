@@ -186,7 +186,11 @@ if mods["bobplates"] then
         { 247, 140, 003 },
         { 247, 140, 003 },
       }),
-      crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "thermal-water", "lithia-water", "water-purified" }),
+      crafting_machine_tint = angelsmods.functions.get_recipe_tints({
+        "thermal-water",
+        "lithia-water",
+        "water-purified",
+      }),
       order = "g[water-thermal-lithia]",
     },
   })
@@ -209,7 +213,10 @@ if mods["bobplates"] then
     { name = "water-electrolysis", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     { name = "nitric-acid", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     { name = "sulfuric-acid-2", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
-    { name = "petroleum-gas-cracking", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
+    {
+      name = "petroleum-gas-cracking",
+      ingredients = { { name = "water-purified", type = "fluid", amount = "water" } },
+    },
     { name = "coal-cracking", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     {
       name = "lithium-water-electrolysis",
@@ -220,7 +227,10 @@ if mods["bobplates"] then
     { name = "sulfuric-acid", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     { name = "heavy-oil-cracking", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
     { name = "light-oil-cracking", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
-    { name = "advanced-oil-processing", ingredients = { { name = "water-purified", type = "fluid", amount = "water" } } },
+    {
+      name = "advanced-oil-processing",
+      ingredients = { { name = "water-purified", type = "fluid", amount = "water" } },
+    },
   })
 else
   if

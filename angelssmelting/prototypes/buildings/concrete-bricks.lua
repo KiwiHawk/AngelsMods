@@ -15,8 +15,7 @@ local function copyGrid(name, tile_data)
   return grid
 end
 
-local concrete_brick_tile_data = 
-data:extend({
+local concrete_brick_tile_data = data:extend({
   copyGrid("concrete-brick", {
     walking_speed_modifier = 1.50,
     decorative_removal_probability = 0.33, --0.25,

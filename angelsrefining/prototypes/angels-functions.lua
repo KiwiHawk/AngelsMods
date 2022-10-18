@@ -227,24 +227,18 @@ local function get_molecule_codes(molec_formula)
     --take first segment (or throw error) and trim each code off and repeat until empty or error
     local trim = 1 --always trim at least 1 per code
     if string.find(molec_formula, "^%u%l%d+") == 1 then --Two letter code with number
-      table.insert(
-        string_codes,
-        {
-          form = string.sub(molec_formula, 1, 2),
-          amount = tonumber(string.sub(molec_formula, string.find(molec_formula, "%d+"))),
-        }
-      )
+      table.insert(string_codes, {
+        form = string.sub(molec_formula, 1, 2),
+        amount = tonumber(string.sub(molec_formula, string.find(molec_formula, "%d+"))),
+      })
       trim = string.len(tostring(string_codes[#string_codes].amount)) + 1
     elseif string.find(molec_formula, "^%u%l") == 1 then --Two letter code without number
       table.insert(string_codes, { form = string.sub(molec_formula, 1, 2), amount = 1 }) --no amount-default 1
     elseif string.find(molec_formula, "^%u%d+") == 1 then --One letter code with number
-      table.insert(
-        string_codes,
-        {
-          form = string.sub(molec_formula, 1, 1),
-          amount = tonumber(string.sub(molec_formula, string.find(molec_formula, "%d+"))),
-        }
-      )
+      table.insert(string_codes, {
+        form = string.sub(molec_formula, 1, 1),
+        amount = tonumber(string.sub(molec_formula, string.find(molec_formula, "%d+"))),
+      })
       trim = string.len(tostring(string_codes[#string_codes].amount)) + 1
     elseif string.find(molec_formula, "^%u") == 1 then --One letter code without number
       table.insert(string_codes, { form = string.sub(molec_formula, 1, 1), amount = 1 }) --no amount-default 1

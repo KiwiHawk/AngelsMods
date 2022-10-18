@@ -1,6 +1,5 @@
 function electrolyserpictures()
-  return
-{
+  return {
     north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
@@ -33,8 +32,7 @@ function electrolyserpictures()
 end
 
 function coverpictures()
-  return
-{
+  return {
     north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
@@ -68,8 +66,7 @@ function coverpictures()
 end
 
 function polypictures1()
-  return
-{
+  return {
     north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
@@ -106,8 +103,7 @@ function polypictures1()
 end
 
 function polypictures2()
-  return
-{
+  return {
     north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",
@@ -144,8 +140,7 @@ function polypictures2()
 end
 
 function polypictures3()
-  return
-{
+  return {
     north = {
       filename = "__angelspetrochem__/graphics/entity/electrolyser/blank.png",
       priority = "extra-high",

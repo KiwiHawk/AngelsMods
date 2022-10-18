@@ -24,8 +24,7 @@ if angelsmods.trigger.smelting_products["steel"].ingot then
   end
 
   if
-    not angelsmods.trigger.smelting_products["silicon"]
-    or not angelsmods.trigger.smelting_products["silicon"].ingot
+    not angelsmods.trigger.smelting_products["silicon"] or not angelsmods.trigger.smelting_products["silicon"].ingot
   then
     OV.remove_prereq("angels-steel-smelting-2", "angels-silicon-smelting-2")
   end
