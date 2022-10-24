@@ -77,15 +77,12 @@ local unit_test_007 = function()
     mode = "or",
     elem_filters = { { filter = "name", name = "chemical-void" } },
   })
-  table.insert(
-    recipe_filters,
-    {
-      filter = "has-product-item",
-      invert = false,
-      mode = "or",
-      elem_filters = { { filter = "name", name = "water-void" } },
-    }
-  )
+  table.insert(recipe_filters, {
+    filter = "has-product-item",
+    invert = false,
+    mode = "or",
+    elem_filters = { { filter = "name", name = "water-void" } },
+  })
   table.insert(recipe_filters, { filter = "category", invert = false, mode = "or", category = "barreling-pump" })
 
   local recipe_prototypes = game.get_filtered_recipe_prototypes(recipe_filters)
