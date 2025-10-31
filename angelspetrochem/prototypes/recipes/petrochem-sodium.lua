@@ -9,6 +9,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-salt", amount = 10 },
       { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
@@ -36,6 +37,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 5 },
       { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
@@ -64,6 +66,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-sulfate", amount = 2 },
     },
@@ -89,6 +92,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium", amount = 5 },
       { type = "fluid", name = "angels-gas-carbon-dioxide", amount = 50 },
@@ -110,6 +114,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium", amount = 5 },
       { type = "item", name = "angels-solid-carbon", amount = 1 },
@@ -142,6 +147,7 @@ data:extend({
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium", amount = 5 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
@@ -166,6 +172,7 @@ data:extend({
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 50 },
     },
@@ -190,6 +197,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 4 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 80 },
@@ -218,6 +226,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-carbonate", amount = 5 },
       { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
@@ -248,6 +257,7 @@ data:extend({
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 5 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
@@ -274,6 +284,7 @@ data:extend({
     subgroup = "angels-petrochem-sodium",
     energy_required = 4,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 50 },
       { type = "fluid", name = "angels-gas-chlorine", amount = 200 },
@@ -298,6 +309,7 @@ data:extend({
     subgroup = "angels-petrochem-sodium",
     energy_required = 2,
     enabled = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 50 },
       { type = "fluid", name = "angels-gas-hydrogen-chloride", amount = 50 },
@@ -323,6 +335,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-chlorate", amount = 5 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },

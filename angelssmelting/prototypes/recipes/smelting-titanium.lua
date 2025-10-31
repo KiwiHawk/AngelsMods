@@ -201,6 +201,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ingot-titanium", amount = 12 },
       { type = "item", name = "angels-ingot-manganese", amount = 12 },
@@ -225,6 +226,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ingot-titanium", amount = 12 },
       { type = "item", name = "angels-ingot-nickel", amount = 12 },
@@ -249,6 +251,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ingot-titanium", amount = 12 },
       { type = "item", name = "angels-ingot-aluminium", amount = 12 },
@@ -274,6 +277,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ingot-titanium", amount = 12 },
       { type = "item", name = "angels-ingot-cobalt", amount = 12 },

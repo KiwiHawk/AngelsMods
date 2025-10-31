@@ -1261,6 +1261,7 @@ data:extend({
     energy_required = 3,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-blue", amount = 5 },
       { type = "fluid", name = "sulfuric-acid", amount = 15 },
@@ -1285,6 +1286,7 @@ data:extend({
     energy_required = 3,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-red", amount = 5 },
       { type = "fluid", name = "sulfuric-acid", amount = 15 },
@@ -1309,6 +1311,7 @@ data:extend({
     energy_required = 3,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-yellow", amount = 5 },
       { type = "fluid", name = "sulfuric-acid", amount = 15 },
@@ -1333,6 +1336,7 @@ data:extend({
     energy_required = 3,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-purple", amount = 5 },
       { type = "fluid", name = "sulfuric-acid", amount = 15 },
@@ -1357,6 +1361,7 @@ data:extend({
     energy_required = 3,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-cyan", amount = 5 },
       { type = "fluid", name = "sulfuric-acid", amount = 15 },
@@ -1381,6 +1386,7 @@ data:extend({
     energy_required = 3,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-geode-lightgreen", amount = 5 },
       { type = "fluid", name = "sulfuric-acid", amount = 15 },

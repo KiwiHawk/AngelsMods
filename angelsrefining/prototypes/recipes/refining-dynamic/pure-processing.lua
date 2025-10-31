@@ -9,6 +9,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore1-pure", amount = 9 } },
     results = {
       { type = "item", name = "angels-void", amount = 1 },
@@ -34,6 +35,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore2-pure", amount = 9 } },
     results = {
       { type = "item", name = "angels-void", amount = 1 },
@@ -59,6 +61,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore3-pure", amount = 9 } },
     results = {
       { type = "item", name = "angels-void", amount = 1 },
@@ -87,6 +90,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore4-pure", amount = 9 } },
     results = {
       { type = "item", name = "angels-void", amount = 1 },
@@ -112,6 +116,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore5-pure", amount = 9 } },
     results = {
       { type = "item", name = "angels-void", amount = 1 },
@@ -137,6 +142,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore6-pure", amount = 9 } },
     results = {
       { type = "item", name = "angels-void", amount = 1 },

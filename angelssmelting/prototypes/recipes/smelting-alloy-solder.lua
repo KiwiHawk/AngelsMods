@@ -26,6 +26,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solder-mixture", amount = 12 },
     },
@@ -49,6 +50,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-ingot-tin", amount = 12 },
       { type = "item", name = "angels-ingot-lead", amount = 12 },
@@ -73,6 +75,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ingot-tin", amount = 12 },
       { type = "item", name = "angels-ingot-zinc", amount = 12 },
@@ -97,6 +100,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ingot-tin", amount = 12 },
       { type = "item", name = "angels-ingot-copper", amount = 12 },

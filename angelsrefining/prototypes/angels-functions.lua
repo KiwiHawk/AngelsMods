@@ -1676,6 +1676,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
     recipe.localised_name = { "recipe-name.angels-" .. void_category .. "-void", { void_input_type.."-name." .. fluid_name }}
     recipe.category = "angels-" .. void_category .. "-void"
     recipe.enabled = true
+    recipe.hide_from_signal_gui = true
     recipe.hide_from_player_crafting = angelsmods.trigger.enable_hide_void
     recipe.energy_required = void_process_time
     recipe.ingredients = {

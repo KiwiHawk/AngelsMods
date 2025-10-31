@@ -79,6 +79,7 @@ data:extend({
     subgroup = "angels-bio-arboretum",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-token-bio", amount = 16 },
@@ -117,6 +118,7 @@ data:extend({
     subgroup = "angels-bio-arboretum",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-seed", amount = 2 },
@@ -145,6 +147,7 @@ data:extend({
     subgroup = "angels-bio-arboretum",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-seed", amount = 2 },
@@ -174,6 +177,7 @@ data:extend({
     subgroup = "angels-bio-arboretum",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 30,
     ingredients = {
       { type = "item", name = "angels-tree-seed", amount = 2 },

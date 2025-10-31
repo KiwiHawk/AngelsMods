@@ -113,6 +113,7 @@ data:extend({
     energy_required = 6,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-tungsten-oxide", amount = 12 },
       { type = "fluid", name = "angels-gas-hydrogen-fluoride", amount = 30 },

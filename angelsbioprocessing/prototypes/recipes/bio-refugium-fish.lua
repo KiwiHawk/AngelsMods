@@ -190,6 +190,7 @@ data:extend({
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "raw-fish", amount = 2, ignored_by_stats = 2 },
@@ -229,6 +230,7 @@ data:extend({
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-algae-brown", amount = 2 },
@@ -269,6 +271,7 @@ data:extend({
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-algae-green", amount = 2 },
@@ -309,6 +312,7 @@ data:extend({
     subgroup = "angels-bio-fish-breeding",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-raw-meat", amount = 2 },

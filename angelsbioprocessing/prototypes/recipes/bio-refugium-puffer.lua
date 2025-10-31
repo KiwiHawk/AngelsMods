@@ -6,6 +6,7 @@ data:extend({
     subgroup = "angels-bio-puffer-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 30,
     ingredients = {
       { type = "fluid", name = "angels-gas-sulfur-dioxide", amount = 20 },
@@ -36,6 +37,7 @@ data:extend({
     subgroup = "angels-bio-puffer-egg",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 1,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-egg-shell", amount = 2 },
@@ -59,6 +61,7 @@ data:extend({
     subgroup = "angels-bio-puffer-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-1", amount = 4, ignored_by_stats = 4 },
@@ -90,6 +93,7 @@ data:extend({
     subgroup = "angels-bio-puffer-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-2", amount = 4, ignored_by_stats = 4 },
@@ -122,6 +126,7 @@ data:extend({
     subgroup = "angels-bio-puffer-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-3", amount = 4, ignored_by_stats = 4 },
@@ -154,6 +159,7 @@ data:extend({
     subgroup = "angels-bio-puffer-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-4", amount = 4, ignored_by_stats = 4 },
@@ -186,6 +192,7 @@ data:extend({
     subgroup = "angels-bio-puffer-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-5", amount = 4, ignored_by_stats = 4 },
@@ -221,6 +228,7 @@ data:extend({
     subgroup = "angels-bio-puffer-2",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-2", amount = 2, ignored_by_stats = 2 },
@@ -286,6 +294,7 @@ data:extend({
     subgroup = "angels-bio-puffer-2",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-1", amount = 2, ignored_by_stats = 2 },
@@ -345,6 +354,7 @@ data:extend({
     subgroup = "angels-bio-puffer-2",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-1", amount = 2, ignored_by_stats = 2 },
@@ -404,6 +414,7 @@ data:extend({
     subgroup = "angels-bio-puffer-2",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-1", amount = 2, ignored_by_stats = 2 },
@@ -463,6 +474,7 @@ data:extend({
     subgroup = "angels-bio-puffer-2",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 15,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-1", amount = 2, ignored_by_stats = 2 },
@@ -526,6 +538,7 @@ data:extend({
     subgroup = "angels-bio-puffer-breeding-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-1", amount = 2, ignored_by_stats = 2 },
@@ -588,6 +601,7 @@ data:extend({
     subgroup = "angels-bio-puffer-breeding-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-2", amount = 2, ignored_by_stats = 2 },
@@ -650,6 +664,7 @@ data:extend({
     subgroup = "angels-bio-puffer-breeding-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-3", amount = 2, ignored_by_stats = 2 },
@@ -712,6 +727,7 @@ data:extend({
     subgroup = "angels-bio-puffer-breeding-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-4", amount = 2, ignored_by_stats = 2 },
@@ -774,6 +790,7 @@ data:extend({
     subgroup = "angels-bio-puffer-breeding-1",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-5", amount = 2, ignored_by_stats = 2 },
@@ -838,6 +855,7 @@ data:extend({
     subgroup = "angels-bio-puffer-breeding-2",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-2", amount = 1, ignored_by_stats = 1 },
@@ -894,6 +912,7 @@ data:extend({
     subgroup = "angels-bio-puffer-breeding-2",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-1", amount = 1, ignored_by_stats = 1 },
@@ -950,6 +969,7 @@ data:extend({
     subgroup = "angels-bio-puffer-breeding-2",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-1", amount = 1, ignored_by_stats = 1 },
@@ -1006,6 +1026,7 @@ data:extend({
     subgroup = "angels-bio-puffer-breeding-2",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-1", amount = 1, ignored_by_stats = 1 },
@@ -1062,6 +1083,7 @@ data:extend({
     subgroup = "angels-bio-puffer-breeding-2",
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     energy_required = 60,
     ingredients = {
       { type = "item", name = "angels-bio-puffer-1", amount = 1, ignored_by_stats = 1 },

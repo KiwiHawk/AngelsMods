@@ -67,6 +67,7 @@ data:extend({
     energy_required = 4,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-pellet-silica", amount = 8 },
       { type = "item", name = "angels-ingot-aluminium", amount = 6 },

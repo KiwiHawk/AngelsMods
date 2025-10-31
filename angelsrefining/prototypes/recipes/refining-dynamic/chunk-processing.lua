@@ -9,6 +9,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore1-chunk", amount = 6 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
@@ -34,6 +35,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore2-chunk", amount = 6 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
@@ -59,6 +61,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore3-chunk", amount = 6 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
@@ -84,6 +87,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore4-chunk", amount = 6 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
@@ -109,6 +113,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore5-chunk", amount = 6 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },
@@ -134,6 +139,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = { { type = "item", name = "angels-ore6-chunk", amount = 6 } },
     results = {
       { type = "item", name = "angels-slag", amount = 1 },

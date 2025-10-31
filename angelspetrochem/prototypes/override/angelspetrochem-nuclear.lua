@@ -17,6 +17,7 @@ local tint_colors = {
 OV.patch_recipes({
   {
     name = "uranium-processing",
+    hide_from_signal_gui = true,
     results = {
       { type = "item", name = "angels-uranium-234", amount = 1, probability = 0.000055 },
     },
@@ -37,6 +38,7 @@ OV.patch_recipes({
   },
   {
     name = "uranium-fuel-cell",
+    hide_from_signal_gui = true,
     category = "centrifuging",
     ingredients = {
       { "!!" },
@@ -57,6 +59,7 @@ OV.patch_recipes({
   },
   {
     name = "nuclear-fuel-reprocessing",
+    hide_from_signal_gui = true,
     ingredients = {
       { "!!" },
       { type = "item", name = "depleted-uranium-fuel-cell", amount = 5 },

@@ -10,6 +10,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore5-chunk", amount = 2 },
       { type = "item", name = "angels-ore6-chunk", amount = 2 },
@@ -31,6 +32,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore1-chunk", amount = 2 },
       { type = "item", name = "angels-ore5-chunk", amount = 2 },
@@ -52,6 +54,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore2-chunk", amount = 2 },
       { type = "item", name = "angels-ore4-chunk", amount = 2 },
@@ -73,6 +76,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore2-chunk", amount = 2 },
       { type = "item", name = "angels-ore6-chunk", amount = 2 },
@@ -94,6 +98,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore3-chunk", amount = 2 },
       { type = "item", name = "angels-ore6-chunk", amount = 2 },
@@ -115,6 +120,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore8-powder", amount = 2 },
       { type = "item", name = "angels-ore2-chunk", amount = 2 },
@@ -136,6 +142,7 @@ data:extend({
     enabled = false,
     allow_decomposition = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore1-chunk", amount = 2 },
       { type = "item", name = "angels-ore2-chunk", amount = 2 },
@@ -157,6 +164,7 @@ data:extend({
     allow_decomposition = false,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore8-dust", amount = 8 },
     },
@@ -184,6 +192,7 @@ data:extend({
     allow_decomposition = false,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-ore9-dust", amount = 8 },
     },
