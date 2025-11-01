@@ -29,6 +29,9 @@ if mods["bobassembly"] then
     angelsmods.functions.remove_crafting_category("assembling-machine", "bob-chemical-plant-2", {
       "chemistry",
     })
+    -- Fix production science pack tech
+    OV.remove_prereq("production-science-pack", "bob-chemical-plant-2")
+    OV.add_prereq("production-science-pack", "angels-advanced-chemistry-2")
   end
 
   -- Chemical plant 3
