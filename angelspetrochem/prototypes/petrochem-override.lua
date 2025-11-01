@@ -17,7 +17,6 @@ require("prototypes.override.angelsindustries")
 --OVERRIDE FOR BOBS
 require("prototypes.override.bob")
 require("prototypes.override.bobplates")
-require("prototypes.override.bobassembly")
 require("prototypes.override.bobgreenhouse")
 require("prototypes.override.boblogistics")
 require("prototypes.override.bobrevamp")

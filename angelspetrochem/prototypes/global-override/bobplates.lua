@@ -219,3 +219,16 @@ if mods["bobplates"] then
   -- chemical processing tech patch -------------------------------------------
   OV.add_prereq("bob-chemical-processing-2", "logistic-science-pack")
 end
+
+-------------------------------------------------------------------------------
+-- ELECTROLYSERS --------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  -- Electrolyser 1
+  move_item("bob-electrolyser", "angels-petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-a")
+  angelsmods.functions.add_crafting_category("assembling-machine", "angels-electrolyser", "bob-electrolysis")
+  angelsmods.functions.hide("bob-electrolyser")
+  angelsmods.functions.set_next_upgrade("assembling-machine", "bob-electrolyser", nil)
+  OV.global_replace_item("bob-electrolyser", "angels-electrolyser")
+  OV.disable_recipe("bob-electrolyser")
+end

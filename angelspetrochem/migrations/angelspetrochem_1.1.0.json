@@ -3,6 +3,7 @@
   [
     ["advanced-chemical-plant", "angels-advanced-chemical-plant"],
     ["advanced-chemical-plant-2", "angels-advanced-chemical-plant-2"],
+    ["angels-chemical-plant", "chemical-plant"],
     ["bob-overflow-valve", "angels-valve-overflow"],
     ["bob-topup-valve", "angels-valve-top-up"],
     ["bob-valve", "angels-valve-one-way"],
@@ -111,6 +112,7 @@
   [
     ["advanced-chemical-plant", "angels-advanced-chemical-plant"],
     ["advanced-chemical-plant-2", "angels-advanced-chemical-plant-2"],
+    ["angels-chemical-plant", "chemical-plant"],
     ["bob-overflow-valve", "angels-valve-overflow"],
     ["bob-topup-valve", "angels-valve-top-up"],
     ["bob-valve", "angels-valve-one-way"],
@@ -248,6 +250,7 @@
     ["advanced-oil-refining", "angels-advanced-oil-refining"],
     ["air-separation", "angels-air-separation"],
     ["angels-air-filtering", "angels-gas-compressed-air"],
+    ["angels-chemical-plant", "chemical-plant"],
     ["angels-chemical-void-ferric-chloride-solution", "angels-chemical-void-angels-liquid-ferric-chloride-solution"],
     ["angels-chemical-void-gas-acetone", "angels-chemical-void-angels-gas-acetone"],
     ["angels-chemical-void-gas-acid", "angels-chemical-void-angels-gas-acid"],
