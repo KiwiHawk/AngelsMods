@@ -247,7 +247,7 @@
     ["uranium-234", "angels-uranium-234"],
     ["used-up-AMOX-cell", "angels-depleted-mixed-oxide-cell"],
     ["used-up-angels-thorium-fuel-cell", "angels-depleted-thorium-fuel-cell"],
-    ["used-up-angels-deuterium-fuel-cell", "angels-depleted-deuterium-fuel-cell"]
+    ["used-up-angels-deuterium-fuel-cell", "angels-depleted-deuterium-fuel-cell"],
     ["valve-inspector", "angels-valve-inspector"],
     ["valve-overflow", "angels-valve-overflow"],
     ["valve-return", "angels-valve-one-way"],
