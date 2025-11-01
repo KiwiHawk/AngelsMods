@@ -1535,12 +1535,13 @@ end
 
 function angelsmods.functions.modify_barreling_recipes()
   angelsmods.functions.modify_barreling_icon()
-  if angelsmods.trigger.enable_auto_barreling then
-    local items = data.raw.item
-    local recipes = data.raw.recipe
 
-    for fn, _ in pairs(data.raw.fluid) do
-      if data.raw.item[fn .. "-barrel"] then
+  local items = data.raw.item
+  local recipes = data.raw.recipe
+
+  for fn, _ in pairs(data.raw.fluid) do
+    if data.raw.item[fn .. "-barrel"] then
+      if angelsmods.trigger.enable_auto_barreling then
         if recipes[fn .. "-barrel"] then
           recipes[fn .. "-barrel"].hidden = true
           recipes[fn .. "-barrel"].category = "angels-barreling-pump"
@@ -1549,6 +1550,10 @@ function angelsmods.functions.modify_barreling_recipes()
           recipes["empty-" .. fn .. "-barrel"].hidden = true
           recipes["empty-" .. fn .. "-barrel"].category = "angels-barreling-pump"
         end
+      end
+      if recipes[fn .. "-barrel"] and recipes[fn .. "-barrel"].results and recipes[fn .. "-barrel"].results[1] and recipes[fn .. "-barrel"].results[1].name == fn .. "-barrel" then
+        recipes[fn .. "-barrel"].results[1].ignored_by_stats = nil
+        recipes[fn .. "-barrel"].hide_from_signal_gui = true
       end
     end
   end
