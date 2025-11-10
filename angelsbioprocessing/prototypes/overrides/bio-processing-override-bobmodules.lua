@@ -494,4 +494,5 @@ if mods["bobmodules"] then
   OV.add_prereq("effect-transmission-3", "modules-3")
   OV.add_prereq("effect-transmission", "angels-bio-processing-crystal-splinter-2")
   OV.add_prereq("effect-transmission-2", "angels-bio-processing-crystal-shard-2")
+  OV.add_prereq("effect-transmission-3", "angels-bio-processing-crystal-full")
 end

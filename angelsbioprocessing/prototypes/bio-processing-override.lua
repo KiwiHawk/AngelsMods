@@ -73,6 +73,9 @@ require("prototypes.overrides.bio-processing-override-bob")
 require("prototypes.overrides.bio-processing-override-bobmodules")
 require("prototypes.overrides.bio-processing-override-bobgreenhouse")
 
+--BUILDING PREREQUISITES
+require("prototypes.overrides.bio-processing-override-prerequisites")
+
 --BIO PRODUCTIVITY
 require("prototypes.overrides.bio-processing-override-bio-productivity")
 
