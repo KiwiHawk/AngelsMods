@@ -15,7 +15,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-wood-charcoal",
+        recipe = "angels-wood-bricks",
       },
     },
     unit = {
@@ -39,7 +39,7 @@ data:extend({
     effects = {
       {
         type = "unlock-recipe",
-        recipe = "angels-wood-bricks",
+        recipe = "angels-wood-charcoal",
       },
       {
         type = "unlock-recipe",
@@ -134,6 +134,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-solid-saw",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-cellulose-fiber-raw-wood",
       },
     },
     unit = {

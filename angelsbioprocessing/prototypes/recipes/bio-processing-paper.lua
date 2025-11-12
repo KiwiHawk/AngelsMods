@@ -5,7 +5,7 @@ data:extend({
     name = "angels-cellulose-fiber-raw-wood",
     category = "crafting",
     subgroup = "angels-bio-processing-wood",
-    enabled = true,
+    enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
     energy_required = 2,
