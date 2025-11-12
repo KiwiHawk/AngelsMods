@@ -900,14 +900,13 @@ local function adjust_technology(tech, k) -- check a tech for basic adjustments 
   if modify_table.technologies[k] then
     modifications = modify_table.technologies[k].difficulty
     if modifications then
-      if tech.unit then
+      if modifications.type then -- not a unit based technology
+        tech.unit = nil
+        tech.research_trigger = modifications
+      else
+        tech.unit = tech.unit or {}
         tech.unit.time = modifications.time
         tech.unit.count = modifications.amount
-      else -- not a unit based technology
-        tech.research_trigger = {}
-        for i, modification in pairs(modifications) do
-          tech.research_trigger[i] = modification
-        end
       end
     end
   end
