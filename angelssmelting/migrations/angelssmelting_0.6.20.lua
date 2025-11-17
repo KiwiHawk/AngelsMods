@@ -22,5 +22,5 @@ for _, upgrade in pairs({
   end
 
   angelsmods.migration.replace_quick_bar_slot({ { upgrade.oldEntity, upgrade.newEntity } })
-  angelsmods.migration.clear_logistics_slot({ upgrade.oldEntity })
+  angelsmods.migration.replace_logistics_slot({ { upgrade.oldEntity, upgrade.newEntity } })
 end

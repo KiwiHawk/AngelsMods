@@ -336,29 +336,28 @@ function angelsmods.migration.replace_quick_bar_slot(items_to_replace)
   end
 end
 
-function angelsmods.migration.clear_logistics_slot(items_to_clear)
-  -- items_to_clear is a table of item names
-
-  items_to_clear = items_to_clear or {}
+function angelsmods.migration.replace_logistics_slot(items_to_replace)
+  -- items_to_replace is a table of item_to_replace
+  -- item_to_replace is a table with 2 entries, first entry is old item name
+  -- and second entry is the new item name (or nil)
+  items_to_replace = items_to_replace or {}
 
   for _, player in pairs(game.players) do
     if player.character ~= nil then
       -- find used slots
-      local slots = {}
-      for i = 1, player.character.request_slot_count do
-        local slot = player.get_personal_logistic_slot(i)
-        if slot and slot.name then
-          slots[slot.name] = slots[slot.name] or {}
-          table.insert(slots[slot.name], i)
-        end
-      end
-
-      -- clear old slots
-      for _, item_name in pairs(items_to_clear) do
-        local oldSlots = slots[item_name]
-        if oldSlots then
-          for name, i in pairs(oldSlots) do
-            player.clear_personal_logistic_slot(i)
+      local point = player.character.get_requester_point()
+      if point then
+        for _, item_to_replace in pairs(items_to_replace) do
+          for _, section in pairs(point.sections) do        
+            for i = 1, 100 do
+              local slot = section.get_slot(i)
+              if slot.value then
+                if slot.value.name == item_to_replace[1] then
+                  slot.value.name = item_to_replace[2]
+                  section.set_slot(i, slot)
+                end
+              end
+            end
           end
         end
       end
