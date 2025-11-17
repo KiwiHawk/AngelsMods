@@ -282,7 +282,7 @@ data:extend({
     collision_box = { { -0.29, -0.29 }, { 0.29, 0.29 } },
     selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } },
     mode = "top-up",
-    threshold = 0.8,
+    threshold = 0.5,
     flow_rate = 20,
     fluid_box = {
       volume = 1000,

@@ -9,6 +9,7 @@ Date: ???
     - Restored 1:1 water to steam ratio (1071)
     - Added circuit connectors to all machines (1114)
     - Moved Angel's nuclear overhaul from Angel's Industries to Angel's Petrochemical Processing (1131)
+    - Changed top-up valve threshold from 80% to 50% (1170)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.26
 Date: 21.02.2024
