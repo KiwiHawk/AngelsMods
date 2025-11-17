@@ -1,6 +1,6 @@
 -- modify base game tips-and-tricks to prevent crashes
 
-if data.raw["tutorial"]["trains-stations"]["scenario"] == "trains-stations" then
+if false and data.raw["tutorial"]["trains-stations"]["scenario"] == "trains-stations" then
   data:extend({
     {
       type = "tutorial",
