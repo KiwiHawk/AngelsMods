@@ -132,7 +132,64 @@ data:extend({
     prerequisites = {
       "angels-bio-processing-alien-2",
     },
-    effects = {},
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "angels-alien-pre-artifact-red",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-small-alien-artifact-red",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-alien-pre-artifact-yellow",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-small-alien-artifact-yellow",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-alien-pre-artifact-orange",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-small-alien-artifact-orange",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-alien-pre-artifact-blue",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-small-alien-artifact-blue",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-alien-pre-artifact-purple",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-small-alien-artifact-purple",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-alien-pre-artifact-green",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-small-alien-artifact-green",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-alien-pre-artifact-base",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-small-alien-artifact",
+      },
+    },
     unit = {
       count = 50,
       ingredients = {

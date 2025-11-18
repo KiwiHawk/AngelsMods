@@ -1,6 +1,5 @@
 local artifacts = nil
 if not angelsmods.trigger.artifacts["base"] then
-elseif not angelsmods.trigger.artifacts["base"] then
 elseif data.raw.item["bob-alien-artifact"] then
   artifacts = { "tips-and-tricks-sub.angels-fish-artifacts-bob" }
 else

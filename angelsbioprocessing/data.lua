@@ -10,7 +10,7 @@ angelsmods.trigger.lab_ignore_token = angelsmods.trigger.lab_ignore_token or {}
 angelsmods.trigger.lab_ignore_token["bob-lab-alien"] = true
 --ARTIFACTS
 angelsmods.trigger.artifacts = angelsmods.trigger.artifacts or {}
-if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"] then
+if mods["bobenemies"] and settings.startup["bobmods-enemies-enableartifacts"].value then
   angelsmods.trigger.artifacts["red"] = true
   angelsmods.trigger.artifacts["yellow"] = true
   angelsmods.trigger.artifacts["orange"] = true
@@ -18,7 +18,6 @@ if bobmods and bobmods.enemies and data.raw.item["bob-small-alien-artifact-blue"
   angelsmods.trigger.artifacts["purple"] = true
   angelsmods.trigger.artifacts["green"] = true
   angelsmods.trigger.artifacts["base"] = true -- pink
-  bobmods.enemies.small_alien_artifacts = true
 end
 --BIO PASTES
 angelsmods.trigger.bio_pastes = angelsmods.trigger.bio_pastes or {}
@@ -83,7 +82,6 @@ require("prototypes.buildings.butchery")
 require("prototypes.buildings.gardens")
 require("prototypes.buildings.trees")
 require("prototypes.buildings.bio-tile")
---require("prototypes.buildings.puffer-spawner")
 require("prototypes.buildings.puffer-nest")
 require("prototypes.buildings.alien-fish")
 
@@ -91,6 +89,7 @@ require("prototypes.items.bio-processing-algae")
 require("prototypes.items.bio-processing-wood-paper")
 require("prototypes.items.bio-processing-alien")
 require("prototypes.items.bio-processing-alien-crystal")
+require("prototypes.items.bio-processing-artifacts")
 require("prototypes.items.bio-processing-paste")
 require("prototypes.items.crop-farming-vegetables")
 require("prototypes.items.crop-farming-processing")
@@ -105,6 +104,7 @@ require("prototypes.recipes.bio-processing-wood")
 require("prototypes.recipes.bio-processing-paper")
 require("prototypes.recipes.bio-processing-alien")
 require("prototypes.recipes.bio-processing-alien-crystal")
+require("prototypes.recipes.bio-processing-artifacts")
 require("prototypes.recipes.bio-processing-entity")
 require("prototypes.recipes.bio-processing-paste")
 require("prototypes.recipes.crop-farming-gardens")
@@ -121,7 +121,6 @@ require("prototypes.recipes.bio-module")
 require("prototypes.technology.bio-processing-algae")
 require("prototypes.technology.bio-processing-wood-paper")
 require("prototypes.technology.bio-processing-alien")
-require("prototypes.technology.bio-processing-artifacts")
 require("prototypes.technology.crop-farming")
 require("prototypes.technology.bio-refugium")
 require("prototypes.technology.bio-module")
