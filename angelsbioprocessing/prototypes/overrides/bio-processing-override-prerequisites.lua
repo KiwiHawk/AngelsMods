@@ -1,19 +1,19 @@
 local OV = angelsmods.functions.OV
 
 if mods["bobplates"] then
-  -- Steel gears
+  -- Steel
   OV.add_prereq({
     "angels-bio-wood-processing-3",
     "angels-gardens",
   }, "steel-processing")
-  
-  if mods["boblogistics"] then
-    -- Bronze pipe
-    OV.add_prereq({
-      "angels-bio-nutrient-paste",
-      "angels-bio-pressing-1",
-    }, "bob-alloy-processing")
 
+  -- Bronze
+  OV.add_prereq({
+    "angels-bio-nutrient-paste",
+    "angels-bio-pressing-1",
+  }, "bob-alloy-processing")
+
+  if mods["boblogistics"] then
     -- Brass pipe
     OV.add_prereq({
       "angels-bio-desert-farm",

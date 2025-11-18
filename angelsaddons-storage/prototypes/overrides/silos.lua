@@ -60,10 +60,6 @@ if angelsmods.addons.storage.oresilos and angelsmods.refining then
     OV.add_prereq("angels-ore-silos", "angels-coal-processing")
   end
 
-  if angelsmods.smelting then
-    OV.remove_prereq("angels-ore-silos", "steel-processing")
-    OV.add_prereq("angels-ore-silos", "angels-steel-smelting-1")
-  end
   OV.execute()
 end
 

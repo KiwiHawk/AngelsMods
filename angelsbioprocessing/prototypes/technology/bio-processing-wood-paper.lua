@@ -66,8 +66,8 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "angels-bio-wood-processing-2",
-      "angels-steel-smelting-1",
       "angels-stone-smelting-1",
+      "steel-processing",
     },
     effects = {
       {

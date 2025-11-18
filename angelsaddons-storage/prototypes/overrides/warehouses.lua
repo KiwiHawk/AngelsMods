@@ -8,11 +8,6 @@ if angelsmods.addons.storage.warehouses then
     data.raw["logistic-container"]["angels-warehouse-buffer"].scale_info_icons = true
   end
 
-  if angelsmods.smelting then
-    angelsmods.functions.OV.remove_prereq("angels-warehouses", "steel-processing")
-    angelsmods.functions.OV.add_prereq("angels-warehouses", "angels-steel-smelting-1")
-  end
-
   --OVERRIDE FOR BOBS
   --LOGISTICS
   if mods["boblogistics"] then

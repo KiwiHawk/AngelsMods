@@ -43,7 +43,7 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "angels-steel-smelting-1",
+      "steel-processing",
       "angels-stone-smelting-1",
       "logistic-science-pack",
     },

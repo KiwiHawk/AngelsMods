@@ -24,7 +24,7 @@ OV.add_prereq({
 -- Steel plate
 OV.add_prereq({
   "angels-water-washing-2",
-}, "angels-steel-smelting-1")
+}, "steel-processing")
 
 -- Aluminium plate
 OV.add_prereq({
@@ -45,7 +45,7 @@ OV.add_prereq({
 }, "angels-tungsten-smelting-1")
 
 if mods["bobplates"] then
-  -- Bronze plate
+  -- Bronze
   OV.add_prereq({
     "angels-advanced-chemistry-1",
     "angels-cooling",
@@ -57,15 +57,19 @@ if mods["bobplates"] then
     "angels-water-washing-2",
     "bob-electronics-machine-1",
     "bob-electronics-machine-test",
-  }, "angels-bronze-smelting-1")
+  }, "bob-alloy-processing")
 
-  -- Brass pipe / gear
+  -- Brass
   OV.add_prereq({
     "angels-metallurgy-3",
-    "automation-3",
   }, "bob-zinc-processing")
-
-  -- Titanium pipe / gear
+  if mods["bobassembly"] then
+    OV.add_prereq({
+      "automation-3",
+    }, "bob-zinc-processing")
+  end
+  
+  -- Titanium
   OV.add_prereq({
     "angels-advanced-chemistry-4",
     "angels-metallurgy-4",
@@ -73,27 +77,19 @@ if mods["bobplates"] then
     "bob-electronics-machine-2",
   }, "bob-titanium-processing")
 
-  -- Tungsten pipe / gear
+  -- Tungsten
   OV.add_prereq({
     "angels-advanced-chemistry-5",
     "angels-metallurgy-5",
     "angels-ore-processing-4",
     "automation-5",
   }, "bob-tungsten-processing")
-
-  if mods["boblogistics"] then
-    -- Bronze pipe
-    OV.add_prereq({
-      "angels-advanced-chemistry-5",
-      "angels-cooling",
-      "angels-ore-floatation",
-      "angels-strand-casting-1",
-      "angels-thermal-water-extraction",
-      "angels-water-washing-2",
-    }, "bob-alloy-processing")
-  end
   
   -- Circuits
+  OV.add_prereq({
+    "angels-metallurgy-5",
+  }, "bob-advanced-processing-unit")
+elseif mods["bobelectronics"] then
   OV.add_prereq({
     "angels-metallurgy-5",
   }, "bob-advanced-processing-unit")
