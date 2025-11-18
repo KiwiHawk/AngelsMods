@@ -25,6 +25,21 @@ end
 -- INGOT ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["zinc"].ingot then
+  if not angelsmods.trigger.smelting_products["lead"].ingot then
+    OV.patch_recipes({
+      {
+        name = "angels-ingot-zinc",
+        ingredients = {
+          { type = "fluid", name = "angels-liquid-molten-lead", amount = 0 }
+        },
+        results = {
+          { type = "item", name = "angels-ingot-lead", amount = 0 }
+        }
+      }
+    })
+    OV.remove_prereq("angels-zinc-smelting-1", "angels-lead-smelting-1")
+  end
+
   if angelsmods.trigger.smelting_products["zinc"].plate then
   else
     -- no need for molten recipe
