@@ -173,40 +173,6 @@ if (angelsmods.trigger.salt_production == true) or (angelsmods.trigger.salt_cons
 
     if not angelsmods.petrochem then
       OV.global_replace_item("bob-salt", "angels-solid-salt")
-
-      data:extend({
-        {
-          type = "recipe",
-          name = "angels-salt-water-electrolysis-2",
-          category = "electrolysis",
-          enabled = false,
-          energy_required = 1,
-          ingredients = {
-            { type = "fluid", name = "angels-water-saline", amount = 40 },
-          },
-          results = {
-            { type = "item", name = "bob-sodium-hydroxide", amount = 1 },
-            { type = "fluid", name = "bob-chlorine", amount = 20 },
-            { type = "fluid", name = "bob-hydrogen", amount = 20 },
-          },
-          --icon = "__angelsrefininggraphics__/graphics/icons/electrolysis-salt-water.png",
-          --icon_size = 32,
-          icons = angelsmods.functions.create_viscous_liquid_recipe_icon({
-            "bob-chlorine",
-            "bob-hydrogen",
-            "bob-sodium-hydroxide",
-          }, {
-            { 039, 112, 194 },
-            { 168, 173, 173 },
-            { 070, 133, 232 },
-            { 185, 185, 185, 0.8 },
-          }),
-          crafting_machine_tint = angelsmods.functions.get_recipe_tints({ "angels-water-saline", "bob-chlorine", "bob-hydrogen" }),
-          subgroup = "bob-fluid-electrolysis",
-          order = "b[fluid-chemistry]-b[salt-water-electrolysis]",
-        },
-      })
-      OV.add_unlock("angels-water-treatment", "angels-salt-water-electrolysis-2")
     end
   end
 else
