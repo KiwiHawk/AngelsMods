@@ -1,5 +1,9 @@
 data:extend({
   {
+    type = "module-category",
+    name = "angels-bio-yield",
+  },
+  {
     type = "module",
     name = "angels-bio-yield-module",
     localised_description = { "item-description.angels-bio-yield-module" },

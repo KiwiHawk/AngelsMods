@@ -3,14 +3,6 @@ for _, category in pairs(data.raw["module-category"]) do
   table.insert(module_categories, category.name)
 end
 
--- Bio Productivity
-data:extend({
-  {
-    type = "module-category",
-    name = "angels-bio-yield",
-  },
-})
-
 for _, entity_category in pairs({
   "assembling-machine",
   "furnace",
