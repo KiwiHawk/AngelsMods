@@ -1111,3 +1111,55 @@ data:extend({
     order = "a-a-a1",
   },
 })
+
+-------------------------------------------------------------------------------
+-- GEMSTONES ------------------------------------------------------------------
+-------------------------------------------------------------------------------
+if mods["bobplates"] then
+  data:extend({
+    {
+      type = "technology",
+      name = "angels-geode-crystallization-1",
+      icon = "__angelsrefininggraphics__/graphics/technology/geode-processing-cyan.png",
+      icon_size = 256,
+      prerequisites = {
+        "angels-geode-processing-2",
+      },
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-1",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-2",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-3",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-4",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-5",
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "angels-ore7-crystallization-6",
+        },
+      },
+      unit = {
+        count = 50,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+        },
+        time = 30,
+      },
+      order = "a-a-a1",
+    },
+  })
+end

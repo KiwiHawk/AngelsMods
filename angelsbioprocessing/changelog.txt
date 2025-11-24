@@ -11,6 +11,7 @@ Date: ???
       - Made Biters require Purple Science
     - Updated for Factorio 2.0 (994)
     - Added circuit connectors to all machines (1114)
+    - Added soft incompatibility with Bob's Greenhouse mod (1140)
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.27
 Date: 21.02.2024
