@@ -1858,6 +1858,19 @@ function angelsmods.functions.get_trigger_names()
     ["angels-thorium-ore"] = "thorium",
     ["angels-chrome-ore"] = "chrome",
     ["angels-platinum-ore"] = "platinum",
+    -- BOB ORES
+    ["bob-bauxite-ore"] = "aluminium",
+    ["bob-cobalt-ore"] = "cobalt",
+    ["bob-gold-ore"] = "gold",
+    ["bob-lead-ore"] = "lead",
+    ["bob-nickel-ore"] = "nickel",
+    ["bob-quartz"] = "silicon",
+    ["bob-rutile-ore"] = "titanium",
+    ["bob-silver-ore"] = "silver",
+    ["bob-thorium-ore"] = "thorium",
+    ["bob-tin-ore"] = "tin",
+    ["bob-tungsten-ore"] = "tungsten",
+    ["bob-zinc-ore"] = "zinc",
   }
 end
 
