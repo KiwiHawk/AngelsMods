@@ -17,12 +17,25 @@ data:extend({
     selection_box = { { -1.3, -1.3 }, { 1.3, 1.3 } },
     minable = {
       mining_particle = "stone-particle",
-      mining_time = 8,
-      result = "stone",
-      count = 20,
+      mining_time = 2,
+      results = {
+        {
+          type = "item",
+          name = "stone",
+          amount_min = 15,
+          amount_max = 25,
+        },
+        {
+          type = "item",
+          name = "coal",
+          amount_min = 15,
+          amount_max = 25,
+        },
+      }
     },
     loot = {
       { item = "stone", probability = 1, count_min = 5, count_max = 10 },
+      { item = "coal", probability = 1, count_min = 5, count_max = 10 },
     },
     count_as_rock_for_filtered_deconstruction = true,
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
