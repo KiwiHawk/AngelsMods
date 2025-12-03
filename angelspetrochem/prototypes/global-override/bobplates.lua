@@ -74,13 +74,13 @@ if mods["bobplates"] then
   OV.remove_prereq("bob-cobalt-processing", "bob-electrolysis-1")
 
   OV.remove_prereq("bob-chemical-processing-2", "bob-electrolysis-2")
-  OV.remove_prereq("plastics", "chemical-plant")
+  OV.remove_prereq("plastics", "bob-chemical-plant")
   OV.remove_prereq("plastics", "bob-electrolysis-2")
   OV.remove_prereq("bob-aluminium-processing", "bob-electrolysis-2")
   OV.add_prereq("bob-aluminium-processing", "angels-chlorine-processing-1")
   OV.remove_prereq("bob-gold-processing-2", "bob-electrolysis-2")
   OV.add_prereq("bob-gold-processing", "angels-chlorine-processing-1")
-  OV.remove_prereq("bob-battery-3", "electrolysis-2")
+  OV.remove_prereq("bob-battery-3", "bob-electrolysis-2")
   OV.add_prereq("bob-grinding", "steel-processing")
 end
 
@@ -205,11 +205,6 @@ end
 if mods["bobplates"] then
   OV.global_replace_item("bob-salt", "angels-solid-salt")
   angelsmods.functions.hide("bob-salt")
-
-  move_item("bob-heavy-water", "angels-water-treatment-fluid", "eb", "fluid")
-  move_item("bob-deuterium", "angels-petrochem-basic-fluids", "i", "fluid")
-  move_item("bob-heavy-water", "angels-water-treatment", "b[bob-heavy-water]", "recipe")
-  move_item("bob-heavy-water-electrolysis", "angels-petrochem-basics", "a[water-separation]-a[heavy-water-electrolysis]", "recipe")
 end
 
 -------------------------------------------------------------------------------
@@ -225,8 +220,36 @@ end
 -------------------------------------------------------------------------------
 if mods["bobplates"] then
   -- Electrolyser 1
-  move_item("bob-electrolyser", "angels-petrochem-buildings-electrolyser", "aa[bobs-electrolyser]-a")
-  angelsmods.functions.add_crafting_category("assembling-machine", "angels-electrolyser", "bob-electrolysis")
+  OV.patch_recipes({
+    {
+      name = "bob-aluminium-plate",
+      category = "angels-petrochem-electrolyser",
+    },
+    {
+      name = "bob-lithium",
+      category = "angels-petrochem-electrolyser",
+    },
+    {
+      name = "bob-lithium-perchlorate",
+      category = "angels-petrochem-electrolyser",
+    },
+    {
+      name = "bob-nickel-plate",
+      category = "angels-petrochem-electrolyser",
+    },
+    {
+      name = "bob-silicon-plate",
+      category = "angels-petrochem-electrolyser",
+    },
+    {
+      name = "bob-titanium-plate",
+      category = "angels-petrochem-electrolyser",
+    },
+    {
+      name = "bob-zinc-plate",
+      category = "angels-petrochem-electrolyser",
+    },
+  })
   angelsmods.functions.hide("bob-electrolyser")
   angelsmods.functions.set_next_upgrade("assembling-machine", "bob-electrolyser", nil)
   OV.global_replace_item("bob-electrolyser", "angels-electrolyser")

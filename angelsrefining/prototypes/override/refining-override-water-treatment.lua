@@ -237,7 +237,6 @@ if mods["bobplates"] then
 
   --Insert water resources to bob recipes (NEED A WAY TO PATCH A SPECIFIC TINT)
   OV.patch_recipes({
-    { name = "bob-water-electrolysis", ingredients = { { name = "angels-water-purified", type = "fluid", amount = "water" } } },
     { name = "bob-nitric-acid", ingredients = { { name = "angels-water-purified", type = "fluid", amount = "water" } } },
     { name = "bob-sulfuric-acid-2", ingredients = { { name = "angels-water-purified", type = "fluid", amount = "water" } } },
     {
@@ -246,7 +245,7 @@ if mods["bobplates"] then
     },
     { name = "bob-coal-cracking", ingredients = { { name = "angels-water-purified", type = "fluid", amount = "water" } } },
     {
-      name = "bob-lithium-water-electrolysis",
+      name = "bob-lithium-perchlorate",
       ingredients = { { name = "angels-water-purified", type = "fluid", amount = "water" } },
     },
     { name = "explosives", ingredients = { { name = "angels-water-purified", type = "fluid", amount = "water" } } },

@@ -12,7 +12,7 @@ if mods['bobplates'] and angelsmods.trigger.smelting_products["lithium"].plate t
     { name = "bob-lithium-chloride", subgroup = "angels-alloys", order = "b[lithium]-a" },
     { name = "bob-lithium", subgroup = "angels-alloys", order = "b[lithium]-b" },
     { name = "bob-lithium-cobalt-oxide", subgroup = "angels-alloys", order = "b[lithium]-c" },
-    { name = "bob-lithium-water-electrolysis", subgroup = "angels-alloys", order = "b[lithium]-d" },
+    { name = "bob-lithium-perchlorate", subgroup = "angels-alloys", order = "b[lithium]-d" },
   })
   OV.add_prereq("bob-lithium-processing", "angels-metallurgy-2")
 end
