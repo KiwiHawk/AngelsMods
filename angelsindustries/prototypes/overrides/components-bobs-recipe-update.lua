@@ -204,7 +204,6 @@ if angelsmods.industries.components then
     OV.disable_recipe("lithium")
     OV.disable_recipe("lithium-water-electrolysis")
     OV.disable_recipe("lithium-chloride")
-    OV.disable_recipe("angels-water-thermal-lithia")
     angelsmods.functions.hide("silver-oxide")
     angelsmods.functions.hide("lithium")
     angelsmods.functions.hide("lithium-perchlorate")
