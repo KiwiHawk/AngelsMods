@@ -358,9 +358,6 @@ if data.raw.item["uraninite"] then
 end
 
 --ENABLE PRODUCTIVITY
-angelsmods.functions.allow_productivity("angels-slag-processing-1")
-angelsmods.functions.allow_productivity("angels-slag-processing-2")
-angelsmods.functions.allow_productivity("angels-slag-processing-3")
 angelsmods.functions.allow_productivity("angels-catalysator-brown")
 
 angelsmods.functions.allow_productivity("angels-ore1-crushed-processing")

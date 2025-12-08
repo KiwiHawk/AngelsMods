@@ -13,6 +13,7 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     hide_from_signal_gui = false,
+    allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -35,6 +36,7 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     hide_from_signal_gui = false,
+    allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -57,6 +59,7 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     hide_from_signal_gui = false,
+    allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -79,6 +82,7 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     hide_from_signal_gui = false,
+    allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -101,6 +105,7 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     hide_from_signal_gui = false,
+    allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
@@ -123,6 +128,7 @@ data:extend({
     show_amount_in_title = false,
     always_show_products = true,
     hide_from_signal_gui = false,
+    allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "angels-mineral-sludge", amount = 100 },
     },
