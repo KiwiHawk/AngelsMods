@@ -24,7 +24,7 @@ if angelsmods.addons.storage.pressuretank then
       name = "angels-pressure-tank-1",
       icon = "__angelsaddons-storage__/graphics/icons/pressure-tank-1.png",
       icon_size = 32,
-      flags = { "placeable-player", "player-creation", "not-rotatable" },
+      flags = { "placeable-player", "player-creation" },
       minable = { mining_time = 3, result = "angels-pressure-tank-1" },
       max_health = 500,
       corpse = "medium-remnants",

@@ -38,7 +38,7 @@ data:extend({
     name = "angels-storage-tank-1",
     icon = "__angelspetrochemgraphics__/graphics/icons/petrochem-gas-tank.png",
     icon_size = 64,
-    flags = { "placeable-player", "player-creation", "not-rotatable" },
+    flags = { "placeable-player", "player-creation" },
     minable = { mining_time = 0.5, result = "angels-storage-tank-1" },
     max_health = 500,
     corpse = "medium-remnants",
