@@ -25,7 +25,8 @@ if angelsmods.smelting then
     {
       name = "angels-filter-lime",
       ingredients = {
-        { name = "angels-solid-lime", type = "item", amount = "angels-stone-crushed" },
+        { name = "angels-solid-lime", type = "item", amount = 1 },
+        { name = "angels-stone-crushed", type = "item", amount = 0 },
       },
     },
   })

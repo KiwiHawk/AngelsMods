@@ -234,7 +234,7 @@ data:extend({
     localised_name = { "item-name.angels-filter-lime" },
     category = "crafting",
     subgroup = "angels-petrochem-catalysts",
-    energy_required = 2,
+    energy_required = 1,
     enabled = false,
     hide_from_signal_gui = true,
     ingredients = {
@@ -253,7 +253,7 @@ data:extend({
     name = "angels-sulfur-air-scrubbing",
     category = "angels-petrochem-air-filtering",
     subgroup = "angels-petrochem-sulfur",
-    energy_required = 10,
+    energy_required = 6,
     enabled = false,
     auto_recycle = false,
     hide_from_signal_gui = true,
