@@ -229,6 +229,9 @@ if mods["bobplates"] or mods["bobelectronics"] then
       },
     })
     OV.add_prereq("circuit-network", "angels-tin-smelting-1")
+    if mods["bobequipment"] then
+      OV.add_prereq("bob-personal-roboport-mk3-equipment", "angels-rubbers")
+    end
     if mods["boblogistics"] then
       OV.add_prereq("bob-robo-modular-3", "angels-rubbers")
       OV.add_prereq("bob-robots-2", "angels-rubbers")
@@ -238,6 +241,13 @@ if mods["bobplates"] or mods["bobelectronics"] then
     end
     if mods["bobpower"] then
       OV.add_prereq("bob-electric-pole-3", "angels-rubbers")
+      OV.add_prereq("bob-electric-substation-3", "angels-rubbers")
+    end
+    if mods["bobvehicleequipment"] then
+      OV.add_prereq("bob-vehicle-roboport-equipment-3", "angels-rubbers")
+    end
+    if mods["bobwarfare"] then
+      OV.add_prereq("bob-walking-vehicle", "angels-rubbers")
     end
   else
     angelsmods.functions.hide("bob-rubber")
