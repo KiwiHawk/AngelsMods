@@ -210,14 +210,14 @@ data:extend({
     localised_name = { "fluid-name.angels-water-saline" },
     category = "angels-salination-plant",
     subgroup = "angels-water-salination",
-    energy_required = 2,
+    energy_required = 5,
     enabled = false,
     ingredients = {
-      { type = "item", name = "angels-solid-salt", amount = 10 },
-      { type = "fluid", name = "angels-water-purified", amount = 1000 },
+      { type = "item", name = "angels-solid-salt", amount = 15 },
+      { type = "fluid", name = "water", amount = 1000 },
     },
     results = {
-      { type = "fluid", name = "angels-water-saline", amount = 400 },
+      { type = "fluid", name = "angels-water-saline", amount = 1000 },
     },
     main_product = "angels-water-saline",
     always_show_products = true,
