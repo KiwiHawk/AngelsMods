@@ -93,35 +93,6 @@ end
 -- PLATE ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["iron"].plate then
-  OV.patch_recipes({
-    {
-      name = "iron-plate",
-      energy_required = 10.5,
-      enabled = false,
-      hidden = true,
-      ingredients = {
-        { name = "iron-ore", type = "item", amount = "+3" },
-      },
-      results = {
-        { name = "iron-plate", type = "item", amount = "+2" },
-      },
-      icons = {
-        {
-          icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
-          icon_size = 32,
-        },
-        {
-          icon = "__base__/graphics/icons/iron-ore.png",
-          icon_size = 64,
-          scale = 32 / 64 * 0.4375,
-          shift = { -10, -10 },
-        },
-      },
-      subgroup = "angels-iron-casting",
-      order = "l[angels-plate-iron]-b",
-    },
-  })
-  OV.remove_unlock("angels-ore-crushing", "iron-plate")
   angelsmods.functions.move_item("iron-plate", "angels-iron-casting", "l")
   angelsmods.functions.override_item_conditions({
     value = 200,
@@ -138,7 +109,7 @@ if angelsmods.trigger.smelting_products["iron"].plate then
 
   OV.patch_recipes({
     {
-      name = "angels-ore1-crushed-smelting",
+      name = "iron-plate",
       subgroup = "angels-iron-casting",
       order = "l[angels-plate-iron]-a",
     },

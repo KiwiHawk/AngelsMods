@@ -44,15 +44,14 @@ OV.patch_recipes({
 if angelsmods.refining then
   OV.patch_recipes({
     {
-      name = "angels-ore3-crushed-smelting",
+      name = "copper-plate",
       subgroup = "angels-copper-casting",
       order = "j[angels-plate-copper]-a",
     },
   })
 end
 
-if not (angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger.smelting_products["tin"].plate) then
-  -- special vanilla
+if not angelsmods.trigger.ores["silicon"] then
   OV.patch_recipes({
     {
       name = "angels-solid-cement",
@@ -64,7 +63,6 @@ if not (angelsmods.trigger.smelting_products["lead"].plate or angelsmods.trigger
       name = "angels-solid-cement-2",
       ingredients = {
         { name = "angels-stone-crushed", type = "item", amount = "angels-quartz" },
-        { name = "angels-stone-crushed", type = "item", amount = "angels-solid-aluminium-oxide" },
       },
     },
   })

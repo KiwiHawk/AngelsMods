@@ -2,8 +2,7 @@ data:extend({
   --Tier 0
   {
     type = "recipe",
-    name = "angels-ore1-crushed-smelting",
-    localised_name = { "item-name.iron-plate" },
+    name = "iron-plate",
     category = "smelting",
     subgroup = "raw-material",
     energy_required = 7,
@@ -31,8 +30,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-ore3-crushed-smelting",
-    localised_name = { "item-name.copper-plate" },
+    name = "copper-plate",
     category = "smelting",
     subgroup = "raw-material",
     energy_required = 7,
@@ -58,37 +56,5 @@ data:extend({
     },
     icon_size = 32,
     order = "c[copper-ore]-a[crushed]",
-  },
-  {
-    type = "recipe",
-    name = "angels-ore5-crushed-smelting",
-    localised_name = { "item-name.angels-void" },
-    category = "smelting",
-    subgroup = "raw-material",
-    energy_required = 7,
-    ingredients = { { type = "item", name = "angels-ore5-crushed", amount = 3 } },
-    results = {
-      { type = "item", name = "angels-void", amount = 1 },
-    },
-    enabled = true,
-    allow_decomposition = false,
-    icon_size = 32,
-    order = "a-a [angels-ore5-crushed-smelting]",
-  },
-  {
-    type = "recipe",
-    name = "angels-ore6-crushed-smelting",
-    localised_name = { "item-name.angels-void" },
-    category = "smelting",
-    subgroup = "raw-material",
-    energy_required = 7,
-    ingredients = { { type = "item", name = "angels-ore6-crushed", amount = 3 } },
-    results = {
-      { type = "item", name = "angels-void", amount = 1 },
-    },
-    enabled = true,
-    allow_decomposition = false,
-    icon_size = 32,
-    order = "a-a [angels-ore6-crushed-smelting]",
   },
 })

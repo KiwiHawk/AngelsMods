@@ -9,6 +9,7 @@ Date: ???
     - Updated for Factorio 2.0 (994)
     - Added circuit connectors to all machines (1114)
     - Added some trigger techs to divide up the research tree (1165)
+    - Update recipes for components from Bob's Electronics mod to use Angel's wires (1197)
   Bugfixes:
     - Fixed coolant production graphs (1000)
     - Moved Cobalt Oxide 1 recipe from Ore processor to Chemical furnace (1006)

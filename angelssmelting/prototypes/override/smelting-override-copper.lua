@@ -43,35 +43,6 @@ end
 -- PLATE ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["copper"].plate then
-  OV.patch_recipes({
-    {
-      name = "copper-plate",
-      energy_required = 10.5,
-      enabled = false,
-      hidden = true,
-      ingredients = {
-        { name = "copper-ore", type = "item", amount = "+3" },
-      },
-      results = {
-        { name = "copper-plate", type = "item", amount = "+2" },
-      },
-      icons = {
-        {
-          icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
-          icon_size = 32,
-        },
-        {
-          icon = "__base__/graphics/icons/copper-ore.png",
-          icon_size = 64,
-          scale = 32 / 64 * 0.4375,
-          shift = { -10, -10 },
-        },
-      },
-      subgroup = "angels-copper-casting",
-      order = "j[angels-plate-copper]-b",
-    },
-  })
-  OV.remove_unlock("angels-ore-crushing", "copper-plate")
   angelsmods.functions.move_item("copper-plate", "angels-copper-casting", "j")
   angelsmods.functions.override_item_conditions({
     value = 200,
@@ -88,7 +59,7 @@ if angelsmods.trigger.smelting_products["copper"].plate then
 
   OV.patch_recipes({
     {
-      name = "angels-ore3-crushed-smelting",
+      name = "copper-plate",
       subgroup = "angels-copper-casting",
       order = "j[angels-plate-copper]-a",
     },

@@ -25,14 +25,6 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-ore4-crushed",
       },
-      -- {
-      -- type = "unlock-recipe",
-      -- recipe = "angels-ore5-crushed"
-      -- },
-      -- {
-      -- type = "unlock-recipe",
-      -- recipe = "angels-ore6-crushed"
-      -- },
       {
         type = "unlock-recipe",
         recipe = "angels-ore1-crushed-processing",

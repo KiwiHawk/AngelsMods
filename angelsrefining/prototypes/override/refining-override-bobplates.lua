@@ -127,41 +127,11 @@ end
 if mods["bobplates"] then
   OV.patch_recipes({
     {
-      name = "angels-ore1-crushed-smelting",
+      name = "iron-plate",
       subgroup = "bob-material-smelting",
     },
     {
-      name = "angels-ore3-crushed-smelting",
-      subgroup = "bob-material-smelting",
-    },
-    {
-      name = "angels-ore5-crushed-smelting",
-      localised_name = { "item-name.bob-lead-plate" },
-      results = {
-        { "!!" },
-        { type = "item", name = "bob-lead-plate", amount = 1 },
-      },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("bob-lead-plate"),
-        angelsmods.functions.get_object_icons("angels-ore5-crushed"),
-        { -10, -10 },
-        0.4375
-      ),
-      subgroup = "bob-material-smelting",
-    },
-    {
-      name = "angels-ore6-crushed-smelting",
-      localised_name = { "item-name.bob-tin-plate" },
-      results = {
-        { "!!" },
-        { type = "item", name = "bob-tin-plate", amount = 1 },
-      },
-      icons = angelsmods.functions.add_icon_layer(
-        angelsmods.functions.get_object_icons("bob-tin-plate"),
-        angelsmods.functions.get_object_icons("angels-ore6-crushed"),
-        { -10, -10 },
-        0.4375
-      ),
+      name = "copper-plate",
       subgroup = "bob-material-smelting",
     },
   })

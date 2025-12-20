@@ -64,7 +64,6 @@ angelsmods.trigger.ores["uranium"] = true
 -- other (angel)mods have time during the data stage to update the angelsmods.trigger.ore
 if mods["bobplates"] then
   local ore_exists = angelsmods.functions.ore_exists
-  --angelsmods.trigger.ores["uranium"] = true
   angelsmods.trigger.ores["tin"] = ore_exists("bob-tin-ore")
   angelsmods.trigger.ores["lead"] = ore_exists("bob-lead-ore")
   angelsmods.trigger.ores["nickel"] = ore_exists("bob-nickel-ore")

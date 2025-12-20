@@ -54,32 +54,16 @@ end
 -- PLATE ----------------------------------------------------------------------
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["tin"].plate then
-  OV.patch_recipes({
-    {
-      name = "angels-ore6-crushed-smelting",
-      subgroup = "angels-tin-casting",
-      order = "i[angels-plate-tin]-a",
-    },
-  })
-
   -- REPLACE ITEMS (use bob version)
   if mods["bobplates"] then
     OV.global_replace_item("angels-plate-tin", "bob-tin-plate")
     angelsmods.functions.hide("angels-plate-tin")
     OV.copy_item_properties("angels-plate-tin", "bob-tin-plate")
-    OV.patch_recipes({
-      {
-        name = "angels-ore6-crushed-smelting",
-        icons = angelsmods.functions.add_icon_layer(
-          angelsmods.functions.get_object_icons("bob-tin-plate"),
-          angelsmods.functions.get_object_icons("angels-ore6-crushed"),
-          { -10, -10 },
-          0.4375
-        ),
-      },
-    })
     OV.remove_unlock("angels-ore-crushing", "bob-tin-plate")
     OV.hide_recipe({ "bob-tin-plate" })
+    if mods["boblogistics"] then
+      OV.add_prereq("logistics", "angels-tin-smelting-1")
+    end
   end
 else
   angelsmods.functions.hide("angels-plate-tin")

@@ -105,6 +105,8 @@ if angelsmods.trigger.smelting_products["gold"].wire then
         },
       },
     })
+    OV.remove_prereq("processing-unit", "angels-rubbers")
+    OV.add_prereq("processing-unit", "angels-gold-smelting-1")
   else
     OV.patch_recipes({
       {

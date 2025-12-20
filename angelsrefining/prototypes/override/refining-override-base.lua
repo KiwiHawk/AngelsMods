@@ -4,21 +4,6 @@ local OV = angelsmods.functions.OV
 -- BASE OVERRIDES -------------------------------------------------------------
 -------------------------------------------------------------------------------
 OV.add_prereq("concrete", "angels-ore-crushing")
-
-OV.add_unlock("angels-ore-crushing", "copper-plate")
-OV.add_unlock("angels-ore-crushing", "iron-plate")
-
-OV.patch_recipes({
-  {
-    name = "iron-plate",
-    enabled = false,
-  },
-  {
-    name = "copper-plate",
-    enabled = false,
-  },
-})
-
 OV.add_prereq("uranium-processing", "angels-ore-leaching")
 
 -- Fix tips and tricks simulations missing "iron-ore" entity

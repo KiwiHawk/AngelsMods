@@ -77,19 +77,6 @@ if angelsmods.trigger.smelting_products["lead"].plate then
     angelsmods.functions.hide("angels-plate-lead")
     OV.copy_item_properties("angels-plate-lead", "bob-lead-plate")
     OV.disable_recipe({"bob-lead-plate", "bob-lead-plate-2"})
-    OV.patch_recipes({
-      {
-        name = "angels-ore5-crushed-smelting",
-        icons = angelsmods.functions.add_icon_layer(
-          angelsmods.functions.get_object_icons("bob-lead-plate"),
-          angelsmods.functions.get_object_icons("angels-ore5-crushed"),
-          { -10, -10 },
-          0.4375
-        ),
-        subgroup = "angels-lead-casting",
-        order = "k[angels-plate-lead]-a",
-      },
-    })
   end
 else
   angelsmods.functions.hide("angels-plate-lead")

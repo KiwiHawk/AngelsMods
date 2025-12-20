@@ -101,6 +101,7 @@ if angelsmods.trigger.smelting_products["silver"].wire then
         name = "bob-electronic-components",
         ingredients = {
           { type = "item", name = "angels-wire-silver", amount = "bob-tinned-copper-cable" },
+          { type = "item", name = "angels-wire-silver", amount = "copper-cable" },
         },
       },
     })

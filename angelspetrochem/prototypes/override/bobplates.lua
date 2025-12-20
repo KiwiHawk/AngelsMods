@@ -228,6 +228,14 @@ if mods["bobplates"] or mods["bobelectronics"] then
         },
       },
     })
+    OV.add_prereq("circuit-network", "angels-tin-smelting-1")
+    if mods["boblogistics"] then
+      OV.add_prereq("bob-robo-modular-3", "angels-rubbers")
+      OV.add_prereq("bob-robots-2", "angels-rubbers")
+    end
+    if mods["bobmodules"] then
+      OV.add_prereq("effect-transmission-3", "angels-rubbers")
+    end
     if mods["bobpower"] then
       OV.add_prereq("bob-electric-pole-3", "angels-rubbers")
     end
