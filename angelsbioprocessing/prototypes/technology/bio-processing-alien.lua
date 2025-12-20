@@ -131,6 +131,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "angels-bio-processing-alien-2",
+      "chemical-science-pack",
     },
     effects = {
       {
@@ -195,7 +196,7 @@ data:extend({
       ingredients = {
         { "automation-science-pack", 1 },
         { "logistic-science-pack", 1 },
-        --{ "chemical-science-pack", 1 },
+        { "chemical-science-pack", 1 },
         { "angels-token-bio", 1 },
       },
       time = 30,

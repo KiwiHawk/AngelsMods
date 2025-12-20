@@ -251,8 +251,6 @@ if mods["bobplates"] then
         OV.remove_science_pack("bobingabout-enrichment-process", "production-science-pack")
         OV.remove_prereq("bobingabout-enrichment-process", "kovarex-enrichment-process")
       else
-        OV.set_science_pack("bob-rtg", "production-science-pack", 1)
-        OV.add_prereq("bobingabout-enrichment-process", "kovarex-enrichment-process")
         data.raw.recipe["bobingabout-enrichment-process"].category = "angels-centrifuging-2"
         if data.raw.recipe["bob-plutonium-nucleosynthesis"] then
           data.raw.recipe["bob-plutonium-nucleosynthesis"].category = "angels-centrifuging-2"
