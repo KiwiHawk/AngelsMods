@@ -710,7 +710,6 @@ function angelsmods.functions.make_resource()
       order = input.order,
       base_density = input.autoplace.base_density,
       has_starting_area_placement = input.autoplace.starting_area,
-      resource_index = input.autoplace.resource_index,
       regular_rq_factor_multiplier = input.autoplace.regular_rq_factor_multiplier,
       starting_rq_factor_multiplier = input.autoplace.starting_rq_factor_multiplier,
       base_spots_per_km2 = input.autoplace.base_spots_per_km2,
@@ -808,7 +807,6 @@ function angelsmods.functions.make_resource()
       --Get map_color and icon from the regular resource
       if input.get then
         input.map_color = data.raw.resource[input.get].map_color
-        autoplace_ret_table.patch_set_name = input.get
         if data.raw.resource[input.get] then
           if data.raw.resource[input.get].icon_size then
             input.icon_size = data.raw.resource[input.get].icon_size
