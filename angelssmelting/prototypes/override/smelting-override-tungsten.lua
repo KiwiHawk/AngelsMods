@@ -67,9 +67,7 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
     OV.disable_recipe({ "bob-tungsten-plate" })
     OV.add_prereq("bob-tungsten-processing", "angels-tungsten-smelting-1")
     OV.set_research_difficulty("bob-tungsten-processing", "bob-tungsten-plate", 10, "craft-item")
-  end
 
-  if mods["bobplates"] then
     angelsmods.functions.move_item("bob-copper-tungsten-alloy", "angels-tungsten-casting", "l")
     angelsmods.functions.move_item("bob-tungsten-carbide", "angels-tungsten-casting", "k")
     OV.patch_recipes({
@@ -98,6 +96,8 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
         }, 2, angelsmods.smelting.number_tint),
       },
     })
+    
+    OV.remove_prereq("bob-tungsten-processing", "bob-nickel-processing")
   end
 
   if mods["angelsindustries"] and angelsmods.industries.tech then
