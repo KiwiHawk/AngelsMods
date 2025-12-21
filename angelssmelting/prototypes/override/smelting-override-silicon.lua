@@ -149,8 +149,30 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
     angelsmods.functions.move_item("bob-silicon-nitride", "angels-silicon-casting", "m[bobs-silicon]-a")
     angelsmods.functions.move_item("bob-silicon-carbide", "angels-silicon-casting", "m[bobs-silicon]-b")
     OV.patch_recipes({
-      { name = "bob-silicon-nitride", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-a" },
-      { name = "bob-silicon-carbide", subgroup = "angels-silicon-casting", order = "m[bobs-silicon]-b" },
+      { 
+        name = "bob-silicon-nitride",
+        subgroup = "angels-silicon-casting",
+        ingredients = {
+          { type = "item", name = "bob-silicon-powder", amount = 10 },
+          { type = "fluid", name = "angels-gas-nitrogen", amount = 130 },
+        },
+        results = {
+          { type = "item", name = "bob-silicon-nitride", amount = 10 },
+        },
+        order = "m[bobs-silicon]-a",
+      },
+      { 
+        name = "bob-silicon-carbide",
+        subgroup = "angels-silicon-casting",
+        ingredients = {
+          { type = "item", name = "bob-silicon-powder", amount = 10 },
+          { type = "item", name = "angels-solid-carbon", amount = 20 },
+        },
+        results = {
+          { type = "item", name = "bob-silicon-carbide", amount = 20 },
+        },
+        order = "m[bobs-silicon]-b" 
+      },
     })
   end
 else

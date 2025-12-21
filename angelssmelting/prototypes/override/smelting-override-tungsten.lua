@@ -74,6 +74,14 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
       {
         name = "bob-tungsten-carbide",
         subgroup = "angels-tungsten-casting",
+        energy_required = 6,
+        ingredients = {
+          { type = "item", name = "bob-tungsten-oxide", amount = 10 },
+          { type = "item", name = "angels-solid-carbon", amount = 10 },
+        },
+        results = {
+          { type = "item", name = "bob-tungsten-carbide", amount = 20 },
+        },
         order = "k[tungsten-carbide]-a",
         icons = angelsmods.functions.add_number_icon_layer({
           {
@@ -86,6 +94,14 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
       {
         name = "bob-tungsten-carbide-2",
         subgroup = "angels-tungsten-casting",
+        energy_required = 6,
+        ingredients = {
+          { type = "item", name = "bob-powdered-tungsten", amount = 10 },
+          { type = "item", name = "angels-solid-carbon", amount = 10 },
+        },
+        results = {
+          { type = "item", name = "bob-tungsten-carbide", amount = 20 },
+        },
         order = "k[tungsten-carbide]-b",
         icons = angelsmods.functions.add_number_icon_layer({
           {
@@ -143,4 +159,20 @@ if mods["bobplates"] then
       data.raw.recipe[name].category = "angels-sintering-4"
     end
   end
+  
+  OV.patch_recipes({
+    {
+      name = "bob-copper-tungsten-alloy",
+      energy_required = 8,
+      ingredients = {
+        { type = "item", name = "bob-powdered-tungsten", amount = 15 },
+        { type = "item", name = "copper-plate", amount = 0 },
+        { type = "item", name = "angels-powder-copper", amount = 10 },
+      },
+      results = {
+        { type = "item", name = "bob-copper-tungsten-alloy", amount = 25 },
+      },
+    },
+  })
+  OV.add_prereq("bob-tungsten-alloy-processing", "angels-copper-smelting-2")
 end
