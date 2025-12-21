@@ -244,9 +244,9 @@ data:extend({
     enabled = false,
     hide_from_signal_gui = true,
     ingredients = {
-      { type = "fluid", name = "angels-gas-allylchlorid", amount = 100 },
-      { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 50 },
-      { type = "item", name = "angels-solid-sodium-hydroxide", amount = 5 },
+      { type = "fluid", name = "angels-gas-allylchlorid", amount = 60 },
+      { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 30 },
+      { type = "item", name = "angels-solid-sodium-hydroxide", amount = 2 },
     },
     results = {
       { type = "fluid", name = "angels-gas-epichlorhydrin", amount = 90 },

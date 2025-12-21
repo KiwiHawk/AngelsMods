@@ -159,7 +159,7 @@ data:extend({
       { type = "fluid", name = "angels-gas-epichlorhydrin", amount = 20 },
     },
     results = {
-      { type = "fluid", name = "angels-liquid-resin", amount = 30 },
+      { type = "fluid", name = "angels-liquid-resin", amount = 40 },
     },
     always_show_products = true,
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {

@@ -8,6 +8,7 @@ Date: ???
     - Added separate crafting categories for Gas Refinery and Advanced Gas Refinery (988)
     - Updated for Factorio 2.0 (994)
     - Restored 1:1 water to steam ratio (1071)
+    - Buffed recipes Resin 3, Catalytic synthesis of phenol, and Epichlorhydrin gas (1095)
     - Added circuit connectors to all machines (1114)
     - Moved Angel's nuclear overhaul from Angel's Industries to Angel's Petrochemical Processing (1131)
     - Changed top-up valve threshold from 80% to 50% (1170)

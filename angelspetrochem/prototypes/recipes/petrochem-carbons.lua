@@ -1042,8 +1042,8 @@ data:extend({
     auto_recycle = false,
     hide_from_signal_gui = true,
     ingredients = {
-      { type = "fluid", name = "angels-gas-benzene", amount = 100 },
-      { type = "fluid", name = "angels-gas-oxygen", amount = 100 },
+      { type = "fluid", name = "angels-gas-benzene", amount = 50 },
+      { type = "fluid", name = "angels-gas-oxygen", amount = 50 },
       { type = "item", name = "angels-catalyst-metal-yellow", amount = 1 }, --Fe
     },
     results = {
