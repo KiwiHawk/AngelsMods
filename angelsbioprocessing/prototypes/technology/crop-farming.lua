@@ -735,6 +735,7 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "angels-bio-farm-1",
+      "angels-bio-nutrient-paste",
       "angels-slag-processing-1",
       "angels-oil-processing",
     },
