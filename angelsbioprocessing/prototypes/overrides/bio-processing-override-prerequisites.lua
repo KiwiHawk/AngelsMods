@@ -28,4 +28,10 @@ if mods["bobplates"] then
       "angels-bio-refugium-biter-1",
     }, "bob-titanium-processing")
   end
+
+  -- Glass
+  OV.add_prereq({
+    "angels-bio-refugium-fish-1",
+    "angels-bio-refugium-puffer-1",
+  }, "angels-glass-smelting-1")
 end

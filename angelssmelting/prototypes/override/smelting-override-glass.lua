@@ -42,27 +42,15 @@ if angelsmods.trigger.smelting_products["glass"].plate then
     data.raw["recipe"]["angels-plate-glass-2"].main_product = "bob-glass"
     data.raw["recipe"]["angels-plate-glass-3"].main_product = "bob-glass"
 
-    OV.patch_recipes({
-      {
-        name = "bob-glass",
-        energy_required = 10.5,
-        ingredients = {
-          { name = "bob-quartz", type = "item", amount = "+3" },
-        },
-        results = {
-          { name = "bob-glass", type = "item", amount = "+2" },
-        },
-        icons = angelsmods.functions.add_icon_layer(
-          angelsmods.functions.get_object_icons("bob-glass"),
-          angelsmods.functions.get_object_icons("bob-quartz"),
-          { -10, -10 },
-          0.4375
-        ),
-        icon_size = 32,
-        subgroup = "angels-glass-casting",
-        order = "d[angels-plate-glass]-a",
-      },
-    })
+    OV.disable_recipe("bob-glass")
+    OV.add_prereq("solar-energy", "angels-glass-smelting-1")
+    
+    if mods["bobwarfare"] then
+      OV.add_prereq({
+        "military-3", -- Sniper rifle
+        "bob-laser-rifle",
+      }, "angels-glass-smelting-1")
+    end
   end
 else
   angelsmods.functions.hide("angels-plate-glass")
