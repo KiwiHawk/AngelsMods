@@ -332,7 +332,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-ore1-chunk", amount = 2 },
-      { type = "fluid", name = "angels-water-yellow-waste", amount = 50 },
+      { type = "fluid", name = "angels-water-yellow-waste", amount = 25 },
       { type = "item", name = "angels-geode-blue", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore1-chunk",
@@ -353,7 +353,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-ore2-chunk", amount = 2 },
-      { type = "fluid", name = "angels-water-yellow-waste", amount = 50 },
+      { type = "fluid", name = "angels-water-yellow-waste", amount = 25 },
       { type = "item", name = "angels-geode-purple", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore2-chunk",
@@ -374,7 +374,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-ore3-chunk", amount = 2 },
-      { type = "fluid", name = "angels-water-yellow-waste", amount = 50 },
+      { type = "fluid", name = "angels-water-yellow-waste", amount = 25 },
       { type = "item", name = "angels-geode-yellow", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore3-chunk",
@@ -395,7 +395,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-ore4-chunk", amount = 2 },
-      { type = "fluid", name = "angels-water-yellow-waste", amount = 50 },
+      { type = "fluid", name = "angels-water-yellow-waste", amount = 25 },
       { type = "item", name = "angels-geode-lightgreen", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore4-chunk",
@@ -416,7 +416,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-ore5-chunk", amount = 2 },
-      { type = "fluid", name = "angels-water-yellow-waste", amount = 50 },
+      { type = "fluid", name = "angels-water-yellow-waste", amount = 25 },
       { type = "item", name = "angels-geode-cyan", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore5-chunk",
@@ -437,7 +437,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-ore6-chunk", amount = 2 },
-      { type = "fluid", name = "angels-water-yellow-waste", amount = 50 },
+      { type = "fluid", name = "angels-water-yellow-waste", amount = 25 },
       { type = "item", name = "angels-geode-red", amount = 1, probability = 0.5 },
     },
     main_product = "angels-ore6-chunk",

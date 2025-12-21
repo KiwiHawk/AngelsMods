@@ -9,7 +9,10 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
   OV.patch_recipes({
     {
       name = "angels-ore2-chunk",
-      results = { { name = "angels-water-greenyellow-waste", type = "fluid", amount = "angels-water-yellow-waste" } },
+      results = {
+        { type = "fluid", name = "angels-water-greenyellow-waste", amount = 50 },
+        { type = "fluid", name = "angels-water-yellow-waste", amount = 0 },
+      },
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "angels-water-greenyellow-waste",
         angelsmods.refining.ore_tints["ore2"],
@@ -17,7 +20,10 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
     },
     {
       name = "angels-ore4-chunk",
-      results = { { name = "angels-water-green-waste", type = "fluid", amount = "angels-water-yellow-waste" } },
+      results = {
+        { type = "fluid", name = "angels-water-green-waste", amount = 50 },
+        { type = "fluid", name = "angels-water-yellow-waste", amount = 0 },
+      },
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "angels-water-green-waste",
         angelsmods.refining.ore_tints["ore4"],
@@ -25,7 +31,10 @@ if angelsmods.petrochem and angelsmods.trigger.enableacids then
     },
     {
       name = "angels-ore5-chunk",
-      results = { { name = "angels-water-red-waste", type = "fluid", amount = "angels-water-yellow-waste" } },
+      results = {
+        { type = "fluid", name = "angels-water-red-waste", amount = 50 },
+        { type = "fluid", name = "angels-water-yellow-waste", amount = 0 },
+      },
       crafting_machine_tint = angelsmods.functions.get_recipe_tints({
         "angels-water-red-waste",
         angelsmods.refining.ore_tints["ore5"],

@@ -7,6 +7,7 @@ Date: ???
     - Fixed crash when removing 'angelspump' mod (test mod, merged into Angel's Refining) (992)
     - Fixed crash on startup with error message No icon size defined for icon (997)
   Changes:
+    - Halved the Sulfuric wase water produced by ore chunk recipes (849)
     - Removed references to normal / expensive recipes (945)
     - Added Ore Sorting Facility 5. Catalyst sorting requires a higher tier ore sorting facility (979)
     - Updated for Factorio 2.0 (994)
