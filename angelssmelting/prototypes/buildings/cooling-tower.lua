@@ -34,7 +34,6 @@ data:extend({
     module_slots = 2,
     allowed_effects = { "consumption", "speed", "pollution" },
     crafting_speed = 2,
-    --ingredient_count = 4,
     resistances = {
       {
         type = "fire",

@@ -84,7 +84,6 @@ data:extend({
     energy_usage = "200kW",
     circuit_connector = circuit_connector_definitions["angels-ore-floatation-cell"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         north = {
@@ -363,7 +362,6 @@ data:extend({
     energy_usage = "250kW",
     circuit_connector = circuit_connector_definitions["angels-ore-floatation-cell"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         north = {
@@ -641,7 +639,6 @@ data:extend({
     energy_usage = "300kW",
     circuit_connector = circuit_connector_definitions["angels-ore-floatation-cell"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         north = {

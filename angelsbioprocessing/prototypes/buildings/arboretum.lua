@@ -58,7 +58,6 @@ data:extend({
       emissions_per_minute = { pollution = -75 },
     },
     energy_usage = "100kW",
-    ingredient_count = 4,
     graphics_set = {
       animation = {
         layers = {
@@ -183,7 +182,6 @@ data:extend({
     energy_usage = "100kW",
     circuit_connector = circuit_connector_definitions["angels-bio-generator"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 4,
     graphics_set = {
       animation = {
         layers = {
@@ -308,7 +306,6 @@ data:extend({
     energy_usage = "100kW",
     circuit_connector = circuit_connector_definitions["angels-bio-generator"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 4,
     graphics_set = {
       animation = {
         layers = {
@@ -435,7 +432,6 @@ data:extend({
     energy_usage = "100kW",
     circuit_connector = circuit_connector_definitions["angels-bio-arboretum-1"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 4,
     graphics_set = {
       animation = {
         layers = {

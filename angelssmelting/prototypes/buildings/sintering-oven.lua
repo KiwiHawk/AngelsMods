@@ -43,7 +43,6 @@ data:extend({
       emissions_per_minute = { pollution = 1.2 },
     },
     energy_usage = "100kW",
-    --ingredient_count = 2,
     graphics_set = {
       animation = {
         layers = {
@@ -146,7 +145,6 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "150kW",
-    --ingredient_count = 4,
     graphics_set = {
       animation = {
         layers = {
@@ -249,7 +247,6 @@ data:extend({
       emissions_per_minute = { pollution = 2.4 },
     },
     energy_usage = "200kW",
-    --ingredient_count = 6,
     graphics_set = {
       animation = {
         layers = {
@@ -352,7 +349,6 @@ data:extend({
       emissions_per_minute = { pollution = 3 },
     },
     energy_usage = "250kW",
-    --ingredient_count = 6,
     graphics_set = {
       animation = {
         layers = {
@@ -454,7 +450,6 @@ data:extend({
       emissions_per_minute = { pollution = 3.6 },
     },
     energy_usage = "300kW",
-    --ingredient_count = 6,
     graphics_set = {
       animation = {
         layers = {

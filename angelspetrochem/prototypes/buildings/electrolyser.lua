@@ -52,7 +52,6 @@ data:extend({
     energy_usage = "300kW",
     circuit_connector = circuit_connector_definitions["angels-electrolyser"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         north = {
@@ -179,7 +178,6 @@ data:extend({
     energy_usage = "350kW",
     circuit_connector = circuit_connector_definitions["angels-electrolyser"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         north = {
@@ -306,7 +304,6 @@ data:extend({
     energy_usage = "400kW",
     circuit_connector = circuit_connector_definitions["angels-electrolyser"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         north = {
@@ -432,7 +429,6 @@ data:extend({
     energy_usage = "450kW",
     circuit_connector = circuit_connector_definitions["angels-electrolyser"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         north = {

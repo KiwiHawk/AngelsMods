@@ -41,7 +41,6 @@ data:extend({
     selection_box = { { -1.5, -1.5 }, { 1.5, 1.5 } },
     crafting_categories = { "angels-ore-refining-t1" },
     crafting_speed = 1,
-    ingredient_count = 1,
     energy_source = {
       type = "burner",
       effectivity = 1,
@@ -61,7 +60,6 @@ data:extend({
     energy_usage = "100kW",
     circuit_connector = circuit_connector_definitions["angels-ore-crusher"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 2,
     graphics_set = {
       animation = {
         layers = {
@@ -141,7 +139,6 @@ data:extend({
     energy_usage = "100kW",
     circuit_connector = circuit_connector_definitions["angels-ore-crusher"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         layers = {
@@ -220,7 +217,6 @@ data:extend({
     energy_usage = "125kW",
     circuit_connector = circuit_connector_definitions["angels-ore-crusher"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         layers = {
@@ -298,7 +294,6 @@ data:extend({
     energy_usage = "150kW",
     circuit_connector = circuit_connector_definitions["angels-ore-crusher"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         layers = {

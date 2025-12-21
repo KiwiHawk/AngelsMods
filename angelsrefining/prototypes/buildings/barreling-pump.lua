@@ -43,7 +43,6 @@ local barreling_pump = {
   energy_usage = "60kW",
   circuit_connector = circuit_connector_definitions["angels-barreling-pump"],
   circuit_wire_max_distance = default_circuit_wire_max_distance,
-  ingredient_count = 2,
   graphics_set = {
     animation = {
       north = {
@@ -123,7 +122,6 @@ if angelsmods.trigger.enable_auto_barreling then
   barreling_pump.type = "furnace"
   barreling_pump.result_inventory_size = 1
   barreling_pump.source_inventory_size = 1
-  barreling_pump.ingredient_count = nil
   barreling_pump.cant_insert_at_source_message_key = "cant_insert.angels-barreling-pump-limitation"
 end
 

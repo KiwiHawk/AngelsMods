@@ -42,7 +42,6 @@ data:extend({
       emissions_per_minute = { pollution = 1.2 },
     },
     energy_usage = "200kW",
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         filename = "__angelsrefininggraphics__/graphics/entity/electro-whinning-cell/electro-whinning-cell.png",
@@ -137,7 +136,6 @@ data:extend({
       emissions_per_minute = { pollution = 1.8 },
     },
     energy_usage = "250kW",
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         filename = "__angelsrefininggraphics__/graphics/entity/electro-whinning-cell/electro-whinning-cell.png",

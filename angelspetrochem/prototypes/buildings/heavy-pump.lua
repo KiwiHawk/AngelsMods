@@ -32,7 +32,6 @@ data:extend({
       emissions_per_minute = { pollution = 0.03 * 60 },
     },
     energy_usage = "60kW",
-    ingredient_count = 4,
     graphics_set = {
       animation = {
         north = {

@@ -52,7 +52,6 @@ data:extend({
     energy_usage = "200kW",
     circuit_connector = circuit_connector_definitions["angels-steam-cracker"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         layers = {
@@ -195,7 +194,6 @@ data:extend({
     energy_usage = "225kW",
     circuit_connector = circuit_connector_definitions["angels-steam-cracker"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         layers = {
@@ -322,7 +320,6 @@ data:extend({
     energy_usage = "250kW",
     circuit_connector = circuit_connector_definitions["angels-steam-cracker"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         layers = {
@@ -448,7 +445,6 @@ data:extend({
     energy_usage = "275kW",
     circuit_connector = circuit_connector_definitions["angels-steam-cracker"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
-    ingredient_count = 3,
     graphics_set = {
       animation = {
         layers = {
