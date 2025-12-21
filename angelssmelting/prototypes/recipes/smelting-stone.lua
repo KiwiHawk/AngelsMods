@@ -31,7 +31,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-lime", amount = 1 },
-      { type = "item", name = "angels-quartz", amount = 1 },
+      { type = "item", name = "angels-powder-silicon", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-solid-cement", amount = 1 },
@@ -49,17 +49,16 @@ data:extend({
     localised_name = { "item-name.angels-solid-cement" },
     category = "angels-powder-mixing-2",
     subgroup = "angels-stone",
-    energy_required = 4,
+    energy_required = 16,
     enabled = false,
     auto_recycle = false,
     ingredients = {
-      { type = "item", name = "angels-quartz", amount = 1 },
-      { type = "item", name = "angels-solid-lime", amount = 1 },
+      { type = "item", name = "angels-powder-silicon", amount = 1 },
+      { type = "item", name = "angels-solid-lime", amount = 4 },
       { type = "item", name = "angels-solid-aluminium-oxide", amount = 1 },
-      { type = "item", name = "iron-ore", amount = 1 },
     },
     results = {
-      { type = "item", name = "angels-solid-cement", amount = 2 },
+      { type = "item", name = "angels-solid-cement", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-solid-cement"),

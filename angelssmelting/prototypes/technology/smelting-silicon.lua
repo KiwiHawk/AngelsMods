@@ -32,6 +32,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "angels-silicon-wafer",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "angels-powder-silicon",
+      },
     },
     unit = {
       count = 150,
@@ -66,10 +70,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "angels-ingot-silicon-2",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "angels-powder-silicon",
       },
     },
     unit = {

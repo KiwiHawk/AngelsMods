@@ -7,6 +7,7 @@ data:extend({
     prerequisites = {
       --"angels-metallurgy-2",
       "angels-powder-metallurgy-2",
+      "angels-silicon-smelting-1",
     },
     effects = {
       {

@@ -124,6 +124,8 @@ if angelsmods.trigger.smelting_products["silicon"].powder then
     })
     angelsmods.functions.hide("angels-powder-silicon")
     OV.disable_recipe({ "angels-powder-silicon" })
+    OV.remove_unlock("bob-silicon-processing", "bob-silicon-powder")
+    OV.add_unlock("angels-silicon-smelting-1", "bob-silicon-powder")
 
     angelsmods.functions.move_item("bob-silicon-powder", "angels-silicon", "g")
     data.raw.item["bob-silicon-powder"].icon = "__angelssmeltinggraphics__/graphics/icons/powder-silica.png"

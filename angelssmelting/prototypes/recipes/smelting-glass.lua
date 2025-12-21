@@ -11,7 +11,7 @@ data:extend({
     enabled = false,
     auto_recycle = false,
     ingredients = {
-      { type = "item", name = "angels-quartz", amount = 1 },
+      { type = "item", name = "angels-powder-silicon", amount = 1 },
     },
     results = {
       { type = "item", name = "angels-solid-glass-mixture", amount = 1 },
@@ -29,15 +29,15 @@ data:extend({
     localised_name = { "item-name.angels-solid-glass-mixture" },
     category = "angels-powder-mixing-2",
     subgroup = "angels-glass",
-    energy_required = 4,
+    energy_required = 6,
     enabled = false,
     auto_recycle = false,
     ingredients = {
-      { type = "item", name = "angels-quartz", amount = 1 },
+      { type = "item", name = "angels-powder-silicon", amount = 2 },
       { type = "item", name = "angels-solid-lime", amount = 1 },
     },
     results = {
-      { type = "item", name = "angels-solid-glass-mixture", amount = 2 },
+      { type = "item", name = "angels-solid-glass-mixture", amount = 3 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-solid-glass-mixture"),
@@ -52,16 +52,16 @@ data:extend({
     localised_name = { "item-name.angels-solid-glass-mixture" },
     category = "angels-powder-mixing-3",
     subgroup = "angels-glass",
-    energy_required = 4,
+    energy_required = 8,
     enabled = false,
     auto_recycle = false,
     ingredients = {
-      { type = "item", name = "angels-quartz", amount = 1 },
+      { type = "item", name = "angels-powder-silicon", amount = 1 },
       { type = "item", name = "angels-solid-aluminium-oxide", amount = 1 },
-      { type = "item", name = "angels-solid-lime", amount = 1 },
+      { type = "item", name = "angels-solid-lime", amount = 2 },
     },
     results = {
-      { type = "item", name = "angels-solid-glass-mixture", amount = 3 },
+      { type = "item", name = "angels-solid-glass-mixture", amount = 4 },
     },
     icons = angelsmods.functions.add_number_icon_layer(
       angelsmods.functions.get_object_icons("angels-solid-glass-mixture"),
@@ -76,7 +76,7 @@ data:extend({
     localised_name = { "item-name.angels-solid-glass-mixture" },
     category = "angels-powder-mixing-3",
     subgroup = "angels-glass",
-    energy_required = 4,
+    energy_required = 8,
     enabled = false,
     auto_recycle = false,
     ingredients = {
