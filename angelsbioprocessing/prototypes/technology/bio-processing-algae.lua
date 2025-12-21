@@ -60,10 +60,6 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-algae-brown-burning",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "angels-algae-brown-burning-wash",
       },
     },

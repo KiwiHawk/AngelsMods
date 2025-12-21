@@ -233,6 +233,9 @@ if mods["bobplates"] then
   OV.add_prereq("bob-lithium-processing", "angels-thermal-water-extraction-2")
   OV.remove_unlock("angels-water-treatment-3", "angels-solid-lithium")
   OV.add_unlock("bob-lithium-processing", "angels-solid-lithium")
+  if angelsmods.bioprocessing then
+    OV.add_unlock("bob-lithium-processing", "angels-algae-brown-burning")
+  end
   OV.set_science_pack("bob-lithium-processing", "chemical-science-pack", 1)
 
   --Insert water resources to bob recipes (NEED A WAY TO PATCH A SPECIFIC TINT)
