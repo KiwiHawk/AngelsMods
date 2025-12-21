@@ -156,7 +156,7 @@ data:extend({
     enabled = false,
     ingredients = {
       { type = "fluid", name = "angels-liquid-bisphenol-a", amount = 20 },
-      { type = "fluid", name = "angels-gas-epichlorhydrin", amount = 20 },
+      { type = "fluid", name = "angels-gas-epichlorohydrin", amount = 20 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-resin", amount = 40 },
@@ -165,7 +165,7 @@ data:extend({
     icons = AF.create_viscous_liquid_recipe_icon(nil, { { 255, 225, 155 }, { 255, 225, 155 } }, {
       AF.add_number_icon_layer({}, 3, angelsmods.petrochem.number_tint),
     }),
-    crafting_machine_tint = AF.get_recipe_tints({ "angels-liquid-resin", "angels-liquid-bisphenol-a", "angels-gas-epichlorhydrin" }),
+    crafting_machine_tint = AF.get_recipe_tints({ "angels-liquid-resin", "angels-liquid-bisphenol-a", "angels-gas-epichlorohydrin" }),
     order = "b[resin]-a[liquid]-c",
   },
   --RUBBER

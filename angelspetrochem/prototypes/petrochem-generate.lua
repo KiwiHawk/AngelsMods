@@ -41,7 +41,7 @@ if angelsmods.refining then
   angelsmods.functions.make_void("angels-gas-hydrogen-chloride", "chemical")
   angelsmods.functions.make_void("angels-liquid-hydrochloric-acid", "chemical")
   angelsmods.functions.make_void("angels-gas-allylchlorid", "chemical")
-  angelsmods.functions.make_void("angels-gas-epichlorhydrin", "chemical")
+  angelsmods.functions.make_void("angels-gas-epichlorohydrin", "chemical")
   angelsmods.functions.make_void("angels-gas-chlor-methane", "chemical")
   angelsmods.functions.make_void("angels-liquid-perchloric-acid", "chemical")
   angelsmods.functions.make_void("angels-liquid-ferric-chloride-solution", "chemical")

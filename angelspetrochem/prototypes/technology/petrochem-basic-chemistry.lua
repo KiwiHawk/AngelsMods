@@ -687,7 +687,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-gas-epichlorhydrin",
+        recipe = "angels-gas-epichlorohydrin",
       },
       {
         type = "unlock-recipe",

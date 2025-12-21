@@ -83,7 +83,7 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "angels-gas-epichlorhydrin",
+    name = "angels-gas-epichlorohydrin",
     localised_description = show_formula and {
       "tooltip-description.chemical-formula",
       "C[font=default-tiny-bold]3[/font]H[font=default-tiny-bold]5[/font]Cl",

@@ -236,8 +236,8 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "angels-gas-epichlorhydrin",
-    localised_name = { "fluid-name.angels-gas-epichlorhydrin" },
+    name = "angels-gas-epichlorohydrin",
+    localised_name = { "recipe-name.angels-gas-epichlorohydrin" },
     category = "chemistry",
     subgroup = "angels-petrochem-chlorine-2",
     energy_required = 2,
@@ -249,18 +249,18 @@ data:extend({
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 2 },
     },
     results = {
-      { type = "fluid", name = "angels-gas-epichlorhydrin", amount = 90 },
+      { type = "fluid", name = "angels-gas-epichlorohydrin", amount = 90 },
     },
     always_show_products = true,
     icons = angelsmods.functions.create_gas_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/epichlorohydrin.png", 72 },
     }, "CClC"),
     crafting_machine_tint = AF.get_recipe_tints({
-      "angels-gas-epichlorhydrin",
+      "angels-gas-epichlorohydrin",
       "angels-gas-allylchlorid",
       "angels-liquid-hydrochloric-acid",
     }),
-    order = "i[gas-epichlorhydrin]",
+    order = "i[gas-epichlorohydrin]",
   },
   {
     type = "recipe",
@@ -272,7 +272,7 @@ data:extend({
     enabled = false,
     hide_from_signal_gui = true,
     ingredients = {
-      { type = "fluid", name = "angels-gas-epichlorhydrin", amount = 100 },
+      { type = "fluid", name = "angels-gas-epichlorohydrin", amount = 100 },
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
     results = {
@@ -282,7 +282,7 @@ data:extend({
     icons = angelsmods.functions.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/glycerol.png", 72 },
     }, "COH"),
-    crafting_machine_tint = AF.get_recipe_tints({ "angels-liquid-glycerol", "angels-gas-epichlorhydrin", "angels-water-purified" }),
+    crafting_machine_tint = AF.get_recipe_tints({ "angels-liquid-glycerol", "angels-gas-epichlorohydrin", "angels-water-purified" }),
     order = "j[liquid-glycerol]",
   },
   {
