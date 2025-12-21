@@ -17,7 +17,7 @@ if not angelsmods.functions.make_resource then
 
   --Create particles
   local function make_particle(input)
-    if not data.raw.particle[input.name .. "-particle"] then
+    if not data.raw["optimized-particle"][input.name .. "-particle"] then
       data:extend({
         {
           type = "optimized-particle",
@@ -729,7 +729,7 @@ if not angelsmods.functions.make_resource then
         end
         --Create Particle if resource yields items
         if input.type == "item" then
-          if input.get and data.raw.particle[input.get .. "-particle"] then
+          if input.get and data.raw["optimized-particle"][input.get .. "-particle"] then
             input.particle = input.get .. "-particle"
           else
             make_particle(input)
@@ -807,7 +807,7 @@ if not angelsmods.functions.make_resource then
             if data.raw.resource[input.get].icon_size then
               input.icon_size = data.raw.resource[input.get].icon_size
             else
-              input.icon_size = 32
+              input.icon_size = 64
             end
             if data.raw.resource[input.get].icon then
               ret_table.icon = data.raw.resource[input.get].icon
@@ -817,12 +817,12 @@ if not angelsmods.functions.make_resource then
             end
           end
         elseif not input.icon_size then
-          input.icon_size = 32
+          input.icon_size = 64
         end
 
         if input.icon then
           if not input.icon_size then
-            input.icon_size = 32
+            input.icon_size = 64
           end
           ret_table.icons = { { icon = input.icon, icon_size = input.icon_size } }
         end
