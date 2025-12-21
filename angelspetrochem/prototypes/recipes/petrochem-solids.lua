@@ -473,6 +473,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-glycerol", amount = 50 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 25 },
@@ -501,6 +502,7 @@ data:extend({
     energy_required = 2,
     enabled = false,
     auto_recycle = false,
+    allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-toluene", amount = 50 },
       { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 25 },
