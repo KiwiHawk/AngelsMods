@@ -142,16 +142,22 @@ if mods["bobplates"] then
   if mods["bobgreenhouse"] then
     OV.add_prereq("bob-greenhouse", "angels-ore-crushing")
   end
-  OV.add_unlock("bob-lead-processing", "bob-silver-plate")
   if data.raw.recipe["bob-solder-alloy"] then
-    OV.remove_unlock("bob-electronics", "bob-solder-alloy")
-    OV.add_unlock("bob-lead-processing", "bob-solder-alloy")
   end
-  OV.add_prereq("bob-battery-3", "bob-lead-processing")
-  OV.add_prereq("bob-solar-panel-equipment-2", "bob-lead-processing")
-  OV.add_prereq("bob-vehicle-solar-panel-equipment-2", "bob-lead-processing")
+  if mods["bobequipment"] then
+    OV.add_prereq("bob-solar-panel-equipment-2", "bob-lead-processing")
+  end
+  if mods["bobvehicleequipment"] then
+    OV.add_prereq("bob-vehicle-solar-panel-equipment-2", "bob-lead-processing")
+  end
   if mods["bobmodules"] then
-    OV.add_prereq("processing-unit", "bob-lead-processing")
+    OV.add_prereq("modules", "angels-ore-floatation")
+  end
+  if mods["bobelectronics"] then
+    OV.remove_unlock("bob-electronics", "bob-silver-plate")
+    OV.remove_unlock("bob-electronics", "bob-solder-alloy")
+    OV.add_unlock("bob-lead-processing", "bob-silver-plate")
+    OV.add_unlock("bob-lead-processing", "bob-solder-alloy")
   end
   OV.patch_recipes({
     {
@@ -166,12 +172,9 @@ if mods["bobplates"] then
       name = "bob-glass",
       enabled = false,
     },
-    {
-      name = "bob-silver-plate",
-      enabled = false,
-    },
   })
   OV.add_prereq("bob-nickel-processing", "angels-ore-crushing")
+  OV.add_prereq("bob-alloy-processing", "angels-ore-crushing")
 end
 
 -------------------------------------------------------------------------------
