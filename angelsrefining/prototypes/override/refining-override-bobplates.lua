@@ -142,22 +142,8 @@ if mods["bobplates"] then
   if mods["bobgreenhouse"] then
     OV.add_prereq("bob-greenhouse", "angels-ore-crushing")
   end
-  if data.raw.recipe["bob-solder-alloy"] then
-  end
-  if mods["bobequipment"] then
-    OV.add_prereq("bob-solar-panel-equipment-2", "bob-lead-processing")
-  end
-  if mods["bobvehicleequipment"] then
-    OV.add_prereq("bob-vehicle-solar-panel-equipment-2", "bob-lead-processing")
-  end
-  if mods["bobmodules"] then
-    OV.add_prereq("modules", "angels-ore-floatation")
-  end
-  if mods["bobelectronics"] then
-    OV.remove_unlock("bob-electronics", "bob-silver-plate")
-    OV.remove_unlock("bob-electronics", "bob-solder-alloy")
-    OV.add_unlock("bob-lead-processing", "bob-silver-plate")
-    OV.add_unlock("bob-lead-processing", "bob-solder-alloy")
+  if mods["boblogistics"] and settings.startup["bobmods-logistics-beltoverhaul"].value == true then
+    OV.add_prereq("logistics", "angels-ore-crushing")
   end
   OV.patch_recipes({
     {
@@ -175,6 +161,23 @@ if mods["bobplates"] then
   })
   OV.add_prereq("bob-nickel-processing", "angels-ore-crushing")
   OV.add_prereq("bob-alloy-processing", "angels-ore-crushing")
+  if mods["bobwarfare"] then
+    OV.patch_recipes({
+      {
+        name = "firearm-magazine",
+        ingredients = {
+          { type = "item", name = "iron-plate", amount = "bob-lead-plate" },
+        },
+      },
+      {
+        name = "piercing-rounds-magazine",
+        ingredients = {
+          { type = "item", name = "bob-lead-plate", amount = "copper-plate" },
+        },
+      },
+    })
+    OV.add_prereq("military-2", "angels-ore-crushing")
+  end
 end
 
 -------------------------------------------------------------------------------
