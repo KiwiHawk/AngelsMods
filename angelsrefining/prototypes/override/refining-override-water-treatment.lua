@@ -5,7 +5,7 @@ angelsmods.functions.move_item("water", "angels-water-treatment-fluid", "a", "fl
 -------------------------------------------------------------------------------
 -- REFINERY ACID WASTE PRODUCTS -----------------------------------------------
 -------------------------------------------------------------------------------
-if angelsmods.petrochem and angelsmods.trigger.enableacids then
+if angelsmods.petrochem then
   OV.patch_recipes({
     {
       name = "angels-ore2-chunk",

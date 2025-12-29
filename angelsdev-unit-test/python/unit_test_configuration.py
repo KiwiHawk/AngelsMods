@@ -32,7 +32,6 @@ class UnitTestConfiguration:
 # Angels petrochem
 UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-converter", False) # We do not test the converter valve as this is just there for compatibility
 UnitTestConfiguration.addDefaultSetting("startup", "angels-hide-converter", True)
-UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-acids", True)
 
 # Angels industries
 UnitTestConfiguration.addDefaultSetting("startup", "angels-enable-industries", False)
@@ -286,47 +285,6 @@ UnitTestConfiguration.addConfiguration("BA (regular)",
       #"angels-enable-industries": False, # Angels overhaul
       #"angels-enable-components": False, # Angels component mode
       #"angels-enable-tech"      : False, # Angels technology mode
-    }
-  }
-)
-
-UnitTestConfiguration.addConfiguration("BA (no acid in refining)",
-  [
-    "angelsrefining",
-    "angelspetrochem",
-    "angelssmelting",
-    "angelsbioprocessing",
-    #"angelsindustries",
-    #"angelsexploration",
-
-    "angelsaddons-storage",
-
-    "boblibrary",
-    "bobassembly",
-    "bobclasses",
-    "bobelectronics",
-    "bobenemies",
-    "bobequipment",
-    #"bobgreenhouse",
-    "bobinserters",
-    "boblogistics",
-    "bobmining",
-    "bobmodules",
-    "bobores",
-    "bobplates",
-    "bobpower",
-    "bobrevamp",
-    "bobtech",
-    "bobvehicleequipment",
-    "bobwarfare",
-  ],
-  {
-    "startup":
-    {
-      #"angels-enable-industries": False, # Angels overhaul
-      #"angels-enable-components": False, # Angels component mode
-      #"angels-enable-tech"      : False, # Angels technology mode
-      "angels-enable-acids"     : False
     }
   }
 )

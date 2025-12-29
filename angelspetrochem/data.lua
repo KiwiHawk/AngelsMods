@@ -14,29 +14,17 @@ angelsmods.trigger.liquid_ferric_chloride_solution = mods["bobelectronics"] and 
 angelsmods.trigger.liquid_cupric_chloride_solution = false
 angelsmods.trigger.gas_ammonium_chloride = false
 angelsmods.trigger.early_sulfuric_acid = false
-angelsmods.trigger.gas_hydrogen_fluoride = settings.startup["angels-enable-acids"].value
-  or (mods["angelsbioprocessing"] and true or false)
 angelsmods.trigger.gas_acetone = angelsmods.trigger.resin
 angelsmods.trigger.gas_urea = (mods["bobgreenhouse"] or angelsmods.trigger.resin) and true or false
 
 --OVERRIDE FOR REFINING
-angelsmods.trigger.enableacids = settings.startup["angels-enable-acids"].value
 angelsmods.trigger.ores["thorium"] = true
 angelsmods.trigger.ores["uranium"] = true
 angelsmods.trigger.slag = true
 angelsmods.trigger.salt_production = true
-angelsmods.trigger.water_greenyellow_waste = angelsmods.trigger.enableacids or mods["angelssmelting"]
-angelsmods.trigger.water_green_waste = (
-  angelsmods.trigger.enableacids or (mods["bobplates"] and data.raw.fluid["bob-deuterium"])
-)
-    and true
-  or false
-
-if mods["bobplates"] then
-  angelsmods.trigger.ores["fluorite"] = true
-elseif mods["angelsindustries"] then
-  angelsmods.trigger.ores["fluorite"] = true
-end
+angelsmods.trigger.water_greenyellow_waste = true
+angelsmods.trigger.water_green_waste = true
+angelsmods.trigger.ores["fluorite"] = true
 
 --LOAD PROTOTYPES
 require("prototypes.petrochem-category")

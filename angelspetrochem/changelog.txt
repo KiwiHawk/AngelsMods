@@ -13,6 +13,7 @@ Date: ???
     - Moved Angel's nuclear overhaul from Angel's Industries to Angel's Petrochemical Processing (1131)
     - Changed top-up valve threshold from 80% to 50% (1170)
     - Buffed lime air filtering recipes (1198)
+    - Remove Acids mod setting (1213)
 ---------------------------------------------------------------------------------------------------
 Version: 0.9.26
 Date: 21.02.2024

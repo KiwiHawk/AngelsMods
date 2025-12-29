@@ -6,7 +6,6 @@ local get_ore_name = angelsmods.functions.get_ore_name
 -- WATER ENRICHMENT -----------------------------------------------------------
 -------------------------------------------------------------------------------
 if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
-  angelsmods.trigger.water_green_waste = true
   OV.converter_fluid("bob-heavy-water", "angels-liquid-water-heavy")
   OV.converter_fluid("bob-deuterium", "angels-gas-deuterium")
 
@@ -44,8 +43,6 @@ if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
       },
     })
   end
-else
-  angelsmods.trigger.water_green_waste = true
 end
 
 -- Enforce semiheavy water temp
@@ -340,23 +337,4 @@ if angelsmods.trigger.early_sulfuric_acid == true then
 else
   -- Hide sulfur 4
   OV.disable_technology("angels-sulfur-processing-4")
-end
-
------------------------------------------------------------------------------
--- HYDROGEN FLUORIDE GAS ----------------------------------------------------
------------------------------------------------------------------------------
-if angelsmods.trigger.gas_hydrogen_fluoride == false then
-  OV.disable_recipe({
-    "angels-gas-hydrogen-fluoride",
-    "angels-liquid-hydrogen-fluoride",
-  })
-  OV.patch_recipes({
-    name = "angels-gas-acid-catalyst",
-    results = { { name = "angels-gas-hydrogen-fluoride", type = "fluid", amount = 0 } },
-    category = "chemistry",
-  })
-  angelsmods.functions.hide({
-    "angels-gas-hydrogen-fluoride",
-    "angels-liquid-hydrofluoric-acid",
-  })
 end

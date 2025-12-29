@@ -1008,11 +1008,7 @@ function angelsmods.functions.update_autoplace()
               and settings.startup["angels-keepuranacid"].value
           then
             if angelsmods.petrochem then
-              if angelsmods.trigger.enableacids then
-                input.acid_req = input.acid_to_mine
-              else
-                input.acid_req = "angels-liquid-sulfuric-acid"
-              end
+              input.acid_req = input.acid_to_mine
             else
               if data.raw.fluid[input.acid_to_mine] then
                 input.acid_req = input.acid_to_mine
