@@ -12,6 +12,7 @@ angelsmods.trigger.ores["chrome"] = true
 angelsmods.trigger.ores["cobalt"] = true
 angelsmods.trigger.ores["manganese"] = true
 angelsmods.trigger.ores["nickel"] = true
+angelsmods.trigger.ores["silicon"] = true
 angelsmods.trigger.ores["silver"] = true
 angelsmods.trigger.ores["titanium"] = true
 angelsmods.trigger.ores["tungsten"] = true

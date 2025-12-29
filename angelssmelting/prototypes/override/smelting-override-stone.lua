@@ -51,23 +51,6 @@ if angelsmods.refining then
   })
 end
 
-if not angelsmods.trigger.ores["silicon"] then
-  OV.patch_recipes({
-    {
-      name = "angels-solid-cement",
-      ingredients = {
-        { name = "angels-stone-crushed", type = "item", amount = "angels-quartz" },
-      },
-    },
-    {
-      name = "angels-solid-cement-2",
-      ingredients = {
-        { name = "angels-stone-crushed", type = "item", amount = "angels-quartz" },
-      },
-    },
-  })
-end
-
 if angelsmods.trigger.smelting_products["steel"].rod then
   -- if steel rod is present, concrete should use these instead of steel plates
   OV.patch_recipes({

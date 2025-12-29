@@ -63,6 +63,7 @@ data:extend({
       --"angels-metallurgy-2",
       "chemical-science-pack",
       "angels-powder-metallurgy-2",
+      "angels-silicon-smelting-1",
       "angels-stone-smelting-1",
       "concrete",
       "angels-resins",
