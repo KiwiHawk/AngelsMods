@@ -32,3 +32,6 @@ require("prototypes.generation.dm-tenemut")
 -- EXECUTE FUNCTIONS
 angelsmods.functions.make_resource()
 patch_overlapping_resources()
+
+-- UPDATE URANIUM MINING TECH
+require("prototypes.overrides.infiniteores-override-base")
