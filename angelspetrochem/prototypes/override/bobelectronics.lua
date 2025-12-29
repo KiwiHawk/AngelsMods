@@ -25,5 +25,9 @@ if mods["bobelectronics"] then
   OV.remove_unlock("bob-electronics", "bob-insulated-cable")
 
   OV.add_unlock("angels-rubbers", "bob-insulated-cable")
-  OV.add_prereq("processing-unit", "angels-rubbers")
+  OV.add_prereq({
+    "bob-personal-roboport-modular-equipment-3",
+    "bob-vehicle-roboport-modular-equipment-3",
+    "processing-unit",
+  }, "angels-rubbers")
 end

@@ -207,6 +207,7 @@ if mods["bobplates"] or mods["bobelectronics"] then
       wire_name = "bob-tinned-copper-cable"
     elseif mods["angelssmelting"] and angelsmods.trigger.smelting_products["tin"].wire then
       wire_name = "angels-wire-tin"
+      OV.add_prereq("circuit-network", "angels-tin-smelting-1")
     end
     OV.patch_recipes({
       {
@@ -228,7 +229,6 @@ if mods["bobplates"] or mods["bobelectronics"] then
         },
       },
     })
-    OV.add_prereq("circuit-network", "angels-tin-smelting-1")
     if mods["bobequipment"] then
       OV.add_prereq("bob-personal-roboport-mk3-equipment", "angels-rubbers")
     end
@@ -289,6 +289,7 @@ if mods["bobplates"] then
     OV.add_prereq("angels-advanced-chemistry-2", "bob-aluminium-processing")
     OV.add_prereq("angels-advanced-chemistry-4", "bob-titanium-processing")
     OV.add_prereq("angels-advanced-chemistry-5", "bob-tungsten-processing")
+    OV.add_prereq("angels-thorium-power", "bob-tungsten-processing")
   end
 
   OV.add_prereq("angels-advanced-chemistry-2", "bob-zinc-processing")

@@ -1,7 +1,7 @@
 local OV = angelsmods.functions.OV
 
 if mods["bobvehicleequipment"] then
-  if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
+  if mods["bobplates"] and data.raw.fluid["bob-deuterium"] then
     -- In Angel's mods Heavy water becomes available way later then in Bob's
 
     OV.remove_prereq("bob-vehicle-fission-reactor-equipment-2", "angels-water-chemistry-1")

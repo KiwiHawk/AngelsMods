@@ -93,4 +93,14 @@ elseif mods["bobelectronics"] then
   OV.add_prereq({
     "angels-metallurgy-5",
   }, "bob-advanced-processing-unit")
+  
+  if mods["bobassembly"] then
+    OV.add_prereq({
+      "automation-4",
+      "bob-electronics-machine-2",
+    }, "angels-titanium-smelting-1")
+    OV.add_prereq({
+      "automation-5",
+    }, "angels-tungsten-smelting-1")
+  end
 end

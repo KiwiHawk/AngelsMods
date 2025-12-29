@@ -825,12 +825,19 @@ if special_vanilla then
       order = "b[copper]-b[slag]",
     },
     {
+      name = "angels-ore-chunk-mix6-processing",
+      ingredients = {
+        { type = "item", name = "angels-catalysator-green", amount = 0 },
+      },
+      order = "c[fluorite]-a[ore]-a",
+    },
+    {
       name = "angels-ore-chunk-mix3-processing",
       ingredients = {
         { type = "item", name = "angels-catalysator-green", amount = 0 },
         { type = "item", name = "angels-ore1-chunk", amount = "angels-ore2-chunk" },
       },
-      order = "c[uranium]-a[ore]-a",
+      order = "d[uranium]-a[ore]-a",
     },
     {
       name = "angels-ore-crystal-mix1-processing",
@@ -838,7 +845,7 @@ if special_vanilla then
         { type = "item", name = "angels-catalysator-orange", amount = 0 },
         { type = "item", name = "angels-ore5-crystal", amount = 0 },
       },
-      order = "c[uranium]-a[ore]-b",
+      order = "d[uranium]-a[ore]-b",
     },
     {
       name = "angels-ore-pure-mix1-processing",
@@ -847,7 +854,7 @@ if special_vanilla then
         { type = "item", name = "angels-ore3-pure", amount = 0 },
         { type = "item", name = "angels-ore4-pure", amount = "angels-ore2-pure" },
       },
-      order = "c[uranium]-a[ore]-c",
+      order = "d[uranium]-a[ore]-c",
     },
     {
       name = "angels-ore-pure-mix2-processing",
@@ -857,7 +864,7 @@ if special_vanilla then
         { type = "item", name = "angels-ore5-pure", amount = 0 },
         { type = "item", name = "angels-ore6-pure", amount = 0 },
       },
-      order = "d[thorium]-a[ore]-a",
+      order = "e[thorium]-a[ore]-a",
     }
   })
 end
