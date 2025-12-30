@@ -180,7 +180,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-crystal-powder-from-dust",
-    category = "angels-ore-refining-t1-5",
+    category = "angels-powderizing-1",
     subgroup = "angels-bio-biter-processing-crystal-full",
     enabled = false,
     auto_recycle = false,

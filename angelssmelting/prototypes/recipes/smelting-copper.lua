@@ -124,7 +124,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-copper",
-    category = "advanced-crafting",
+    category = "angels-powderizing-1",
     subgroup = "angels-copper",
     energy_required = 0.5,
     enabled = false,

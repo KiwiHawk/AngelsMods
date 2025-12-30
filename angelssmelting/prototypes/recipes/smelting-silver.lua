@@ -149,7 +149,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-silver",
-    category = "advanced-crafting",
+    category = "angels-powderizing-1",
     subgroup = "angels-silver",
     energy_required = 0.5,
     enabled = false,

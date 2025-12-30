@@ -2,6 +2,8 @@
 Version: 2.0.0
 Date: ???
   Changes:
+    - Moved ingot powder receipes to powderizer machines (852)
+    - Added minimum machine tier to powderizer recipes (852)
     - Removed references to normal / expensive recipes (945)
     - Rebalance Tungsten Smelting Recipes (980)
     - Adjusted the recipes for Bob's Assembling Machines (985)

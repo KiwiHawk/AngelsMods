@@ -140,7 +140,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-nickel",
-    category = "advanced-crafting",
+    category = "angels-powderizing-2",
     subgroup = "angels-nickel",
     energy_required = 0.5,
     enabled = false,

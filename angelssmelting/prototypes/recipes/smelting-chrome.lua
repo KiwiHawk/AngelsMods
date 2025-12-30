@@ -166,7 +166,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-chrome",
-    category = "advanced-crafting",
+    category = "angels-powderizing-3",
     subgroup = "angels-chrome",
     energy_required = 0.5,
     enabled = false,

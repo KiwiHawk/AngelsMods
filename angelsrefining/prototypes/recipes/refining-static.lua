@@ -248,7 +248,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore8-powder",
-    category = "angels-ore-refining-t1-5",
+    category = "angels-powderizing-1",
     subgroup = "angels-ore-processing-a",
     energy_required = 2,
     enabled = false,
@@ -299,7 +299,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-ore9-powder",
-    category = "angels-ore-refining-t1-5",
+    category = "angels-powderizing-1",
     subgroup = "angels-ore-processing-a",
     energy_required = 2,
     enabled = false,
@@ -1077,7 +1077,7 @@ data:extend({
     type = "recipe",
     name = "angels-milling-drum",
     category = "crafting",
-    subgroup = "angels-ore-powderizer",
+    subgroup = "angels-powderizer",
     energy_required = 1,
     enabled = false,
     ingredients = {
@@ -1094,7 +1094,7 @@ data:extend({
     type = "recipe",
     name = "angels-milling-drum-lubricated",
     category = "crafting-with-fluid",
-    subgroup = "angels-ore-powderizer",
+    subgroup = "angels-powderizer",
     energy_required = 1,
     enabled = false,
     ingredients = {

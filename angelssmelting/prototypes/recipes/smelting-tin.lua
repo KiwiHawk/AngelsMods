@@ -105,7 +105,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-tin",
-    category = "advanced-crafting",
+    category = "angels-powderizing-1",
     subgroup = "angels-tin",
     energy_required = 0.5,
     enabled = false,

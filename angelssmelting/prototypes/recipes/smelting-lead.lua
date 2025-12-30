@@ -175,7 +175,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-powder-lead",
-    category = "advanced-crafting",
+    category = "angels-powderizing-1",
     subgroup = "angels-lead",
     energy_required = 0.5,
     enabled = false,
