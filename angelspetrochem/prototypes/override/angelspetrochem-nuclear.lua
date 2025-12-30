@@ -342,18 +342,17 @@ if mods["bobplates"] then
   OV.global_replace_technology("bob-plutonium-fuel-cell", "kovarex-enrichment-process")
   OV.disable_technology("bob-plutonium-fuel-cell")
 
-  if data.raw.item["bob-thorium-fuel-cell"] then
-    OV.disable_recipe("bob-thorium-fuel-cell")
-    if data.raw.reactor["bob-nuclear-reactor-2"] then
-      data.raw.item["angels-thorium-fuel-cell"].fuel_category = "bob-thorium"
-      OV.add_prereq("bob-nuclear-power-2", "angels-thorium-power")
-      OV.set_science_pack("bob-nuclear-power-2", "utility-science-pack")
-    end
+  OV.disable_recipe("bob-thorium-fuel-cell")
+  if data.raw.reactor["bob-nuclear-reactor-2"] then
+    data.raw.item["angels-thorium-fuel-cell"].fuel_category = "bob-thorium"
+    OV.add_unlock("angels-thorium-power", "bob-nuclear-reactor-2")
+    OV.add_prereq("angels-thorium-power", "bob-heat-pipe-3")
   end
 
   if data.raw.reactor["bob-nuclear-reactor-3"] then
     data.raw.item["angels-deuterium-fuel-cell"].fuel_category = "bob-deuterium"
-    OV.add_prereq("bob-nuclear-power-3", "angels-fusion-power-1")
+    OV.add_unlock("angels-fusion-power-1", "bob-nuclear-reactor-3")
+    OV.add_prereq("angels-fusion-power-1", "bob-heat-pipe-4")
   end
 
   -- make atomic artillery shells use plutonium instead of uranium 235
