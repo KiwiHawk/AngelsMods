@@ -185,7 +185,7 @@ data:extend({
         tint = { a = 0.01 },
       },
       {
-        icon = "__angelspetrochemgraphics__/graphics/icons/neptunium-240.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/neptunium-239.png",
         icon_size = 64,
         scale = 32 / 64 * 40 / 64,
         shift = { 0, -6 },
@@ -197,7 +197,7 @@ data:extend({
         shift = { -8, 8 },
       },
       {
-        icon = "__angelspetrochemgraphics__/graphics/icons/plutonium-240.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/plutonium-239.png",
         icon_size = 64,
         scale = 32 / 64 * 32 / 64,
         shift = { 8, 8 },
