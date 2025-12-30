@@ -129,6 +129,10 @@ if mods["bobplates"] then
   OV.add_unlock("flammables", "bob-enriched-fuel")
   OV.remove_prereq("flammables", "angels-gas-processing")
   OV.add_prereq("flammables", "angels-steam-cracking-1")
+  if mods["bobwarfare"] then
+    -- Napalm capsule requires Liquid fuel
+    OV.add_prereq("military-3", "flammables")
+  end
 end
 
 -------------------------------------------------------------------------------
