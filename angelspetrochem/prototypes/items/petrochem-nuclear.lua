@@ -45,14 +45,14 @@ data:extend({
     order = "a[radioactive-element]-d[neptunium-240]",
     stack_size = 100,
   },
-  --Pu-240
+  --Pu-239
   {
     type = "item",
-    name = "angels-plutonium-240", -- orange
+    name = "angels-plutonium-239", -- orange
     icon = "__angelspetrochemgraphics__/graphics/icons/plutonium-239.png",
     icon_size = 64,
     subgroup = "angels-power-nuclear-processing",
-    order = "a[radioactive-element]-e[plutonium-240]",
+    order = "a[radioactive-element]-e[plutonium-239]",
     stack_size = 100,
   },
   --Am-241

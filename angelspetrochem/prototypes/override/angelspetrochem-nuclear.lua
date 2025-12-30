@@ -219,11 +219,11 @@ if mods["bobassembly"] and data.raw["assembling-machine"]["bob-centrifuge-3"] th
 end
 if mods["bobplates"] then
   --basically remove all of bobs things (Sorry bob)
-  OV.global_replace_item("angels-plutonium-240", "bob-plutonium-239") --use bobs plutonium
+  OV.global_replace_item("angels-plutonium-239", "bob-plutonium-239") --use bobs plutonium
   if data.raw.item["bob-plutonium-239"] then
-    data.raw.item["bob-plutonium-239"].icon = data.raw.item["angels-plutonium-240"].icon
-    data.raw.item["bob-plutonium-239"].icon_size = data.raw.item["angels-plutonium-240"].icon_size
-    data.raw.item["bob-plutonium-239"].icons = data.raw.item["angels-plutonium-240"].icons
+    data.raw.item["bob-plutonium-239"].icon = data.raw.item["angels-plutonium-239"].icon
+    data.raw.item["bob-plutonium-239"].icon_size = data.raw.item["angels-plutonium-239"].icon_size
+    data.raw.item["bob-plutonium-239"].icons = data.raw.item["angels-plutonium-239"].icons
   end
 
   angelsmods.functions.move_item(
@@ -232,7 +232,7 @@ if mods["bobplates"] then
     "a[radioactive-element]-e[plutonium-239]"
   )
   OV.disable_recipe("bob-empty-nuclear-fuel-cell")
-  angelsmods.functions.hide({ "angels-plutonium-240", "bob-empty-nuclear-fuel-cell" })
+  angelsmods.functions.hide({ "angels-plutonium-239", "bob-empty-nuclear-fuel-cell" })
 
   -- plutonium enrichment process
   if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then

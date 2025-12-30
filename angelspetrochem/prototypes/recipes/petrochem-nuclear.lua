@@ -24,9 +24,9 @@ data:extend({
       { type = "item", name = "angels-neptunium-240", amount = 8 },
     },
     results = {
-      { type = "item", name = "angels-plutonium-240", amount = 8 },--was 5
+      { type = "item", name = "angels-plutonium-239", amount = 8 },--was 5
     },
-    main_product = "angels-plutonium-240",
+    main_product = "angels-plutonium-239",
     always_show_products = true,
     show_amount_in_title = false,
     icons = {
@@ -72,11 +72,11 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-americium-241", amount = 5 },
       { type = "item", name = "uranium-238", amount = 60, ignored_by_stats = 15 },
-      { type = "item", name = "angels-plutonium-240", amount = 1 },
+      { type = "item", name = "angels-plutonium-239", amount = 1 },
     },
     results = {
       --{type = "item", name = "uranium-235", amount = 1,probability=0.3},
-      { type = "item", name = "angels-plutonium-240", amount = 6, ignored_by_productivity = 1, ignored_by_stats = 1 },
+      { type = "item", name = "angels-plutonium-239", amount = 6, ignored_by_productivity = 1, ignored_by_stats = 1 },
       { type = "item", name = "uranium-238", amount = 15, ignored_by_productivity = 15, ignored_by_stats = 15 },
     },
     icons = {
@@ -124,7 +124,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-thorium-232", amount = 4 },
-      { type = "item", name = "angels-plutonium-240", amount = 1, probability = 0.15 }, --must be low enough to not be self-sustainable (<=0.15)
+      { type = "item", name = "angels-plutonium-239", amount = 1, probability = 0.15 }, --must be low enough to not be self-sustainable (<=0.15)
     },
     icons = {
       { -- need to have something as bottom layer
@@ -174,7 +174,7 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-uranium-234", amount = 1, probability = 0.95, ignored_by_productivity = 1 }, --balances the isotope numbers
-      { type = "item", name = "angels-plutonium-240", amount = 13, ignored_by_productivity = 13},
+      { type = "item", name = "angels-plutonium-239", amount = 13, ignored_by_productivity = 13},
       { type = "item", name = "uranium-238", amount = 43, ignored_by_productivity = 43 },
     },
     icons = {
@@ -185,7 +185,7 @@ data:extend({
         tint = { a = 0.01 },
       },
       {
-        icon = "__angelspetrochemgraphics__/graphics/icons/neptunium-239.png",
+        icon = "__angelspetrochemgraphics__/graphics/icons/neptunium-240.png",
         icon_size = 64,
         scale = 32 / 64 * 40 / 64,
         shift = { 0, -6 },
@@ -307,7 +307,7 @@ data:extend({
     energy_required = 80, --1200
     ingredients = {
       { type = "item", name = "uranium-238", amount = 38 },
-      { type = "item", name = "angels-plutonium-240", amount = 2 },
+      { type = "item", name = "angels-plutonium-239", amount = 2 },
       { type = "item", name = "iron-plate", amount = 20 },
     },
     results = {
@@ -388,7 +388,7 @@ data:extend({
       { type = "fluid", name = "angels-liquid-hydrofluoric-acid", amount = 60 },
     },
     results = {
-      { type = "item", name = "angels-plutonium-240", amount = 2 },
+      { type = "item", name = "angels-plutonium-239", amount = 2 },
       { type = "item", name = "angels-slag", amount = 4, ignored_by_productivity = 4 },
       { type = "item", name = "angels-curium-245", amount = 3, probability = 0.45 },
       { type = "item", name = "uranium-235", amount = 1, probability = 0.2 },
@@ -444,7 +444,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-thorium-232", amount = 17 },
       { type = "item", name = "angels-curium-245", amount = 1 },
-      { type = "item", name = "angels-plutonium-240", amount = 8 },
+      { type = "item", name = "angels-plutonium-239", amount = 8 },
       { type = "item", name = "steel-plate", amount = 15 },
     },
     results = {
@@ -474,7 +474,7 @@ data:extend({
     {
       {type = "item", name = "angels-thorium-232", amount = 15},
       {type = "item", name = "angels-americium-241", amount = 2},
-      {type = "item", name = "angels-plutonium-240", amount = 4},
+      {type = "item", name = "angels-plutonium-239", amount = 4},
       {type = "item", name = "steel-plate", amount = 10},
     },
     results = 
@@ -767,7 +767,7 @@ data:extend({
     hide_from_signal_gui = true,
     category = "angels-centrifuging-2",
     ingredients = {
-      { type = "item", name = "angels-plutonium-240", amount = 1 },
+      { type = "item", name = "angels-plutonium-239", amount = 1 },
       { type = "item", name = "rocket-fuel", amount = 1 },
     },
     results = {
@@ -782,7 +782,7 @@ data:extend({
     enabled = false,
     category = "angels-centrifuging-3",
     ingredients = {
-      { type = "item", name = "angels-plutonium-240", amount = 2 },
+      { type = "item", name = "angels-plutonium-239", amount = 2 },
       { type = "item", name = "rocket-fuel", amount = 3 },
       { type = "item", name = "angels-thorium-232", amount = 1 },
     },
@@ -808,7 +808,7 @@ data:extend({
       { type = "item", name = "processing-unit", amount = 10 },
       { type = "item", name = "explosives", amount = 10 },
       { type = "item", name = "angels-rocket-booster", amount = 1 },
-      { type = "item", name = "angels-plutonium-240", amount = 30 },
+      { type = "item", name = "angels-plutonium-239", amount = 30 },
     },
     results = {
       { type = "item", name = "atomic-bomb", amount = 1 },

@@ -557,7 +557,7 @@ local function add_ignores()
     ignored_unlocks["angels-nuclear-fuel"] = {
       items = {
         ["bob-plutonium-239"] = true,
-        ["angels-plutonium-240"] = true,
+        ["angels-plutonium-239"] = true,
         ["bob-thorium-232"] = true,
         ["angels-thorium-232"] = true,
       },
@@ -569,7 +569,7 @@ local function add_ignores()
     ignored_unlocks["atomic-bomb"] = {
       items = {
         ["bob-plutonium-239"] = true,
-        ["angels-plutonium-240"] = true,
+        ["angels-plutonium-239"] = true,
         ["angels-muon-fusion-catalyst"] = true,
       },
       fluids = {
