@@ -27,20 +27,6 @@ if mods["bobrevamp"] then
   OV.hide_recipe("bob-ammonia")
   OV.converter_fluid("bob-ammonia", "angels-gas-ammonia")
 
-  if settings.startup["bobmods-revamp-old-oil"] then
-    OV.hide_recipe({
-      "bob-oil-processing-with-sulfur",
-      "bob-oil-processing-with-sulfur-dioxide",
-      "bob-oil-processing-with-sulfur-dioxide-2",
-      "bob-oil-processing-with-sulfur-dioxide-3",
-    })
-  end
-  if settings.startup["bobmods-revamp-oil"] then
-    OV.hide_recipe("bob-solid-fuel-from-sour-gas")
-    OV.remove_unlock("flammables", "bob-solid-fuel-from-sour-gas")
-    OV.remove_unlock("flammables", "bob-solid-fuel-from-petroleum-gas")
-  end
-
   if angelsmods.trigger.disable_bobs_chemical_plants then
     OV.global_replace_technology("chemical-plant", "angels-basic-chemistry-2")
   end

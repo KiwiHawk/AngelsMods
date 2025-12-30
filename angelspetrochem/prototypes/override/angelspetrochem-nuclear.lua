@@ -300,8 +300,8 @@ if mods["bobplates"] then
   end
   
   OV.disable_recipe("bob-thorium-processing")
-  OV.global_replace_technology("bob-thorium-processing", "angels-thorium-power")
-  OV.disable_technology("bob-thorium-processing")
+  OV.global_replace_technology("bob-nuclear-power-2", "angels-thorium-power")
+  OV.disable_technology("bob-nuclear-power-2")
 
   OV.disable_recipe("bob-thorium-fuel-cell")
   OV.global_replace_item("bob-thorium-fuel-cell", "angels-thorium-fuel-cell")
@@ -336,30 +336,24 @@ if mods["bobplates"] then
   angelsmods.functions.hide("bob-depleted-deuterium-fuel-cell")
 
   -- plutonium processing
-  if bobmods.revamp and settings.startup["bobmods-revamp-nuclear"].value then
-    --if overhaul, remove unlocks in each reactor tech
-    --add each cell to each reactor... or would it be quicker to just set the setting?
-    OV.disable_recipe("bob-plutonium-fuel-cell") --keep as "uranium tier"
-    OV.global_replace_technology("bob-plutonium-fuel-cell", "kovarex-enrichment-process")
-    OV.disable_technology("bob-plutonium-fuel-cell")
+  -- remove unlocks in each reactor tech
+  -- add each cell to each reactor
+  OV.disable_recipe("bob-plutonium-fuel-cell") --keep as "uranium tier"
+  OV.global_replace_technology("bob-plutonium-fuel-cell", "kovarex-enrichment-process")
+  OV.disable_technology("bob-plutonium-fuel-cell")
 
-    if data.raw.item["bob-thorium-fuel-cell"] then
-      OV.disable_recipe("bob-thorium-fuel-cell")
-      if data.raw.reactor["bob-nuclear-reactor-2"] then
-        data.raw.item["angels-thorium-fuel-cell"].fuel_category = "bob-thorium"
-        OV.add_prereq("bob-nuclear-power-2", "angels-thorium-power")
-        OV.set_science_pack("bob-nuclear-power-2", "utility-science-pack")
-      end
+  if data.raw.item["bob-thorium-fuel-cell"] then
+    OV.disable_recipe("bob-thorium-fuel-cell")
+    if data.raw.reactor["bob-nuclear-reactor-2"] then
+      data.raw.item["angels-thorium-fuel-cell"].fuel_category = "bob-thorium"
+      OV.add_prereq("bob-nuclear-power-2", "angels-thorium-power")
+      OV.set_science_pack("bob-nuclear-power-2", "utility-science-pack")
     end
+  end
 
-    if data.raw.reactor["bob-nuclear-reactor-3"] then
-      data.raw.item["angels-deuterium-fuel-cell"].fuel_category = "bob-deuterium"
-      OV.add_prereq("bob-nuclear-power-3", "angels-fusion-power-1")
-    end
-  else --remove them from their individual techs
-    OV.disable_recipe({ "bob-plutonium-fuel-cell", "bob-thorium-processing" })
-    OV.global_replace_technology("bob-plutonium-fuel-cell", "kovarex-enrichment-process")
-    OV.disable_technology("bob-plutonium-fuel-cell")
+  if data.raw.reactor["bob-nuclear-reactor-3"] then
+    data.raw.item["angels-deuterium-fuel-cell"].fuel_category = "bob-deuterium"
+    OV.add_prereq("bob-nuclear-power-3", "angels-fusion-power-1")
   end
 
   -- make atomic artillery shells use plutonium instead of uranium 235

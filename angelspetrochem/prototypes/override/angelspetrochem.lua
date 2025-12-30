@@ -13,8 +13,8 @@ if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
 
   OV.global_replace_technology("bob-heavy-water-processing", "angels-water-chemistry-1")
   OV.disable_technology("bob-heavy-water-processing")
-  OV.global_replace_technology("bob-deuterium-processing", "angels-water-chemistry-2")
-  OV.disable_technology("bob-deuterium-processing")
+  OV.global_replace_technology("bob-nuclear-power-3", "angels-water-chemistry-2")
+  OV.disable_technology("bob-nuclear-power-3")
   OV.add_prereq("angels-water-chemistry-2", "nuclear-fuel-reprocessing")
 
   if mods["bobequipment"] then

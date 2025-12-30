@@ -1,7 +1,6 @@
 if mods["bobplates"] then
   angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-bluedeuterium")
   angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-expensive-electrolysis")
-  angelsmods.settings.hide_setting("bool-setting", "bobmods-plates-nuclearupdate")
 end
 if mods["bobassembly"] then
   angelsmods.settings.hide_setting("bool-setting", "bobmods-assembly-centrifuge", true)
