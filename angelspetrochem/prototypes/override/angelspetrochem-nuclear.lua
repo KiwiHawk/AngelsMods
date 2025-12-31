@@ -234,46 +234,32 @@ if mods["bobplates"] then
   OV.disable_recipe("bob-empty-nuclear-fuel-cell")
   angelsmods.functions.hide({ "angels-plutonium-239", "bob-empty-nuclear-fuel-cell" })
 
-  -- plutonium enrichment process
   if mods["bobrevamp"] and settings.startup["bobmods-revamp-rtg"].value then
-    if data.raw.recipe["bobingabout-enrichment-process"] then
-      OV.patch_recipes({
-        {
-          name = "bobingabout-enrichment-process",
-          subgroup = "angels-power-nuclear-processing",
-          order = "b[AMOX]-c[duplication]",
-        },
-      })
-      OV.remove_prereq("bob-rtg", "nuclear-fuel-reprocessing")
-      OV.add_prereq("bob-rtg", "bobingabout-enrichment-process")
-      if mods["bobclasses"] then
-        -- rtg needs to be available at blue science for bob's character bodies
-        OV.remove_science_pack("bobingabout-enrichment-process", "production-science-pack")
-        OV.remove_prereq("bobingabout-enrichment-process", "kovarex-enrichment-process")
-      else
-        data.raw.recipe["bobingabout-enrichment-process"].category = "angels-centrifuging-2"
-        if data.raw.recipe["bob-plutonium-nucleosynthesis"] then
-          data.raw.recipe["bob-plutonium-nucleosynthesis"].category = "angels-centrifuging-2"
-        end
-      end
-    end
-    if data.raw.recipe["bob-plutonium-nucleosynthesis"] then
-      OV.patch_recipes({
-        {
-          name = "bob-plutonium-nucleosynthesis",
-          subgroup = "angels-power-nuclear-processing",
-          order = "b[AMOX]-d[synthesis]",
-        },
-      })
-    end
-  else
-    --if not rtg, remove bobingabout process
-    OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
-    OV.disable_recipe("bobingabout-enrichment-process")
-    OV.disable_recipe("bob-plutonium-nucleosynthesis")
-    OV.global_replace_technology("bobingabout-enrichment-process", "kovarex-enrichment-process")
-    OV.disable_technology("bobingabout-enrichment-process")
+    OV.remove_prereq("bob-rtg", "nuclear-fuel-reprocessing")
+    OV.add_prereq("bob-rtg", "angels-thorium-power")
+    OV.set_science_pack("bob-rtg", "production-science-pack", 1)
+    OV.set_science_pack("bob-rtg", "utility-science-pack", 1)
   end
+
+  if mods["bobclasses"] then
+    -- Bob's character bodies can't use rtg as these need plutonium
+    OV.remove_prereq("bob-bodies", "bob-rtg")
+    OV.add_prereq("bob-bodies", "nuclear-power")
+    OV.patch_recipes({
+      {
+        name = "bob-player-power-core",
+        ingredients = {
+          { type = "item", name = "uranium-fuel-cell", amount = "bob-rtg" },
+        }
+      }
+    })
+  end
+
+  OV.remove_unlock("bobingabout-enrichment-process", "bobingabout-enrichment-process")
+  OV.disable_recipe("bobingabout-enrichment-process")
+  OV.disable_recipe("bob-plutonium-nucleosynthesis")
+  OV.global_replace_technology("bobingabout-enrichment-process", "kovarex-enrichment-process")
+  OV.disable_technology("bobingabout-enrichment-process")
 
   OV.global_replace_item("bob-plutonium-fuel-cell", "angels-mixed-oxide-cell")
   angelsmods.functions.hide("bob-plutonium-fuel-cell")

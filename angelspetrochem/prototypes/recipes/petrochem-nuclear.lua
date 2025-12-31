@@ -24,7 +24,7 @@ data:extend({
       { type = "item", name = "angels-neptunium-240", amount = 8 },
     },
     results = {
-      { type = "item", name = "angels-plutonium-239", amount = 8 },--was 5
+      { type = "item", name = "angels-plutonium-239", amount = 8 },
     },
     main_product = "angels-plutonium-239",
     always_show_products = true,
@@ -173,7 +173,7 @@ data:extend({
       { type = "item", name = "uranium-238", amount = 52 },
     },
     results = {
-      { type = "item", name = "angels-uranium-234", amount = 1, probability = 0.95, ignored_by_productivity = 1 }, --balances the isotope numbers
+      { type = "item", name = "uranium-235", amount = 1, probability = 0.95, ignored_by_productivity = 1 }, --balances the isotope numbers
       { type = "item", name = "angels-plutonium-239", amount = 13, ignored_by_productivity = 13},
       { type = "item", name = "uranium-238", amount = 43, ignored_by_productivity = 43 },
     },
