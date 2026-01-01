@@ -533,8 +533,7 @@ else
   angelsmods.functions.hide("angels-electro-whinning-cell-2")
   OV.remove_unlock("angels-advanced-ore-refining-4", "angels-electro-whinning-cell-2")
 
-  if angelsmods.bioprocessing then
-  else
+  if not angelsmods.bioprocessing then
     -- hide milling drums
     OV.hide_recipe({
       "angels-milling-drum",
@@ -543,6 +542,16 @@ else
     angelsmods.functions.hide("angels-milling-drum")
     angelsmods.functions.hide("angels-milling-drum-lubricated")
     OV.remove_unlock("angels-advanced-ore-refining-3", "angels-powderizer-3")
+  end
+  if not angelsmods.smelting then
+    OV.hide_recipe({
+      "angels-powderizer",
+      "angels-powderizer-2",
+      "angels-powderizer-3",
+    })
+    angelsmods.functions.hide("angels-powderizer")
+    angelsmods.functions.hide("angels-powderizer-2")
+    angelsmods.functions.hide("angels-powderizer-3")
   end
 end
 
