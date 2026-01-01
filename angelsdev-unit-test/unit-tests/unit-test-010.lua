@@ -518,39 +518,6 @@ local function add_ignores()
         ["angels-solid-beans"] = true,
       },
     }
-    -- TODO: Either make all modules take crystals or remove crystals from agriculture modules (without industries)
-    ignored_unlocks["angels-bio-yield-module"] = {
-      items = {
-        ["angels-crystal-splinter-green"] = true,
-      },
-    }
-    ignored_unlocks["angels-bio-yield-module-2"] = {
-      items = {
-        ["angels-crystal-shard-green"] = true,
-      },
-    }
-    ignored_unlocks["angels-bio-yield-module-3"] = {
-      items = {
-        ["angels-crystal-full-green"] = true,
-      },
-    }
-
-    ignored_unlocks["angels-bio-desert-farm"] = {
-      items = {
-        ["angels-clay-brick"] = true,
-      },
-    }
-    ignored_unlocks["angels-bio-swamp-farm"] = {
-      items = {
-        ["bob-bronze-pipe"] = true,
-      },
-    }
-    ignored_unlocks["angels-bio-temperate-farm"] = {
-      items = {
-        ["bob-bronze-pipe"] = true,
-        ["angels-clay-brick"] = true,
-      },
-    }
   end
 
   if script.active_mods["angelspetrochem"] then
