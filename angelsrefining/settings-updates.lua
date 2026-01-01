@@ -52,6 +52,7 @@ end
 if mods["bobassembly"] then
   angelsmods.settings.hide_setting("bool-setting", "bobmods-assembly-limits", false)
   angelsmods.settings.hide_setting("bool-setting", "bobmods-assembly-distilleries", false)
+  angelsmods.settings.set_default("bool-setting", "bobmods-assembly-burner", false)
 end
 
 if mods["boblogistics"] then
