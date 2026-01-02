@@ -34,6 +34,8 @@ require("util")
 ---@type { [data.TechnologyID]: { [data.RecipeID] : boolean } }
 local technology_recipe_unlocks = {}
 
+local use_sloped_train_features = feature_flags.rail_bridges and (mods["elevated-rails"] and true or false)
+
 ---Adds the given `recipe_name` to the `technology_recipe_unlocks` dictionary, to be unlocked by the
 ---technology with the given `technology_name`.
 ---@param technology_name data.TechnologyID The name of a technology prototype that will unlock the recipe with the `recipe_name`.
@@ -127,17 +129,17 @@ end
 ---The first tier is just the base name; otherwise, it is the base name suffixed with `-#`.
 local angel_train_base_names = {
   "angels-crawler-locomotive",
-  "angels-crawler-locomotive-wagon",
-  "angels-crawler-wagon",
-  "angels-crawler-bot-wagon",
+  "angels-crawler-locomotive-tender",
+  "angels-crawler-cargo-wagon",
+  "angels-crawler-robot-wagon",
 
-  "angels-petro-locomotive-1",
-  "angels-petro-tank1",
-  "angels-petro-tank2",
+  "angels-petro-locomotive",
+  "angels-petro-gas-wagon",
+  "angels-petro-oil-wagon",
 
-  "angels-smelting-locomotive-1",
+  "angels-smelting-locomotive",
   "angels-smelting-locomotive-tender",
-  "angels-smelting-wagon-1",
+  "angels-smelting-cargo-wagon",
 }
 
 ---Generates the [`additional_pastable_entities`](https://lua-api.factorio.com/latest/prototypes/EntityPrototype.html#additional_pastable_entities)
@@ -249,8 +251,8 @@ end
 ---Generates a tiered train recipe from the given `ref_recipe`.
 ---@param ref_recipe data.RecipePrototype The recipe prototype that defines the common base recipe for all tiers.
 ---@param tiered_ingredients Angels.Addons.Mobility.TieredIngredient[]
----@param base_technology_name data.TechnologyID The name of the base technology that will unlock the created recipe tiers.
-local function generate_train_recipe(ref_recipe, tiered_ingredients, base_technology_name)
+---@param ref_technology_name data.TechnologyID The name of the technology that will unlock the created recipe.
+local function generate_train_recipe(ref_recipe, tiered_ingredients, ref_technology_name)
   local recipes = {}
 
   local train_type = get_train_type(ref_recipe.name)
@@ -262,11 +264,8 @@ local function generate_train_recipe(ref_recipe, tiered_ingredients, base_techno
       local recipe_name = ref_recipe.name
       local ingredients = generate_tiered_ingredients(i, tiered_ingredients)
 
-      local current_technology_name = base_technology_name -- Reset for each tier's calculation
-
       if i > 1 then
         recipe_name = recipe_name .. "-" .. i
-        current_technology_name = base_technology_name .. "-" .. i
 
         local name_of_previous_tier = i == 2 and ref_recipe.name or (ref_recipe.name .. "-" .. (i - 1))
 
@@ -288,13 +287,15 @@ local function generate_train_recipe(ref_recipe, tiered_ingredients, base_techno
 
       table.insert(recipes, copy)
 
-      add_recipe_unlock(current_technology_name, recipe_name)
+      local technology_name = i > 1 and ref_technology_name .. "-" .. i or ref_technology_name
+
+      add_recipe_unlock(technology_name, recipe_name)
     end
   else
     ref_recipe.ingredients = generate_tiered_ingredients(1, tiered_ingredients)
     table.insert(recipes, ref_recipe)
 
-    add_recipe_unlock(base_technology_name, ref_recipe.name)
+    add_recipe_unlock(ref_technology_name, ref_recipe.name)
   end
 
   data:extend(recipes)
@@ -578,7 +579,29 @@ if mods["elevated-rails"] then
   standard_train_wheels.slope_angle_between_frames = 1.25
 end
 
+---@class Angels.Addons.Mobility.TrainColors
+---@field petro data.Color
+---@field crawler data.Color
+---@field smelting data.Color
+
+---@type Angels.Addons.Mobility.TrainColors
+local train_colors = {
+  petro = { r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 1 },
+  crawler = { r = 1, g = 160 / 255, b = 0, a = 1 },
+  smelting = { r = 1, g = 96 / 255, b = 0, a = 1 },
+}
+
 return {
+  ---Indicates whether to use the sloped train features of the `RollingStockRotatedSlopedGraphicsSet`
+  ---prototype.
+  ---
+  ---`true` when the Rail Bridges feature flag and the `elevated-rails` mod are activated; otherwise,
+  ---`false`.
+  ---@type boolean
+  use_sloped_train_features = use_sloped_train_features,
+
+  default_train_colors = train_colors,
+
   standard_train_wheels = standard_train_wheels,
   generate_train_entities = generate_train_entities,
   generate_train_items = generate_train_items,

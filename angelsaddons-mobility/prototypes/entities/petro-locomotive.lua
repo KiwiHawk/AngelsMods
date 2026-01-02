@@ -4,9 +4,6 @@ local selected_minimap_representation = data.raw["locomotive"]["locomotive"].sel
 local funcs = require("prototypes.train-functions")
 local simulations = require("prototypes.factoriopedia-simulations")
 
-local fixed_tint = { r = 000 / 255, g = 000 / 255, b = 000 / 255, a = 0.4 }
-local tintable_tint = { r = 210 / 255, g = 020 / 255, b = 000 / 255, a = 0.5 } -- alpha must be 0.5 due to base game...
-
 data:extend({
   {
     type = "equipment-grid",
@@ -19,22 +16,24 @@ data:extend({
 
 funcs.generate_train_items({
   type = "item-with-entity-data",
-  name = "angels-petro-locomotive-1",
-  icon = "__angelsaddons-mobility__/graphics/icons/petro-loco-1-ico.png",
-  icon_size = 32,
+  name = "angels-petro-locomotive",
+  icon = "__angelsaddons-mobility-graphics-petro__/graphics/icons/petro-locomotive.png",
+  icon_size = 64,
   subgroup = "angels-petrotrain",
   order = "z[angel-train]-c[petro]-a[locomotive]",
-  place_result = "angels-petro-locomotive-1",
+  place_result = "angels-petro-locomotive",
   stack_size = 5,
 })
 
+--- braking_force OR braking_power, but diagnostics wants both to be compliant.
+---@diagnostic disable: missing-fields
 funcs.generate_train_entities({
   type = "locomotive",
-  name = "angels-petro-locomotive-1",
-  icon = "__angelsaddons-mobility__/graphics/icons/petro-loco-1-ico.png",
-  icon_size = 32,
+  name = "angels-petro-locomotive",
+  icon = "__angelsaddons-mobility-graphics-petro__/graphics/icons/petro-locomotive.png",
+  icon_size = 64,
   flags = { "placeable-neutral", "player-creation", "placeable-off-grid" },
-  minable = { mining_time = 1, result = "angels-petro-locomotive-1" },
+  minable = { mining_time = 1, result = "angels-petro-locomotive" },
   mined_sound = { filename = "__core__/sound/deconstruct-medium.ogg" },
   max_health = 2500,
   corpse = "medium-remnants",
@@ -42,8 +41,10 @@ funcs.generate_train_entities({
   factoriopedia_simulation = simulations.factoriopedia_petro_locomotive,
   collision_box = { { -0.6, -2.6 }, { 0.6, 2.6 } },
   selection_box = { { -1, -3 }, { 1, 3 } },
-  color = tintable_tint,
+  drawing_box = { { -1, -4 }, { 1, 3 } },
   allow_manual_color = true,
+  allow_remote_driving = true,
+  color = funcs.default_train_colors.petro,
   weight = 3000,
   max_speed = 1.2,
   max_power = "800kW",
@@ -176,66 +177,115 @@ funcs.generate_train_entities({
   pictures = {
     rotated = {
       layers = {
-        {
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive", {
+          dice = 4,
           priority = "very-low",
-          width = 256,
-          height = 256,
-          direction_count = 128,
-          filenames = {
-            "__angelsaddons-mobility__/graphics/entity/petro-loco1/petro-loco1-1.png",
-            "__angelsaddons-mobility__/graphics/entity/petro-loco1/petro-loco1-2.png",
-          },
-          line_length = 8,
-          lines_per_file = 8,
-          shift = { 0.0, -0.75 },
-        },
-        {
+          allow_low_quality_rotation = true,
+          direction_count = 256,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-mask", {
+          dice = 4,
           priority = "very-low",
-          flags = { "mask" },
-          width = 256,
-          height = 256,
-          direction_count = 128,
-          filenames = {
-            "__angelsaddons-mobility__/graphics/entity/petro-loco1/petro-loco1-1-tint.png",
-            "__angelsaddons-mobility__/graphics/entity/petro-loco1/petro-loco1-2-tint.png",
-          },
-          line_length = 8,
-          lines_per_file = 8,
           apply_runtime_tint = true,
-          shift = { 0.0, -0.75 },
-        },
-        {
-          priority = "very-low",
+          tint_as_overlay = true,
           flags = { "mask" },
-          width = 256,
-          height = 256,
-          direction_count = 128,
-          filenames = {
-            "__angelsaddons-mobility__/graphics/entity/petro-loco1/petro-loco1-1-tint.png",
-            "__angelsaddons-mobility__/graphics/entity/petro-loco1/petro-loco1-2-tint.png",
-          },
-          line_length = 8,
-          lines_per_file = 8,
-          apply_runtime_tint = false,
-          tint = fixed_tint,
-          shift = { 0.0, -0.75 },
-        },
-        {
+          allow_low_quality_rotation = true,
+          direction_count = 256,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-running-lights", {
+          dice = 4,
           priority = "very-low",
-          width = 256,
-          height = 256,
-          direction_count = 128,
+          draw_as_light = true,
+          allow_low_quality_rotation = true,
+          direction_count = 256,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-shadow", {
+          dice = 4,
+          priority = "very-low",
+          flags = { "shadow" },
           draw_as_shadow = true,
-          filenames = {
-            "__angelsaddons-mobility__/graphics/entity/petro-loco1/petro-loco1-shadow-1.png",
-            "__angelsaddons-mobility__/graphics/entity/petro-loco1/petro-loco1-shadow-2.png",
-          },
-          line_length = 8,
-          lines_per_file = 8,
-          shift = { 0.5, -0.5 },
-        },
+          allow_low_quality_rotation = true,
+          direction_count = 256,
+          scale = 0.5,
+          usage = "train",
+        }),
       },
     },
+    slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
+    sloped = funcs.use_sloped_train_features and {
+      layers = {
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-sloped", {
+          dice = 4,
+          priority = "very-low",
+          direction_count = 160,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-sloped-mask", {
+          dice = 4,
+          priority = "very-low",
+          apply_runtime_tint = true,
+          tint_as_overlay = true,
+          flags = { "mask" },
+          direction_count = 160,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-sloped-running-lights", {
+          dice = 4,
+          priority = "very-low",
+          draw_as_light = true,
+          direction_count = 160,
+          scale = 0.5,
+          usage = "train",
+        }),
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-sloped-shadow", {
+          dice = 4,
+          priority = "very-low",
+          flags = { "shadow" },
+          draw_as_shadow = true,
+          direction_count = 160,
+          scale = 0.5,
+          usage = "train",
+        }),
+      },
+    },
+  },
+  front_light_pictures = {
+    rotated = {
+      layers = {
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-lights", {
+          dice = 4,
+          priority = "very-low",
+          blend_mode = "additive",
+          draw_as_light = true,
+          allow_low_quality_rotation = true,
+          direction_count = 256,
+          scale = 0.5,
+          usage = "train",
+        }),
+      },
+    },
+    slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
+    sloped = funcs.use_sloped_train_features and {
+      layers = {
+        util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-sloped-lights", {
+          dice = 4,
+          priority = "very-low",
+          blend_mode = "additive",
+          draw_as_light = true,
+          direction_count = 160,
+          scale = 0.5,
+          usage = "train"
+        }),
+      }
+    }
   },
   wheels = funcs.standard_train_wheels,
   stop_trigger = {
