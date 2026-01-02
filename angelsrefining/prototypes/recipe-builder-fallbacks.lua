@@ -237,7 +237,7 @@ angelsmods.functions.RB.set_fallback("item", "liqui-3", { { "block-cprocessing-3
 angelsmods.functions.RB.set_fallback("item", "liqui-4", { { "block-cprocessing-4", 1 }, { "angels-liquifier-3" } })
 
 angelsmods.functions.RB.set_fallback("item", "thermal-1", { { "block-production-2", 5 } })
-angelsmods.functions.RB.set_fallback("item", "thermal-2", { { "block-extraction-4", 5 } })
+angelsmods.functions.RB.set_fallback("item", "thermal-2", { { "block-extraction-4", 5 }, { "angels-thermal-bore" } })
 
 angelsmods.functions.RB.set_fallback("item", "salination-1", { { "block-production-3", 5 } })
 angelsmods.functions.RB.set_fallback("item", "salination-2", { { "block-production-4", 5 }, { "angels-salination-plant" } })
