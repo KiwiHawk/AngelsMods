@@ -637,6 +637,7 @@
   ],
   "technology":
   [
+    ["angels-plutonium-power", "kovarex-enrichment-process"],
     ["basic-chemistry", "angels-basic-chemistry"],
     ["basic-chemistry-2", "angels-basic-chemistry-2"],
     ["basic-chemistry-3", "angels-basic-chemistry-3"],
@@ -644,6 +645,7 @@
     ["chlorine-processing-2", "angels-chlorine-processing-2"],
     ["chlorine-processing-3", "angels-chlorine-processing-3"],
     ["chlorine-processing-4", "angels-chlorine-processing-4"],
+    ["deuterium-processing", "angels-fusion-power-1"],
     ["gas-processing", "angels-gas-processing"],
     ["gas-synthesis", "angels-gas-synthesis"],
     ["oil-gas-extraction", "oil-gathering"],
@@ -662,6 +664,7 @@
     ["sodium-processing-2", "angels-sodium-processing-2"],
     ["steam-cracking-1", "angels-steam-cracking-1"],
     ["steam-cracking-2", "angels-steam-cracking-2"],
+    ["thorium-processing", "angels-thorium-power"],
     ["water-chemistry-1", "angels-water-chemistry-1"],
     ["water-chemistry-2", "angels-water-chemistry-2"]
   ],
