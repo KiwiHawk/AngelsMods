@@ -25,4 +25,21 @@ return function(configuration_data)
       global.SP_data.version = 2
     end
   end
+
+  for _, force in pairs(game.forces) do
+    force.reset_technologies()
+    force.reset_recipes()
+    for tech_name, tech in pairs(force.technologies) do
+      if tech.researched then
+        for tech_name, effect in pairs(tech.prototype.effects) do
+          if effect.type == "unlock-recipe" then
+            force.recipes[effect.recipe].enabled = true
+          end
+        end
+      end
+      if prototypes.technology[tech_name].enabled then
+        force.technologies[tech_name].enabled = true
+      end
+    end
+  end
 end
