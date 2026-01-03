@@ -48,6 +48,9 @@ local updated_recipes = {
   "bob-electronics-machine-2",
   "bob-electronics-machine-3",
   "bob-integrated-electronics",
+  "bob-module-processor-board",
+  "bob-module-processor-board-3",
+  "bob-processing-electronics",
   "processing-unit",
 }
 angelsmods.functions.patch_recycling_recipes(updated_recipes)

@@ -51,5 +51,7 @@ local updated_recipes = {
   "bob-module-contact",
   "bob-repair-pack-3",
   "bob-steam-engine-3",
+  "firearm-magazine",
+  "piercing-rounds-magazine",
 }
 angelsmods.functions.patch_recycling_recipes(updated_recipes)

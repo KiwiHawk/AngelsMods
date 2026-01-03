@@ -49,6 +49,7 @@ local updated_recipes = {
   "arithmetic-combinator",
   "atomic-bomb",
   "bob-atomic-artillery-shell",
+  "bob-player-power-core",
   "decider-combinator",
   "chemical-plant",
   "constant-combinator",
