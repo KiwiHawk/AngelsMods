@@ -157,7 +157,13 @@ data:extend({
     },
     results = {
       { type = "item", name = "angels-ingot-chrome", amount = 24, ignored_by_productivity = 6, ignored_by_stats = 6 },
-      { type = "item", name = "angels-solid-chrome-oxide", amount = 6, ignored_by_productivity = 6, ignored_by_stats = 6 },
+      {
+        type = "item",
+        name = "angels-solid-chrome-oxide",
+        amount = 6,
+        ignored_by_productivity = 6,
+        ignored_by_stats = 6,
+      },
     },
     main_product = "angels-ingot-chrome",
     icons = AF.add_number_icon_layer(AF.get_object_icons("angels-ingot-chrome"), 3, angelsmods.smelting.number_tint),

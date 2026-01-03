@@ -176,13 +176,13 @@ local unit_test_009 = function()
   table.insert(entity_filters, { filter = "autoplace", invert = true, mode = "and" })
 
   local entity_prototypes = prototypes.get_entity_filtered(entity_filters)
-  
+
   -- Ignore entities placed by a space starter pack
-  for _, item in pairs(prototypes.get_item_filtered({{ filter = "type", type = "space-platform-starter-pack" }})) do
+  for _, item in pairs(prototypes.get_item_filtered({ { filter = "type", type = "space-platform-starter-pack" } })) do
     if item.trigger then
       for _, trigger in pairs(item.trigger) do
         if trigger.action_delivery then
-          for  _, delivery in pairs(trigger.action_delivery) do
+          for _, delivery in pairs(trigger.action_delivery) do
             for _, effect in pairs(delivery.source_effects) do
               if effect.type == "create-entity" then
                 entities_to_ignore_item[effect.entity_name] = true
@@ -210,17 +210,17 @@ local unit_test_009 = function()
 
       local item_prototypes = prototypes.get_item_filtered(item_filters)
       local found_item = false
-      
+
       for item_name, item in pairs(item_prototypes) do
         if not item.hidden then
           found_item = true
           break
         end
       end
-      
+
       -- TODO: Remove this check when "hidden" can be used as and ItemPrototypeFilter
       if not found_item then
-      --if #item_prototypes == 0 then
+        --if #item_prototypes == 0 then
         unit_test_functions.print_msg(string.format("Entity %q has no item to place it.", entity_name))
         unit_test_result = unit_test_functions.test_failed
       end

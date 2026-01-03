@@ -1,5 +1,11 @@
-circuit_connector_definitions["angels-charging-station"] = circuit_connector_definitions.create_single(universal_connector_template,
-  { variation = 25, main_offset = util.by_pixel(-38.625, -1.25), shadow_offset = util.by_pixel(-38.625, -1.25), show_shadow = true }
+circuit_connector_definitions["angels-charging-station"] = circuit_connector_definitions.create_single(
+  universal_connector_template,
+  {
+    variation = 25,
+    main_offset = util.by_pixel(-38.625, -1.25),
+    shadow_offset = util.by_pixel(-38.625, -1.25),
+    show_shadow = true,
+  }
 )
 
 data:extend({

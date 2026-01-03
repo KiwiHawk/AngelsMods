@@ -66,7 +66,7 @@ function turbo_bike:on_damaged_entity(damaged_entity, damaging_entity, raw_damag
     -- damage passenger
     if not damaged_entity.valid then
       return
-    end    
+    end
     local passenger = damaged_entity.get_passenger()
     if passenger and passenger.object_name == "LuaPlayer" then
       passenger = passenger.character

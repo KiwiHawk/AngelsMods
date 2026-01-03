@@ -67,14 +67,16 @@ if mods["bobplates"] then
       if vals.turr ~= false then
         table.insert(
           turret_params,
-          { type = fluid, damage_modifier = math.floor(vals.fv / Energy_table["angels-gas-methane"].fv * 10 + 0.5) / 10 }
+          {
+            type = fluid,
+            damage_modifier = math.floor(vals.fv / Energy_table["angels-gas-methane"].fv * 10 + 0.5) / 10,
+          }
         )
       end
     end
   end
   --fuel oil balancing
-  data.raw.recipe["bob-enriched-fuel"].ingredients =
-    { { type = "fluid", name = "bob-liquid-fuel", amount = 100 } } --up from 20
+  data.raw.recipe["bob-enriched-fuel"].ingredients = { { type = "fluid", name = "bob-liquid-fuel", amount = 100 } } --up from 20
 end
 
 -------------------------------------------------------------------------------
@@ -266,7 +268,8 @@ if mods["bobplates"] then
   if data.raw.recipe["bob-pure-water-pump"] then
     data.raw.recipe["bob-pure-water-pump"].icon = nil
     data.raw.recipe["bob-pure-water-pump"].icon_size = 32
-    data.raw.recipe["bob-pure-water-pump"].icons = { { icon = "__angelsrefininggraphics__/graphics/icons/water-purified.png" } }
+    data.raw.recipe["bob-pure-water-pump"].icons =
+      { { icon = "__angelsrefininggraphics__/graphics/icons/water-purified.png" } }
   end
 end
 

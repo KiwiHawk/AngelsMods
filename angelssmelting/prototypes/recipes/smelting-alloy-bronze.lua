@@ -86,17 +86,12 @@ if mods["bobplates"] then
       results = {
         { type = "item", name = "bob-bronze-alloy", amount = 4 },
       },
-      icons = angelsmods.functions.add_icon_layer(
+      icons = angelsmods.functions.add_icon_layer({
         {
-          {
-            icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png",
-            icon_size = 32,
-          }
+          icon = "__angelssmeltinggraphics__/graphics/icons/plate-bronze.png",
+          icon_size = 32,
         },
-        angelsmods.functions.get_object_icons("angels-liquid-molten-bronze"),
-        { -10, -10 },
-        0.4375
-      ),
+      }, angelsmods.functions.get_object_icons("angels-liquid-molten-bronze"), { -10, -10 }, 0.4375),
       order = "a[bronze]-b[bronze-alloy]",
     },
   })

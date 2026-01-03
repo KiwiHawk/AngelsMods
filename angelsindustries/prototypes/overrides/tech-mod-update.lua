@@ -23,7 +23,7 @@ if angelsmods.industries.tech then
       type = "item",
       name = "science-gravitational-analyzer",
       amount = 1000,
-    }
+    },
   }
   data.raw.technology["space-science-pack"].icon = "__angelsindustriesgraphics__/graphics/technology/tech-white.png"
   data.raw.technology["space-science-pack"].icon_size = 128

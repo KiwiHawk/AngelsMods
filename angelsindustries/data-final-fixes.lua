@@ -119,10 +119,10 @@ for t, tech in pairs(data.raw.technology) do
         tech.unit.count = 666
       end
     else
-      log('tech '.. tech.name .. " is not trigger or unit")
+      log("tech " .. tech.name .. " is not trigger or unit")
       log(serpent.block(data.raw.technology[tech.name]))
       OV.set_research_difficulty(tech.name, "copper-wire", 1, "craft-item")
       OV.execute()
-      end
+    end
   end
 end

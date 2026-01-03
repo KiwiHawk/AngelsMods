@@ -3,8 +3,10 @@ if mods["angelsbioprocessing"] and data.raw.item["angels-solid-paper"] then
   data.raw.item["angels-solid-paper"].icon = "__angelsaddons-nilaus__/graphics/icons/nilaus-paper.png"
   data.raw.item["angels-solid-paper"].icon_size = 256
   data.raw.item["angels-solid-paper"].icons = nil
-  data.raw.item["angels-solid-paper"].localised_name =
-    { "item-name.nilaus-paper", data.raw.item["angels-solid-paper"].localised_name or { "item-name.angels-solid-paper" } }
+  data.raw.item["angels-solid-paper"].localised_name = {
+    "item-name.nilaus-paper",
+    data.raw.item["angels-solid-paper"].localised_name or { "item-name.angels-solid-paper" },
+  }
   data.raw.item["angels-solid-paper"].localised_description = { "item-description.nilaus-paper" }
 
   -- replace recipe icons

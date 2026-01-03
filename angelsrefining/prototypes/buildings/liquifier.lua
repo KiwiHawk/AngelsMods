@@ -18,12 +18,33 @@ local function angles_liquifier_fluid_boxes()
   }
 end
 
-circuit_connector_definitions["angels-liquifier"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation =  4, main_offset = util.by_pixel( 16.5,  12), shadow_offset = util.by_pixel( 16.5,  12), show_shadow = true },
-  { variation =  4, main_offset = util.by_pixel( 16.5,  12), shadow_offset = util.by_pixel( 16.5,  12), show_shadow = true },
-  { variation =  4, main_offset = util.by_pixel( 16.5,  12), shadow_offset = util.by_pixel( 16.5,  12), show_shadow = true },
-  { variation =  4, main_offset = util.by_pixel( 16.5,  12), shadow_offset = util.by_pixel( 16.5,  12), show_shadow = true },
-})
+circuit_connector_definitions["angels-liquifier"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 4,
+      main_offset = util.by_pixel(16.5, 12),
+      shadow_offset = util.by_pixel(16.5, 12),
+      show_shadow = true,
+    },
+    {
+      variation = 4,
+      main_offset = util.by_pixel(16.5, 12),
+      shadow_offset = util.by_pixel(16.5, 12),
+      show_shadow = true,
+    },
+    {
+      variation = 4,
+      main_offset = util.by_pixel(16.5, 12),
+      shadow_offset = util.by_pixel(16.5, 12),
+      show_shadow = true,
+    },
+    {
+      variation = 4,
+      main_offset = util.by_pixel(16.5, 12),
+      shadow_offset = util.by_pixel(16.5, 12),
+      show_shadow = true,
+    },
+  })
 
 data:extend({
   {

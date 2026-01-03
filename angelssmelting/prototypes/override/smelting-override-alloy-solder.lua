@@ -33,7 +33,7 @@ if angelsmods.trigger.smelting_products["solder"].wire then
   end
 
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then
-    OV.add_additional_category("angels-solder-2", "electronics" )
+    OV.add_additional_category("angels-solder-2", "electronics")
   end
 
   if angelsmods.trigger.smelting_products["solder"].mixture then

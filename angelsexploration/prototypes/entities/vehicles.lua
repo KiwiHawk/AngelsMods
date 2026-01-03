@@ -56,23 +56,21 @@ data:extend({
     selection_box = { { -0.5, -1 }, { 0.5, 1 } },
     effectivity = 0.06,
     braking_power = "100W",
-    energy_source =
-    {
+    energy_source = {
       type = "burner",
-      fuel_categories = {"chemical"},
+      fuel_categories = { "chemical" },
       effectivity = 1,
       fuel_inventory_size = 1,
-      smoke =
-      {
+      smoke = {
         {
           name = "car-smoke",
-          deviation = {0.25, 0.25},
+          deviation = { 0.25, 0.25 },
           frequency = 200,
-          position = {0, 1.5},
+          position = { 0, 1.5 },
           starting_frame = 0,
-          starting_frame_deviation = 60
-        }
-      }
+          starting_frame_deviation = 60,
+        },
+      },
     },
     consumption = "10kW",
     terrain_friction_modifier = 0.2,
@@ -355,23 +353,21 @@ data:extend({
     drawing_box_vertical_extension = 1.5,
     effectivity = 0.7,
     braking_power = "1000kW",
-    energy_source =
-    {
+    energy_source = {
       type = "burner",
-      fuel_categories = {"chemical"},
+      fuel_categories = { "chemical" },
       effectivity = 0.75,
       fuel_inventory_size = 3,
-      smoke =
-      {
+      smoke = {
         {
           name = "tank-smoke",
-          deviation = {0.25, 0.25},
+          deviation = { 0.25, 0.25 },
           frequency = 50,
-          position = {0, 1.5},
+          position = { 0, 1.5 },
           starting_frame = 0,
-          starting_frame_deviation = 60
-        }
-      }
+          starting_frame_deviation = 60,
+        },
+      },
     },
     consumption = "1200kW",
     terrain_friction_modifier = 0.2,
