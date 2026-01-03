@@ -30,7 +30,7 @@ data:extend({
       },
       {
         type = "create-ghost-on-entity-death",
-        modifier = true
+        modifier = true,
       },
     },
     unit = {
@@ -66,11 +66,11 @@ data:extend({
       },
       {
         type = "character-logistic-requests",
-        modifier = true
+        modifier = true,
       },
       {
         type = "character-logistic-trash-slots",
-        modifier = 30
+        modifier = 30,
       },
     },
     unit = {
@@ -219,5 +219,5 @@ data:extend({
       time = 30,
     },
     order = "c-a",
-  }
+  },
 })

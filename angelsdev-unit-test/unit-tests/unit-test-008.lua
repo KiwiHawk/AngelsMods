@@ -158,7 +158,7 @@ local unit_test_008 = function()
       end
     end
   end
-  
+
   for tile_name, tile in pairs(prototypes.tile) do
     if tile.fluid then
       fluids_to_ignore[tile.fluid.name] = true
@@ -194,7 +194,7 @@ local unit_test_008 = function()
 
   local item_prototypes = prototypes.get_item_filtered(item_filters)
 
-    for item_name, item in pairs(item_prototypes) do
+  for item_name, item in pairs(item_prototypes) do
     -- TODO: Remove this check when "hidden" can be used as and ItemPrototypeFilter
     if not item.hidden and not items_to_ignore[item_name] then
       local recipe_filters = {}

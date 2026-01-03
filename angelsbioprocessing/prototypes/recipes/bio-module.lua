@@ -58,7 +58,7 @@ if mods["bobmodules"] then
         { type = "item", name = "angels-token-bio", amount = 1 },
       },
       energy_required = 15,
-      results = {{ type = "item", name = "angels-bio-yield-module-4", amount = 1 }},
+      results = { { type = "item", name = "angels-bio-yield-module-4", amount = 1 } },
     },
     {
       type = "recipe",
@@ -71,7 +71,7 @@ if mods["bobmodules"] then
         { type = "item", name = "angels-token-bio", amount = 1 },
       },
       energy_required = 15,
-      results = {{ type = "item", name = "angels-bio-yield-module-5", amount = 1 }},
+      results = { { type = "item", name = "angels-bio-yield-module-5", amount = 1 } },
     },
   })
 end

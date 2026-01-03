@@ -26,7 +26,6 @@ data.raw["item-subgroup"]["transport"].order = "ba[railway]-a[vanilla]"
 data.raw["item-subgroup"]["train-transport"].group = "angels-vehicles"
 data.raw["item-subgroup"]["train-transport"].order = "ba[railway]-b[signals]"
 
-
 if mods["boblogistics"] then
   data.raw["item-subgroup"]["bob-locomotive"].group = "angels-vehicles"
   data.raw["item-subgroup"]["bob-locomotive"].order = "ba[vanilla-train]-a[locomotive]"

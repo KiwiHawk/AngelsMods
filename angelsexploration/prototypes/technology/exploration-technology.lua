@@ -140,7 +140,7 @@ data:extend({
     unit = {
       count = 80,
       ingredients = {
-        { "automation-science-pack",  2 },
+        { "automation-science-pack", 2 },
         { "logistic-science-pack", 1 },
         { "military-science-pack", 2 },
       },

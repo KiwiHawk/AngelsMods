@@ -40,7 +40,12 @@ if angelsmods.trigger.smelting_products["silver"].ingot then
     data.raw.item["bob-silver-oxide"].icon = "__angelssmeltinggraphics__/graphics/icons/solid-silver-oxide.png"
     data.raw.item["bob-silver-oxide"].icon_size = 32
     OV.patch_recipes({
-      { name = "bob-silver-oxide", subgroup = "angels-silver", order = "e[silver-oxide]", category = "angels-powder-mixing-3" },
+      {
+        name = "bob-silver-oxide",
+        subgroup = "angels-silver",
+        order = "e[silver-oxide]",
+        category = "angels-powder-mixing-3",
+      },
     })
   end
 

@@ -1,7 +1,13 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 
-circuit_connector_definitions["angels-gathering-turret"] = circuit_connector_definitions.create_single(universal_connector_template,
-  { variation = 17, main_offset = util.by_pixel(-19.875,  1.75), shadow_offset = util.by_pixel(-19.875,  1.75), show_shadow = true }
+circuit_connector_definitions["angels-gathering-turret"] = circuit_connector_definitions.create_single(
+  universal_connector_template,
+  {
+    variation = 17,
+    main_offset = util.by_pixel(-19.875, 1.75),
+    shadow_offset = util.by_pixel(-19.875, 1.75),
+    show_shadow = true,
+  }
 )
 
 -- GATHERING TURRET

@@ -187,7 +187,13 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "angels-liquid-acetic-acid", amount = 100 },
-      { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        ignored_by_stats = 1,
+      },
     },
     main_product = "angels-liquid-acetic-acid",
     always_show_products = true,
@@ -340,7 +346,13 @@ data:extend({
     },
     results = {
       { type = "fluid", name = "angels-liquid-propionic-acid", amount = 50 },
-      { type = "item", name = "angels-catalyst-metal-carrier", amount = 1, ignored_by_productivity = 1, ignored_by_stats = 1 },
+      {
+        type = "item",
+        name = "angels-catalyst-metal-carrier",
+        amount = 1,
+        ignored_by_productivity = 1,
+        ignored_by_stats = 1,
+      },
     },
     main_product = "angels-liquid-propionic-acid",
     always_show_products = true,

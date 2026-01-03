@@ -3,7 +3,7 @@ local OV = angelsmods.functions.OV
 -------------------------------------------------------------------------------
 -- BOB OVERRIDES --------------------------------------------------------------
 -------------------------------------------------------------------------------
-if mods['bobplates'] and angelsmods.trigger.smelting_products["lithium"].plate then
+if mods["bobplates"] and angelsmods.trigger.smelting_products["lithium"].plate then
   angelsmods.functions.move_item("bob-lithium-chloride", "angels-alloys", "b[lithium]-a")
   angelsmods.functions.move_item("bob-lithium", "angels-alloys", "b[lithium]-b")
   angelsmods.functions.move_item("bob-lithium-cobalt-oxide", "angels-alloys", "b[lithium]-c")

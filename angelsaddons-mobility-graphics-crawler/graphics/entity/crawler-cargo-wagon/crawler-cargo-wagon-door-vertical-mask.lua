@@ -1,5 +1,4 @@
-return
-{
+return {
   width = 126,
   height = 423,
   shift = util.by_pixel_hr(0.0, -49.5),

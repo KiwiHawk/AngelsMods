@@ -128,7 +128,7 @@ if mods["bobplates"] then
   -- sodium processing --------------------------------------------------------
   OV.global_replace_item("bob-sodium-hydroxide", "angels-solid-sodium-hydroxide")
   angelsmods.functions.hide("bob-sodium-hydroxide")
-  OV.disable_recipe('bob-sodium-hydroxide-sink')
+  OV.disable_recipe("bob-sodium-hydroxide-sink")
 
   -- nitrogen processing ------------------------------------------------------
   OV.converter_fluid("bob-liquid-air", "angels-gas-compressed-air")

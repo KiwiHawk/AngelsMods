@@ -22,7 +22,12 @@ if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
       {
         name = "fission-reactor-equipment",
         ingredients = {
-          { type = "fluid", name = "angels-liquid-water-semiheavy-3", amount = "angels-liquid-water-heavy", maximum_temperature = 30 },
+          {
+            type = "fluid",
+            name = "angels-liquid-water-semiheavy-3",
+            amount = "angels-liquid-water-heavy",
+            maximum_temperature = 30,
+          },
         },
       },
     })
@@ -32,13 +37,23 @@ if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
       {
         name = "bob-vehicle-fission-cell-equipment-2",
         ingredients = {
-          { type = "fluid", name = "angels-liquid-water-semiheavy-3", amount = "angels-liquid-water-heavy", maximum_temperature = 30 },
+          {
+            type = "fluid",
+            name = "angels-liquid-water-semiheavy-3",
+            amount = "angels-liquid-water-heavy",
+            maximum_temperature = 30,
+          },
         },
       },
       {
         name = "bob-vehicle-fission-reactor-equipment-2",
         ingredients = {
-          { type = "fluid", name = "angels-liquid-water-semiheavy-3", amount = "angels-liquid-water-heavy", maximum_temperature = 30 },
+          {
+            type = "fluid",
+            name = "angels-liquid-water-semiheavy-3",
+            amount = "angels-liquid-water-heavy",
+            maximum_temperature = 30,
+          },
         },
       },
     })
@@ -274,7 +289,6 @@ else
   angelsmods.functions.hide("angels-gas-ammonium-chloride")
   OV.remove_prereq("angels-nitrogen-processing-3", "angels-chlorine-processing-2")
 end
-
 
 -----------------------------------------------------------------------------
 -- SULFURIC ACID ------------------------------------------------------------

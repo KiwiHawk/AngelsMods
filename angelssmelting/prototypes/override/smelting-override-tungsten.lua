@@ -112,7 +112,7 @@ if angelsmods.trigger.smelting_products["tungsten"].plate then
         }, 2, angelsmods.smelting.number_tint),
       },
     })
-    
+
     OV.remove_prereq("bob-tungsten-processing", "bob-nickel-processing")
   end
 else
@@ -153,7 +153,7 @@ if mods["bobplates"] then
       data.raw.recipe[name].category = "angels-sintering-4"
     end
   end
-  
+
   OV.patch_recipes({
     {
       name = "bob-copper-tungsten-alloy",

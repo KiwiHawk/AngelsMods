@@ -32,7 +32,11 @@ if mods["bobplates"] then
     OV.set_research_difficulty("bob-alloy-processing", "bob-bronze-alloy", 10, "craft-item")
   else
     angelsmods.functions.hide("angels-liquid-molten-bronze")
-    OV.disable_recipe({ "angels-liquid-molten-bronze", "angels-liquid-molten-bronze-2", "angels-liquid-molten-bronze-3" })
+    OV.disable_recipe({
+      "angels-liquid-molten-bronze",
+      "angels-liquid-molten-bronze-2",
+      "angels-liquid-molten-bronze-3",
+    })
     OV.disable_recipe({ "angels-plate-bronze" })
     OV.disable_technology({ "angels-bronze-smelting-1", "angels-bronze-smelting-2", "angels-bronze-smelting-3" })
   end

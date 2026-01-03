@@ -255,12 +255,33 @@ local bio_turret_preparing_muzzle_animation = function(opts)
   }
 end
 
-circuit_connector_definitions["angels-bio-turret"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation = 14, main_offset = util.by_pixel(-7.25,  24.5), shadow_offset = util.by_pixel(-7.25,  24.5), show_shadow = true },
-  { variation =  4, main_offset = util.by_pixel(-42.875, -12.125), shadow_offset = util.by_pixel(-42.875, -12.125), show_shadow = true },
-  { variation =  2, main_offset = util.by_pixel( 7.625, -46.75), shadow_offset = util.by_pixel( 7.625, -46.75), show_shadow = true },
-  { variation =  0, main_offset = util.by_pixel( 44.5, -8.5), shadow_offset = util.by_pixel( 44.5, -8.5), show_shadow = true },
-})
+circuit_connector_definitions["angels-bio-turret"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 14,
+      main_offset = util.by_pixel(-7.25, 24.5),
+      shadow_offset = util.by_pixel(-7.25, 24.5),
+      show_shadow = true,
+    },
+    {
+      variation = 4,
+      main_offset = util.by_pixel(-42.875, -12.125),
+      shadow_offset = util.by_pixel(-42.875, -12.125),
+      show_shadow = true,
+    },
+    {
+      variation = 2,
+      main_offset = util.by_pixel(7.625, -46.75),
+      shadow_offset = util.by_pixel(7.625, -46.75),
+      show_shadow = true,
+    },
+    {
+      variation = 0,
+      main_offset = util.by_pixel(44.5, -8.5),
+      shadow_offset = util.by_pixel(44.5, -8.5),
+      show_shadow = true,
+    },
+  })
 
 data:extend({
   {
@@ -339,19 +360,17 @@ data:extend({
         percent = 100,
       },
     },
-    fluid_box =
-    {
+    fluid_box = {
       production_type = "none", -- FluidTurret has its own logic
       secondary_draw_order = 0,
       render_layer = "lower-object",
       --pipe_picture = fireutil.flamethrower_turret_pipepictures(),
       pipe_covers = pipecoverspictures(),
       volume = 100,
-      pipe_connections =
-      {
+      pipe_connections = {
         { direction = defines.direction.west, position = { -0.5, 1.0 } },
-        { direction = defines.direction.east, position = { 0.5, 1.0 } }
-      }
+        { direction = defines.direction.east, position = { 0.5, 1.0 } },
+      },
     },
     fluid_buffer_size = 100,
     fluid_buffer_input_flow = 250 / 60 / 5, -- 5s to fill the buffer

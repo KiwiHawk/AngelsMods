@@ -76,7 +76,7 @@ if angelsmods.trigger.smelting_products["lead"].plate then
     OV.global_replace_item("angels-plate-lead", "bob-lead-plate")
     angelsmods.functions.hide("angels-plate-lead")
     OV.copy_item_properties("angels-plate-lead", "bob-lead-plate")
-    OV.disable_recipe({"bob-lead-plate", "bob-lead-plate-2"})
+    OV.disable_recipe({ "bob-lead-plate", "bob-lead-plate-2" })
   end
 else
   angelsmods.functions.hide("angels-plate-lead")

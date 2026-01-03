@@ -255,7 +255,7 @@ local function calculate_tech_unlock_level(technology_prototype, effect_level_fr
   return tech_effect_level
 end
 
--- Computes the tech level of the science packs (ingredients) used to unlock a tech, or if the tech is unlocked by crafting 
+-- Computes the tech level of the science packs (ingredients) used to unlock a tech, or if the tech is unlocked by crafting
 -- or mining an item this function will return the tech level of the technology that unlocks that item
 local function calculate_tech_ingredient_level(technology_prototype)
   local tech_ingredient_level = 0
@@ -378,14 +378,14 @@ local unit_test_006 = function()
 
       -- Calculate test result for this technology
       -- Check 1:
-      -- If the ingredients to unlock this tech are of lower level than than those of its prereqs, then the test fails 
+      -- If the ingredients to unlock this tech are of lower level than than those of its prereqs, then the test fails
       -- (for example, if a tech requires green science but its prereqs require blue science)
       if tech_ingredient_levels[tech_name] < prereq_ingredient_level then
         unit_test_functions.print_msg(
           string.format("Technology %q requires prerequisites with higher science packs.", tech_name)
         )
         unit_test_result = unit_test_functions.test_failed
-      
+
       -- Check 2:
       -- If the tech is not a bonus upgrade, and the max of:
       --    the level of the ingredients to unlock this tech's prereqs

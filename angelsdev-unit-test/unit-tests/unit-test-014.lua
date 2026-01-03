@@ -11,8 +11,8 @@ local function check_recipe_products(item_name, recycing_recipe)
 
   if not recipe then
     local filters = {
-     { filter = "hidden", invert = true, mode = "and", },
-     { filter = "has-product-item", elem_filters = {{filter = "name", name = item_name}}, mode = "and", }
+      { filter = "hidden", invert = true, mode = "and" },
+      { filter = "has-product-item", elem_filters = { { filter = "name", name = item_name } }, mode = "and" },
     }
     for _, test_recipe in pairs(prototypes.get_recipe_filtered(filters)) do
       if #test_recipe.ingredients == 1 or test_recipe.main_product == item_name then
@@ -37,7 +37,13 @@ local function check_recipe_products(item_name, recycing_recipe)
       end
     end
     if not found then
-      unit_test_functions.print_msg(string.format("Original and recycling recipes for item %q do not match. Missing product %q.", item_name, product.name))
+      unit_test_functions.print_msg(
+        string.format(
+          "Original and recycling recipes for item %q do not match. Missing product %q.",
+          item_name,
+          product.name
+        )
+      )
       return unit_test_functions.test_failed
     end
   end
@@ -56,7 +62,13 @@ local function check_recipe_products(item_name, recycing_recipe)
       found = true
     end
     if not found then
-      unit_test_functions.print_msg(string.format("Original and recycling recipes for item %q do not match. Missing ingredient %q.", item_name, ingredient.name))
+      unit_test_functions.print_msg(
+        string.format(
+          "Original and recycling recipes for item %q do not match. Missing ingredient %q.",
+          item_name,
+          ingredient.name
+        )
+      )
       return unit_test_functions.test_failed
     end
   end
@@ -71,14 +83,14 @@ local unit_test_014 = function()
 
   local unit_test_result = unit_test_functions.test_successful
   local filters = {
-   { filter = "hidden",       invert = true, mode = "and", },
-   { filter = "is-parameter", invert = true, mode = "and", },
-   { filter = "flag",         invert = true, mode = "and", flag = "only-in-cursor" },
+    { filter = "hidden", invert = true, mode = "and" },
+    { filter = "is-parameter", invert = true, mode = "and" },
+    { filter = "flag", invert = true, mode = "and", flag = "only-in-cursor" },
   }
 
   -- Check every item to see if it has a recycling recipe
   for item_name, item in pairs(prototypes.get_item_filtered(filters)) do
-    local recipe = prototypes.recipe[item.name.."-recycling"]
+    local recipe = prototypes.recipe[item.name .. "-recycling"]
     if recipe and recipe.category == "recycling" then
       unit_test_result = check_recipe_products(item_name, recipe)
     else

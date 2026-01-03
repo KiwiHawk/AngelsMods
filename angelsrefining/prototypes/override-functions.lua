@@ -362,7 +362,7 @@ end
 ov_functions.copy_item_properties = function(from, to)
   local from_item = data.raw.item[from]
   local to_item = data.raw.item[to]
-  to_item.localised_name = { "item-name."..from_item.name }
+  to_item.localised_name = { "item-name." .. from_item.name }
   to_item.icon = from_item.icon
   to_item.icon_size = from_item.icon_size
   to_item.icons = from_item.icons
@@ -500,62 +500,55 @@ ov_functions.set_research_difficulty = function(technology, unit_time, unit_amou
   create-space-platform
   ]]
   local tab_form = { -- allow for triggered technologies
-    ["unit"]={
+    ["unit"] = {
       time = unit_time,
       amount = unit_amount,
     },
-    ["craft-item"]=
-    {
+    ["craft-item"] = {
       count = unit_amount,
       item = unit_time,
-      type = trigger
+      type = trigger,
     },
-    ["craft-fluid"]=
-    {
+    ["craft-fluid"] = {
       count = unit_amount,
       fluid = unit_time,
-      type = "craft-fluid"
+      type = "craft-fluid",
     },
-    ["mine-entity"]=
-    {
+    ["mine-entity"] = {
       entity = unit_time,
-      type = "mine-entity"
+      type = "mine-entity",
     },
-    ["send-item-to-orbit"]=
-    {
+    ["send-item-to-orbit"] = {
       item = unit_time,
-      type = "send-item-to-orbit"
+      type = "send-item-to-orbit",
     },
-    ["capture-spawner"]=
-    {
+    ["capture-spawner"] = {
       item = unit_time,
-      type = "capture-spawner"
+      type = "capture-spawner",
     },
-    ["build-entity"]=
-    {
+    ["build-entity"] = {
       entity = unit_time,
-      type = "build-entity"
+      type = "build-entity",
     },
-    ["create-space-platform"]=
-    {
-      type="create-space-platform"
+    ["create-space-platform"] = {
+      type = "create-space-platform",
     },
   }
   if type(technology) == "table" then
     for _, tech in pairs(technology) do --two types, {unit={count,{ings},time},research_trigger={count,item,type}}
-      ov_functions.set_research_difficulty(tech, unit_time, unit_amount,trigger)
+      ov_functions.set_research_difficulty(tech, unit_time, unit_amount, trigger)
     end
   else
     guarantee_subtable(modify_table.technologies, technology)
     guarantee_subtable(modify_table.technologies[technology], "difficulty")
     if trigger == nil then
       local tech = data.raw.technology[technology]
-      if tech and type(tech.research_trigger)=="table" then
+      if tech and type(tech.research_trigger) == "table" then
         trigger = tech.research_trigger.type
-      elseif tech and type(tech.unit)=="table" then
+      elseif tech and type(tech.unit) == "table" then
         trigger = "unit"
       else
-        log("technology ".. technology.." does not have an unlock condition")
+        log("technology " .. technology .. " does not have an unlock condition")
       end
     end
     if trigger == "unit" or nil then
@@ -699,7 +692,7 @@ ov_functions.barrel_overrides = function(fluid, style) --Bottling override funct
           fluid_s.localised_name or { "fluid-name." .. fluid_s.name },
         }
       end
-      angelsmods.functions.patch_recycling_recipes({F_Fill.name})
+      angelsmods.functions.patch_recycling_recipes({ F_Fill.name })
     end
   end
 end
@@ -728,7 +721,7 @@ local function adjust_recipe(recipe) -- check a recipe for basic adjustments bas
           item.amount = item[2]
           item[1] = nil
           item[2] = nil
-          log("recipe "..parent.name.." "..subtable.." is still using the old format")
+          log("recipe " .. parent.name .. " " .. subtable .. " is still using the old format")
         end
         local new = substitution_table[substitution_type][item.name]
         if new then
