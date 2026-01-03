@@ -114,7 +114,7 @@ if mods["bobelectronics"] then
   angelsmods.trigger.ores["platinum"] = true
   angelsmods.trigger.ores["silver"] = true
   angelsmods.trigger.ores["tin"] = true
-  
+
   angelsmods.trigger.smelting_products["gold"].plate = true
   angelsmods.trigger.smelting_products["platinum"].plate = true
   angelsmods.trigger.smelting_products["silver"].plate = true
@@ -124,7 +124,7 @@ if mods["bobelectronics"] then
   angelsmods.trigger.smelting_products["platinum"].wire = true
   angelsmods.trigger.smelting_products["silver"].wire = true
   angelsmods.trigger.smelting_products["tin"].wire = true
-  
+
   if mods["bobplates"] then
     angelsmods.trigger.smelting_products["glass"].board = true
     angelsmods.trigger.smelting_products["solder"].wire = true

@@ -476,7 +476,7 @@ data:extend({
   {
     type = "item",
     name = "angels-rocket-defense-equipment-vequip",
-    hidden = true,  
+    hidden = true,
     icon = "__angelsaddons-cab__/graphics/icons/heavy-tank-rocket-launcher-icon.png",
     icon_size = 32,
     place_as_equipment_result = "angels-rocket-defense-equipment-vequip",

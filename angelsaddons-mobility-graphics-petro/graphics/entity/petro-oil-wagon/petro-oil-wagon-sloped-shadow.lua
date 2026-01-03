@@ -1,5 +1,4 @@
-return
-{
+return {
   width = 444,
   height = 484,
   shift = util.by_pixel_hr(33.0, 2.0),
@@ -8,7 +7,7 @@ return
     "-1.png",
     "-2.png",
     "-3.png",
-    "-4.png"
+    "-4.png",
   },
   lines_per_file = 5,
 }

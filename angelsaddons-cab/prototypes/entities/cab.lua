@@ -16,7 +16,7 @@ data:extend({
       "angels-repair",
       "angels-heavy-defense",
       "angels-construction",
-      "angels-movement"
+      "angels-movement",
     },
   },
   {
@@ -135,25 +135,25 @@ data:extend({
       type = "burner",
       effectivity = 0.75,
       fuel_inventory_size = 3,
-    --  smoke =
-    -- {
-    -- {
-    -- name = "tank-smoke",
-    -- deviation = {0.25, 0.25},
-    -- frequency = 50,
-    -- position = {0.5, 2},
-    -- starting_frame = 0,
-    -- starting_frame_deviation = 60
-    -- },
-    -- {
-    -- name = "tank-smoke",
-    -- deviation = {0.25, 0.25},
-    -- frequency = 50,
-    -- position = {-0.5, 2},
-    -- starting_frame = 0,
-    -- starting_frame_deviation = 60
-    -- }
-    --}
+      --  smoke =
+      -- {
+      -- {
+      -- name = "tank-smoke",
+      -- deviation = {0.25, 0.25},
+      -- frequency = 50,
+      -- position = {0.5, 2},
+      -- starting_frame = 0,
+      -- starting_frame_deviation = 60
+      -- },
+      -- {
+      -- name = "tank-smoke",
+      -- deviation = {0.25, 0.25},
+      -- frequency = 50,
+      -- position = {-0.5, 2},
+      -- starting_frame = 0,
+      -- starting_frame_deviation = 60
+      -- }
+      --}
     },
     consumption = "1400kW",
     terrain_friction_modifier = 0.2,

@@ -27,7 +27,6 @@ local function enemy_worm_autoplace(probability_expression)
   })
 end
 
-
 -- return
 -- {
 --   control_name = control_name,
@@ -825,7 +824,7 @@ local function make_projectile_stream(pro_app, pro_dmg)
     --flame_alpha = 0.35,
     --flame_alpha_deviation = 0.05,
 
-    emissions_per_second = {pollution=0.001},
+    emissions_per_second = { pollution = 0.001 },
 
     add_fuel_cooldown = 10,
     fade_in_duration = 1,
@@ -1132,7 +1131,7 @@ local function make_projectile_stream(pro_app, pro_dmg)
               type = "create-fire",
               entity_name = splash_fire.name,
               tile_collision_mask = { layers = {
-                water_tile=true
+                water_tile = true,
               } },
               show_in_tooltip = true,
             },
@@ -1461,7 +1460,7 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
   data:extend({
     {
       type = "unit-spawner",
-      name = "angels-"..spawn_data.appearance.type .. "-spawner",
+      name = "angels-" .. spawn_data.appearance.type .. "-spawner",
       icon = "__base__/graphics/icons/biter-spawner.png",
       icon_size = 64,
       flags = { "placeable-player", "placeable-enemy", "not-repairable" },
@@ -1517,7 +1516,7 @@ function angelsmods.functions.make_alien_spawner(spawn_data)
     },
     {
       type = "corpse",
-      name = "angels-"..spawn_data.appearance.type .. "-spawner-corpse",
+      name = "angels-" .. spawn_data.appearance.type .. "-spawner-corpse",
       flags = { "placeable-neutral", "placeable-off-grid", "not-on-map" },
       icon = "__base__/graphics/icons/biter-spawner-corpse.png",
       icon_size = 32,
@@ -1558,7 +1557,8 @@ function angelsmods.functions.update_spawner(us_data)
   if us_data == nil then
     return
   end
-  local spawner = data.raw["unit-spawner"][us_data.appearance.full_name or ("angels-"..us_data.appearance.type .. "-spawner")]
+  local spawner =
+    data.raw["unit-spawner"][us_data.appearance.full_name or ("angels-" .. us_data.appearance.type .. "-spawner")]
   if spawner then
     spawner.resistances = spawner.resistances or {}
     for _, new_resistance_data in pairs(us_data.resistance or {}) do

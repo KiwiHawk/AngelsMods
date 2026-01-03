@@ -1,5 +1,5 @@
 -- remove non-existing angels stuff
-for _, entity in pairs({"angels-cab", "angels-crawler"}) do
+for _, entity in pairs({ "angels-cab", "angels-crawler" }) do
   local entityEquipmentCategories = data.raw["equipment-grid"][entity].equipment_categories
   local equipmentCategories = util.table.deepcopy(entityEquipmentCategories)
   for _, equipmentCategory in pairs(equipmentCategories) do

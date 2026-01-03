@@ -63,7 +63,6 @@ function angelsmods.migration.replace_signals(entities_to_check, signals_to_repl
         or controlBehavior.type == defines.control_behavior.type.loader
         or controlBehavior.type == defines.control_behavior.type.pump
         or controlBehavior.type == defines.control_behavior.type.turret
-
       then
         replace_control_behavior("circuit_condition", controlBehavior, signals_to_replace)
       end
@@ -348,7 +347,7 @@ function angelsmods.migration.replace_logistics_slot(items_to_replace)
       local point = player.character.get_requester_point()
       if point then
         for _, item_to_replace in pairs(items_to_replace) do
-          for _, section in pairs(point.sections) do        
+          for _, section in pairs(point.sections) do
             for i = 1, 100 do
               local slot = section.get_slot(i)
               if slot.value then

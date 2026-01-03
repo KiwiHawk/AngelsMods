@@ -27,12 +27,33 @@ local function angels_chemical_plant_fluid_boxes()
   }
 end
 
-circuit_connector_definitions["chemical-plant"] = circuit_connector_definitions.create_vector(universal_connector_template, {
-  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
-  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
-  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
-  { variation =  3, main_offset = util.by_pixel(-21.25,  2.875), shadow_offset = util.by_pixel(-21.25,  2.875), show_shadow = true },
-})
+circuit_connector_definitions["chemical-plant"] =
+  circuit_connector_definitions.create_vector(universal_connector_template, {
+    {
+      variation = 3,
+      main_offset = util.by_pixel(-21.25, 2.875),
+      shadow_offset = util.by_pixel(-21.25, 2.875),
+      show_shadow = true,
+    },
+    {
+      variation = 3,
+      main_offset = util.by_pixel(-21.25, 2.875),
+      shadow_offset = util.by_pixel(-21.25, 2.875),
+      show_shadow = true,
+    },
+    {
+      variation = 3,
+      main_offset = util.by_pixel(-21.25, 2.875),
+      shadow_offset = util.by_pixel(-21.25, 2.875),
+      show_shadow = true,
+    },
+    {
+      variation = 3,
+      main_offset = util.by_pixel(-21.25, 2.875),
+      shadow_offset = util.by_pixel(-21.25, 2.875),
+      show_shadow = true,
+    },
+  })
 
 data:extend({
   {

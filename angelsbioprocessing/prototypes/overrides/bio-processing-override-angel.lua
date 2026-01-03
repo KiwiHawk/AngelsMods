@@ -6,7 +6,14 @@ if angelsmods.trigger.smelting_products["glass"].mixture then --only change it i
 end
 
 -- FARMING TOOLTIPS
-for _, item_name in pairs({ "angels-solid-beans", "angels-solid-corn", "angels-solid-leafs", "angels-solid-nuts", "angels-solid-pips", "angels-solid-fruit" }) do
+for _, item_name in pairs({
+  "angels-solid-beans",
+  "angels-solid-corn",
+  "angels-solid-leafs",
+  "angels-solid-nuts",
+  "angels-solid-pips",
+  "angels-solid-fruit",
+}) do
   local item = data.raw["item"][item_name]
   if item then
     local origin_items = {}
@@ -66,7 +73,7 @@ OV.add_prereq("efficiency-module-3", "angels-bio-processing-crystal-full")
 for _, type in pairs({ "speed", "efficiency", "productivity" }) do
   -- remove the marked as upgrade from base game
   for _, tier in pairs({ "2", "3" }) do
-    local tech = data.raw.technology[type .. "-module-"..tier]
+    local tech = data.raw.technology[type .. "-module-" .. tier]
     if tech then
       tech.upgrade = false
     end

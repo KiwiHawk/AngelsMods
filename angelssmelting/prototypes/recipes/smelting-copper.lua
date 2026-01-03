@@ -269,17 +269,12 @@ data:extend({
     results = {
       { type = "item", name = "copper-plate", amount = 4 },
     },
-    icons = angelsmods.functions.add_icon_layer(
+    icons = angelsmods.functions.add_icon_layer({
       {
-        {
-          icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
-          icon_size = 32,
-        }
+        icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
+        icon_size = 32,
       },
-      angelsmods.functions.get_object_icons("angels-liquid-molten-copper"),
-      { -10, -10 },
-      0.4375
-    ),
+    }, angelsmods.functions.get_object_icons("angels-liquid-molten-copper"), { -10, -10 }, 0.4375),
     order = "j[angels-plate-copper]-c", -- j[angels-plate-copper]-a reserved for crushed stiratite smelting (see global overrides)
   }, -- j[angels-plate-copper]-b reserved for base game smelting recipe (see global overrides)
   {
@@ -298,17 +293,12 @@ data:extend({
     results = {
       { type = "item", name = "copper-plate", amount = 4 },
     },
-    icons = angelsmods.functions.add_icon_layer(
+    icons = angelsmods.functions.add_icon_layer({
       {
-        {
-          icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
-          icon_size = 32,
-        }
+        icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
+        icon_size = 32,
       },
-      angelsmods.functions.get_object_icons("angels-roll-copper"),
-      { -10, -10 },
-      0.4375
-    ),
+    }, angelsmods.functions.get_object_icons("angels-roll-copper"), { -10, -10 }, 0.4375),
     order = "j[angels-plate-copper]-d",
   },
   {
@@ -327,17 +317,12 @@ data:extend({
     results = {
       { type = "item", name = "copper-cable", amount = 16 },
     },
-    icons = angelsmods.functions.add_icon_layer(
+    icons = angelsmods.functions.add_icon_layer({
       {
-        {
-          icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png",
-          icon_size = 32,
-        }
+        icon = "__angelssmeltinggraphics__/graphics/icons/wire-copper.png",
+        icon_size = 32,
       },
-      angelsmods.functions.get_object_icons("angels-wire-coil-copper"),
-      { -10, -10 },
-      0.4375
-    ),
+    }, angelsmods.functions.get_object_icons("angels-wire-coil-copper"), { -10, -10 }, 0.4375),
     order = "k[angels-wire-copper]-e", -- k[angels-wire-copper]-a reserved for base game recipe (see global overrides)
   },
 })

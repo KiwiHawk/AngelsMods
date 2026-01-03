@@ -732,7 +732,11 @@ function angelsmods.functions.make_resource()
       end
       --Create Particle if resource yields items
       if input.type == "item" then
-        if input.get and data.raw["optimized-particle"] and data.raw["optimized-particle"][input.get .. "-particle"] then
+        if
+          input.get
+          and data.raw["optimized-particle"]
+          and data.raw["optimized-particle"][input.get .. "-particle"]
+        then
           input.particle = input.get .. "-particle"
         else
           make_particle(input)
@@ -913,8 +917,7 @@ function angelsmods.functions.remove_resource(resource)
   for planet_name, planet in pairs(data.raw.planet) do
     -- Remove the planet-specific generation setting
     local planet_resource = planet_name .. "_" .. resource
-    if data.raw["autoplace-control"][planet_resource]
-    then
+    if data.raw["autoplace-control"][planet_resource] then
       data.raw["autoplace-control"][planet_resource] = nil
     end
 

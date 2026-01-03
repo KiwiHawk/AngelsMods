@@ -286,7 +286,7 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "angels-pellet-coke"
+        recipe = "angels-pellet-coke",
       },
     },
     unit = {
