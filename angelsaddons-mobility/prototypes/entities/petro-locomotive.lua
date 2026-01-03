@@ -41,7 +41,6 @@ funcs.generate_train_entities({
   factoriopedia_simulation = simulations.factoriopedia_petro_locomotive,
   collision_box = { { -0.6, -2.6 }, { 0.6, 2.6 } },
   selection_box = { { -1, -3 }, { 1, 3 } },
-  drawing_box = { { -1, -4 }, { 1, 3 } },
   allow_manual_color = true,
   allow_remote_driving = true,
   color = funcs.default_train_colors.petro,
@@ -217,7 +216,7 @@ funcs.generate_train_entities({
         }),
       },
     },
-    slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
+    slope_angle_between_frames = 1.25,
     sloped = funcs.use_sloped_train_features and {
       layers = {
         util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-sloped", {
@@ -255,7 +254,7 @@ funcs.generate_train_entities({
           usage = "train",
         }),
       },
-    },
+    } or nil,
   },
   front_light_pictures = {
     rotated = {
@@ -272,7 +271,7 @@ funcs.generate_train_entities({
         }),
       },
     },
-    slope_angle_between_frames = funcs.use_sloped_train_features and 1.25,
+    slope_angle_between_frames = 1.25,
     sloped = funcs.use_sloped_train_features and {
       layers = {
         util.sprite_load("__angelsaddons-mobility-graphics-petro__/graphics/entity/petro-locomotive/petro-locomotive-sloped-lights", {
@@ -284,8 +283,8 @@ funcs.generate_train_entities({
           scale = 0.5,
           usage = "train"
         }),
-      }
-    }
+      },
+    } or nil,
   },
   wheels = funcs.standard_train_wheels,
   stop_trigger = {
