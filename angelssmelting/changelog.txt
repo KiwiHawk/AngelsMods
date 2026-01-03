@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
-Date: ???
+Date: 04.01.26
   Changes:
     - Moved ingot powder receipes to powderizer machines (852)
     - Added minimum machine tier to powderizer recipes (852)

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
-Date: ???
+Date: 04.01.26
   Changes:
     - Updated for Factorio 2.0 (994)
     - Standardized silo and warehouse storage size (1017)

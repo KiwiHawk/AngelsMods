@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
-Date: ???
+Date: 04.01.26
   Bugfixes:
     - Fixed when placing an electric offshore waterpump over its ghost, the module request would be forgotten (973)
     - Fixed crash when upgrading blueprints (978)

@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
-Date: ???
+Date: 04.01.26
   Features:
     - Supports Elevated Rails and includes HQ train graphics with updated geometry and materials (1183)
     - Crawler-themed trains are now colorable (1183)
