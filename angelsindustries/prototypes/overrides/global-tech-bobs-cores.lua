@@ -6,16 +6,16 @@ if angelsmods.industries.tech then
   -- BASE BOBS (MCI) ------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobplates"] then
-    AI.core_replace("grinding", "basic", "processing")
+    AI.core_replace("bob-grinding", "basic", "processing")
     AI.core_replace("polishing", "basic", "processing")
     AI.core_replace("mixing-furnace", "basic", "processing")
     AI.core_replace("steel-mixing-furnace", "basic", "processing")
     AI.core_replace("electric-mixing-furnace", "basic", "processing")
     AI.core_replace("steel-chemical-furnace", "basic", "processing")
     AI.core_replace("electric-chemical-furnace", "basic", "processing")
-    AI.core_replace("fluid-barrel-processing", "logistic", "processing")
-    AI.core_replace("fluid-canister-processing", "logistic", "processing")
-    AI.core_replace("gas-canisters", "basic", "processing")
+    AI.core_replace("bob-fluid-barrel-processing", "logistic", "processing")
+    AI.core_replace("bob-fluid-canister-processing", "logistic", "processing")
+    AI.core_replace("bob-gas-canisters", "basic", "processing")
     AI.core_replace("ceramics", "basic", "processing")
 
     -- depending on settings and enabled mods, bobingabout-enrichment-process could be using either basic or processing core
@@ -23,12 +23,12 @@ if angelsmods.industries.tech then
     AI.core_replace("bobingabout-enrichment-process", "processing", "energy")
 
     if not mods["bobtech"] then
-      AI.core_replace("alien-blue-research", "processing", "war")
-      AI.core_replace("alien-orange-research", "processing", "war")
-      AI.core_replace("alien-purple-research", "processing", "war")
-      AI.core_replace("alien-yellow-research", "processing", "war")
-      AI.core_replace("alien-green-research", "processing", "war")
-      AI.core_replace("alien-red-research", "processing", "war")
+      AI.core_replace("bob-alien-blue-research", "processing", "war")
+      AI.core_replace("bob-alien-orange-research", "processing", "war")
+      AI.core_replace("bob-alien-purple-research", "processing", "war")
+      AI.core_replace("bob-alien-yellow-research", "processing", "war")
+      AI.core_replace("bob-alien-green-research", "processing", "war")
+      AI.core_replace("bob-alien-red-research", "processing", "war")
     end
   end
 
@@ -37,11 +37,9 @@ if angelsmods.industries.tech then
   -------------------------------------------------------------------------------
   if mods["bobassembly"] then
     --assemblers
-    if settings.startup["bobmods-assembly-burner"].value == true then
+    if data.raw.technology["basic-automation"] then
       AI.core_replace("basic-automation", "processing", "basic")
       AI.core_replace("automation", "basic", "processing")
-    else
-      AI.core_replace("automation", "processing", "basic")
     end
     --chemplants
     if settings.startup["bobmods-assembly-chemicalplants"].value == true then
@@ -126,21 +124,6 @@ if angelsmods.industries.tech then
   if mods["bobmodules"] then
     AI.core_replace("effect-transmission-2", "processing", "enhance")
     AI.core_replace("effect-transmission-3", "processing", "enhance")
-    if bobmods.modules.ModulesLab then
-      OV.remove_science_pack("speed-module", "angels-science-pack-orange")
-      OV.remove_science_pack("effectivity-module", "angels-science-pack-orange")
-      OV.remove_science_pack("productivity-module", "angels-science-pack-orange")
-
-      OV.remove_science_pack("speed-module", "datacore-enhance-1")
-      OV.remove_science_pack("effectivity-module", "datacore-enhance-1")
-      OV.remove_science_pack("productivity-module", "datacore-enhance-1")
-      OV.remove_science_pack("angels-bio-yield-module", "datacore-enhance-1")
-
-      OV.remove_science_pack("speed-module-3", "angels-science-pack-yellow")
-      OV.remove_science_pack("effectivity-module-3", "angels-science-pack-yellow")
-      OV.remove_science_pack("productivity-module-3", "angels-science-pack-yellow")
-      OV.remove_science_pack("angels-bio-yield-module-3", "angels-science-pack-yellow")
-    end
   end
 
   -------------------------------------------------------------------------------
@@ -160,7 +143,9 @@ if angelsmods.industries.tech then
     AI.core_replace("bob-robo-modular-1", "basic", "logistic")
     AI.core_replace("bob-robo-modular-2", "basic", "logistic")
     AI.core_replace("bob-robo-modular-3", "basic", "logistic")
+    -- "bob-robo-modular-4" could be using basic or processing core, depending on which of Bob's mods are enabled
     AI.core_replace("bob-robo-modular-4", "basic", "logistic")
+    AI.core_replace("bob-robo-modular-4", "processing", "logistic")
     -- repair packs
     AI.core_replace("bob-repair-pack-2", "basic", "enhance")
     AI.core_replace("bob-repair-pack-3", "basic", "enhance")
@@ -221,7 +206,6 @@ if angelsmods.industries.tech then
   -- BOBS POWER -----------------------------------------------------------------
   -------------------------------------------------------------------------------
   if mods["bobpower"] then
-    AI.core_replace("steam-power", "energy", "basic")
     if settings.startup["bobmods-power-fluidgenerator"].value == true then
       AI.core_replace("fluid-generator-1", "logistic", "energy")
       AI.core_replace("fluid-generator-2", "logistic", "energy")
@@ -252,6 +236,12 @@ if angelsmods.industries.tech then
   if mods["bobtech"] then
     --Remove cores associated with advanced alien technologies
     if data.raw.tool["science-pack-gold"] then
+      OV.remove_science_pack("bob-alien-research-blue", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-orange", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-purple", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-yellow", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-green", "datacore-processing-1")
+      OV.remove_science_pack("bob-alien-research-red", "datacore-processing-1")
       --blue tier
       OV.remove_science_pack("bob-battery-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("bob-battery-equipment-5", "datacore-enhance-1")
@@ -275,15 +265,14 @@ if angelsmods.industries.tech then
       OV.remove_science_pack("vehicle-fusion-cell-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-fusion-cell-equipment-5", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-fusion-cell-equipment-6", "datacore-enhance-1")
-      OV.remove_science_pack("fusion-reactor-equipment-2", "datacore-enhance-1")
-      OV.remove_science_pack("fusion-reactor-equipment-3", "datacore-enhance-1")
-      OV.remove_science_pack("fusion-reactor-equipment-4", "datacore-enhance-1")
+      OV.remove_science_pack("fission-reactor-equipment-2", "datacore-enhance-1")
+      OV.remove_science_pack("fission-reactor-equipment-3", "datacore-enhance-1")
+      OV.remove_science_pack("fission-reactor-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-big-turret-equipment-4", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-big-turret-equipment-5", "datacore-enhance-1")
-      OV.remove_science_pack("vehicle-big-turret-equipment-6", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-fusion-reactor-equipment-4", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-fusion-reactor-equipment-5", "datacore-enhance-1")
       OV.remove_science_pack("vehicle-fusion-reactor-equipment-6", "datacore-enhance-1")
+      OV.remove_science_pack("personal-laser-defense-equipment-6", "datacore-enhance-1")
 
       table.insert(
         data.raw.recipe["science-pack-gold"].ingredients,
@@ -293,12 +282,6 @@ if angelsmods.industries.tech then
         data.raw.recipe["science-pack-gold"].ingredients,
         { type = "item", name = "datacore-enhance-2", amount = 1 }
       )
-    end
-
-    if settings.startup["bobmods-burnerphase"].value then
-      AI.core_replace("automation", "basic", "processing")
-      AI.core_replace("steam-power", "energy", "basic")
-      AI.core_replace("steam-automation", "processing", "basic")
     end
   end
 

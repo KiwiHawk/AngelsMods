@@ -1,4 +1,39 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 04.01.26
+  Changes:
+    - Moved ingot powder receipes to powderizer machines (852)
+    - Added minimum machine tier to powderizer recipes (852)
+    - Removed references to normal / expensive recipes (945)
+    - Rebalance Tungsten Smelting Recipes (980)
+    - Adjusted the recipes for Bob's Assembling Machines (985)
+    - Moved Cement Processing techs up a science pack tier so Clay Bricks are not available so early in the game (991)
+    - Updated for Factorio 2.0 (994)
+    - Added circuit connectors to all machines (1114)
+    - Added some trigger techs to divide up the research tree (1165)
+    - Update recipes for components from Bob's Electronics mod to use Angel's wires (1197)
+    - Rebalance recipes: Glass mixture, Cement mixture (1198)
+    - Rebalance Bob's recipes: Silicon nitride, Silicon carbide, Tungsten carbide, Copper tungsted (1198)
+  Bugfixes:
+    - Fixed coolant production graphs (1000)
+    - Moved Cobalt Oxide 1 recipe from Ore processor to Chemical furnace (1006)
+---------------------------------------------------------------------------------------------------
+Version: 0.6.23
+Date: 21.02.2024
+  Changes:
+    - Steel casting does not need to force enable all iron ore products
+---------------------------------------------------------------------------------------------------
+Version: 0.6.22
+Date: 22.12.2023
+  Changes:
+    - Increased the tech and required machine tier of Chrome and Platinum (909)
+    - Allow Fibreglass boards to be made in Bob's Electronics assembling machines (921)
+    - Enabled productivity modules for Glass, Glass fiber, and Fibreglass recipes (929)
+    - Added water to recipe Glass fiber casting 1. Added new recipe Glass fiber casting 2 (939)
+  Bugfixes:
+    - Another attempt at fixed smoke on the blast furnace
+    - Fixed names and descriptions of Bronze processing and Brass processing techs from Bob's MCI mod (926)
+---------------------------------------------------------------------------------------------------
 Version: 0.6.21
 Date: 23.02.2023
   Changes:

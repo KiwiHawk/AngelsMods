@@ -1,9 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: ???
+  Changes:
+    - Updated for Factorio 2.0 (994)
+    - Added "angels-" prefix for all prototypes (1138)
+---------------------------------------------------------------------------------------------------
+Version: 0.3.16
+Date: 21.02.2024
+  Changes:
+    - Renamed triggers table from angelsmods.triggers to angelsmods.trigger to match other Angel's mods (969)
+---------------------------------------------------------------------------------------------------
 Version: 0.3.15
-Date: xx.xx.2023
+Date: 22.12.2023
   Changes:
     - Added "Thorvin" bicycle; credits to the TurboBike mod for the graphics (790)
     - Spitters are back doing acid splash instead of their bio splash
+    - Scarab start spawning at 15% evolution rather than 10%
     - First (partial) rework on artifact drop rates (748)
   Bugfixes:
     - Fixed the native inhabitants tips and tricks could not become visible
