@@ -23,7 +23,7 @@ if angelsmods.addons.mobility.petrotrain.enabled then
         },
         time = 15,
       },
-      prerequisites = { "speed-module", "efficiency-module", "chemical-science-pack" },
+      prerequisites = { "speed-module", "efficiency-module", "chemical-science-pack", "angels-gas-processing", "angels-oil-processing" },
     },
     {
       unit = {
