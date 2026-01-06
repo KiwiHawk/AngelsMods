@@ -23,7 +23,7 @@
     "(?) bobvehicleequipment",
     "? bobwarfare >= 2.0.0",
     "? valves",
-    "? rso-mod >= 7.0.0",
+    "(?) rso-mod >= 7.0.0",
     "? Yuoki >= 1.2.0"
   ]
 }
