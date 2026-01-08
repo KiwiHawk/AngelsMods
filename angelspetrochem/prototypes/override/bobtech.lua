@@ -5,9 +5,9 @@ if mods["bobtech"] then
     {
       name = "production-science-pack",
       ingredients = {
-        { type = "item", name = "angels-chemical-plant-3", amount = "chemical-plant" }
-      }
-    }
+        { type = "item", name = "angels-chemical-plant-3", amount = "chemical-plant" },
+      },
+    },
   })
   OV.add_prereq("production-science-pack", "angels-advanced-chemistry-2")
 end
