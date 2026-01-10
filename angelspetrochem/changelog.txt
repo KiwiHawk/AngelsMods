@@ -3,6 +3,8 @@ Version: 2.0.1
 Date: ???
   Changes:
     - If Bob's Tech mod is enabled, make Production science pack use Chemical plant 3 rather than Chemical plant (1229)
+  Bugfixes:
+    - Fixed crafting categories added chemical plants by other mods being overwritten (1232)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 04.01.26
