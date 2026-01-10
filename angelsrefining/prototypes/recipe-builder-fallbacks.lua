@@ -379,7 +379,7 @@ angelsmods.functions.RB.set_fallback("item", "airfilter-2", { { "block-productio
 angelsmods.functions.RB.set_fallback("item", "airfilter-3", { { "block-production-3", 3 }, { "angels-air-filter-2" } })
 
 angelsmods.functions.RB.set_fallback("item", "oilref-1", { { "block-production-2", 3 } })
-angelsmods.functions.RB.set_fallback("item", "oilref-2", { { "block-cprocessing-3", 3 }, { "angels-oil-refinery" } })
+angelsmods.functions.RB.set_fallback("item", "oilref-2", { { "block-cprocessing-3", 3 }, { "oil-refinery" } })
 angelsmods.functions.RB.set_fallback("item", "oilref-3", { { "block-cprocessing-4", 3 }, { "angels-oil-refinery-2" } })
 angelsmods.functions.RB.set_fallback("item", "oilref-4", { { "block-cprocessing-5", 3 }, { "angels-oil-refinery-3" } })
 
