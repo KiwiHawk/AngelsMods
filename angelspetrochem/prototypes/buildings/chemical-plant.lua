@@ -75,11 +75,11 @@ data:extend({
 local chemical_plant = data.raw["assembling-machine"]["chemical-plant"]
 chemical_plant.icon = nil
 chemical_plant.icons = angelsmods.functions.add_number_icon_layer({
-    {
-      icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
-      icon_size = 32,
-    },
-  }, 1, angelsmods.petrochem.number_tint)
+  {
+    icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
+    icon_size = 32,
+  },
+}, 1, angelsmods.petrochem.number_tint)
 chemical_plant.minable = { mining_time = 0.5, result = "chemical-plant" }
 chemical_plant.max_health = 300
 chemical_plant.corpse = "big-remnants"

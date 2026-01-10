@@ -241,7 +241,7 @@ if data.raw["recipe-category"]["chemistry-or-cryogenics"] then
     "angels-chemical-plant-4",
   }) do
     local entity = data.raw["assembling-machine"][entity_name]
-    if entity then  
+    if entity then
       local addit = true
       for _, category in pairs(entity.crafting_categories) do
         if category == "chemistry-or-cryogenics" then
