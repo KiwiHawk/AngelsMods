@@ -31,6 +31,7 @@ if mods["bobplates"] then
       subgroup = "angels-alloys-casting",
       energy_required = 4,
       enabled = false,
+      hide_from_signal_gui = false,
       ingredients = {
         { type = "item", name = "angels-ingot-copper", amount = 18 },
         { type = "item", name = "angels-ingot-zinc", amount = 12 },
@@ -55,6 +56,7 @@ if mods["bobplates"] then
       subgroup = "angels-alloys-casting",
       energy_required = 4,
       enabled = false,
+      hide_from_signal_gui = false,
       ingredients = {
         { type = "item", name = "angels-ingot-copper", amount = 18 },
         { type = "item", name = "angels-ingot-zinc", amount = 12 },
