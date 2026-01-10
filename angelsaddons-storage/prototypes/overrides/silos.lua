@@ -5,10 +5,14 @@ if angelsmods.addons.storage.icon_scaling then
     data.raw["container"]["angels-silo"].icon_draw_specification = { scale = 2.5, scale_for_many = 2.5 }
   end
   if angelsmods.addons.storage.silos then
-    data.raw["logistic-container"]["angels-silo-active-provider"].icon_draw_specification = { scale = 2.5, scale_for_many = 2.5 }
-    data.raw["logistic-container"]["angels-silo-passive-provider"].icon_draw_specification = { scale = 2.5, scale_for_many = 2.5 }
-    data.raw["logistic-container"]["angels-silo-requester"].icon_draw_specification = { scale = 2.5, scale_for_many = 2.5 }
-    data.raw["logistic-container"]["angels-silo-storage"].icon_draw_specification = { scale = 2.5, scale_for_many = 2.5 }
+    data.raw["logistic-container"]["angels-silo-active-provider"].icon_draw_specification =
+      { scale = 2.5, scale_for_many = 2.5 }
+    data.raw["logistic-container"]["angels-silo-passive-provider"].icon_draw_specification =
+      { scale = 2.5, scale_for_many = 2.5 }
+    data.raw["logistic-container"]["angels-silo-requester"].icon_draw_specification =
+      { scale = 2.5, scale_for_many = 2.5 }
+    data.raw["logistic-container"]["angels-silo-storage"].icon_draw_specification =
+      { scale = 2.5, scale_for_many = 2.5 }
     data.raw["logistic-container"]["angels-silo-buffer"].icon_draw_specification = { scale = 2.5, scale_for_many = 2.5 }
   end
   if angelsmods.addons.storage.oresilos then
