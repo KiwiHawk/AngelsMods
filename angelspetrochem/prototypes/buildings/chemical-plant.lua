@@ -73,6 +73,7 @@ data:extend({
 })
 
 local chemical_plant = data.raw["assembling-machine"]["chemical-plant"]
+chemical_plant.icon = nil
 chemical_plant.icons = angelsmods.functions.add_number_icon_layer({
     {
       icon = "__angelspetrochemgraphics__/graphics/icons/chemical-plant.png",
