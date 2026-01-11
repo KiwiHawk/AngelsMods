@@ -47,7 +47,21 @@ if angelsmods.trigger.smelting_products["glass"].plate then
     data.raw["recipe"]["angels-plate-glass-2"].main_product = "bob-glass"
     data.raw["recipe"]["angels-plate-glass-3"].main_product = "bob-glass"
 
-    OV.disable_recipe("bob-glass")
+    if mods["bobgreenhouse"] and not mods["angelsbioprocessing"] then
+      -- Glass is needed for Bob's Greenhouses if Bioprocessing mod is not enabled
+      OV.patch_recipes({
+        {
+          name = "bob-glass",
+          ingredients = {
+            { type = "item", name = "bob-quartz", amount = 10 },
+          },
+          subgroup = "angels-glass-casting",
+          order = "d[angels-plate-glass]-a",
+        },
+      })
+    else
+      OV.disable_recipe("bob-glass")
+    end
     OV.add_prereq("solar-energy", "angels-glass-smelting-1")
 
     if mods["bobwarfare"] then
