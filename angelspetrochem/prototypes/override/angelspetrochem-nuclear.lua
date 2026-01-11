@@ -319,6 +319,9 @@ if mods["bobplates"] then
   OV.global_replace_technology("bob-deuterium-fuel-cell-2", "angels-fusion-power-2")
   OV.disable_technology({ "bob-deuterium-fuel-reprocessing", "bob-deuterium-fuel-cell-2" })
   angelsmods.functions.hide("bob-depleted-deuterium-fuel-cell")
+  if mods["bobpower"] then
+    OV.add_prereq("angels-fusion-power-1", "bob-advanced-processing-unit")
+  end
 
   -- plutonium processing
   -- remove unlocks in each reactor tech
