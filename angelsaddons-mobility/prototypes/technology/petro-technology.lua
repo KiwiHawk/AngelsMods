@@ -27,8 +27,6 @@ if angelsmods.addons.mobility.petrotrain.enabled then
         "speed-module",
         "efficiency-module",
         "chemical-science-pack",
-        "angels-gas-processing",
-        "angels-oil-processing",
       },
     },
     {

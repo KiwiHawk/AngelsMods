@@ -65,13 +65,10 @@ if mods["bobplates"] then
       data.raw.fluid[fluid].fuel_value = (math.floor(vals.fv / 5 + 0.5)) * 5 .. "kJ"
       data.raw.fluid[fluid].emissions_multiplier = vals.em or data.raw.fluid[fluid].emissions_multiplier or 1
       if vals.turr ~= false then
-        table.insert(
-          turret_params,
-          {
-            type = fluid,
-            damage_modifier = math.floor(vals.fv / Energy_table["angels-gas-methane"].fv * 10 + 0.5) / 10,
-          }
-        )
+        table.insert(turret_params, {
+          type = fluid,
+          damage_modifier = math.floor(vals.fv / Energy_table["angels-gas-methane"].fv * 10 + 0.5) / 10,
+        })
       end
     end
   end

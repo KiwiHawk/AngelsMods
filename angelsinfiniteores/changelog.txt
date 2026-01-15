@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 15.01.26
+  Bugfixes:
+    - Fixed message when attempting to place drill on infinite ore before researching Advanced Mining (1222)
+    - Fixed ore circle sometimes generating around ore patches (1238)
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 04.01.26
   Changes:

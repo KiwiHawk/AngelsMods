@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 15.01.26
+  Changes:
+    - Adjusted Gas refinery sound (867)
+    - If Bob's Tech mod is enabled, make Production science pack use Chemical plant 3 rather than Chemical plant (1229)
+  Bugfixes:
+    - Fixed crafting categories added chemical plants by other mods being overwritten (1232)
+    - Fixed Oil refinery 2 recipe (1233)
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 04.01.26
   Changes:

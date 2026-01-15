@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 15.01.26
+  Bugfixes:
+    - Enabled early glass for Bob's Greenhouse (1224)
+    - Fixed handcrafting trying to use the wrong recipe for wires (1225)
+    - Allowed Bronze and Brass smelting recipes to be selected as signals (with Bob's MCI mod) (1234)
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 04.01.26
   Changes:
