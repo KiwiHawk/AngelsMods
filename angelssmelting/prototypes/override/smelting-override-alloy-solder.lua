@@ -2,7 +2,7 @@ local OV = angelsmods.functions.OV
 
 if angelsmods.trigger.smelting_products["enable-all"] then
   angelsmods.trigger.smelting_products["solder"].wire = true
-  angelsmods.trigger.smelting_products["solder"].mixture = true
+  --angelsmods.trigger.smelting_products["solder"].mixture = true
 end
 
 -------------------------------------------------------------------------------
