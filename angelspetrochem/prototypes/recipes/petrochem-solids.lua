@@ -477,7 +477,7 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
     results = {
-      { type = "item", name = "angels-electrode", amount = 1 },
+      { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
       { type = "fluid", name = "angels-water-mineralized", amount = 10 },
       { type = "fluid", name = "water", amount = 40 },
     },
