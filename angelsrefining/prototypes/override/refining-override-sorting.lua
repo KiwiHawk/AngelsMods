@@ -342,7 +342,7 @@ local function create_sorting_mix_recipe(recipe_data)
     if angelsmods.trigger.ores[get_trigger_name[recipe_data.result.name]] and ore_amount > 0 then
       local recipe = {
         name = recipe_data.name,
-        localised_name = { type_name .. "-name." .. ore_name },
+        localised_name = { type_name .. "-name." .. recipe_data.result.name },
         results = {
           { "!!" },
           {
