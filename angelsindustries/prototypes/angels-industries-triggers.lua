@@ -51,7 +51,6 @@ if angelsmods.industries.components then
   angelsmods.trigger.early_sulfuric_acid = true
 
   --SMELTING TRIGGERS
-  angelsmods.trigger.smelting_products["solder"].mixture = true
   angelsmods.trigger.smelting_molds = true
   angelsmods.trigger.smelting_products["glass"].fibre = true
   angelsmods.trigger.smelting_products["glass"].board = false
