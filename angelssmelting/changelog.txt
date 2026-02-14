@@ -3,6 +3,8 @@ Version: 2.0.3
 Date: ???
   Changes:
     - Removed solder mixture. You may need to reset your molten solder induction furnace recipes, sorry! (1241)
+  Bugfixes:
+    - Fixed Bob's Module Boards Ingredients (1253)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 18.01.26
