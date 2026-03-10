@@ -113,9 +113,18 @@ if mods["bobmodules"] then
   })
   if mods["quality"] then
     OV.patch_recipes({
-      { name = "quality-module", ingredients = { { type = "item", name = "angels-crystal-splinter-harmonic", amount = 0 } } },
-      { name = "quality-module-2", ingredients = { { type = "item", name = "angels-crystal-shard-harmonic", amount = 0 } } },
-      { name = "quality-module-3", ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 0 } } },
+      {
+        name = "quality-module",
+        ingredients = { { type = "item", name = "angels-crystal-splinter-harmonic", amount = 0 } },
+      },
+      {
+        name = "quality-module-2",
+        ingredients = { { type = "item", name = "angels-crystal-shard-harmonic", amount = 0 } },
+      },
+      {
+        name = "quality-module-3",
+        ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 0 } },
+      },
     })
 
     OV.remove_prereq("quality-module", "angels-bio-processing-crystal-splinter-2")
