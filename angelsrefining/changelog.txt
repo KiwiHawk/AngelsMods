@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed some catalyst sorting recipes showing the wrong name (1245)
     - Improved migration functions (1248)
+    - Fixed error in angelsmods.functions.make_void when fluid icon has no scale set (1256)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 18.01.26
