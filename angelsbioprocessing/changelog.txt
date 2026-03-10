@@ -3,6 +3,7 @@ Version: 2.0.3
 Date: ???
   Bugfixes:
     - Fixed Agriculture module recipe speed (with Bob's Modules mod) (1255)
+    - Fixed crystals not being added to Quality module recipes (1271)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 18.01.26
