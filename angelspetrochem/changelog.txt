@@ -2,7 +2,8 @@
 Version: 2.0.2
 Date: ???
   Bugfixes:
-    - Fixed production graph for electrodes #1251
+    - Fixed production graph for electrodes (1251)
+    - Fixed Thorium-plutonium-based power systems tech being impossible to research when Nuclear Fuel mod is enabled. Angel's Petrochem does basically the same thing as Nuclear Fuel mod (plus a whole lot more!) so there is not point in having it enabled. But if you really do want it, it should now work (1270)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 15.01.26
