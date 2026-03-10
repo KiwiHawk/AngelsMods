@@ -468,28 +468,24 @@ OV.patch_recipes(merge_table_of_tables({
     ["angels-cobalt-ore"] = not special_vanilla and { 0, 0, 0, 1 },
   }),
   -- FERROUS
-  ore_enabled("ferrous")
-      and create_sorting_recipes("ferrous", "angels-ore8%s", {
-        ["!!"] = not special_vanilla and { true, true, true, true },
-        ["iron-ore"] = not special_vanilla and { 2, 3, 4, 4 },
-        ["angels-manganese-ore"] = not special_vanilla and { 2, 2, 2, 2 },
-        ["angels-nickel-ore"] = not special_vanilla and { 0, 1, 1, 1 },
-        ["angels-cobalt-ore"] = not special_vanilla and { 0, 0, 1, 1 },
-        ["angels-chrome-ore"] = not special_vanilla and { 0, 0, 0, 1 },
-      }, true)
-    or nil,
+  ore_enabled("ferrous") and create_sorting_recipes("ferrous", "angels-ore8%s", {
+    ["!!"] = not special_vanilla and { true, true, true, true },
+    ["iron-ore"] = not special_vanilla and { 2, 3, 4, 4 },
+    ["angels-manganese-ore"] = not special_vanilla and { 2, 2, 2, 2 },
+    ["angels-nickel-ore"] = not special_vanilla and { 0, 1, 1, 1 },
+    ["angels-cobalt-ore"] = not special_vanilla and { 0, 0, 1, 1 },
+    ["angels-chrome-ore"] = not special_vanilla and { 0, 0, 0, 1 },
+  }, true) or nil,
   -- CUPRIC
-  ore_enabled("cupric")
-      and create_sorting_recipes("cupric", "angels-ore9%s", {
-        ["!!"] = not special_vanilla and { true, true, true, true },
-        ["copper-ore"] = not special_vanilla and { 2, 3, 4, 4 },
-        ["angels-tin-ore"] = not special_vanilla and { 2, 2, 2, 2 },
-        ["angels-silver-ore"] = not special_vanilla and { 0, 1, 1, 1 },
-        ["angels-gold-ore"] = not special_vanilla and { 0, 0, 1, 1 },
-        ["angels-platinum-ore"] = not special_vanilla and { 0, 0, 0, 1 },
-        ["angels-quartz"] = not (special_vanilla or ore_enabled("angels-platinum-ore")) and { 0, 0, 0, 1 },
-      }, true)
-    or nil,
+  ore_enabled("cupric") and create_sorting_recipes("cupric", "angels-ore9%s", {
+    ["!!"] = not special_vanilla and { true, true, true, true },
+    ["copper-ore"] = not special_vanilla and { 2, 3, 4, 4 },
+    ["angels-tin-ore"] = not special_vanilla and { 2, 2, 2, 2 },
+    ["angels-silver-ore"] = not special_vanilla and { 0, 1, 1, 1 },
+    ["angels-gold-ore"] = not special_vanilla and { 0, 0, 1, 1 },
+    ["angels-platinum-ore"] = not special_vanilla and { 0, 0, 0, 1 },
+    ["angels-quartz"] = not (special_vanilla or ore_enabled("angels-platinum-ore")) and { 0, 0, 0, 1 },
+  }, true) or nil,
 }))
 
 if special_vanilla then

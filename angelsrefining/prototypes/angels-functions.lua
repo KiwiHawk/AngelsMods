@@ -824,16 +824,14 @@ function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, ti
   end
 
   return clean_table({
-    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask)
-        and {
-          -- base layer required for background shadow
-          icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
-          icon_size = 256,
-          scale = 32 / 256,
-          tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
-          shift = (molecule_icon and not disable_shift) and { 3.5, 0 } or nil,
-        }
-      or nil,
+    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask) and {
+      -- base layer required for background shadow
+      icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
+      icon_size = 256,
+      scale = 32 / 256,
+      tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
+      shift = (molecule_icon and not disable_shift) and { 3.5, 0 } or nil,
+    } or nil,
     tints.bot and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
       icon_size = 256,
@@ -914,15 +912,13 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
   end
 
   local recipe_icons = {
-    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask)
-        and {
-          -- base layer required for background shadow
-          icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
-          icon_size = 256,
-          scale = 32 / 256,
-          tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
-        }
-      or nil,
+    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask) and {
+      -- base layer required for background shadow
+      icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
+      icon_size = 256,
+      scale = 32 / 256,
+      tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
+    } or nil,
     tints.bot and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
       icon_size = 256,
