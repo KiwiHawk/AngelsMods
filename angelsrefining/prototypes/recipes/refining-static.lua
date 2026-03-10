@@ -1384,6 +1384,7 @@ data:extend({
     energy_required = 3,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-crystal-dust", amount = 10 },
       { type = "fluid", name = "sulfuric-acid", amount = 15 },
