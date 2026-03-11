@@ -201,7 +201,7 @@ data:extend({
     order = "a[tree]-b[dead-tree]",
     impact_category = "wood",
     autoplace = {
-      order = "yab",
+      order = "zab",
       probability_expression = 0.000025,
       tile_restriction = { "dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7" },
     },
