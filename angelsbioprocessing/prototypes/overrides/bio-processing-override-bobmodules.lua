@@ -315,9 +315,11 @@ if mods["bobmodules"] then
   OV.add_prereq("effect-transmission", "angels-bio-processing-crystal-splinter-2")
   OV.add_prereq("effect-transmission-2", "angels-bio-processing-crystal-shard-2")
   OV.add_prereq("effect-transmission-3", "angels-bio-processing-crystal-full")
-
 elseif mods["bobelectronics"] or mods["bobplates"] then
   OV.patch_recipes({
-    { name = "angels-bio-yield-module-3", ingredients = { { type = "item", name = "bob-advanced-processing-unit", amount = "advanced-circuit" } } },
+    {
+      name = "angels-bio-yield-module-3",
+      ingredients = { { type = "item", name = "bob-advanced-processing-unit", amount = "advanced-circuit" } },
+    },
   })
 end
