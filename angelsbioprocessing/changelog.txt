@@ -6,6 +6,7 @@ Date: ???
     - Fixed crystals not being added to Quality module recipes (1271)
   Changes:
     - Adjusted which tiles each type of tree and garden can swawn on (1265)
+    - Changed Agriculture module 3 ingredients (with Bob's MCI / Bob's Electronics but without Bob's Modules) (1273)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 18.01.26
