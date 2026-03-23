@@ -64,7 +64,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-solid-chromate", amount = 12 },
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 40 },
+      { type = "fluid", name = "sulfuric-acid", amount = 40 },
     },
     results = {
       { type = "item", name = "angels-solid-dichromate", amount = 12 },
@@ -74,7 +74,7 @@ data:extend({
     main_product = "angels-solid-dichromate",
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-molten-chrome",
-      "angels-liquid-sulfuric-acid",
+      "sulfuric-acid",
       AF.fluid_color("NaSO4"),
       "angels-water-purified",
     }),

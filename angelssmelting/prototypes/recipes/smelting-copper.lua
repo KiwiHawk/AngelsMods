@@ -109,7 +109,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-anode-copper", amount = 12 },
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 30 },
+      { type = "fluid", name = "sulfuric-acid", amount = 30 },
     },
     results = {
       { type = "item", name = "angels-ingot-copper", amount = 12 },

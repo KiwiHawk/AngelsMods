@@ -124,7 +124,7 @@ data:extend({
   {
     type = "recipe",
     name = "angels-liquid-sulfuric-acid",
-    localised_name = { "fluid-name.angels-liquid-sulfuric-acid" },
+    localised_name = { "fluid-name.sulfuric-acid" },
     category = "chemistry",
     subgroup = "angels-petrochem-sulfur",
     energy_required = 2,
@@ -135,14 +135,14 @@ data:extend({
       { type = "fluid", name = "angels-water-purified", amount = 40 },
     },
     results = {
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 60 },
+      { type = "fluid", name = "sulfuric-acid", amount = 60 },
     },
     always_show_products = true,
     icons = AF.create_liquid_recipe_icon({
       { "__angelspetrochemgraphics__/graphics/icons/molecules/sulfuric-acid.png", 72 },
     }, "SHO"),
     crafting_machine_tint = AF.get_recipe_tints({
-      "angels-liquid-sulfuric-acid",
+      "sulfuric-acid",
       "angels-gas-sulfur-dioxide",
       "angels-water-purified",
     }),

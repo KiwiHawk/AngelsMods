@@ -499,7 +499,7 @@ data:extend({
     allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-glycerol", amount = 50 },
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 25 },
+      { type = "fluid", name = "sulfuric-acid", amount = 25 },
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 25 },
       { type = "item", name = "coal", amount = 1 },
     },
@@ -511,7 +511,7 @@ data:extend({
     crafting_machine_tint = AF.get_recipe_tints({
       { r = 1, g = 0, b = 0 },
       "angels-liquid-glycerol",
-      "angels-liquid-sulfuric-acid",
+      "sulfuric-acid",
       "angels-liquid-nitric-acid",
     }),
     order = "a[explosives]-b",
@@ -528,7 +528,7 @@ data:extend({
     allow_productivity = true,
     ingredients = {
       { type = "fluid", name = "angels-liquid-toluene", amount = 50 },
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 25 },
+      { type = "fluid", name = "sulfuric-acid", amount = 25 },
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 25 },
     },
     results = {
@@ -541,7 +541,7 @@ data:extend({
     crafting_machine_tint = AF.get_recipe_tints({
       { r = 1, g = 0, b = 0 },
       "angels-liquid-toluene",
-      "angels-liquid-sulfuric-acid",
+      "sulfuric-acid",
       "angels-liquid-nitric-acid",
     }),
     order = "a[explosives]-c",

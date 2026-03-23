@@ -55,7 +55,6 @@ OV.global_replace_icon(
   { "__angelspetrochemgraphics__/graphics/icons/liquid-sulfuric-acid.png", icon_size = 64 }
 )
 move_item("sulfur", "angels-petrochem-sulfur", "a[sulfer]-a[sulfer]")
-angelsmods.functions.hide("sulfuric-acid")
 if angelsmods.trigger.early_sulfuric_acid == true then
   OV.remove_prereq("battery", "sulfur-processing")
   OV.add_prereq("battery", "angels-sulfur-processing-2")

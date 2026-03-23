@@ -269,7 +269,7 @@ data:extend({
     hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-nitrate", amount = 5 },
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 40 },
+      { type = "fluid", name = "sulfuric-acid", amount = 40 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-nitric-acid", amount = 40 },
@@ -286,7 +286,7 @@ data:extend({
     ),
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-nitric-acid",
-      "angels-liquid-sulfuric-acid",
+      "sulfuric-acid",
       AF.fluid_color("NaNO3"),
     }),
     order = "h[nitric-acid]-b[sulfuric-acid]",

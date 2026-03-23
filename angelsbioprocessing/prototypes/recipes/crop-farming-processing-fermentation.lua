@@ -149,7 +149,7 @@ data:extend({
     energy_required = 4,
     ingredients = {
       { type = "fluid", name = "angels-gas-ethanol", amount = 50 },
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 50 },
+      { type = "fluid", name = "sulfuric-acid", amount = 50 },
     },
     results = {
       { type = "fluid", name = "angels-gas-ethylene", amount = 50 },
@@ -162,7 +162,7 @@ data:extend({
     }, "CHH"),
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-gas-ethylene",
-      "angels-liquid-sulfuric-acid",
+      "sulfuric-acid",
       "angels-water-yellow-waste",
       "angels-gas-ethanol",
     }),
@@ -252,7 +252,7 @@ data:extend({
       { type = "item", name = "angels-cellulose-fiber", amount = 10 },
       { type = "fluid", name = "angels-liquid-acetic-acid", amount = 40 },
       { type = "fluid", name = "angels-liquid-acetic-anhydride", amount = 40 },
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 20 },
+      { type = "fluid", name = "sulfuric-acid", amount = 20 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-cellulose-acetate-mixture", amount = 100 },
@@ -263,7 +263,7 @@ data:extend({
       "angels-liquid-cellulose-acetate-mixture",
       "angels-liquid-acetic-anhydride",
       "angels-liquid-acetic-acid",
-      "angels-liquid-sulfuric-acid",
+      "sulfuric-acid",
     }),
     order = "c",
   },
