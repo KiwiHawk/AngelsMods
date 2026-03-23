@@ -9,7 +9,7 @@
   "description": "Adds infinite ores for the base game, Bob's mods, Yuoki Industries and the base ores for Angel's Refining. Has config options to change the yield for all infinite resources including oil and gas.",
   "dependencies": [
     "base >= 2.0.0",
-    "? angelsrefining >= 2.0.0",
+    "? angelsrefining >= 2.0.3",
     "(?) rso-mod >= 7.0.0",
     "? bobores >= 2.0.0",
     "? bobplates >= 2.0.0",
