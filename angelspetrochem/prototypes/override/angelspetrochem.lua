@@ -9,7 +9,7 @@ if mods["bobplates"] and data.raw["fluid"]["bob-deuterium"] then
   OV.converter_fluid("bob-heavy-water", "angels-liquid-water-heavy")
   OV.converter_fluid("bob-deuterium", "angels-gas-deuterium")
 
-  OV.disable_recipe({ "bob-heavy-water", "bob-heavy-water-electrolysis" })
+  OV.disable_recipe({ "bob-heavy-water", "bob-deuterium" })
 
   OV.global_replace_technology("bob-heavy-water-processing", "angels-water-chemistry-1")
   OV.disable_technology("bob-heavy-water-processing")
