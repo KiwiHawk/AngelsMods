@@ -324,19 +324,17 @@ local function process_tech(technology_prototype)
     processed_techs[technology_prototype.name] = levels
     return unit_test_functions.test_successful
   end
-  
+
   -- Calculate ingredient level
   levels.ingredient_level = calculate_tech_ingredient_level(technology_prototype)
   if levels.ingredient_level < 0 then
-    unit_test_functions.print_msg(
-      string.format("Failed to determine technology ingredient level for %q.", tech_name)
-    )
+    unit_test_functions.print_msg(string.format("Failed to determine technology ingredient level for %q.", tech_name))
     return unit_test_functions.test_invalid
   end
 
   levels.trigger_tech = technology_prototype.research_trigger and true or false
 
-  -- Calculate prereq level 
+  -- Calculate prereq level
   for prereq_name, prereq_tech_prototype in pairs(technology_prototype.prerequisites) do
     if not processed_techs[prereq_name] then
       local result = process_tech(prereq_tech_prototype)
@@ -346,12 +344,15 @@ local function process_tech(technology_prototype)
     end
 
     levels.prerequisite_level = math.max(levels.prerequisite_level, processed_techs[prereq_name].tech_level)
-    levels.prerequisite_unlock_level = math.max(levels.prerequisite_unlock_level, math.max(levels.prerequisite_level, processed_techs[prereq_name].unlock_level))
+    levels.prerequisite_unlock_level = math.max(
+      levels.prerequisite_unlock_level,
+      math.max(levels.prerequisite_level, processed_techs[prereq_name].unlock_level)
+    )
   end
 
   -- Calculate unlock level
   levels.unlock_level = calculate_tech_unlock_level(technology_prototype)
-  
+
   -- Calculate technology level
   levels.tech_level = math.max(levels.prerequisite_level, levels.ingredient_level)
 
