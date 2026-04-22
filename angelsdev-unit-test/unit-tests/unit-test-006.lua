@@ -328,7 +328,7 @@ local function process_tech(technology_prototype)
   -- Calculate ingredient level
   levels.ingredient_level = calculate_tech_ingredient_level(technology_prototype)
   if levels.ingredient_level < 0 then
-    unit_test_functions.print_msg(string.format("Failed to determine technology ingredient level for %q.", tech_name))
+    unit_test_functions.print_msg(string.format("Failed to determine technology ingredient level for %q.", technology_prototype.name))
     return unit_test_functions.test_invalid
   end
 
