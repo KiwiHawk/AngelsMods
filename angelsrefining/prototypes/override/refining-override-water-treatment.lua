@@ -244,6 +244,7 @@ if mods["bobplates"] then
   OV.add_unlock("bob-lithium-processing", "angels-solid-lithium")
   if angelsmods.bioprocessing then
     OV.add_unlock("bob-lithium-processing", "angels-algae-brown-burning")
+    OV.add_prereq("bob-lithium-processing", "angels-bio-processing-green")
   end
   OV.set_science_pack("bob-lithium-processing", "chemical-science-pack", 1)
 
