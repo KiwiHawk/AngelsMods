@@ -134,6 +134,7 @@ local function calculate_science_pack_level()
   end
 
   if script.active_mods["ScienceCostTweakerM"] then
+    science_pack_level["sct-science-pack-0"] = 10
     science_pack_level["sct-bio-science-pack"] = science_pack_level["angels-token-bio"]
   end
 
@@ -373,7 +374,10 @@ local unit_test_006 = function()
   local effect_level_from_start = calculate_unlock_level_from_start() -- the technology level unlocked at the start of a new game
   for tech_name, technology_prototype in pairs(prototypes.technology) do
     if not processed_techs[tech_name] then
-      process_tech(technology_prototype)
+      unit_test_result = process_tech(technology_prototype)
+      if unit_test_result ~= unit_test_functions.test_successful then
+        break
+      end
     end
   end
 

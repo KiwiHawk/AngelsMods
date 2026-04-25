@@ -92,7 +92,10 @@ local unit_test_014 = function()
   for item_name, item in pairs(prototypes.get_item_filtered(filters)) do
     local recipe = prototypes.recipe[item.name .. "-recycling"]
     if recipe and recipe.category == "recycling" then
-      unit_test_result = check_recipe_products(item_name, recipe)
+      local result = check_recipe_products(item_name, recipe)
+      if result ~= unit_test_functions.test_successful then
+        unit_test_result = result
+      end
     else
       unit_test_functions.print_msg(string.format("Item %q has no recycling recipe.", item_name))
       unit_test_result = unit_test_functions.test_failed
