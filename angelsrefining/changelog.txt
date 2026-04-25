@@ -5,6 +5,7 @@ Date: ???
     - Fixed some catalyst sorting recipes showing the wrong name (1245)
     - Improved migration functions (1248)
     - Fixed error in angelsmods.functions.make_void when fluid icon has no scale set (1256)
+    - Fixed missing basic iron and copper ore smelting recipes in Special Vanilla mode (1283)
   Changes:
     - Allow recipe Crystal slurry from Crystal dust to be selected as a signal (1262)
     - Renamed Uranium mining tech to Advanced mining and removed it as a prerequisite for Uranium processing (1276)

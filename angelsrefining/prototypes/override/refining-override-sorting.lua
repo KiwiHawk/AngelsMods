@@ -494,8 +494,10 @@ if special_vanilla then
 else
   -- disable the nuggets and pebbles
   OV.disable_recipe({
+    "angels-iron-ore-smelting",
     "angels-iron-nugget-smelting",
     "angels-iron-pebbles-smelting",
+    "angels-copper-ore-smelting",
     "angels-copper-nugget-smelting",
     "angels-copper-pebbles-smelting",
     "angels-iron-pebbles",
