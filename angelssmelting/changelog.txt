@@ -5,6 +5,7 @@ Date: ???
     - Removed solder mixture. You may need to reset your molten solder induction furnace recipes, sorry! (1241)
   Bugfixes:
     - Fixed Bob's Module Boards Ingredients (1253)
+    - Fixed Used coolant being affected by productivity in Glass fiber 2 recipe (1281)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 18.01.26
