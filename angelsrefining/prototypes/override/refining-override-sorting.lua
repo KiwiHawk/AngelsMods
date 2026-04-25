@@ -250,6 +250,7 @@ local function create_basic_sorting_localisation(localised_base_name, sorting_ti
         else
           resource.localised_description = tier_localised_description
         end
+        resource.factoriopedia_description = ""
       end
       resource = data.raw.resource["infinite-" .. item_name]
       if resource then
