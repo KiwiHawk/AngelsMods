@@ -296,6 +296,7 @@ if not angelsmods.functions.make_resource then
           }
         end
         if input.sheet == 9 then
+          local sheet_id
           if settings.startup["angels-tryptophobia-friendly-stiratite"].value == true then
             sheet_id = 11
           else
@@ -303,7 +304,7 @@ if not angelsmods.functions.make_resource then
           end
           return {
             sheet = {
-              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-19.png",
+              filename = "__angelsinfiniteores__/graphics/entity/ores/ore-" ..sheet_id .. ".png",
               priority = "extra-high",
               tint = input.tint,
               width = 128,
@@ -416,7 +417,7 @@ if not angelsmods.functions.make_resource then
     if input.glow == true then
       if input.type == "item" then
         if input.get and data.raw.resource[input.get] then
-          stages_input = data.raw.resource[input.get].stages
+          local stages_input = data.raw.resource[input.get].stages
           input.frame_count = stages_input.sheet.frame_count
           input.variation_count = stages_input.sheet.variation_count
         else
@@ -694,7 +695,7 @@ if not angelsmods.functions.make_resource then
   --CREATE RESOURCE FROM STORE
   function angelsmods.functions.make_resource()
     for r, input in pairs(angelsmods.functions.store.make) do
-      ret_table = {
+      local ret_table = {
         type = "resource",
         flags = { "placeable-neutral" },
         tree_removal_probability = 0.8,
@@ -702,7 +703,7 @@ if not angelsmods.functions.make_resource then
         infinite_depletion_amount = 10,
         resource_patch_search_radius = 12,
       }
-      autoplace_ret_table = {
+      local autoplace_ret_table = {
         name = input.name,
         order = input.order,
         base_density = input.autoplace.base_density,
@@ -729,7 +730,11 @@ if not angelsmods.functions.make_resource then
         end
         --Create Particle if resource yields items
         if input.type == "item" then
-          if input.get and data.raw["optimized-particle"][input.get .. "-particle"] then
+          if
+            input.get
+            and data.raw["optimized-particle"]
+            and data.raw["optimized-particle"][input.get .. "-particle"]
+          then
             input.particle = input.get .. "-particle"
           else
             make_particle(input)
@@ -756,6 +761,7 @@ if not angelsmods.functions.make_resource then
           input.hardness = 0.9
         end]]
         --Set stages count according to resource type
+        local stages_count
         if input.type == "item" then
           if input.infinite == true then
             stages_count = { 1 }

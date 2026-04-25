@@ -815,7 +815,7 @@ function angelsmods.functions.make_resource()
           if data.raw.resource[input.get].icon_size then
             input.icon_size = data.raw.resource[input.get].icon_size
           else
-            input.icon_size = 32
+            input.icon_size = 64
           end
           if data.raw.resource[input.get].icon then
             ret_table.icon = data.raw.resource[input.get].icon
@@ -825,12 +825,12 @@ function angelsmods.functions.make_resource()
           end
         end
       elseif not input.icon_size then
-        input.icon_size = 32
+        input.icon_size = 64
       end
 
       if input.icon then
         if not input.icon_size then
-          input.icon_size = 32
+          input.icon_size = 64
         end
         ret_table.icons = { { icon = input.icon, icon_size = input.icon_size } }
       end

@@ -41,6 +41,7 @@ if angelsmods.ores.disable_ore_override or not angelsmods.refining then
         output_max = 1,
         output_probability = angelsmods.ores.loweryield,
         icon = data.raw.resource[ore].icon,
+        icon_size = data.raw.resource[ore].icon_size,
         autoplace = {
           starting_area = false,
           --resource_index = 1,
