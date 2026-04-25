@@ -7,6 +7,7 @@ Date: ???
     - Fixed mod compatibility issue where research trigger fluid was not being replaced by Angel's fluid (1275)
   Changes:
     - Angel's mods will now use the base game fluid "sulfuric-acid" rather than replacing this with our own version. This should help mod compatibility. (1275)
+    - Removed Carbon 2 recipe (1264)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 15.01.26
