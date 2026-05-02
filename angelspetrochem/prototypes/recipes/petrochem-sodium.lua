@@ -41,7 +41,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 5 }, --was 5
       { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "angels-water-purified", amount = 50} -- was 0
+      { type = "fluid", name = "angels-water-purified", amount = 50 }, -- was 0
     },
     results = {
       { type = "item", name = "angels-solid-sodium", amount = 5 },
@@ -240,7 +240,7 @@ data:extend({
     ingredients = {
       { type = "item", name = "angels-solid-sodium-carbonate", amount = 5 },
       { type = "item", name = "angels-electrode", amount = 1, ignored_by_stats = 1 },
-      { type = "fluid", name = "angels-water-purified", amount = 50 }, 
+      { type = "fluid", name = "angels-water-purified", amount = 50 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-aqueous-sodium-hydroxide", amount = 75 }, --was 50
