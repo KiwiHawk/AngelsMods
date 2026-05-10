@@ -1860,7 +1860,7 @@ function angelsmods.functions.get_trigger_names()
     ["bob-silver-ore"] = "silver",
     ["bob-thorium-ore"] = "thorium",
     ["bob-tin-ore"] = "tin",
-    ["bob-tungsten-ore"] = "tungsten",
+    ["tungsten-ore"] = "tungsten",
     ["bob-zinc-ore"] = "zinc",
   }
 end
@@ -1898,7 +1898,7 @@ function angelsmods.functions.get_ore_name(ore_name)
     ["angels-silver-ore"] = mods["bobores"] and "bob-silver-ore" or "angels-silver-ore",
     ["angels-thorium-ore"] = mods["bobores"] and "bob-thorium-ore" or "angels-thorium-ore",
     ["angels-tin-ore"] = mods["bobores"] and "bob-tin-ore" or "angels-tin-ore",
-    ["angels-tungsten-ore"] = mods["bobores"] and "bob-tungsten-ore" or "angels-tungsten-ore",
+    ["angels-tungsten-ore"] = mods["bobores"] and "tungsten-ore" or "angels-tungsten-ore",
     ["uranium-ore"] = "uranium-ore",
     ["angels-zinc-ore"] = mods["bobores"] and "bob-zinc-ore" or "angels-zinc-ore",
   }

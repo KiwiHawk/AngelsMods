@@ -76,7 +76,7 @@ angelsmods.functions.RB.set_fallback("item", "t4-plate", {
 })
 angelsmods.functions.RB.set_fallback("item", "t5-plate", {
   { "block-construction-5" },
-  { "bob-tungsten-plate", 4 },
+  { "tungsten-plate", 4 },
   {
     "angels-plate-tungsten",
     4,
@@ -89,7 +89,7 @@ angelsmods.functions.RB.set_fallback("item", "t5-plate", {
 angelsmods.functions.RB.set_fallback("item", "t6-plate", {
   { "block-construction-5" },
   {
-    "bob-tungsten-carbide",
+    "tungsten-carbide",
     4,
     function(t, n)
       return mods["angelssmelting"] and angelsmods.trigger.smelting_products["tungsten"].plate or false

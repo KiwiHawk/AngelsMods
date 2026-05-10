@@ -24,7 +24,7 @@ if not angelsmods.refining.disable_ore_override then
     angelsmods.functions.remove_resource("bob-silver-ore")
     angelsmods.functions.remove_resource("bob-sulfur")
     angelsmods.functions.remove_resource("bob-tin-ore")
-    angelsmods.functions.remove_resource("bob-tungsten-ore")
+    angelsmods.functions.remove_resource("tungsten-ore")
     angelsmods.functions.remove_resource("bob-zinc-ore")
     angelsmods.functions.remove_resource("bob-lithia-water")
     angelsmods.functions.remove_resource("bob-ground-water")
