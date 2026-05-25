@@ -21,7 +21,7 @@ if mods["bobplates"] then
       "angels-bio-refugium-puffer-1",
       "angels-bio-swamp-farm",
       "angels-bio-temperate-farm",
-    }, "bob-zinc-processing")
+    }, "bob-brass-processing")
 
     -- Titanium pipe
     OV.add_prereq({

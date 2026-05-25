@@ -69,7 +69,7 @@ if mods["bobplates"] then
   --clean-up pre-requisites
   OV.remove_prereq("steel-processing", "bob-electrolysis-1")
   OV.remove_prereq("bob-lithium-processing", "bob-electrolysis-1")
-  OV.remove_prereq("bob-zinc-processing", "bob-electrolysis-1")
+  OV.remove_prereq("bob-brass-processing", "bob-electrolysis-1")
   OV.remove_prereq("bob-lead-processing", "bob-electrolysis-1")
   OV.remove_prereq("bob-cobalt-processing", "bob-electrolysis-1")
 

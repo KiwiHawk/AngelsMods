@@ -73,6 +73,7 @@ if angelsmods.addons.storage.silos then
   if mods["boblogistics"] then
   else
     table.insert(data.raw.technology["angels-logistic-silos"].unit.ingredients, { "utility-science-pack", 1 })
+    OV.add_prereq("angels-logistic-silos", "utility-science-pack")
   end
 
   --TECHNOLOGY

@@ -23,8 +23,6 @@ if mods["bobplates"] then
     OV.remove_prereq("bob-nitinol-processing", "bob-alloy-processing")
     OV.remove_prereq("steel-processing", "bob-alloy-processing")
     OV.remove_prereq("bob-tungsten-processing", "bob-alloy-processing")
-    OV.remove_prereq("bob-tungsten-alloy-processing", "bob-alloy-processing")
-    OV.remove_prereq("bob-zinc-processing", "bob-alloy-processing")
     if mods["bobpower"] then
       OV.remove_prereq("bob-fluid-generator-1", "bob-alloy-processing")
       OV.add_prereq("bob-fluid-generator-1", "angels-bronze-smelting-1")

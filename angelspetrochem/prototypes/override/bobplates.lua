@@ -240,7 +240,7 @@ if mods["bobplates"] or mods["bobelectronics"] then
       OV.add_prereq("bob-robots-2", "angels-rubbers")
     end
     if mods["bobmodules"] then
-      OV.add_prereq("effect-transmission-3", "angels-rubbers")
+      OV.add_prereq("effect-transmission-2", "angels-rubbers")
     end
     if mods["bobpower"] then
       OV.add_prereq("bob-electric-pole-3", "angels-rubbers")
@@ -296,8 +296,8 @@ if mods["bobplates"] then
     OV.add_prereq("angels-thorium-power", "bob-tungsten-processing")
   end
 
-  OV.add_prereq("angels-advanced-chemistry-2", "bob-zinc-processing")
-  OV.add_prereq("angels-nitrogen-processing-4", "bob-tungsten-alloy-processing")
+  OV.add_prereq("angels-advanced-chemistry-2", "bob-brass-processing")
+  OV.add_prereq("angels-nitrogen-processing-4", "bob-tungsten-processing")
   OV.add_prereq("angels-advanced-chemistry-5", "bob-advanced-processing-unit")
 elseif mods["bobelectronics"] then
   OV.add_prereq("angels-advanced-chemistry-5", "bob-advanced-processing-unit")

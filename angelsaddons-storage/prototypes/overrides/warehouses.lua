@@ -1,3 +1,5 @@
+local OV = angelsmods.functions.OV
+
 if angelsmods.addons.storage.warehouses then
   if angelsmods.addons.storage.icon_scaling then
     data.raw["container"]["angels-warehouse"].icon_draw_specification = { scale = 3.5, scale_for_many = 3.5 }
@@ -18,6 +20,7 @@ if angelsmods.addons.storage.warehouses then
   if mods["boblogistics"] then
   else
     table.insert(data.raw.technology["angels-logistic-warehouses"].unit.ingredients, { "utility-science-pack", 1 })
+    OV.add_prereq("angels-logistic-warehouses", "utility-science-pack")
   end
 
   --TECHNOLOGY

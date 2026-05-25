@@ -62,11 +62,11 @@ if mods["bobplates"] then
   -- Brass
   OV.add_prereq({
     "angels-metallurgy-3",
-  }, "bob-zinc-processing")
+  }, "bob-brass-processing")
   if mods["bobassembly"] then
     OV.add_prereq({
       "automation-3",
-    }, "bob-zinc-processing")
+    }, "bob-brass-processing")
   end
 
   -- Titanium
