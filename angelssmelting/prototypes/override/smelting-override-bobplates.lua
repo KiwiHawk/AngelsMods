@@ -26,7 +26,7 @@ if mods["bobplates"] then
         ingredients = {
           { type = "item", name = "bob-brass-alloy", amount = "bob-cobalt-steel-alloy" },
         },
-      }
+      },
     })
   end
 
@@ -45,7 +45,7 @@ if mods["bobplates"] then
           { type = "item", name = "bob-cobalt-steel-alloy", amount = "bob-brass-alloy" },
           { type = "item", name = "bob-titanium-gear-wheel", amount = "bob-brass-gear-wheel" },
         },
-      }
+      },
     })
   end
 
@@ -58,7 +58,7 @@ if mods["bobplates"] then
         ingredients = {
           { type = "item", name = "bob-brass-bearing", amount = "bob-steel-bearing" },
         },
-      }
+      },
     })
   end
 

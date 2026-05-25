@@ -10,22 +10,20 @@ if mods["boblogistics"] and mods["bobplates"] then
       {
         name = recipe_name,
         ingredients = {
-          { type = "item", name = "bob-titanium-pipe", amount = "bob-brass-pipe" }
+          { type = "item", name = "bob-titanium-pipe", amount = "bob-brass-pipe" },
         },
-      }
+      },
     })
   end
 
   OV.add_prereq({
-      "bob-boiler-3",
-      "bob-burner-reactor-2",
-      "bob-fluid-generator-2",
-      "bob-fluid-handling-2",
-      "bob-oil-boiler-2",
-      "bob-steam-engine-3",
-    },
-    "bob-brass-processing"
-  )
+    "bob-boiler-3",
+    "bob-burner-reactor-2",
+    "bob-fluid-generator-2",
+    "bob-fluid-handling-2",
+    "bob-oil-boiler-2",
+    "bob-steam-engine-3",
+  }, "bob-brass-processing")
   bobmods.logistics.set_pipe_distance("bob-brass-pipe-to-ground", 3)
   data.raw["pipe"]["bob-brass-pipe"].max_health = 200
   data.raw["pipe-to-ground"]["bob-brass-pipe-to-ground"].max_health = 250
