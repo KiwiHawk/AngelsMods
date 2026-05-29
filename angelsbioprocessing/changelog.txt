@@ -5,9 +5,10 @@ Date: ???
     - Fixed Agriculture module recipe speed (with Bob's Modules mod) (1255)
     - Fixed crystals not being added to Quality module recipes (1271)
   Changes:
+    - Allowed Crystal powder recipes to be selected as signals (1262)
+    - Moved Sodium carbonate from Brown alge recipe later in the tech tree (1264)
     - Adjusted which tiles each type of tree and garden can swawn on (1265)
     - Changed Agriculture module 3 ingredients (with Bob's MCI / Bob's Electronics but without Bob's Modules) (1273)
-    - Moved Sodium carbonate from Brown alge recipe later in the tech tree (1264)
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 18.01.26
