@@ -546,7 +546,7 @@ ov_functions.set_research_difficulty = function(technology, unit_time, unit_amou
         log("technology " .. technology .. " does not have an unlock condition")
       end
     end
-    if trigger == "unit" or nil then
+    if trigger == nil or trigger == "unit" then
       modify_table.technologies[technology].difficulty = tab_form["unit"]
     else
       modify_table.technologies[technology].difficulty = tab_form[trigger]
@@ -765,8 +765,10 @@ local function adjust_recipe(recipe) -- check a recipe for basic adjustments bas
           end
         elseif recipe.additional_categories then
           for i, category in pairs(recipe.additional_categories) do
-            table.remove(recipe.additional_categories, i)
-            break
+            if category == category_name then
+              table.remove(recipe.additional_categories, i)
+              break
+            end
           end
         end
       end
@@ -840,7 +842,15 @@ local function adjust_technology(tech, tech_name) -- check a tech for basic adju
     for pk, prereq in pairs(tech.prerequisites) do
       local new = substitution_table.technologies[prereq]
       if new then
-        tech.prerequisites[pk] = new
+        if dup_table[new] then
+          -- new prerequisite already exists; remove this entry instead of duplicating
+          to_remove[pk] = true
+        else
+          tech.prerequisites[pk] = new
+          dup_table[new] = true
+        end
+      else
+        dup_table[prereq] = true
       end
       if modifications and modifications[prereq] == false then
         to_remove[pk] = true
@@ -850,8 +860,6 @@ local function adjust_technology(tech, tech_name) -- check a tech for basic adju
     for pk, prereq in pairs(tech.prerequisites) do
       if to_remove[pk] then
         table.insert(actual_remove, pk)
-      else
-        dup_table[tech.prerequisites[pk]] = true
       end
     end
     for i = #actual_remove, 1, -1 do
@@ -871,7 +879,7 @@ local function adjust_technology(tech, tech_name) -- check a tech for basic adju
   local overrides = override_table.technologies[tech_name]
   if overrides then
     if type(overrides) == "string" then
-      tech[overrides] = not tech[overrides] or true
+      tech[overrides] = not tech[overrides]
     else
       override_subtable(tech, overrides)
     end
