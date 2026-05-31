@@ -87,6 +87,18 @@ if angelsmods.trigger.smelting_products["silver"].plate then
     angelsmods.functions.hide("angels-plate-silver")
     OV.copy_item_properties("angels-plate-silver", "bob-silver-plate")
     OV.hide_recipe({ "bob-silver-plate" })
+    if mods["bobpower"] then
+      OV.add_prereq("bob-electric-pole-3", "angels-silver-smelting-1")
+      OV.add_prereq("bob-electric-substation-3", "angels-silver-smelting-1")
+      OV.add_prereq("bob-heat-pipe-3", "angels-silver-smelting-1")
+      OV.add_prereq("bob-solar-energy-2", "angels-silver-smelting-1")
+    end
+    if mods["bobequipment"] then
+      OV.add_prereq("bob-solar-panel-equipment-2", "angels-silver-smelting-1")
+    end
+    if mods["bobvehicleequipment"] then
+      OV.add_prereq("bob-vehicle-solar-panel-equipment-2", "angels-silver-smelting-1")
+    end
   end
 else
   angelsmods.functions.hide("angels-plate-silver")

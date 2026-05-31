@@ -104,6 +104,16 @@ if mods["bobplates"] then
       OV.set_science_pack("bob-acid-rocket", "production-science-pack", 1)
       OV.set_science_pack("bob-flame-rocket", "production-science-pack", 1)
       OV.set_science_pack("bob-poison-rocket", "production-science-pack", 1)
+      OV.add_prereq({
+        "bob-ap-bullets",
+        "bob-shotgun-ap-shells",
+        "bob-piercing-rocket",
+        "bob-electric-rocket",
+        "bob-explosive-rocket",
+        "bob-acid-rocket",
+        "bob-flame-rocket",
+        "bob-poison-rocket",
+      }, "production-science-pack")
     end
   end
 end

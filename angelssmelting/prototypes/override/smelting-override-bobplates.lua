@@ -1,30 +1,80 @@
 local OV = angelsmods.functions.OV
 
 if mods["bobplates"] then
-  -- Swap Cobalt Steel and Brass
+  -- Swap Cobalt Steel for Invar
   for _, recipe_name in pairs({
     "artillery-turret",
     "artillery-wagon",
-    "bob-area-mining-drill-2",
+    "bob-armoured-cargo-wagon",
+    "bob-armoured-fluid-wagon",
+    "bob-armoured-locomotive",
+    "bob-cargo-wagon-2",
     "bob-exoskeleton-equipment-2",
+    "bob-fluid-wagon-2",
     "bob-gun-turret-3",
-    "bob-mining-drill-2",
-    "bob-pumpjack-1",
-    "bob-radar-3",
+    "bob-laser-turret-3",
+    "bob-locomotive-2",
+    "bob-plasma-turret-1",
     "bob-rifle",
+    "bob-roboport-door-2",
     "bob-robot-tool-combat-2",
     "bob-sniper-rifle",
     "bob-sniper-turret-2",
-    "centrifuge",
+    "bob-vehicle-big-turret-equipment-1",
     "combat-shotgun",
-    "steam-turbine",
+    "power-armor-mk2",
     "tank",
   }) do
     OV.patch_recipes({
       {
         name = recipe_name,
         ingredients = {
+          { type = "item", name = "bob-invar-alloy", amount = "bob-cobalt-steel-alloy" },
+        },
+      },
+    })
+  end
+
+  -- Swap Cobalt Steel for Brass
+  for _, recipe_name in pairs({
+    "beacon",
+    "bob-area-mining-drill-2",
+    "bob-mining-drill-2",
+    "bob-pumpjack-1",
+    "bob-radar-3",
+    "centrifuge",
+  }) do
+    OV.patch_recipes({
+      {
+        name = recipe_name,
+        ingredients = {
           { type = "item", name = "bob-brass-alloy", amount = "bob-cobalt-steel-alloy" },
+        },
+      },
+    })
+  end
+
+  -- Swap Invar for Cobalt Steel
+  for _, recipe_name in pairs({
+    "bob-artillery-wagon-2",
+    "bob-boiler-4",
+    "bob-electric-chemical-mixing-furnace",
+    "bob-electric-furnace-2",
+    "bob-fluid-generator-3",
+    "bob-heat-exchanger-3",
+    "bob-heat-pipe-3",
+    "bob-oil-boiler-3",
+    "bob-plasma-turret-2",
+    "bob-power-armor-mk3",
+    "bob-storage-tank-3",
+    "bob-storage-tank-all-corners-3",
+    "bob-vehicle-big-turret-equipment-2",
+  }) do
+    OV.patch_recipes({
+      {
+        name = recipe_name,
+        ingredients = {
+          { type = "item", name = "bob-cobalt-steel-alloy", amount = "bob-invar-alloy" },
         },
       },
     })
@@ -62,18 +112,57 @@ if mods["bobplates"] then
     })
   end
 
-  OV.add_prereq("bob-area-drills-2", "bob-brass-processing")
-  OV.add_prereq("bob-drills-3", "bob-brass-processing")
-  OV.add_prereq("bob-turrets-3", "bob-brass-processing")
+  OV.add_prereq({
+    "artillery",
+    "bob-armoured-fluid-wagon",
+    "bob-armoured-railway",
+    "bob-fluid-wagon-2",
+    "bob-laser-turrets-3",
+    "bob-plasma-turrets-1",
+    "bob-railway-2",
+    "bob-robo-modular-2",
+    "bob-sniper-turrets-2",
+    "bob-turrets-3",
+    "bob-vehicle-big-turret-equipment-1",
+    "bob-vehicle-roboport-equipment-2",
+    "distractor",
+    "personal-roboport-mk2-equipment",
+    "power-armor-mk2",
+    "tank",
+  }, "angels-invar-smelting-1")
 
-  OV.remove_prereq("bob-turrets-3", "bob-cobalt-processing")
+  OV.add_prereq({
+    "advanced-material-processing-3",
+    "bob-alien-blue-research",
+    "bob-artillery-wagon-2",
+    "bob-boiler-4",
+    "bob-centrifuge-2",
+    "bob-fluid-generator-3",
+    "bob-fluid-handling-3",
+    "bob-heat-exchanger-3",
+    "bob-heat-pipe-3",
+    "bob-multi-purpose-furnace-1",
+    "bob-oil-boiler-3",
+    "bob-plasma-turrets-2",
+    "bob-power-armor-3",
+    "bob-vehicle-big-turret-equipment-2",
+    "bob-walking-vehicle",
+  }, "angels-cobalt-steel-smelting-1")
 
-  angelsmods.functions.hide("bob-cobalt-steel-bearing-ball")
-  angelsmods.functions.hide("bob-cobalt-steel-bearing")
-  angelsmods.functions.hide("bob-cobalt-steel-gear-wheel")
-  OV.disable_recipe({ "bob-cobalt-steel-bearing-ball", "bob-cobalt-steel-bearing", "bob-cobalt-steel-gear-wheel" })
-  OV.global_replace_item("bob-cobalt-steel-gear-wheel", "bob-brass-gear-wheel")
-  OV.global_replace_item("bob-cobalt-steel-bearing", "bob-brass-bearing")
-  data.raw.recipe["bob-cobalt-steel-bearing-recycling"] = nil
-  data.raw.recipe["bob-cobalt-steel-gear-wheel-recycling"] = nil
+  OV.remove_prereq({
+    "bob-alien-blue-research",
+  }, "bob-cobalt-processing")
+
+  OV.remove_prereq({
+    "advanced-material-processing-3",
+    "bob-boiler-4",
+    "bob-electronics-machine-2",
+    "bob-fluid-generator-3",
+    "bob-fluid-handling-3",
+    "bob-heat-exchanger-3",
+    "bob-heat-pipe-3",
+    "bob-multi-purpose-furnace-1",
+    "bob-oil-boiler-3",
+    "bob-power-armor-3",
+  }, "bob-invar-processing")
 end

@@ -9,7 +9,7 @@ if mods["bobmodules"] then
     OV.add_prereq("modules", "angels-chlorine-processing-1")
   end
 
-  if mods["angelssmelting"] and angelsmods.trigger.smelting_products["silver"].wire then
+  if mods["angelssmelting"] then
     OV.add_prereq("modules", "angels-silver-smelting-1")
   elseif mods["bobplates"] then
     OV.add_prereq("modules", "bob-lead-processing")
