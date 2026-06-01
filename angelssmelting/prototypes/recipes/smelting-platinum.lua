@@ -109,7 +109,7 @@ data:extend({
     auto_recycle = false,
     ingredients = {
       { type = "item", name = "angels-processed-platinum", amount = 8 },
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 60 },
+      { type = "fluid", name = "sulfuric-acid", amount = 60 },
     },
     results = {
       { type = "item", name = "angels-ingot-platinum", amount = 24 },

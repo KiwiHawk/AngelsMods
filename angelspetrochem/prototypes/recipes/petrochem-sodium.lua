@@ -45,8 +45,8 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-sodium", amount = 5 },
       { type = "item", name = "angels-electrode-used", amount = 1, ignored_by_productivity = 1 },
-      { type = "fluid", name = "angels-water-purified", amount = 50 },
-      --{type = "fluid", name = "angels-gas-oxygen", amount = 50}
+      { type = "fluid", name = "steam", amount = 50 },
+      --{type = "fluid", name = "angels-gas-oxygen", amount = 50} --excluded for complexity reasons
     },
     main_product = "angels-solid-sodium",
     icons = angelsmods.functions.create_solid_recipe_icon({ "angels-solid-sodium-hydroxide" }, "angels-solid-sodium"),
@@ -209,7 +209,7 @@ data:extend({
     hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-sodium-hydroxide", amount = 4 },
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 80 },
+      { type = "fluid", name = "sulfuric-acid", amount = 80 },
     },
     results = {
       { type = "item", name = "angels-solid-sodium-sulfate", amount = 2 },
@@ -219,7 +219,7 @@ data:extend({
     icon_size = 32,
     crafting_machine_tint = AF.get_recipe_tints({
       AF.fluid_color("Na2SO4"),
-      "angels-liquid-sulfuric-acid",
+      "sulfuric-acid",
       AF.fluid_color("NaOH"),
     }),
     order = "d[sodium-hydroxide]",

@@ -824,16 +824,14 @@ function angelsmods.functions.create_viscous_liquid_fluid_icon(molecule_icon, ti
   end
 
   return clean_table({
-    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask)
-        and {
-          -- base layer required for background shadow
-          icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
-          icon_size = 256,
-          scale = 32 / 256,
-          tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
-          shift = (molecule_icon and not disable_shift) and { 3.5, 0 } or nil,
-        }
-      or nil,
+    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask) and {
+      -- base layer required for background shadow
+      icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
+      icon_size = 256,
+      scale = 32 / 256,
+      tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
+      shift = (molecule_icon and not disable_shift) and { 3.5, 0 } or nil,
+    } or nil,
     tints.bot and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
       icon_size = 256,
@@ -914,15 +912,13 @@ function angelsmods.functions.create_viscous_liquid_recipe_icon(bot_molecules_ic
   end
 
   local recipe_icons = {
-    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask)
-        and {
-          -- base layer required for background shadow
-          icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
-          icon_size = 256,
-          scale = 32 / 256,
-          tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
-        }
-      or nil,
+    (tints.bot or tints.bot_left or tints.bot_right or tints.bot_mask) and {
+      -- base layer required for background shadow
+      icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-base.png",
+      icon_size = 256,
+      scale = 32 / 256,
+      tint = { r = 0.25, g = 0.25, b = 0.25, a = 0.7 },
+    } or nil,
     tints.bot and {
       icon = "__angelsrefininggraphics__/graphics/icons/angels-liquid/liquid-viscous-item-bot.png",
       icon_size = 256,
@@ -1795,7 +1791,7 @@ function angelsmods.functions.make_void(fluid_name, void_category, void_amount) 
       table.insert(recipe.icons, {
         icon = iconLayer.icon,
         icon_size = iconLayer.icon_size or nil,
-        scale = (iconLayer.scale or recipe.icon_size / (iconLayer.icon_size or 32)) * 0.5,
+        scale = (iconLayer.scale or 32 / (iconLayer.icon_size or 64)) * 0.5,
         shift = {
           ((iconLayer.shift or {})[1] or (iconLayer.shift or {})["x"] or 0) * 0.5 - 8,
           ((iconLayer.shift or {})[2] or (iconLayer.shift or {})["y"] or 0) * 0.5 - 8,
@@ -1864,7 +1860,7 @@ function angelsmods.functions.get_trigger_names()
     ["bob-silver-ore"] = "silver",
     ["bob-thorium-ore"] = "thorium",
     ["bob-tin-ore"] = "tin",
-    ["bob-tungsten-ore"] = "tungsten",
+    ["tungsten-ore"] = "tungsten",
     ["bob-zinc-ore"] = "zinc",
   }
 end
@@ -1902,7 +1898,7 @@ function angelsmods.functions.get_ore_name(ore_name)
     ["angels-silver-ore"] = mods["bobores"] and "bob-silver-ore" or "angels-silver-ore",
     ["angels-thorium-ore"] = mods["bobores"] and "bob-thorium-ore" or "angels-thorium-ore",
     ["angels-tin-ore"] = mods["bobores"] and "bob-tin-ore" or "angels-tin-ore",
-    ["angels-tungsten-ore"] = mods["bobores"] and "bob-tungsten-ore" or "angels-tungsten-ore",
+    ["angels-tungsten-ore"] = mods["bobores"] and "tungsten-ore" or "angels-tungsten-ore",
     ["uranium-ore"] = "uranium-ore",
     ["angels-zinc-ore"] = mods["bobores"] and "bob-zinc-ore" or "angels-zinc-ore",
   }

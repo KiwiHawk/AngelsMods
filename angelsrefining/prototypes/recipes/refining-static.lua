@@ -1384,6 +1384,7 @@ data:extend({
     energy_required = 3,
     enabled = false,
     auto_recycle = false,
+    hide_from_signal_gui = false,
     ingredients = {
       { type = "item", name = "angels-crystal-dust", amount = 10 },
       { type = "fluid", name = "sulfuric-acid", amount = 15 },
@@ -1557,6 +1558,34 @@ data:extend({
   --IRON
   {
     type = "recipe",
+    name = "angels-iron-ore-smelting",
+    localised_name = { "item-name.iron-plate" },
+    category = "smelting",
+    subgroup = "raw-material",
+    energy_required = 3.2,
+    enabled = false,
+    auto_recycle = false,
+    ingredients = { { type = "item", name = "iron-ore", amount = 1 } },
+    results = {
+      { type = "item", name = "iron-plate", amount = 1 },
+    },
+    icons = {
+      {
+        icon = "__base__/graphics/icons/iron-plate.png",
+        icon_size = 64,
+        scale = 32 / 64,
+      },
+      {
+        icon = "__base__/graphics/icons/iron-ore.png",
+        icon_size = 64,
+        scale = 0.2,
+        shift = { -10, -10 },
+      },
+    },
+    order = "b[iron-ore]-b[ore]",
+  },
+  {
+    type = "recipe",
     name = "angels-iron-pebbles-smelting",
     localised_name = { "item-name.iron-plate" },
     category = "smelting",
@@ -1569,10 +1598,7 @@ data:extend({
       { type = "item", name = "iron-plate", amount = 2 },
     },
     icons = {
-      mods["angelssmelting"] and {
-        icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
-        icon_size = 32,
-      } or {
+      {
         icon = "__base__/graphics/icons/iron-plate.png",
         icon_size = 64,
         scale = 32 / 64,
@@ -1600,10 +1626,7 @@ data:extend({
       { type = "item", name = "iron-plate", amount = 3 },
     },
     icons = {
-      mods["angelssmelting"] and {
-        icon = "__angelssmeltinggraphics__/graphics/icons/plate-iron.png",
-        icon_size = 32,
-      } or {
+      {
         icon = "__base__/graphics/icons/iron-plate.png",
         icon_size = 64,
         scale = 32 / 64,
@@ -1635,6 +1658,34 @@ data:extend({
   --COPPER
   {
     type = "recipe",
+    name = "angels-copper-ore-smelting",
+    localised_name = { "item-name.copper-plate" },
+    category = "smelting",
+    subgroup = "raw-material",
+    energy_required = 3.2,
+    enabled = false,
+    auto_recycle = false,
+    ingredients = { { type = "item", name = "copper-ore", amount = 1 } },
+    results = {
+      { type = "item", name = "copper-plate", amount = 1 },
+    },
+    icons = {
+      {
+        icon = "__base__/graphics/icons/copper-plate.png",
+        icon_size = 64,
+        scale = 32 / 64,
+      },
+      {
+        icon = "__base__/graphics/icons/copper-ore.png",
+        icon_size = 64,
+        scale = 0.2,
+        shift = { -10, -10 },
+      },
+    },
+    order = "b[copper-ore]-b[ore]",
+  },
+  {
+    type = "recipe",
     name = "angels-copper-pebbles-smelting",
     localised_name = { "item-name.copper-plate" },
     category = "smelting",
@@ -1647,10 +1698,7 @@ data:extend({
       { type = "item", name = "copper-plate", amount = 2 },
     },
     icons = {
-      mods["angelssmelting"] and {
-        icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
-        icon_size = 32,
-      } or {
+      {
         icon = "__base__/graphics/icons/copper-plate.png",
         icon_size = 64,
         scale = 32 / 64,
@@ -1678,10 +1726,7 @@ data:extend({
       { type = "item", name = "copper-plate", amount = 3 },
     },
     icons = {
-      mods["angelssmelting"] and {
-        icon = "__angelssmeltinggraphics__/graphics/icons/plate-copper.png",
-        icon_size = 32,
-      } or {
+      {
         icon = "__base__/graphics/icons/copper-plate.png",
         icon_size = 64,
         scale = 32 / 64,

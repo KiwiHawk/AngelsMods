@@ -40,7 +40,7 @@ data:extend({
     autoplace = {
       order = "xaa",
       probability_expression = 0.000025,
-      tile_restriction = { "grass-1", "grass-2", "grass-3", "grass-4", "dry-dirt" },
+      tile_restriction = { "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7", "dry-dirt", "red-desert-1" },
     },
     pictures = {
       {
@@ -98,7 +98,7 @@ data:extend({
     autoplace = {
       order = "yaa",
       probability_expression = 0.000025,
-      tile_restriction = { "dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7" },
+      tile_restriction = { "grass-1", "grass-2", "grass-3", "grass-4", "red-desert-0" },
     },
     pictures = {
       {
@@ -160,9 +160,9 @@ data:extend({
     order = "z-b",
     impact_category = "wood",
     autoplace = {
-      order = "yaa",
+      order = "zaa",
       probability_expression = 0.000025,
-      tile_restriction = { "dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7" },
+      tile_restriction = { "sand-1", "sand-2", "sand-3", "dirt-1", "dirt-2", "red-desert-2", "red-desert-3" },
     },
     pictures = {
       {

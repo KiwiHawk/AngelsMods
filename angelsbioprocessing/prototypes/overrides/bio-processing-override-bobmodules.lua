@@ -111,6 +111,41 @@ if mods["bobmodules"] then
       ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 1 } },
     },
   })
+  if mods["quality"] then
+    OV.patch_recipes({
+      {
+        name = "quality-module",
+        ingredients = { { type = "item", name = "angels-crystal-splinter-harmonic", amount = 0 } },
+      },
+      {
+        name = "quality-module-2",
+        ingredients = { { type = "item", name = "angels-crystal-shard-harmonic", amount = 0 } },
+      },
+      {
+        name = "quality-module-3",
+        ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 0 } },
+      },
+    })
+
+    OV.remove_prereq("quality-module", "angels-bio-processing-crystal-splinter-2")
+    OV.remove_prereq("quality-module-2", "angels-bio-processing-crystal-shard-2")
+    OV.remove_prereq("quality-module-3", "angels-bio-processing-crystal-full")
+
+    OV.patch_recipes({
+      {
+        name = "bob-quality-processor",
+        ingredients = { { type = "item", name = "angels-crystal-splinter-harmonic", amount = 1 } },
+      },
+      {
+        name = "bob-quality-processor-2",
+        ingredients = { { type = "item", name = "angels-crystal-shard-harmonic", amount = 1 } },
+      },
+      {
+        name = "bob-quality-processor-3",
+        ingredients = { { type = "item", name = "angels-crystal-full-harmonic", amount = 1 } },
+      },
+    })
+  end
 
   -----------------------------------------------------------------------------
   -- EXISTING MODULES TECHNOLOGY ----------------------------------------------
@@ -120,6 +155,9 @@ if mods["bobmodules"] then
   OV.add_prereq("bob-modules-2", "angels-bio-processing-crystal-splinter-1")
   OV.add_prereq("bob-pollution-clean-module-2", "angels-bio-processing-crystal-splinter-2")
   OV.add_prereq("bob-pollution-create-module-2", "angels-bio-processing-crystal-splinter-2")
+  if mods["quality"] then
+    OV.add_prereq("quality-module-2", "angels-bio-processing-crystal-splinter-2")
+  end
 
   if mods["bobplates"] then
     OV.add_prereq("bob-modules-2", "bob-gem-processing-3")
@@ -129,6 +167,9 @@ if mods["bobmodules"] then
   OV.add_prereq("bob-modules-3", "angels-bio-processing-crystal-shard-1")
   OV.add_prereq("bob-pollution-clean-module-3", "angels-bio-processing-crystal-shard-2")
   OV.add_prereq("bob-pollution-create-module-3", "angels-bio-processing-crystal-shard-2")
+  if mods["quality"] then
+    OV.add_prereq("quality-module-3", "angels-bio-processing-crystal-shard-2")
+  end
 
   -- tier 4 modules
   OV.add_prereq("bob-modules-4", "angels-bio-processing-crystal-full")
@@ -274,4 +315,11 @@ if mods["bobmodules"] then
   OV.add_prereq("effect-transmission", "angels-bio-processing-crystal-splinter-2")
   OV.add_prereq("effect-transmission-2", "angels-bio-processing-crystal-shard-2")
   OV.add_prereq("effect-transmission-3", "angels-bio-processing-crystal-full")
+elseif mods["bobelectronics"] or mods["bobplates"] then
+  OV.patch_recipes({
+    {
+      name = "angels-bio-yield-module-3",
+      ingredients = { { type = "item", name = "bob-advanced-processing-unit", amount = "advanced-circuit" } },
+    },
+  })
 end

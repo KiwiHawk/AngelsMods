@@ -523,41 +523,8 @@ data:extend({
     results = {
       { type = "item", name = "angels-solid-carbon", amount = 3 },
     },
-    icons = AF.add_number_icon_layer(AF.get_object_icons("angels-solid-carbon"), 1, angelsmods.petrochem.number_tint),
     order = "d[coke-purification]-a",
     crafting_machine_tint = AF.get_recipe_tints({ { r = 1, g = 1, b = 1 }, { r = 1, g = 1, b = 1 }, "steam" }),--[[{
-        primary = {r = 1, g = 0.5, b = 0.5, a = 0},
-        secondary = {r = 1, g = 0.5, b = 0.5, a = 0},
-        tertiary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255}
-      }]]
-  },
-  {
-    type = "recipe",
-    name = "angels-coke-purification-2",
-    category = "angels-liquifying",
-    subgroup = "angels-petrochem-coal",
-    energy_required = 2,
-    enabled = false,
-    auto_recycle = false,
-    hide_from_signal_gui = true,
-    ingredients = {
-      { type = "item", name = "angels-solid-coke", amount = 4 },
-      { type = "item", name = "angels-solid-sodium-hydroxide", amount = 1 },
-      { type = "fluid", name = "angels-gas-nitrogen", amount = 30 },
-    },
-    results = {
-      { type = "item", name = "angels-solid-carbon", amount = 6 },
-      { type = "item", name = "angels-solid-sodium-carbonate", amount = 1 },
-      { type = "fluid", name = "water", amount = 10 },
-    },
-    icons = AF.add_number_icon_layer(AF.get_object_icons("angels-solid-carbon"), 2, angelsmods.petrochem.number_tint),
-    order = "d[coke-purification]-b",
-    crafting_machine_tint = AF.get_recipe_tints({
-      { r = 1, g = 1, b = 1 },
-      "angels-gas-nitrogen",
-      "water",
-      AF.fluid_color("NaCO3"),
-    }),--[[{
         primary = {r = 1, g = 0.5, b = 0.5, a = 0},
         secondary = {r = 1, g = 0.5, b = 0.5, a = 0},
         tertiary = {r = 167 / 255, g = 75 / 255, b = 5 / 255, a = 0 / 255}

@@ -70,6 +70,16 @@ OV.add_prereq("speed-module-3", "angels-bio-processing-crystal-full")
 OV.add_prereq("productivity-module-3", "angels-bio-processing-crystal-full")
 OV.add_prereq("efficiency-module-3", "angels-bio-processing-crystal-full")
 
+if mods["quality"] then
+  OV.modify_input("quality-module", { type = "item", name = "angels-crystal-splinter-harmonic", amount = 1 })
+  OV.modify_input("quality-module-2", { type = "item", name = "angels-crystal-shard-harmonic", amount = 1 })
+  OV.modify_input("quality-module-3", { type = "item", name = "angels-crystal-full-harmonic", amount = 1 })
+
+  OV.add_prereq("quality-module", "angels-bio-processing-crystal-splinter-2")
+  OV.add_prereq("quality-module-2", "angels-bio-processing-crystal-shard-2")
+  OV.add_prereq("quality-module-3", "angels-bio-processing-crystal-full")
+end
+
 for _, type in pairs({ "speed", "efficiency", "productivity" }) do
   -- remove the marked as upgrade from base game
   for _, tier in pairs({ "2", "3" }) do

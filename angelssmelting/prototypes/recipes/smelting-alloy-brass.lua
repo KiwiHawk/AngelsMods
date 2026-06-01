@@ -96,5 +96,28 @@ if mods["bobplates"] then
       }, angelsmods.functions.get_object_icons("angels-liquid-molten-brass"), { -10, -10 }, 0.4375),
       order = "b[brass]-b[brass-alloy]",
     },
+    --INTERMEDIATE
+    {
+      type = "recipe",
+      name = "bob-brass-bearing-ball",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-brass-alloy", amount = 1 },
+      },
+      results = { { type = "item", name = "bob-brass-bearing-ball", amount = 12 } },
+      allow_productivity = true,
+    },
+
+    {
+      type = "recipe",
+      name = "bob-brass-bearing",
+      enabled = false,
+      ingredients = {
+        { type = "item", name = "bob-brass-alloy", amount = 1 },
+        { type = "item", name = "bob-brass-bearing-ball", amount = 16 },
+      },
+      results = { { type = "item", name = "bob-brass-bearing", amount = 2 } },
+      allow_productivity = true,
+    },
   })
 end

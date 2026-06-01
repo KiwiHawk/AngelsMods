@@ -98,6 +98,8 @@ local function check_ingredients(ingredients)
         ingredient_map[item.type][i_name] = i
         i = i + 1
       end
+    else
+      break
     end
   end
 end

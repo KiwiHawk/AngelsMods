@@ -146,6 +146,7 @@ require("prototypes.buildings.pellet-press")
 require("prototypes.buildings.sintering-oven")
 require("prototypes.buildings.strand-casting-machine")
 require("prototypes.buildings.cooling-tower")
+require("prototypes.buildings.pipe")
 
 require("prototypes.buildings.clay-bricks")
 require("prototypes.buildings.concrete-bricks")

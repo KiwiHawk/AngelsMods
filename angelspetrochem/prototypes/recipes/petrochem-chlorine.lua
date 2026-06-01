@@ -145,7 +145,7 @@ data:extend({
     hide_from_signal_gui = true,
     ingredients = {
       { type = "item", name = "angels-solid-salt", amount = 6 },
-      { type = "fluid", name = "angels-liquid-sulfuric-acid", amount = 120 },
+      { type = "fluid", name = "sulfuric-acid", amount = 120 },
     },
     results = {
       { type = "fluid", name = "angels-liquid-hydrochloric-acid", amount = 70 },
@@ -157,7 +157,7 @@ data:extend({
     }, "ClHO"),
     crafting_machine_tint = AF.get_recipe_tints({
       "angels-liquid-hydrchloric-acid",
-      "angels-liquid-sulfuric-acid",
+      "sulfuric-acid",
       AF.fluid_color("NaCl"),
       AF.fluid_color("Na2SO4"),
     }),
