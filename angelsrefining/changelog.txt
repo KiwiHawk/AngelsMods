@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
-Date: ???
+Date: 01.06.2026
   Bugfixes:
     - Fixed some catalyst sorting recipes showing the wrong name (1245)
     - Improved migration functions (1248)
