@@ -199,7 +199,7 @@ for _, centrifuge_name in pairs({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "input", position = { 0, -1.19 }, direction = defines.direction.north },
+          { flow_direction = "input", position = { 0, -1 }, direction = defines.direction.north },
         }, -- assume 3x3 entity collision box
       })
     end
@@ -211,7 +211,7 @@ for _, centrifuge_name in pairs({
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {
-          { flow_direction = "output", position = { 0, 1.19 }, direction = defines.direction.south },
+          { flow_direction = "output", position = { 0, 1 }, direction = defines.direction.south },
         }, -- assume 3x3 entity collision box
       })
     end
