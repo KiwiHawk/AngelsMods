@@ -180,6 +180,12 @@ local function patch_resource_pair(name1, name2)
   local resource2_regular_index = autoplace_set.regular.patch_set_indexes[name2]
   local resource1_starting_index = autoplace_set.starting.patch_set_indexes[name1] or 0
   local resource2_starting_index = autoplace_set.starting.patch_set_indexes[name2] or 0
+  local resource1_exp = data.raw["noise-expression"]["default-" .. name1 .. "-patches"]
+  local resource2_exp = data.raw["noise-expression"]["default-" .. name2 .. "-patches"]
+
+  if not (resource1_regular_index and resource2_regular_index and resource1_exp and resource2_exp) then
+    return
+  end
 
   local new_expression_format =
     "paired_resource_autoplace_all_patches{ other_frequency = var('control:%s:frequency'), other_skip_offset = %i, other_starting_skip_offset = %i, "
@@ -194,9 +200,6 @@ local function patch_resource_pair(name1, name2)
     new_expression_format:format(name2, resource2_regular_index, resource1_other_starting_index)
   local resource2_parameters =
     new_expression_format:format(name1, resource1_regular_index, resource2_other_starting_index)
-
-  local resource1_exp = data.raw["noise-expression"]["default-" .. name1 .. "-patches"]
-  local resource2_exp = data.raw["noise-expression"]["default-" .. name2 .. "-patches"]
 
   resource1_exp.expression = resource1_exp.expression:gsub("resource_autoplace_all_patches{", resource1_parameters)
   resource2_exp.expression = resource2_exp.expression:gsub("resource_autoplace_all_patches{", resource2_parameters)
