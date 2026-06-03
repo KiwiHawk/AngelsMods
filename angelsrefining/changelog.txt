@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.4
-Date: ???
+Date: 04.06.2026
   Bugfixes:
     - Removed references to Bob's Sulfur resource (1304)
     - Fixed migration function to check if a logistics slot is manual before attempting to migrate it (1306)
