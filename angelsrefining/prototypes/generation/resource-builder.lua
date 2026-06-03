@@ -959,9 +959,7 @@ local function remove_resource_from_presets(resource)
   end
 
   for _, preset in pairs(data.raw["map-gen-presets"]["default"]) do
-    local autoplace_controls = preset
-      and preset.basic_settings
-      and preset.basic_settings.autoplace_controls
+    local autoplace_controls = preset and preset.basic_settings and preset.basic_settings.autoplace_controls
     if autoplace_controls then
       autoplace_controls[resource] = nil
     end
