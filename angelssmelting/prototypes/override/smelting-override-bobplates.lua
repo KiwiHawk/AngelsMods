@@ -167,4 +167,8 @@ if mods["bobplates"] then
     "bob-oil-boiler-3",
     "bob-power-armor-3",
   }, "bob-invar-processing")
+
+  if mods["space-age"] then
+    OV.remove_prereq("bob-tungsten-processing", "metallurgic-science-pack")
+  end
 end

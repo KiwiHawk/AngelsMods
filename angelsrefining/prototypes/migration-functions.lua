@@ -347,12 +347,14 @@ function angelsmods.migration.replace_logistics_slot(entities_to_check, items_to
     if point then
       for old_item, new_item in pairs(items_to_replace) do
         for _, section in pairs(point.sections) do
-          for i = 1, 100 do
-            local slot = section.get_slot(i)
-            if slot.value then
-              if slot.value.name == old_item then
-                slot.value.name = new_item
-                local filter_index = section.set_slot(i, slot)
+          if section.is_manual then
+            for i = 1, 100 do
+              local slot = section.get_slot(i)
+              if slot.value then
+                if slot.value.name == old_item then
+                  slot.value.name = new_item
+                  local filter_index = section.set_slot(i, slot)
+                end
               end
             end
           end
