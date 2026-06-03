@@ -3,6 +3,7 @@ Version: 2.0.4
 Date: ???
   Bugfixes:
     - Removed references to Bob's Sulfur resource (1304)
+    - Fixed migration function to check if a logistics slot is manual before attempting to migrate it (1306)
   Changes:
     - Prevented resources being removed from planets other than Nauvis (1289)
 ---------------------------------------------------------------------------------------------------
