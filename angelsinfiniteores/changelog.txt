@@ -3,6 +3,7 @@ Version: 2.0.3
 Date: ???
   Changes:
     - Added additional error checking (1250, 1290)
+    - Prevented resources being removed from planets other than Nauvis (1289)
   Bugfixes:
     - Fixed crash with Bob's Ores and without Angel's Refining (1304)
 ---------------------------------------------------------------------------------------------------
